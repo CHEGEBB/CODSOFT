@@ -1,15 +1,15 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import Products from './components/Products';
-import Shop from './components/Shop';
-import User from './components/User';
-import Checkout from './components/Checkout';
-import Cart from './components/Cart';
-import Login from './components/Login';
+import Navbar from './components/Navbar.jsx';
+import Home from './components/Home.jsx';
+import Contact from './components/Contact.jsx';
+import Products from './components/Products.jsx';
+import Shop from './components/Shop.jsx';
+import User from './components/User.jsx';
+import Checkout from './components/Checkout.jsx';
+import Cart from './components/Cart.jsx';
+import Login from './components/Login.jsx';
 
 const App = () => {
     return (
