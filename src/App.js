@@ -12,10 +12,11 @@ import Login from './components/Login.jsx';
 
 const App = () => {
     return (
-        <Router>
+        
             <div className="App">
-                <h1>My Website</h1>
+           <h1>App</h1>
                 <Navbar />
+                <Router>
                 <Route exact path="/" component={Home} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/products" component={Products} />
@@ -24,8 +25,8 @@ const App = () => {
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/cart" component={Cart} />
                 <Route path="/login" component={Login} />
+                </Router>
             </div>
-        </Router>
     );
 }
 
