@@ -1,32 +1,33 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navbar from './components/Navbar.jsx';
-import Home from './components/Home.jsx';
-import Contact from './components/Contact.jsx';
-import Products from './components/Products.jsx';
-import Shop from './components/Shop.jsx';
-import User from './components/User.jsx';
-import Checkout from './components/Checkout.jsx';
-import Cart from './components/Cart.jsx';
-import Login from './components/Login.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import Products from './components/Products';
+import Shop from './components/Shop';
+import User from './components/User';
+import Checkout from './components/Checkout';
+import Cart from './components/Cart';
+import Login from './components/Login';
 
 const App = () => {
     return (
-        
-            <div className="App">
-           <h1>App</h1>
+        <div className="App">
+            <Router basename={process.env.PUBLIC_URL}>
                 <Navbar />
-                <Router>
-                <Route exact path="/" component={Home} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/products" component={Products} />
-                <Route path="/shop" component={Shop} />
-                <Route path="/user" component={User} />
-                <Route path="/checkout" component={Checkout} />
-                <Route path="/cart" component={Cart} />
-                <Route path="/login" component={Login} />
-                </Router>
-            </div>
+                <h1>App</h1>
+                <Routes> {/* Use Routes component */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/shop" element={<Shop />} />
+                    <Route path="/user" element={<User />} />
+                    <Route path="/checkout" element={<Checkout />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/login" element={<Login />} />
+                </Routes>
+            </Router>
+        </div>
     );
 }
 

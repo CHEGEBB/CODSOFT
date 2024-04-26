@@ -1,7 +1,43 @@
-
-.navbar{
-  background-color: #333;
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
-.h1{
-  color: white;
+
+/* Navbar component */
+.navbar {
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
