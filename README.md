@@ -1,13 +1,5 @@
 # WEB DEVELOPMENT
 
-## My Ui Designs
-![Group 1](https://github.com/CHEGEBB/CODSOFT/assets/123733116/6ee42d59-5e25-4655-9719-897f5edee27c)
-
-![Group 2](https://github.com/CHEGEBB/CODSOFT/assets/123733116/de5492af-6e74-4bdc-be69-502631d7f5d7)
-
-
-
-
 ## ABOUT US
 
 CODSOFT is a vibrant and diverse community that brings together individuals with similar objectives and ultimate goals. Our main focus is on creating opportunities that span various areas, including leadership development, learning, student engagement, and fostering shared interests. We believe in the power of leadership and its ability to drive positive change. That's why we provide platforms and resources for our community members to develop their leadership skills. Through mentorship programs, workshops, and collaborative projects, we empower individuals to take on leadership roles and make a difference in their respective fields.
