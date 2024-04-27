@@ -6,6 +6,8 @@ $frosted-glass: rgba(255, 255, 255, 0.5);
 $white: #fff;
 $special:#141C27;
 $background-image1: url("./images/pic2.jpg");
+$women-background-image: url("./images/wom2.jpg");
+$mens-background-image: url("./images/pic4.jpg");
 
 
 
@@ -189,7 +191,7 @@ body{
 }
 .home-cta{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   color: white;
@@ -198,3 +200,4 @@ body{
   height: 600px;
   width: 100%;
 }
+.womens-shop
