@@ -10,7 +10,7 @@ const images = [
     src: pic2,
     text: 'First Image',
     heading: 'Upto 40% Off',
-    paragraph: 'This is the paragraph for the first image.',
+    paragraph: 'Exclusive on all clothes  with all latest  brands available.',
     buttonText: 'Shop Now'
   },
   {
