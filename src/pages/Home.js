@@ -6,40 +6,66 @@ import wom2 from '../images/wom2.jpg';
 import sneakers3 from '../images/sneakers3.jpg';
 
 const images = [
-  { src: pic2, text: 'First Image' },
-  { src: wom2, text: 'Second Image' },
-  { src: sneakers3, text: 'Third Image' }
+  {
+    src: pic2,
+    text: 'First Image',
+    heading: 'Heading 1',
+    paragraph: 'This is the paragraph for the first image.',
+    buttonText: 'Shop Now'
+  },
+  {
+    src: wom2,
+    text: 'Second Image',
+    heading: 'Heading 2',
+    paragraph: 'This is the paragraph for the second image.',
+    buttonText: 'Shop Now'
+  },
+  {
+    src: sneakers3,
+    text: 'Third Image',
+    heading: 'Heading 3',
+    paragraph: 'This is the paragraph for the third image.',
+    buttonText: 'Shop Now'
+  }
 ];
 
 const Home = () => {
   const [index, setIndex] = useState(0);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLoading(true); // Set loading to true when changing image
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
-
-    // Simulate loading delay of 2 seconds before showing the next image
-    const loadingTimeout = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
-      clearTimeout(loadingTimeout);
     };
+  }, []);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animate');
+    elements.forEach((element) => {
+      element.classList.remove('fadeIn');
+      void element.offsetWidth;
+      element.classList.add('fadeIn');
+    });
   }, [index]);
 
   return (
     <div className="Homepage">
       <div
         className="home-intro"
-        style={{ backgroundImage: `url(${images[index].src})` }}
+        style={{
+          backgroundImage: `url(${images[index].src})`,
+          transition: 'background-image 1s ease-in-out' // Animated transition
+        }}
       >
-        <h1>Welcome to Glamour Gallerie</h1>
-        <p>Your one stop shop for all things beauty</p>
+        <div className="text-container animate">
+          <h1 className="heading animate">{images[index].heading}</h1>
+          <p className="paragraph animate">{images[index].paragraph}</p>
+          <p className="colored-paragraph animate">{images[index].paragraph}</p>
+          <button className="animate">{images[index].buttonText}</button>
+        </div>
       </div>
       <div className="loading-indicator">
         {[0, 1, 2].map((i) => (

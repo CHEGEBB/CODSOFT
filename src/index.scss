@@ -238,8 +238,8 @@ body{
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #fff;
   margin: 0 5px;
@@ -249,4 +249,37 @@ body{
 .active {
   background-color: #ff6f61;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.heading,
+.paragraph,
+.colored-paragraph,
+button {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.heading {
+  animation-delay: 0.5s;
+}
+
+.paragraph {
+  animation-delay: 1s;
+}
+
+.colored-paragraph {
+  animation-delay: 1.5s;
+}
+
+button {
+  animation-delay: 2s;
+}
