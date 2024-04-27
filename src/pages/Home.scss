@@ -221,6 +221,8 @@ $mens-background-image: url("../images/style2.jpg");
             cursor: pointer;
             transition: background-color 0.3s ease;
             margin-left: 40px;
+            padding: 10px 20px;
+            margin-top: 180px;
         }
   }
   .dresses{
@@ -231,10 +233,19 @@ $mens-background-image: url("../images/style2.jpg");
   }
   .watches{
     @include card-item;
+    background-image: url("../images/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .shoes{
     @include card-item;
+    background-image: url("../images/airmaxplus.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .accessories{
     @include card-item;
+    background-image: url("../images/acce3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
