@@ -6,28 +6,29 @@ import wom2 from '../images/pic3.jpg';
 import sneakers3 from '../images/pic5.jpg';
 
 const images = [
-  {
-    src: pic2,
-    text: 'First Image',
-    heading: 'Upto 40% Off',
-    paragraph: 'Exclusive on all clothes  with all latest  brands available.',
-    buttonText: 'Shop Now'
-  },
-  {
-    src: wom2,
-    text: 'Second Image',
-    heading: 'Heading 2',
-    paragraph: 'This is the paragraph for the second image.',
-    buttonText: 'Shop Now'
-  },
-  {
-    src: sneakers3,
-    text: 'Third Image',
-    heading: 'Heading 3',
-    paragraph: 'This is the paragraph for the third image.',
-    buttonText: 'Shop Now'
-  }
-];
+    {
+      src: pic2,
+      text: 'First Image',
+      heading: 'Discover Your Style',
+      paragraph: 'Explore our latest collection and find the perfect outfit that reflects your unique personality. From casual chic to elegant sophistication, we have something for every fashionista.',
+      buttonText: 'Shop Now'
+    },
+    {
+      src: wom2,
+      text: 'Second Image',
+      heading: 'Elevate Your Wardrobe',
+      paragraph: 'Revamp your closet with our exclusive selection of trendy apparel. Stay ahead of the fashion curve and make a statement wherever you go. Quality and style guaranteed.',
+      buttonText: 'Shop Now'
+    },
+    {
+      src: sneakers3,
+      text: 'Third Image',
+      heading: 'Step into Comfort',
+      paragraph: 'Experience unparalleled comfort and style with our premium footwear collection. Whether you’re hitting the gym or strolling around the city, our sneakers will keep you looking and feeling great.',
+      buttonText: 'Shop Now'
+    }
+  ];
+  
 
 const Home = () => {
   const [index, setIndex] = useState(0);
