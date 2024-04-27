@@ -15,6 +15,7 @@ import Wishlist from "./images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "./images/ant-design--search-outlined.svg";
 import FilterIcon from "./images/bx--filter.svg";
 
+
 const App = () => {
   return (
     <Router>
