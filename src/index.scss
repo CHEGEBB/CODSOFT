@@ -44,8 +44,10 @@ $placeholder-color: #999;
     padding-right: 40px;
     border: none;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-left: 350px;
     height: 40px;
+    max-width: 600px;
+    outline: none;
 
     &::placeholder {
       color: $placeholder-color;
@@ -65,12 +67,14 @@ $placeholder-color: #999;
   }
 
   button[type="submit"] {
-    right: 20px;
+    right: 290px;
     background-color: $celestialOrange;
     border: none;
     cursor: pointer;
     height: 40px;
     width: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 
   }
 }

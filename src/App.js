@@ -40,7 +40,7 @@ const App = () => {
         </div>
       </div>
       <div className="search-container">
-          <input type="text" placeholder="Search for products here..." />
+          <input type="text" className="input-field" placeholder="Search for products here..." />
           <span className="filter-icon">
             <img src={FilterIcon} alt="Filter Icon" />
           </span>
