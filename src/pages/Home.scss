@@ -319,4 +319,28 @@ $mens-background-image: url("../images/style2.jpg");
   .accessories:hover {
     transform: rotate(5deg);
   }
-  
+  .featured{
+    display: flex;
+    flex-direction: column;
+  }
+  .products-row1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.products-row2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.products{
+    width: 200px;
+    height: 250px;
+    background-color: crimson;
+}

@@ -108,6 +108,43 @@ const Home = () => {
                 </div>
         </div>
       </div>
+      <div className="featured">
+        <h1>Featured Products</h1>
+        <div className="products-row1">
+            <div className="product">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div className="product">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div className="product">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div className="products-row2">
+            <div className="product">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div className="product">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div className="product">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+      </div>
+      </div>
     </div>
   );
 }
