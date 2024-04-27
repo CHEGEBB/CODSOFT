@@ -1,5 +1,5 @@
 $greyish:#555555;
-$celesrialOrange:#FF6F61;
+$celestialOrange:#FF6F61;
 
 
 
@@ -17,7 +17,15 @@ $celesrialOrange:#FF6F61;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
+}
+.bar{
+    background-color: $celestialOrange;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .App {
@@ -33,7 +41,7 @@ $celesrialOrange:#FF6F61;
 
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
 }
 

@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Shop from './pages/Shop';
 import User from './pages/User';
+import CartIcon from './images/ic--round-shopping-cart.svg';
+import Wishlist from './images/icon-park-solid--love-and-help.svg';
 
 const App = () => {
     return (
@@ -24,6 +26,17 @@ const App = () => {
         <div className="my-account">
             <p>My Account</p>
         </div>
+        </div>
+        <div className="bar">
+            <div className="cart">
+                <img src={CartIcon} alt="Cart Icon" />
+                <p>Cart</p>
+            </div>
+            <div className="wishlist">
+                <img src={Wishlist} alt="Wishlist Icon" />
+                <p>Wishlist</p>
+
+            </div>
         </div>
             <Navbar />
             <Routes>
