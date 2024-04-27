@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import '../index.scss';
 
 import pic2 from '../images/pic2.jpg';
-import wom2 from '../images/pexels-godisable-jacob-226636-794062.jpg';
-import sneakers3 from '../images/pexels-rfera-432059.jpg';
+import wom2 from '../images/pic3.jpg';
+import sneakers3 from '../images/pic5.jpg';
 
 const images = [
   {
     src: pic2,
     text: 'First Image',
-    heading: 'Heading 1',
+    heading: 'Upto 40% Off',
     paragraph: 'This is the paragraph for the first image.',
     buttonText: 'Shop Now'
   },
