@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../index.scss';
+import './Home.scss'
 
 import pic2 from '../images/pic2.jpg';
 import wom2 from '../images/pic3.jpg';
