@@ -1,6 +1,7 @@
 $greyish:#555555;
 $celestialOrange:#FF6F61;
-$common-height:90px;
+$common-height:80px;
+$placeholder-color: #999;
 
 
 
@@ -30,6 +31,50 @@ $common-height:90px;
     justify-content: flex-end;
     height: $common-height;
 }
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $greyish;
+  padding: 10px;
+  height: 120px;
+
+  input[type="text"] {
+    flex: 1;
+    padding-right: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: 40px;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  .filter-icon,
+  button[type="submit"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $celestialOrange;
+  }
+
+  .filter-icon {
+    left: 10px;
+  }
+
+  button[type="submit"] {
+    right: 20px;
+    background-color: $celestialOrange;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 50px;
+
+  }
+}
+
 
 .App {
   font-family: Arial, sans-serif;
