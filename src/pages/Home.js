@@ -9,8 +9,12 @@ const Home = () => {
             <p>Your one stop shop for all things beauty</p>
         </div>
         <div className="home-cta">
-            <h2>Shop Now</h2>
-            <button>Shop</button>
+        <div className="womens-shop">
+        <button>Shop Now</button>
+        </div>
+        <div className="mens-shop">
+        <button>Shop Now</button>
+        </div>
             </div>
         </div>
     );
