@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import '../index.scss';
 
 import pic2 from '../images/pic2.jpg';
-import wom2 from '../images/wom2.jpg';
-import sneakers3 from '../images/sneakers3.jpg';
+import wom2 from '../images/pexels-godisable-jacob-226636-794062.jpg';
+import sneakers3 from '../images/pexels-rfera-432059.jpg';
 
 const images = [
   {
@@ -57,7 +57,7 @@ const Home = () => {
         className="home-intro"
         style={{
           backgroundImage: `url(${images[index].src})`,
-          transition: 'background-image 1s ease-in-out' // Animated transition
+          transition: 'background-image 1s ease-in-out'
         }}
       >
         <div className="text-container animate">
