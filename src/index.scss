@@ -1,5 +1,6 @@
 $greyish:#555555;
 $celestialOrange:#FF6F61;
+$common-height:90px;
 
 
 
@@ -17,6 +18,7 @@ $celestialOrange:#FF6F61;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    height: $common-height;
 }
 .bar{
     background-color: $celestialOrange;
@@ -26,6 +28,7 @@ $celestialOrange:#FF6F61;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    height: $common-height;
 }
 
 .App {
