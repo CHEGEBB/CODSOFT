@@ -14,6 +14,17 @@ import User from './pages/User';
 const App = () => {
     return (
         <Router>
+        <div className="header">
+        <div className="phone">
+            <p>Phone: 123-456-7890</p>
+        </div>
+        <div className="email">
+            <p>info@glamourgallerie.com</p>
+        </div>
+        <div className="my-account">
+            <p>My Account</p>
+        </div>
+        </div>
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
