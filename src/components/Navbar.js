@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CategoryIcon from "../images/ic--baseline-apps.svg";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="container">
             <div className="categories">
+            <span className="category-icon">
+            <img src={CategoryIcon} alt="Category Icon" />
             <h2>Categories</h2>
+            </span>
         </div>
             <div className="container2">
                 <ul className="navbar-nav">
