@@ -2,6 +2,7 @@ $greyish:#555555;
 $celestialOrange:#FF6F61;
 $common-height:80px;
 $placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
 
 
 
@@ -35,7 +36,7 @@ $placeholder-color: #999;
   position: relative;
   display: flex;
   align-items: center;
-  background-color: $greyish;
+  background-color:$frosted-glass;
   padding: 10px;
   height: 120px;
 
@@ -48,6 +49,8 @@ $placeholder-color: #999;
     height: 40px;
     max-width: 600px;
     outline: none;
+    border: 2px solid $celestialOrange;
+    box-shadow:  0 0 6px $greyish;
 
     &::placeholder {
       color: $placeholder-color;
@@ -63,7 +66,10 @@ $placeholder-color: #999;
   }
 
   .filter-icon {
-    left: 10px;
+    left: 900px;
+    height: 40px;
+    width: 40px;
+    background-color: $greyish;
   }
 
   button[type="submit"] {
