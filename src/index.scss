@@ -103,12 +103,13 @@ body{
   }
 
   button[type="submit"] {
-    right: 290px;
+    right: 274px;
     background-color: $celestialOrange;
     border: none;
     cursor: pointer;
     height: 40px;
     width: 50px;
+    margin-top: -1px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 

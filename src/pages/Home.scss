@@ -222,30 +222,89 @@ $mens-background-image: url("../images/style2.jpg");
             transition: background-color 0.3s ease;
             margin-left: 40px;
             padding: 10px 20px;
-            margin-top: 180px;
+            margin-top: 150px;
+        }
+        h3{
+            font-size: 18px;
+            color:crimson;
+            margin-top: 20px;
+            text-align: center;
+        
         }
   }
-  .dresses{
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .dresses {
     @include card-item;
     background-image: url("../images/women/dress2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 2px solid transp;
+    transition: border-color 0.3s ease;
   }
-  .watches{
+  
+  .dresses:hover {
+    border-color: $celestialOrange;
+  }
+  
+  .watches {
     @include card-item;
     background-image: url("../images/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
   }
-  .shoes{
+  
+  .watches:hover {
+    filter: contrast(100%);
+  }
+  
+  .shoes {
     @include card-item;
     background-image: url("../images/airmaxplus.jfif");
     background-size: cover;
     background-repeat: no-repeat;
+    animation: zoomInOut 7s ease-in-out infinite alternate, fadeInOut 5s ease-in-out infinite alternate;
+    box-shadow: 0px 0px 10px rgba(255, 111, 97, 0.5);
   }
-  .accessories{
+  
+  .shoes:hover {
+    box-shadow: 0px 0px 20px rgba(255, 111, 97, 1);
+  }
+  
+  .accessories {
     @include card-item;
     background-image: url("../images/acce3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 6s ease-in-out infinite alternate;
+    border-radius: 10px;
+    animation: zoomInOut 7s ease-in-out infinite alternate, fadeInOut 5s ease-in-out infinite alternate;
+    box-shadow: 0px 0px 10px rgba(255, 111, 97, 0.5);
   }
+  
+  .accessories:hover {
+    transform: rotate(5deg);
+  }
+  
