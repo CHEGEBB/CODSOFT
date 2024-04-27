@@ -14,22 +14,16 @@ const Navbar = () => {
                         <Link to="/products" className="nav-link">Products</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/cart" className="nav-link">Cart</Link>
+                        <Link to="/shop" className="nav-link">Shop</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/checkout" className="nav-link">Checkout</Link>
+                        <Link to="/checkout" className="nav-link">Collections</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/contact" className="nav-link">Contact</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/login" className="nav-link">Login</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/shop" className="nav-link">Shop</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/user" className="nav-link">User</Link>
                     </li>
                 </ul>
             </div>
