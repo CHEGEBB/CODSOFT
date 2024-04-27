@@ -78,11 +78,15 @@ const Home = () => {
       </div>
       <div className="home-content">
         <div className="women-shop">
+        <h1>Shop Women's</h1>
           <button>Shop Now</button>
         </div>
         <div className="mens-shop">
+        <h1>Shop Men's</h1>
           <button>Shop Now</button>
         </div>
+      </div>
+      <div className="welcome">
       </div>
     </div>
   );

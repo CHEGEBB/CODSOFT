@@ -8,6 +8,18 @@ $special:#141C27;
 $background-image1: url("./images/pic2.jpg");
 $women-background-image: url("./images/wom2.jpg");
 $mens-background-image: url("./images/pic.jpg");
+@mixin shop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+  height: 400px;
+  width:600px;
+}
 
 
 *{

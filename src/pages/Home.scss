@@ -5,8 +5,8 @@ $placeholder-color: #999;
 $frosted-glass: rgba(255, 255, 255, 0.5);
 $white: #fff;
 $special:#141C27;
-$women-background-image: url("../images/wom2.jpg");
-$mens-background-image: url("../images/pic.jpg");
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
 @mixin shop{
     display: flex;
     flex-direction: column;
@@ -172,4 +172,6 @@ $mens-background-image: url("../images/pic.jpg");
   button {
     animation-delay: 2s;
   }
-  
+  .welcome{
+    
+  }
