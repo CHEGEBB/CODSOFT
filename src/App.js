@@ -43,6 +43,7 @@ const App = () => {
           <input type="text" className="input-field" placeholder="Search for products here..." />
           <span className="filter-icon">
             <img src={FilterIcon} alt="Filter Icon" />
+            <p>Filter</p>
           </span>
           <button type="submit">
             <img src={SearchIcon} alt="Search Icon" />

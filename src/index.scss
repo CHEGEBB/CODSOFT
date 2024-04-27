@@ -3,6 +3,8 @@ $celestialOrange:#FF6F61;
 $common-height:80px;
 $placeholder-color: #999;
 $frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
 
 
 
@@ -42,14 +44,14 @@ $frosted-glass: rgba(255, 255, 255, 0.5);
 
   input[type="text"] {
     flex: 1;
-    padding-right: 40px;
+    padding: 10px 50px 10px 20px; 
     border: none;
     border-radius: 5px;
     margin-left: 350px;
     height: 40px;
-    max-width: 600px;
+    max-width: 630px;
     outline: none;
-    border: 2px solid $celestialOrange;
+    border: 1.5px solid $celestialOrange;
     box-shadow:  0 0 6px $greyish;
 
     &::placeholder {
@@ -66,10 +68,20 @@ $frosted-glass: rgba(255, 255, 255, 0.5);
   }
 
   .filter-icon {
-    left: 900px;
+    left: 850px;
     height: 40px;
-    width: 40px;
+    width: 90px;
     background-color: $greyish;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 2px solid $celestialOrange;
+    color: $white;
+  }
+  .filter-icon img{
+    height: 20px;
+    width: 20px;
   }
 
   button[type="submit"] {
@@ -93,8 +105,9 @@ $frosted-glass: rgba(255, 255, 255, 0.5);
 
 /* Navbar component */
 .navbar {
-  background-color: #333;
+  background-color: $special;
   color: #fff;
+  height: 100px;
 }
 
 .container {
