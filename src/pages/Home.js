@@ -10,21 +10,21 @@ const images = [
       src: pic2,
       text: 'First Image',
       heading: 'Discover Your Style',
-      paragraph: 'Explore our latest collection and find the perfect outfit that reflects your unique personality. From casual chic to elegant sophistication, we have something for every fashionista.',
+      paragraph: 'Explore our latest collection and find the perfect outfit that reflects your unique personality',
       buttonText: 'Shop Now'
     },
     {
       src: wom2,
       text: 'Second Image',
       heading: 'Elevate Your Wardrobe',
-      paragraph: 'Revamp your closet with our exclusive selection of trendy apparel. Stay ahead of the fashion curve and make a statement wherever you go. Quality and style guaranteed.',
+      paragraph: 'Revamp your closet with our exclusive selection of trendy apparel',
       buttonText: 'Shop Now'
     },
     {
       src: sneakers3,
       text: 'Third Image',
       heading: 'Step into Comfort',
-      paragraph: 'Experience unparalleled comfort and style with our premium footwear collection. Whether you’re hitting the gym or strolling around the city, our sneakers will keep you looking and feeling great.',
+      paragraph: 'Experience unparalleled comfort and style with our premium footwear collection',
       buttonText: 'Shop Now'
     }
   ];
