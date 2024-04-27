@@ -7,7 +7,7 @@ $white: #fff;
 $special:#141C27;
 $background-image1: url("./images/pic2.jpg");
 $women-background-image: url("./images/wom2.jpg");
-$mens-background-image: url("./images/pic4.jpg");
+$mens-background-image: url("./images/pic.jpg");
 
 
 
@@ -200,4 +200,6 @@ body{
   height: 600px;
   width: 100%;
 }
-.womens-shop
+.women-shop{
+  background-image: $women-background-image;
+}
