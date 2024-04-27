@@ -344,3 +344,52 @@ $mens-background-image: url("../images/style2.jpg");
     height: 250px;
     background-color: crimson;
 }
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  
+    h3 {
+      margin-top: 0;
+    }
+  
+    p {
+      margin: 5px 0;
+    }
+  
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+  
+      img {
+        width: 20px;
+        margin-right: 5px;
+      }
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .products-row1, .products-row2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .product {
+    flex: 0 0 auto;
+    margin-right: 20px;
+  }
+  
