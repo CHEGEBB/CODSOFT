@@ -5,6 +5,7 @@ $placeholder-color: #999;
 $frosted-glass: rgba(255, 255, 255, 0.5);
 $white: #fff;
 $special:#141C27;
+$background-image1: url("./images/pic2.jpg");
 
 
 
@@ -13,6 +14,9 @@ $special:#141C27;
     padding: 0;
     box-sizing: border-box;
 
+}
+body{
+  overflow-y: scroll;
 }
 .header{
     background-color: $greyish;
@@ -147,6 +151,7 @@ $special:#141C27;
   justify-content: center;
   align-items: center;
   margin-left: 100px;
+  gap: 50px;
 
 }
 
@@ -168,4 +173,28 @@ $special:#141C27;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.home-intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: $background-image1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+  height: 550px;
+  width: 100%;
+}
+.home-cta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #ffff;
+  padding: 10px;
+  height: 600px;
+  width: 100%;
 }
