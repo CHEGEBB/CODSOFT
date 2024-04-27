@@ -21,8 +21,10 @@ $mens-background-image: url("../images/style2.jpg");
     width:600px;
   }
   @mixin card-item{
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 250px;
+    background-color: crimson;
+    margin-top: 20px;
   }
 
 
@@ -179,8 +181,9 @@ $mens-background-image: url("../images/style2.jpg");
   }
   .welcome{
     background-color: #000;
-    height: 400px;
+    height: 500px;
     color: white;
+    width: 100%;
 
         h1{
             font-size: 2rem;
@@ -192,19 +195,46 @@ $mens-background-image: url("../images/style2.jpg");
 
         }
         p{
-            font-size: 1rem;
+            font-size: 18px;
             margin: 0;
             color: $white;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 10px;
+            margin-left: 370px;
+            width: 700px;
         }
 
   }
   .items{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+        button{
+            background-color: $celestialOrange;
+            color: $white;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 40px;
+        }
   }
-  .dresses,.watches, .shoes,.accessories{
+  .dresses{
+    @include card-item;
+    background-image: url("../images/women/dress2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .watches{
+    @include card-item;
+  }
+  .shoes{
+    @include card-item;
+  }
+  .accessories{
     @include card-item;
   }
