@@ -3,7 +3,7 @@ import './Home.scss'
 
 import pic2 from '../images/pic2.jpg';
 import wom2 from '../images/pic3.jpg';
-import sneakers3 from '../images/pic5.jpg';
+import sneakers3 from '../images/js.jfif';
 
 const images = [
     {

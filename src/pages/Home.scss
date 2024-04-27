@@ -28,7 +28,6 @@ $mens-background-image: url("../images/pic.jpg");
     color: $celestialOrange;
     width: 300px;
     margin-left: 100px;
-    background-color: rgba(0, 0, 0, 0.1);
   }
   
   .paragraph {
@@ -37,7 +36,6 @@ $mens-background-image: url("../images/pic.jpg");
     color: $white;
     width: 500px;
     margin-left: 400px;
-    background-color: rgba(0, 0, 0, 0.5);
   }
   
   .colored-paragraph {
@@ -46,7 +44,6 @@ $mens-background-image: url("../images/pic.jpg");
     margin-bottom: 20px;
     width: 500px;
     margin-left: 400px;
-    background-color: rgba(0, 0, 0, 0.5);
   }
   
   button {
@@ -57,6 +54,7 @@ $mens-background-image: url("../images/pic.jpg");
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 90px;
   }
   
   button:hover {
