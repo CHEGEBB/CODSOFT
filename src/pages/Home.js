@@ -88,9 +88,6 @@ const Home = () => {
       </div>
       <div className="welcome">
         <h1>Welcome to Glamour Gallerie</h1>
-        <h2>
-            Elevate Your Style with Our Exclusive Collection
-        </h2>
         <p>Discover the latest fashion trends and elevate your wardrobe with Glamour Gallerie. Our exclusive collection of apparel, footwear, and accessories is designed to help you make a statement wherever you go. Explore our online store and find the perfect outfit that reflects your unique personality.</p>
         <div className="items">
             <div className="dresses">
