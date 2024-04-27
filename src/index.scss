@@ -176,30 +176,77 @@ body{
   flex-direction: column;
   align-items: center;
 }
-.home-intro{
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.home-intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  background-image: $background-image1;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10px;
-  height: 550px;
+  height: 600px;
   width: 100%;
+  animation: zoomIn 5s ease infinite alternate;
 }
-.home-cta{
+
+.home-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.home-intro p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.home-content {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.women-shop,
+.mens-shop {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: #ffff;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 10px;
-  height: 600px;
-  width: 100%;
+  height: 400px;
+  width: 48%;
 }
-.women-shop{
-  background-image: $women-background-image;
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+  gap: 20px;
+  z-index: 100;
 }
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 5px;
+
+}
+
+.active {
+  background-color: #ff6f61;
+}
+
