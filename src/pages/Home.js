@@ -92,6 +92,24 @@ const Home = () => {
             Elevate Your Style with Our Exclusive Collection
         </h2>
         <p>Discover the latest fashion trends and elevate your wardrobe with Glamour Gallerie. Our exclusive collection of apparel, footwear, and accessories is designed to help you make a statement wherever you go. Explore our online store and find the perfect outfit that reflects your unique personality.</p>
+        <div className="items">
+            <div className="dresses">
+                <h3>Dresses</h3>
+                <button>Shop Now</button>
+            </div>
+            <div className="watches">
+                <h3>Watches</h3>
+                <button>Shop Now</button>
+            </div>
+            <div className="shoes">
+                <h3>Shoes</h3>
+                <button>Shop Now</button>
+                </div>
+                <div className="accessories">
+                <h3>Accessories</h3>
+                <button>Shop Now</button>
+                </div>
+        </div>
       </div>
     </div>
   );
