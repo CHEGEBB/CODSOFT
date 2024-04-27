@@ -123,6 +123,15 @@ $special:#141C27;
   align-items: center;
   justify-content: space-between;
 }
+.category-icon{
+  display: flex;
+  flex-direction: row;
+}
+.category-icon img{
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
 
 .navbar-brand {
   text-decoration: none;
