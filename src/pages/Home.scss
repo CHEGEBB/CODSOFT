@@ -259,8 +259,11 @@ $mens-background-image: url("../images/style2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
-    border: 2px solid transp;
+    border: 1px solid $celestialOrange;
     transition: border-color 0.3s ease;
+    background-repeat: no-repeat;
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
   }
   
   .dresses:hover {
@@ -274,6 +277,9 @@ $mens-background-image: url("../images/style2.jpg");
     background-repeat: no-repeat;
     animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
     filter: contrast(80%);
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 1px solid $celestialOrange;
+    transition: border-color 0.3s ease;
   }
   
   .watches:hover {
@@ -285,8 +291,11 @@ $mens-background-image: url("../images/style2.jpg");
     background-image: url("../images/airmaxplus.jfif");
     background-size: cover;
     background-repeat: no-repeat;
-    animation: zoomInOut 7s ease-in-out infinite alternate, fadeInOut 5s ease-in-out infinite alternate;
-    box-shadow: 0px 0px 10px rgba(255, 111, 97, 0.5);
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 1px solid $celestialOrange;
+    transition: border-color 0.3s ease;
   }
   
   .shoes:hover {
@@ -299,9 +308,12 @@ $mens-background-image: url("../images/style2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 6s ease-in-out infinite alternate;
-    border-radius: 10px;
-    animation: zoomInOut 7s ease-in-out infinite alternate, fadeInOut 5s ease-in-out infinite alternate;
-    box-shadow: 0px 0px 10px rgba(255, 111, 97, 0.5);
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 1px solid $celestialOrange;
+    transition: border-color 0.3s ease;
+
   }
   
   .accessories:hover {
