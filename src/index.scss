@@ -96,6 +96,15 @@ $special:#141C27;
 
   }
 }
+.categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $celestialOrange;
+    color: white;
+    padding: 10px;
+    height: 100px;
+}
 /* Navbar component */
 .navbar {
   background-color: $special;
@@ -107,6 +116,12 @@ $special:#141C27;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.container2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-brand {
