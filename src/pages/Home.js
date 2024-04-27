@@ -1,9 +1,9 @@
 import React from 'react';
-import '../scss/Home.scss';
+import '../index.scss';
 
 const Home = () => {
     return (
-        <div>
+        <div className="Homepage">
         <div className="header">
             <div className="container">
                 <h1>Welcome to My Website</h1>
