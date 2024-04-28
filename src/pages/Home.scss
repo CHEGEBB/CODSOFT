@@ -487,10 +487,55 @@ $island:'Island Moments', cursive;
     @include product-images;
   }
   .about{
-    background-color: #09101A;
+    background-color: #2F4F4F;
     height: 500px;
     width: 100%;
   }
+  // Home.scss
+
+.about {
+  text-align: center;
+  padding: 50px 0;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    .image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: rotate(5deg) scale(1.1);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
  
 
   
