@@ -13,18 +13,7 @@ $jost: 'Jost', sans-serif;
 $rubik: 'Rubik', sans-serif;
 $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
-@mixin shop{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 10px;
-    height: 400px;
-    width:600px;
-  }
+
   @mixin card-item{
     width: 200px;
     height: 250px;
@@ -140,15 +129,96 @@ $island:'Island Moments', cursive;
     background-color: $silver;
     font-family: $ropa;
   }
-  
-  .women-shop{
+  .women-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    position: relative;
     background-image: $women-background-image;
-    @include shop;
+    transition: transform 0.5s ease;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+  
+    &:hover img {
+      transform: perspective(1000px) rotateY(10deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+  
+    &:hover::before {
+      opacity: 1;
+    }
   }
+  
   .mens-shop {
-   @include shop;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    position: relative;
     background-image: $mens-background-image;
+    transition: transform 0.5s ease;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+  
+    &:hover img {
+      transform: perspective(1000px) rotateY(10deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+  
+    &:hover::before {
+      opacity: 1;
+    }
   }
+  
   .loading-indicator {
     display: flex;
     justify-content: center;

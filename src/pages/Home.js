@@ -4,6 +4,7 @@ import CartIcon from "../images/ic--round-shopping-cart.svg";
 import StarIcon from "../images/women/ic--outline-star.svg";
 import Image1 from "../images/pexels-rfera-432059.jpg";
 import Image2 from "../images/pexels-godisable-jacob-226636-794062.jpg";
+import Image3 from "../images/wom2.jpg";
 import Footer from '../components/Footer';
 import DeliveryIcon from "../images/us/carbon--delivery.svg";
 import SupportIcon from "../images/us/mdi--customer-service.svg";
@@ -222,6 +223,9 @@ const Home = () => {
           </div>
           <div className="image">
             <img src={Image2} alt="dress" />
+          </div>
+          <div className="image">
+            <img src={Image3} alt="dress" />
           </div>
         </div>
       </div>
