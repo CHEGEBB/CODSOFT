@@ -39,6 +39,7 @@ $island:'Island Moments', cursive;
   @mixin us-icon{
     width: 50px;
     height: 50px;
+    margin-left: 120px;
   }
 
 
@@ -569,6 +570,21 @@ $island:'Island Moments', cursive;
 .DeliveryIcon img, .SupportIcon img,.DiscountIcon img,.SecurePaymentsIcon img{
   @include us-icon;
 }
+.DeliveryIcon img:hover,
+.SupportIcon img:hover,
+.DiscountIcon img:hover,
+.SecurePaymentsIcon img:hover {
+  animation: iconHover 0.5s infinite alternate;
+}
+
+@keyframes iconHover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
 .set-apart{
   h2{
     font-size: 25px;
@@ -576,5 +592,13 @@ $island:'Island Moments', cursive;
     margin-top: 20px;
     text-align: center;
     font-family: $ropa;
+  }
+  p{
+    font-size: 18px;
+    margin: 0;
+    color: $white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: $jost;
   }
 }
