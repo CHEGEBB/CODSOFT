@@ -221,6 +221,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="set-apart">
+      <h1>We are best known for</h1>
+
+      </div>
       <div className="footer">
       <Footer />
       </div>
