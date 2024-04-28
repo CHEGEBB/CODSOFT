@@ -72,6 +72,7 @@ $island:'Island Moments', cursive;
     background-color: $celestialOrange;
     color: $white;
     border: none;
+    border-radius: 8px;
     padding: 10px 20px;
     font-size: 1.2rem;
     cursor: pointer;
@@ -117,6 +118,7 @@ $island:'Island Moments', cursive;
   .home-intro h1 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: $celestialOrange;
   }
   
   .home-intro p {
@@ -131,6 +133,7 @@ $island:'Island Moments', cursive;
     gap: 20px;
     padding: 20px;
     background-color: $silver;
+    font-family: $ropa;
   }
   
   .women-shop{
@@ -218,7 +221,7 @@ $island:'Island Moments', cursive;
             color: $white;
             text-align: center;
             margin-top: 10px;
-            margin-left: 370px;
+            margin-left: 300px;
             width: 700px;
             font-family: $jost;
         }
