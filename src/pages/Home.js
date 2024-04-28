@@ -4,6 +4,7 @@ import CartIcon from "../images/ic--round-shopping-cart.svg";
 import StarIcon from "../images/women/ic--outline-star.svg";
 import Image1 from "../images/pexels-rfera-432059.jpg";
 import Image2 from "../images/pexels-godisable-jacob-226636-794062.jpg";
+import Footer from '../components/Footer';
 
 const images = [
   {
@@ -220,6 +221,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
