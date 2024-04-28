@@ -233,7 +233,7 @@ const Home = () => {
         <img src={DeliveryIcon} alt="Deliver" />
       </div>
         <h2>Free Delivery</h2>
-        <p>Free shipping on all orders over $50</p>
+        <p>Free shipping on all orders over $500</p>
       </div>
       <div className="support">
       <div className="SupportIcon">
