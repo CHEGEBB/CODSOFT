@@ -54,7 +54,9 @@ const App = () => {
       <div className="bar">
         <div className="cart">
           <img src={CartIcon} alt="Cart Icon" />
+          <div className="cart-content">
           <p>Cart</p>
+          </div>
         </div>
         <div className="wishlist">
           <img src={Wishlist} alt="Wishlist Icon" />

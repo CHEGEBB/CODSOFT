@@ -144,34 +144,6 @@ $island:'Island Moments', cursive;
     position: relative;
     background-image: $women-background-image;
     transition: transform 0.5s ease;
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-    }
-  
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      transition: opacity 0.5s ease;
-      opacity: 0;
-    }
-  
-    &:hover img {
-      transform: perspective(1000px) rotateY(10deg);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-  
-    &:hover::before {
-      opacity: 1;
-    }
   }
   
   .mens-shop {
@@ -189,34 +161,6 @@ $island:'Island Moments', cursive;
     position: relative;
     background-image: $mens-background-image;
     transition: transform 0.5s ease;
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-    }
-  
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      transition: opacity 0.5s ease;
-      opacity: 0;
-    }
-  
-    &:hover img {
-      transform: perspective(1000px) rotateY(10deg);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-  
-    &:hover::before {
-      opacity: 1;
-    }
   }
   
   .loading-indicator {
@@ -473,18 +417,23 @@ $island:'Island Moments', cursive;
     margin-bottom: 20px;
   
     h3 {
-      margin-top: 120px;
-      color: #2F4F4F;
+      margin-top:180px;
+      color:#141C27;
       font-family: $ropa;
+      font-size: 1.5rem;
+      background-color:rgba(255, 255, 255, 0.4);
+      width: 120px;
     }
   
     p {
       margin: 5px 0;
       color: #333;
-      font-family: $jost;
-      color: crimson;
-      font-weight: 700px;
-      margin-left: -90px;
+      font-family: $ropa;
+      color: #000;
+      font-weight: bold;
+      background-color:rgba(255, 255, 255, 0.4);
+      width: 170px;
+
     }
   
     button {
