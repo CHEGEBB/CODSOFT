@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Home.scss';
 import CartIcon from "../images/ic--round-shopping-cart.svg";
 import StarIcon from "../images/women/ic--outline-star.svg";
+import Image1 from "../images/pexels-rfera-432059.jpg";
+import Image2 from "../images/pexels-godisable-jacob-226636-794062.jpg";
 
 const images = [
   {
@@ -206,8 +208,16 @@ const Home = () => {
         </div>
       </div>
       <div className="about">
-        <h1>Elavate Your New Style With GlamourGellerie’s Wide range of fashion products </h1>
+        <h1>Elevate Your New Style With GlamourGellerie’s Wide range of fashion products </h1>
         <p>Step into GalmourGallerie, where fashion meets enchantment, and every corner whispers tales of elegance and style.</p>
+        <div className="image-container">
+          <div className="image">
+            <img src={Image1} alt="suit" />
+          </div>
+          <div className="image">
+            <img src={Image2} alt="dress" />
+          </div>
+        </div>
       </div>
     </div>
   );
