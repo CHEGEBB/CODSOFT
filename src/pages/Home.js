@@ -5,6 +5,10 @@ import StarIcon from "../images/women/ic--outline-star.svg";
 import Image1 from "../images/pexels-rfera-432059.jpg";
 import Image2 from "../images/pexels-godisable-jacob-226636-794062.jpg";
 import Footer from '../components/Footer';
+import DeliveryIcon from "../images/us/carbon--delivery.svg";
+import SupportIcon from "../images/us/mdi--customer-service.svg";
+import DiscountIcon from "../images/us/streamline--discount-percent-badge.svg";
+import SecurePaymentsIcon from "../images/us/ri--secure-payment-fill.svg";
 
 const images = [
   {
@@ -225,18 +229,30 @@ const Home = () => {
       <h1>We are best known for</h1>
       <div className="unique">
       <div className="free-delivery">
+      <div className="DeliveryIcon">
+        <img src={DeliveryIcon} alt="Deliver" />
+      </div>
         <h2>Free Delivery</h2>
         <p>Free shipping on all orders over $50</p>
       </div>
       <div className="support">
+      <div className="SupportIcon">
+        <img src={SupportIcon} alt="Support" />
+      </div>
         <h2>24/7 Customer Support</h2>
         <p>Our customer support team is available 24/7</p>
       </div>
       <div className="discount">
+      <div className="DiscountIcon">
+        <img src={DiscountIcon} alt="Discount" />
+      </div>
         <h2>Exclusive Discounts</h2>
         <p>Get exclusive discounts on your favorite products</p>
       </div>
       <div className="secure-payments">
+      <div className="SecurePaymentsIcon">
+        <img src={SecurePaymentsIcon} alt="Secure Payments" />
+      </div>
         <h2>Secure Payments</h2>
         <p>100% secure payment options</p>
       </div>
