@@ -489,7 +489,7 @@ $island:'Island Moments', cursive;
   }
   .about{
     background-color: #333;
-    height: 500px;
+    height: 590px;
     width: 100%;
   }
 .about {
@@ -499,12 +499,18 @@ $island:'Island Moments', cursive;
   h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: $celestialOrange;
+    font-family: $ropa;
+    width: 800px;
+    margin-left: 300px;
   }
 
   p {
-    font-size: 18px;
-    color: #666;
+    font-size: 20px;
+    color: #fff;
     margin-bottom: 40px;
+    font-family: $jost;
+
   }
 
   .image-container {
@@ -514,8 +520,8 @@ $island:'Island Moments', cursive;
     gap: 40px;
     margin-bottom: 40px;
     .image {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 360px;
       border-radius: 12px;
       overflow: hidden;
       position: relative;

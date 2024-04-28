@@ -208,6 +208,7 @@ const Home = () => {
         </div>
       </div>
       <div className="about">
+      <div className="rectangle"></div>
         <h1>Elevate Your New Style With GlamourGellerie’s Wide range of fashion products </h1>
         <p>Step into GalmourGallerie, where fashion meets enchantment, and every corner whispers tales of elegance and style.</p>
         <div className="image-container">
