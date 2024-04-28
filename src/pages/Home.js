@@ -223,6 +223,22 @@ const Home = () => {
       </div>
       <div className="set-apart">
       <h1>We are best known for</h1>
+      <div className="free-delivery">
+        <h2>Free Delivery</h2>
+        <p>Free shipping on all orders over $50</p>
+      </div>
+      <div className="support">
+        <h2>24/7 Customer Support</h2>
+        <p>Our customer support team is available 24/7</p>
+      </div>
+      <div className="discount">
+        <h2>Exclusive Discounts</h2>
+        <p>Get exclusive discounts on your favorite products</p>
+      </div>
+      <div className="secure-payments">
+        <h2>Secure Payments</h2>
+        <p>100% secure payment options</p>
+      </div>
 
       </div>
       <div className="footer">
