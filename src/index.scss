@@ -9,6 +9,10 @@ $special:#141C27;
 $background-image1: url("./images/pic2.jpg");
 $women-background-image: url("./images/wom2.jpg");
 $mens-background-image: url("./images/pic.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
 @mixin shop{
   display: flex;
   flex-direction: column;
@@ -130,6 +134,7 @@ body{
   background-color: $special;
   color: #fff;
   height: 100px;
+  font-family: $ropa;
 }
 
 .container {

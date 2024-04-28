@@ -41,9 +41,11 @@ $island:'Island Moments', cursive;
 .heading {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: $celestialOrange;
-    width: 300px;
+    color: #ffff;
+    width: 400px;
     margin-left: 100px;
+    font-family: $ropa;
+
   }
   
   .paragraph {
@@ -52,14 +54,18 @@ $island:'Island Moments', cursive;
     color: $white;
     width: 500px;
     margin-left: 400px;
+    display: none;
   }
   
   .colored-paragraph {
     font-size: 16px;
-    color: #00CED1;
+    color: darkblue;
     margin-bottom: 20px;
     width: 500px;
     margin-left: 400px;
+    font-family: $jost;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.2);
   }
   
   button {
