@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Jost:ital,wght@0,100..900;1,100..900&family=Ropa+Sans:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 $greyish:#555555;
 $celestialOrange:#FF6F61;
 $common-height:80px;
@@ -9,6 +9,10 @@ $special:#141C27;
 $silver: #C0C0C0;
 $women-background-image: url("../images/wom.jpg");
 $mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
 @mixin shop{
     display: flex;
     flex-direction: column;
