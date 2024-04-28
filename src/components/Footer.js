@@ -1,9 +1,10 @@
-// Footer.js
-
 import React from 'react';
 import FacebookIcon from "../images/us/uim--facebook.svg";
 import TwitterIcon from "../images/us/fa--twitter-square.svg";
 import InstagramIcon from "../images/us/teenyicons--instagram-solid.svg";
+import PaypalIcon from "../images/us/fontisto--paypal.svg";
+import VisaIcon from "../images/us/fontisto--visa.svg";
+import MastercardIcon from "../images/us/fontisto--mastercard.svg";
 import './Footer.scss';
 
 const Footer = () => {
@@ -30,6 +31,14 @@ const Footer = () => {
                         <a href="https://www.facebook.com/example" target="_blank" rel="noopener noreferrer"><img src={FacebookIcon} alt="Facebook Icon" /></a>
                         <a href="https://twitter.com/example" target="_blank" rel="noopener noreferrer"><img src={TwitterIcon} alt="Twitter Icon" /></a>
                         <a href="https://www.instagram.com/example/" target="_blank" rel="noopener noreferrer"><img src={InstagramIcon} alt="Instagram Icon" /></a>
+                    </div>
+                </div>
+                <div className="footer-section payment-methods">
+                    <h3>Payment Methods</h3>
+                    <div className="payment-icons">
+                        <img src={PaypalIcon} alt="Paypal Icon" />
+                        <img src={VisaIcon} alt="Visa Icon" />
+                        <img src={MastercardIcon} alt="Mastercard Icon" />
                     </div>
                 </div>
                 <div className="footer-section">
