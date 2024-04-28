@@ -169,6 +169,7 @@ const Home = () => {
       </div>
       <div className="featured">
         <h1>Featured Products</h1>
+        <p>These are some of the latest and most ordered items on glamourgallerie</p>
         <div className="products-row1">
           {products.slice(0, 4).map((product, idx) => (
             <div className={`product ${product.imageClass}`} key={idx}>

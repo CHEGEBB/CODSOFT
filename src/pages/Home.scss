@@ -361,6 +361,14 @@ $island:'Island Moments', cursive;
         font-family: $ropa;
       
       }
+      p{
+        font-size: 18px;
+        margin: 0;
+        color: $greyish;
+        text-align: center;
+        margin-top: 10px;
+        font-family: $jost;
+      }
   }
   .products-row1{
     display: flex;
@@ -401,6 +409,7 @@ $island:'Island Moments', cursive;
       font-family: $jost;
       color: crimson;
       font-weight: 700px;
+      margin-left: -90px;
     }
   
     button {
