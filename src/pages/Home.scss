@@ -574,7 +574,7 @@ $island:'Island Moments', cursive;
 .SupportIcon img:hover,
 .DiscountIcon img:hover,
 .SecurePaymentsIcon img:hover {
-  animation: iconHover 0.5s infinite alternate;
+  animation: iconHover 0.1s infinite alternate;
 }
 
 @keyframes iconHover {
