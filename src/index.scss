@@ -73,8 +73,23 @@ body{
     text-align: center;
     display: flex;
     flex-direction: row;
+    gap: 30px;
     justify-content: flex-end;
     height: $common-height;
+      h1{
+        font-family: $ropa;
+        font-size: 16px;
+        margin-top: 10px;
+      
+      }
+}
+.choice{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+    margin-right: 50px;
+
 }
 .search-container {
   position: relative;
@@ -207,4 +222,32 @@ body{
 
 .nav-link:hover {
   text-decoration: underline;
+}
+.cart{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.cart img{
+  height: 30px;
+  width: 30px;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition : transform 0.5s;
+    }
+}
+.wishlist{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.wishlist img{
+  height: 30px;
+  width: 30px;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition : transform 0.5s;
+    }
 }

@@ -52,16 +52,25 @@ const App = () => {
        
       </div>
       <div className="bar">
-        <div className="cart">
+      <div className="choice">
+      <div className="cart">
+        <div className="catcon">
           <img src={CartIcon} alt="Cart Icon" />
+        </div>
           <div className="cart-content">
-          <p>Cart</p>
+          <h1>Cart</h1>
           </div>
         </div>
         <div className="wishlist">
+        <div className="wishcon">
           <img src={Wishlist} alt="Wishlist Icon" />
-          <p>Wishlist</p>
         </div>
+        <div className="wishlist-content">
+           <h1>Wishlist</h1>
+        </div>
+        </div>
+      </div>
+       
       </div>
       <div className="search-container">
           <input type="text" className="input-field" placeholder="Search for products here..." />
