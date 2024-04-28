@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import './Home.scss'
-import pic2 from '../images/pic2.jpg';
-import wom2 from '../images/pic3.jpg';
-import sneakers3 from '../images/js.jfif';
+import './Home.scss';
 import CartIcon from "../images/ic--round-shopping-cart.svg";
+import StarIcon from "../images/women/ic--outline-star.svg";
 
 const images = [
   {
-    src: pic2,
+    src: require('../images/pic2.jpg'),
     text: 'First Image',
     heading: 'Discover Your Style',
     paragraph: 'Explore our latest collection and find the perfect outfit that reflects your unique personality',
     buttonText: 'Shop Now'
   },
   {
-    src: wom2,
+    src: require('../images/pic3.jpg'),
     text: 'Second Image',
     heading: 'Elevate Your Wardrobe',
     paragraph: 'Revamp your closet with our exclusive selection of trendy apparel',
     buttonText: 'Shop Now'
   },
   {
-    src: sneakers3,
+    src: require('../images/js.jfif'),
     text: 'Third Image',
     heading: 'Step into Comfort',
     paragraph: 'Experience unparalleled comfort and style with our premium footwear collection',
@@ -31,29 +29,60 @@ const images = [
 
 const products = [
   {
-    image:"../images/shirt.jpg",
-    name: "Product 1",
-    price: "$99.99"
+    imageClass: "product-image-1", 
+    name: "Men Suits",
+    price: "$399.99",
+    originalPrice: "$499.99",
+    rating: 4
   },
   {
-    name: "Product 2",
-    price: "$99.99"
+    imageClass: "product-image-2", 
+    name: "Floral Dress",
+    price: "$49.99",
+    originalPrice: "$59.99",
+    rating: 5
   },
   {
-    name: "Product 3",
-    price: "$99.99"
+    imageClass: "product-image-3", 
+    name: "Running Shoes",
+    price: "$79.99",
+    originalPrice: "$99.99",
+    rating: 4.5
   },
   {
-    name: "Product 4",
-    price: "$99.99"
+    imageClass: "product-image-4",
+    name: "Luxury Watch",
+    price: "$199.99",
+    originalPrice: "$249.99",
+    rating: 4
   },
   {
-    name: "Product 5",
-    price: "$99.99"
+    imageClass: "product-image-5",
+    name: "Leather Bag",
+    price: "$149.99",
+    originalPrice: "$199.99",
+    rating: 5
   },
   {
-    name: "Product 6",
-    price: "$99.99"
+    imageClass: "product-image-6",
+    name: "Fedora Hat",
+    price: "$39.99",
+    originalPrice: "$49.99",
+    rating: 4.5
+  },
+  {
+    imageClass: "product-image-7",
+    name: "Sunglasses",
+    price: "$19.99",
+    originalPrice: "$29.99",
+    rating: 3.5
+  },
+  {
+    imageClass: "product-image-8",
+    name: "Leather Belt",
+    price: "$29.99",
+    originalPrice: "$39.99",
+    rating: 4
   }
 ];
 
@@ -141,10 +170,15 @@ const Home = () => {
       <div className="featured">
         <h1>Featured Products</h1>
         <div className="products-row1">
-          {products.slice(0, 6).map((product, idx) => (
-            <div className="product" key={idx}>
+          {products.slice(0, 4).map((product, idx) => (
+            <div className={`product ${product.imageClass}`} key={idx}>
               <h3>{product.name}</h3>
-              <p>{product.price}</p>
+              <p><del>{product.originalPrice}</del> {product.price}</p>
+              <div className="rating">
+                {Array.from({ length: product.rating }, (_, index) => (
+                  <img key={index} src={StarIcon} alt="Star Icon" />
+                ))}
+              </div>
               <button>
                 <img src={CartIcon} alt="Cart Icon" />
                 Add to Cart
@@ -153,10 +187,15 @@ const Home = () => {
           ))}
         </div>
         <div className="products-row2">
-          {products.slice(6, 12).map((product, idx) => (
-            <div className="product" key={idx}>
+          {products.slice(4, 8).map((product, idx) => (
+            <div className={`product ${product.imageClass}`} key={idx}>
               <h3>{product.name}</h3>
-              <p>{product.price}</p>
+              <p><del>{product.originalPrice}</del> {product.price}</p>
+              <div className="rating">
+                {Array.from({ length: product.rating }, (_, index) => (
+                  <img key={index} src={StarIcon} alt="Star Icon" />
+                ))}
+              </div>
               <button>
                 <img src={CartIcon} alt="Cart Icon" />
                 Add to Cart

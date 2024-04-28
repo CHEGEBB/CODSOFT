@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Jost:ital,wght@0,100..900;1,100..900&family=Ropa+Sans:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 $greyish:#555555;
 $celestialOrange:#FF6F61;
 $common-height:80px;
@@ -25,6 +26,11 @@ $mens-background-image: url("../images/style2.jpg");
     height: 250px;
     background-color: crimson;
     margin-top: 20px;
+  }
+  @mixin product-images{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
 
@@ -351,7 +357,8 @@ $mens-background-image: url("../images/style2.jpg");
     margin-bottom: 20px;
   
     h3 {
-      margin-top: 0;
+      margin-top: 120px;
+      color: #00CED1;
     }
   
     p {
@@ -362,7 +369,7 @@ $mens-background-image: url("../images/style2.jpg");
       margin-top: 10px;
       padding: 5px 10px;
       font-size: 14px;
-      background-color: #007bff;
+      background-color: $celestialOrange;
       color: white;
       border: none;
       border-radius: 3px;
@@ -391,5 +398,47 @@ $mens-background-image: url("../images/style2.jpg");
   .product {
     flex: 0 0 auto;
     margin-right: 20px;
+    width: 250px;
+    height: 350px;
+    border: 2px solid $celestialOrange;
   }
+  .product-image-1 {
+    background-image: url('../images/suit3.jpg');
+    @include product-images;
+  }
+  
+  .product-image-2 {
+    background-image: url('../images/women/dress3.jpg');
+    @include product-images;
+  }
+  
+  .product-image-3 {
+    background-image: url('../images/shoesrun.jpeg');
+    @include product-images;
+  }
+  
+  .product-image-4 {
+    background-image: url('../images/wrist.jpeg');
+    @include product-images;
+  }
+  
+  .product-image-5 {
+    background-image: url('../images/leather2.jpg');
+    @include product-images;
+  }
+  
+  .product-image-6 {
+    background-image: url('../images/fedora.jpeg');
+    @include product-images;
+  }
+  .product-image-7 {
+    background-image: url('../images/sunglasses.jpeg');
+    @include product-images;
+  }
+  .product-image-8 {
+    background-image: url('../images/belts.jpg');
+    @include product-images;
+  }
+ 
+
   
