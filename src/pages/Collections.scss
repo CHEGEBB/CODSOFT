@@ -14,6 +14,7 @@
 }
 
 .item-container {
+    position: relative;
     width: calc(30.33% - 20px);
     margin-bottom: 20px;
     margin-left: 60px;
@@ -26,7 +27,6 @@
 .item-image img {
     width: 100%;
     height: auto;
-    /* Add your item image img styles here */
 }
 
 .item-overlay {
@@ -47,23 +47,45 @@
 .item-container:hover .item-overlay {
     opacity: 1;
 }
+.wish img {
+    width: 20px;
+    height: 20px;
 
-.wishlist-icon img,
+}
 .add-to-cart-btn img {
     width: 20px;
     height: 20px;
 }
 
-.add-to-cart-btn {
-    /* Add your add to cart button styles here */
+.discounted-price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: crimson;
+    width: 30px;
+    height: 20px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.previous-price {
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+
+.current-price {
+    font-weight: bold;
 }
 
 .item-info {
     /* Add your item info styles here */
-}
-
-.item-price {
-    /* Add your item price styles here */
 }
 
 .item-rating {
