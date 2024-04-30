@@ -1,7 +1,6 @@
 .collections-page {
     display: flex;
 }
-
 .side-bar {
     width: 200px;
 }
@@ -11,7 +10,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 20px;
-    width: calc(100% - 200px); /* Adjust the width */
+    width: calc(100% - 200px);
 }
 
 .item-container {
@@ -82,15 +81,4 @@
 
 .current-price {
     font-weight: bold;
-}
-
-/* Ensure each row has exactly three items */
-.collections-items > *:nth-child(3n+1) {
-    grid-column: span 3;
-}
-
-.collections-items > *:nth-child(3n+2),
-.collections-items > *:nth-child(3n+3) {
-    grid-column: span 3;
-    margin-top: 20px; /* Adjust the margin between rows */
 }

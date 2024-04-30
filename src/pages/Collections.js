@@ -262,25 +262,27 @@ const Collections = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Divide items into groups of three
+  const groupedItems = [];
+  for (let i = 0; i < items.length; i += 3) {
+    groupedItems.push(items.slice(i, i + 3));
+  }
+
   return (
     <div className="collections-page">
       <div className="side-bar">
         <LeftSideBar />
       </div>
       <div className="collections-items">
-        {Array.from({ length: 5 }).map((_, rowIndex) => (
-          <div className="row" key={`row-${rowIndex}`}>
-            {items.slice(rowIndex * 3, rowIndex * 3 + 3).map((item) => (
+        {groupedItems.map((row, rowIndex) => (
+          <div className="row" key={rowIndex}>
+            {row.map((item) => (
               <div className="item-container" key={item.id}>
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
                     <div className="wish">
-                      <img
-                        src={item.wishlistIconPath}
-                        alt="Wishlist"
-                        className="wishlist-icon"
-                      />
+                      <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
                     <button className="add-to-cart-btn">
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
@@ -296,20 +298,18 @@ const Collections = () => {
                     <span className="current-price">${item.discountedPrice}</span>
                   </div>
                   <div className="item-rating">
-                    <div className="item-rating">
-                      {Array.from({ length: item.rating }).map((_, index) => (
-                        <span
-                          key={index}
-                          className="star-icon"
-                          style={{
-                            color: "hsla(45, 100%, 50%, 1)",
-                            fontSize: "1.5em"
-                          }}
-                        >
-                          ★
-                        </span>
-                      ))}
-                    </div>
+                    {Array.from({ length: item.rating }).map((_, index) => (
+                      <span
+                        key={index}
+                        className="star-icon"
+                        style={{
+                          color: "hsla(45, 100%, 50%, 1)",
+                          fontSize: "1.5em"
+                        }}
+                      >
+                        ★
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -319,6 +319,6 @@ const Collections = () => {
       </div>
     </div>
   );
- };
+};
 
 export default Collections;
