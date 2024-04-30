@@ -1,14 +1,3 @@
-$greyish:#555555;
-$celestialOrange:#FF6F61;
-$common-height:80px;
-$placeholder-color: #999;
-$frosted-glass: rgba(255, 255, 255, 0.5);
-$white: #fff;
-$special:#141C27;
-$jost: 'Jost', sans-serif;
-$rubik: 'Rubik', sans-serif;
-$ropa: 'Ropa Sans', sans-serif;
-$island:'Island Moments', cursive;
 .collections-page {
     display: flex;
 }
@@ -18,18 +7,16 @@ $island:'Island Moments', cursive;
 }
 
 .collections-items {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    // width: calc(100% - 200px);
     margin-top: 20px;
+    width: calc(100% - 200px); /* Adjust the width */
 }
 
 .item-container {
     position: relative;
-    width:300px;
     margin-bottom: 20px;
-    margin-left: 60px;
 }
 
 .item-image {
@@ -59,11 +46,12 @@ $island:'Island Moments', cursive;
 .item-container:hover .item-overlay {
     opacity: 1;
 }
+
 .wish img {
     width: 30px;
     height: 30px;
-
 }
+
 .add-to-cart-btn img {
     width: 20px;
     height: 20px;
@@ -96,10 +84,13 @@ $island:'Island Moments', cursive;
     font-weight: bold;
 }
 
-.item-info {
-    /* Add your item info styles here */
+/* Ensure each row has exactly three items */
+.collections-items > *:nth-child(3n+1) {
+    grid-column: span 3;
 }
 
-.item-rating {
-    /* Add your item rating styles here */
+.collections-items > *:nth-child(3n+2),
+.collections-items > *:nth-child(3n+3) {
+    grid-column: span 3;
+    margin-top: 20px; /* Adjust the margin between rows */
 }
