@@ -97,6 +97,7 @@ const Collections = () => {
               </div>
             </div>
             <div className="item-info">
+                <div className="item-name">{item.name}</div>
               <div className="price-container">
                 <span className="previous-price">${item.price}</span>
                 <span className="current-price">${item.discountedPrice}</span>

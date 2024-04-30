@@ -8,6 +8,7 @@ $special: #141C27;
 $jost: 'Jost', sans-serif;
 $ropa: 'Ropa Sans', sans-serif;
 $island: 'Island Moments', cursive;
+$Rubik: 'Rubik', sans-serif;
 
 .sidebar {
   width: 250px;
@@ -63,17 +64,22 @@ $island: 'Island Moments', cursive;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
+  font-family: $jost;
+  color: $special;
+  font-weight: 500;
 
   .filter-item {
     margin-bottom: 15px;
 
     h4 {
       margin-bottom: 5px;
+      font-family: $ropa;
+      color: crimson;
     }
 
     .square-radio {
       display: flex;
-      align-items: center; // Center vertically
+      align-items: center; 
       margin-bottom: 5px;
 
       input[type="radio"] {
