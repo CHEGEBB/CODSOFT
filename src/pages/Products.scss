@@ -14,8 +14,10 @@ $island:'Island Moments', cursive;
 @mixin product-cards{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 90px;
     margin-top: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin items-card{
@@ -26,6 +28,7 @@ $island:'Island Moments', cursive;
     height: 400px;
     background-color: $frosted-glass;
     border-radius: 10px;
+    border: 1px solid #8FBC8F;
     padding: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
@@ -61,5 +64,23 @@ $island:'Island Moments', cursive;
     @include items-card;
 }
 .suits{
+    @include items-card;
+}
+.hats{
+    @include items-card;
+}
+.skirts{
+    @include items-card;
+}
+.shorts{
+    @include items-card;
+}
+.dresses{
+    @include items-card;
+}
+.bags{
+    @include items-card;
+}
+.accessories{
     @include items-card;
 }

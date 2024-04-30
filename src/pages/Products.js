@@ -1,5 +1,6 @@
 import React from 'react';
 import '../pages/Products.scss';
+import Footer from '../components/Footer';
 
 const Products = () => {
     return (
@@ -16,7 +17,7 @@ const Products = () => {
                 <button>Buy Now</button>
             </div>
 
-            <div className="shoes">
+            <div className="shoes-prod">
                 <h2>Shoes</h2>
                 <p>Our shoes are made from the finest leather in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
                 <button>Buy Now</button>
@@ -34,7 +35,7 @@ const Products = () => {
                 <p>See our wide array of hoodies</p>
                 <button>Buy Now</button>
                 </div>
-                <div className="dresses">
+                <div className="dresses-prod">
                 <h2>Dresses</h2>
                 <p>
                     At our store, we have a wide array of dresses ranging from casual to formal. Our dresses are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.
@@ -43,7 +44,7 @@ const Products = () => {
                 </div>
             </div>
             <div className="products-row-three">
-            <div className="accessories">
+            <div className="accessories-prod">
                 <h2>Accessories</h2>
                 <p>Our accessories are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
                 <button>Buy Now</button>
@@ -77,6 +78,9 @@ const Products = () => {
                 <button>Buy Now</button>
             </div>
             </div>
+            <div className="footer">
+            <Footer />
+        </div>
         </div>
     );
 }
