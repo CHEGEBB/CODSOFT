@@ -9,9 +9,9 @@ const Products = () => {
         {
             id: 1,
             images: [
-                require("../images/webp/shirt1.webp"),
+                require("../images/webp/c1.webp"),
                 require("../images/webp/shirt2.webp"),
-                require("../images/webp/shirt3.webp"),
+                require("../images/webp/a6.webp"),
                 require("../images/webp/a5.webp")
             ],
             title: "T-Shirts",
