@@ -108,10 +108,10 @@ const Products = () => {
         {
             id: 10,
             images: [
-                "https://example.com/jacket1.jpg",
-                "https://example.com/jacket2.jpg",
-                "https://example.com/jacket3.jpg",
-                "https://example.com/jacket4.jpg"
+               require("../images/jacket1.jpg"),
+                require("../images/jacket2.jpg"),
+                require("../images/jacket3.jpg"),
+                require("../images/jacket4.jpg")
             ],
             title: "Jackets",
             desc: "Our jackets are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
