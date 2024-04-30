@@ -1,0 +1,71 @@
+.collections-page {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+}
+
+.collections-items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: calc(100% - 200px);
+}
+
+.item-container {
+    width: calc(30.33% - 20px);
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.item-image {
+    position: relative;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+    /* Add your item image img styles here */
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item-container:hover .item-overlay {
+    opacity: 1;
+}
+
+.wishlist-icon img,
+.add-to-cart-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.add-to-cart-btn {
+    /* Add your add to cart button styles here */
+}
+
+.item-info {
+    /* Add your item info styles here */
+}
+
+.item-price {
+    /* Add your item price styles here */
+}
+
+.item-rating {
+    /* Add your item rating styles here */
+}
