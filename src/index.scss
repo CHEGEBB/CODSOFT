@@ -36,7 +36,6 @@ $island:'Island Moments', cursive;
 body{
   // overflow-y: scroll;
   overflow-x: hidden;
-  // cursor: none;
 }
 .phone,.email,.my-account{
   display: flex;
@@ -170,6 +169,7 @@ body{
   color: #fff;
   height: 100px;
   font-family: $ropa;
+  font-size: 22px;
 }
 
 .container {
@@ -177,6 +177,7 @@ body{
   flex-direction: row;
   align-items: center;
   font-size: 22px;
+  text-decoration: none;
 }
 .container2{
   display: flex;
@@ -197,7 +198,7 @@ body{
 .navbar-brand {
   text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 25px;
 }
 
 .navbar-nav {
@@ -215,6 +216,7 @@ body{
 
 .nav-item {
   margin-right: 15px;
+  text-decoration: none;
 }
 
 .nav-link {
@@ -224,7 +226,8 @@ body{
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: crimson;
 }
 .cart{
   display: flex;
