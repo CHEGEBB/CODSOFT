@@ -75,8 +75,8 @@ const Products = () => {
         {
             id: 7,
             images: [
-               require("../images/ses1.jpg"),
-                require("../images/ses2.avif"),
+               require("../images/ses5.jpg"),
+                require("../images/ses6.jpg"),
                 require("../images/ses3.jpg"),
                 require("../images/ses4.avif")
             ],
@@ -86,10 +86,10 @@ const Products = () => {
         {
             id: 8,
             images: [
-                "../images/airmaxplus.jfif",
-                "https://example.com/bag2.jpg",
-                "https://example.com/bag3.jpg",
-                "https://example.com/bag4.jpg"
+                require("../images/bag2.avif"),
+                require("../images/bag3.jpg"),
+                require("../images/bag4.jpg"),
+                require("../images/bag5.jpg")
             ],
             title: "Bags",
             desc: "Our bags are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
