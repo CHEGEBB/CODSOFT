@@ -9,10 +9,10 @@ const Products = () => {
         {
             id: 1,
             images: [
-                "../images/webp/shirt1.webp",
-                "../images/webp/shirt2.webp",
-                "../images/webp/shirt3.webp",
-                "../images/webp/shirt4.webp"
+                require("../images/webp/shirt1.webp"),
+                require("../images/webp/shirt2.webp"),
+                require("../images/webp/shirt3.webp"),
+                require("../images/webp/shirt4.webp")
             ],
             title: "T-Shirts",
             desc: "Our T-Shirts are made from the finest cotton in the world. They are soft, comfortable, and durable. They are available in a variety of colors and sizes."
@@ -20,10 +20,8 @@ const Products = () => {
         {
             id: 2,
             images: [
-                "https://example.com/suit1.jpg",
-                "https://example.com/suit2.jpg",
-                "https://example.com/suit3.jpg",
-                "https://example.com/suit4.jpg"
+               
+                
             ],
             title: "Suits",
             desc: "We sell high-class suits that are made from the finest materials. They are available in a variety of colors and sizes."
@@ -31,10 +29,10 @@ const Products = () => {
         {
             id: 3,
             images: [
-                "https://example.com/shoe1.jpg",
-                "https://example.com/shoe2.jpg",
-                "https://example.com/shoe3.jpg",
-                "https://example.com/shoe4.jpg"
+                require("../images/air-jordan-5-anthracite-release-date-5.jpg"),
+                require("../images/airmax2.png"),
+                require("../images/jordans2.png"),
+                require("../images/jorfans3.jpg")
             ],
             title: "Shoes",
             desc: "Our shoes are made from the finest leather in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
@@ -86,7 +84,7 @@ const Products = () => {
         {
             id: 8,
             images: [
-                "https://example.com/bag1.jpg",
+                "../images/airmaxplus.jfif",
                 "https://example.com/bag2.jpg",
                 "https://example.com/bag3.jpg",
                 "https://example.com/bag4.jpg"

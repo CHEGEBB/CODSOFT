@@ -85,10 +85,8 @@ $island:'Island Moments', cursive;
 //     @include items-card;
 // }
 .products-page {
-    // Add styles for the products page container
-  
     .product-card {
-      width: calc(33.33% - 20px); // Adjust the width to fit three cards per row with some margin
+      width: calc(33.33% - 20px);
       margin: 10px;
       padding: 20px;
       border: 1px solid #ccc;
@@ -97,7 +95,7 @@ $island:'Island Moments', cursive;
       transition: transform 0.3s ease;
   
       &:hover {
-        transform: translateY(-5px); // Add a slight hover effect
+        transform: translateY(-5px);
       }
   
       .product-images {
@@ -112,7 +110,7 @@ $island:'Island Moments', cursive;
           transition: transform 0.3s ease;
   
           &:hover {
-            transform: scale(1.1); // Add a zoom effect on hover
+            transform: scale(1.1);
           }
         }
       }
@@ -149,18 +147,20 @@ $island:'Island Moments', cursive;
       }
     }
   
-    // Media query for smaller screens
     @media (max-width: 768px) {
       .product-card {
         width: calc(50% - 20px);
       }
     }
   
-    // Media query for even smaller screens
     @media (max-width: 480px) {
       .product-card {
         width: 100%;
       }
     }
   }
-  
+  .products-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
