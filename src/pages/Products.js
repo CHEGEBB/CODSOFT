@@ -12,7 +12,7 @@ const Products = () => {
                 require("../images/webp/shirt1.webp"),
                 require("../images/webp/shirt2.webp"),
                 require("../images/webp/shirt3.webp"),
-                require("../images/webp/shirt4.webp")
+                require("../images/webp/a5.webp")
             ],
             title: "T-Shirts",
             desc: "Our T-Shirts are made from the finest cotton in the world. They are soft, comfortable, and durable. They are available in a variety of colors and sizes."
@@ -77,7 +77,7 @@ const Products = () => {
             images: [
                require("../images/ses5.jpg"),
                 require("../images/ses6.jpg"),
-                require("../images/ses3.jpg"),
+                require("../images/ses7.jpg"),
                 require("../images/ses4.avif")
             ],
             title: "Accessories",
@@ -97,10 +97,10 @@ const Products = () => {
         {
             id: 9,
             images: [
-                "https://example.com/hat1.jpg",
-                "https://example.com/hat2.jpg",
-                "https://example.com/hat3.jpg",
-                "https://example.com/hat4.jpg"
+                require("../images/hat1.jpg"),
+                require("../images/hat2.jpg"),
+                require("../images/hat3.jpg"),
+                require("../images/hat4.jpg")
             ],
             title: "Hats",
             desc: "Our hats are made from the finest materials in the world. They are comfortable, durable, and stylish"
