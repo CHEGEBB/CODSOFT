@@ -13,8 +13,8 @@ const LeftSideBar = () => {
         setAvailability(event.target.value);
     };
 
-    const handlePriceRangeChange = (event, newValue) => {
-        setPriceRange(newValue);
+    const handlePriceRangeChange = (event) => {
+        setPriceRange(event.target.value);
     };
 
     const handleProductTypeChange = (event) => {
@@ -35,15 +35,6 @@ const LeftSideBar = () => {
 
     return (
         <div className="sidebar">
-            <div className="categories">
-                <h3>Categories</h3>
-                <ul>
-                    <li>Men</li>
-                    <li>Women</li>
-                    <li>Deals and Discounts</li>
-                    <li>Latest</li>
-                </ul>
-            </div>
             <div className="filters">
                 <h3>Filter By</h3>
                 <div className="filter-item">
@@ -63,40 +54,55 @@ const LeftSideBar = () => {
                 </div>
                 <div className="filter-item">
                     <h4>Filter By Price</h4>
-                    {/* Add your slider component for price range */}
                     <input type="range" min="0" max="100" value={priceRange} onChange={handlePriceRangeChange} />
                 </div>
                 <div className="filter-item">
                     <h4>Product Type</h4>
-                    {/* Add your select component for product type */}
-                    <select value={productType} onChange={handleProductTypeChange}>
-                        <option value="">Select Product Type</option>
-                        {/* Add options dynamically based on available product types */}
-                    </select>
+                    <label>
+                        <input type="radio" name="productType" value="t-shirts" checked={productType === 't-shirts'} onChange={handleProductTypeChange} />
+                        T-Shirts
+                    </label>
+                    <label>
+                        <input type="radio" name="productType" value="shirts" checked={productType === 'shirts'} onChange={handleProductTypeChange} />
+                        Shirts
+                    </label>
+                    {/* Add other product types as needed */}
                 </div>
                 <div className="filter-item">
                     <h4>Brand</h4>
-                    {/* Add your select component for brand */}
-                    <select value={brand} onChange={handleBrandChange}>
-                        <option value="">Select Brand</option>
-                        {/* Add options dynamically based on available brands */}
-                    </select>
+                    <label>
+                        <input type="radio" name="brand" value="brand1" checked={brand === 'brand1'} onChange={handleBrandChange} />
+                        Brand 1
+                    </label>
+                    <label>
+                        <input type="radio" name="brand" value="brand2" checked={brand === 'brand2'} onChange={handleBrandChange} />
+                        Brand 2
+                    </label>
+                    {/* Add other brands as needed */}
                 </div>
                 <div className="filter-item">
                     <h4>Color</h4>
-                    {/* Add your select component for color */}
-                    <select value={color} onChange={handleColorChange}>
-                        <option value="">Select Color</option>
-                        {/* Add options dynamically based on available colors */}
-                    </select>
+                    <label>
+                        <input type="radio" name="color" value="red" checked={color === 'red'} onChange={handleColorChange} />
+                        Red
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="blue" checked={color === 'blue'} onChange={handleColorChange} />
+                        Blue
+                    </label>
+                    {/* Add other colors as needed */}
                 </div>
                 <div className="filter-item">
                     <h4>Size</h4>
-                    {/* Add your select component for size */}
-                    <select value={size} onChange={handleSizeChange}>
-                        <option value="">Select Size</option>
-                        {/* Add options dynamically based on available sizes */}
-                    </select>
+                    <label>
+                        <input type="radio" name="size" value="small" checked={size === 'small'} onChange={handleSizeChange} />
+                        Small
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="medium" checked={size === 'medium'} onChange={handleSizeChange} />
+                        Medium
+                    </label>
+                    {/* Add other sizes as needed */}
                 </div>
             </div>
         </div>

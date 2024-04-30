@@ -109,7 +109,7 @@ const Collections = () => {
                       className="star-icon"
                       style={{
                         color: "hsla(45, 100%, 50%, 1)",
-                        fontSize: "1.2em"
+                        fontSize: "1.5em"
                       }}
                     >
                       ★
