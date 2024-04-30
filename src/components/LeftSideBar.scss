@@ -1,0 +1,37 @@
+.sidebar {
+    width: 250px; /* Adjust as needed */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .categories {
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .filter-item {
+    margin-bottom: 15px;
+  }
+  
+  .filter-item h4 {
+    margin-bottom: 5px;
+  }
+  
+  .filter-item input[type="radio"],
+  .filter-item input[type="range"],
+  .filter-item select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  .filter-item select {
+    cursor: pointer;
+  }
+  
