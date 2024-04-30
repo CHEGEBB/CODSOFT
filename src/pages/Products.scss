@@ -18,6 +18,21 @@ $island:'Island Moments', cursive;
     margin-top: 20px;
 }
 
+@mixin items-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    height: 400px;
+    background-color: $frosted-glass;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
 .products-row-one{
     @include product-cards;
 }
@@ -29,4 +44,22 @@ $island:'Island Moments', cursive;
 }
 .products-row-four{
     @include product-cards;
+}
+.t-shirts{
+    @include items-card;
+}
+.hoodies{
+    @include items-card;
+}
+.jackets{
+    @include items-card;
+}
+.trousers{
+    @include items-card;
+}
+.shoes{
+    @include items-card;
+}
+.suits{
+    @include items-card;
 }
