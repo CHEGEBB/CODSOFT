@@ -52,6 +52,7 @@ const LeftSideBar = () => {
             <div className="filters">
                 <h3>Filter By</h3>
                 <div className="filter-item">
+                <h4>Availability</h4>
                 <div className="radio-group">
                 <label className="square-radio">
                             <input type="radio" name="availability" value="inStock" checked={availability === 'inStock'} onChange={handleAvailabilityChange} />
