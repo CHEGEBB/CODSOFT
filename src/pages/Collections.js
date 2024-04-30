@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LeftSideBar from '../components/LeftSideBar';
 import './Collections.scss';
-import wishlistIcon from '../images/icon-park-solid--love-and-help.svg';
+import wishlistIcon from '../images/us/icon-park-outline--love-and-help.svg';
 import cartIcon from '../images/ic--round-shopping-cart.svg';
 
 const Collections = () => {
@@ -9,7 +9,8 @@ const Collections = () => {
         {
             id: 1,
             name: 'Item 1',
-            price: '$10',
+            price: 10,
+            discountedPrice: 8,
             rating: 4,
             images: [
                 require('../images/webp/b1.webp'),
@@ -18,13 +19,14 @@ const Collections = () => {
                 require('../images/acc4.jpg')
             ],
             wishlistIconPath: wishlistIcon,
-            addToCartIconPath:cartIcon,
+            addToCartIconPath: cartIcon,
             currentImageIndex: 0
         },
         {
             id: 2,
             name: 'Item 2',
-            price: '$15',
+            price: 15,
+            discountedPrice: 12,
             rating: 3,
             images: [
                 require('../images/webp/a5.webp'),
@@ -32,23 +34,24 @@ const Collections = () => {
                 require('../images/webp/suit3.webp'),
                 require('../images/webp/b5.webp')
             ],
-            wishlistIconPath: 'wishlist_icon.svg',
-            addToCartIconPath: 'cart_icon.svg',
+            wishlistIconPath: wishlistIcon,
+            addToCartIconPath: cartIcon,
             currentImageIndex: 0
         },
         {
             id: 3,
             name: 'Item 3',
-            price: '$20',
+            price: 20,
+            discountedPrice: 16,
             rating: 5,
             images: [
                 require('../images/webp/b3.webp'),
                 require('../images/webp/c5.webp'),
-                require('../images/webp/a3.webp'),  
+                require('../images/webp/a3.webp'),
                 require('../images/webp/suit4.webp')
             ],
-            wishlistIconPath: 'wishlist_icon.svg',
-            addToCartIconPath: 'cart_icon.svg',
+            wishlistIconPath: wishlistIcon,
+            addToCartIconPath: cartIcon,
             currentImageIndex: 0
         },
         // Add more items as needed
@@ -77,15 +80,22 @@ const Collections = () => {
                         <div className="item-image">
                             <img src={item.images[item.currentImageIndex]} alt={item.name} />
                             <div className="item-overlay">
-                                <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
+                            <div className="wish">
+                            <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
+                            </div>
+                                
                                 <button className="add-to-cart-btn">
                                     <img src={item.addToCartIconPath} alt="Add to Cart" />
                                     Add to Cart
                                 </button>
+                                <div className="discounted-price">{item.discountedPrice}</div>
                             </div>
                         </div>
                         <div className="item-info">
-                            <span className="item-price">{item.price}</span>
+                            <div className="price-container">
+                                <span className="previous-price">${item.price}</span>
+                                <span className="current-price">${item.discountedPrice}</span>
+                            </div>
                             <div className="item-rating">
                                 {/* Render star rating here */}
                             </div>
