@@ -53,10 +53,10 @@ const Products = () => {
         {
             id: 5,
             images: [
-                "https://example.com/hoodie1.jpg",
-                "https://example.com/hoodie2.jpg",
-                "https://example.com/hoodie3.jpg",
-                "https://example.com/hoodie4.jpg"
+                require("../images/hodie1.avif"),
+                require("../images/hoodie7.jpg"),
+                require("../images/hoodie3.jpg"),
+                require("../images/hoodie6.jpg")
             ],
             title: "Hoodies",
             desc: "See our wide array of hoodies"
@@ -64,10 +64,10 @@ const Products = () => {
         {
             id: 6,
             images: [
-                "https://example.com/dress1.jpg",
-                "https://example.com/dress2.jpg",
-                "https://example.com/dress3.jpg",
-                "https://example.com/dress4.jpg"
+                require("../images/dress2.jpg"),
+                require("../images/dress3.jpg"),
+                require("../images/dress4.jpg"),
+                require("../images/dress5.jpg")
             ],
             title: "Dresses",
             desc: "At our store, we have a wide array of dresses ranging from casual to formal. Our dresses are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
