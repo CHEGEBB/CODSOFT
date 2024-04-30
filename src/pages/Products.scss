@@ -60,7 +60,7 @@ $island:'Island Moments', cursive;
 .trousers{
     @include items-card;
 }
-.shoes{
+.shoes-prod{
     @include items-card;
 }
 .suits{
@@ -75,12 +75,12 @@ $island:'Island Moments', cursive;
 .shorts{
     @include items-card;
 }
-.dresses{
+.dresses-prod{
     @include items-card;
 }
 .bags{
     @include items-card;
 }
-.accessories{
+.accessories-prod{
     @include items-card;
 }
