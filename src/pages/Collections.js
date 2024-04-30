@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LeftSideBar from '../components/LeftSideBar';
 
-const Checkout = () => {
+const Collections = () => {
     const [items, setItems] = useState([
         {
             id: 1,
@@ -77,4 +77,4 @@ const Checkout = () => {
     );
 }
 
-export default Checkout;
+export default Collections;
