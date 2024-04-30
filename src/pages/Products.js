@@ -75,10 +75,10 @@ const Products = () => {
         {
             id: 7,
             images: [
-                "https://example.com/accessory1.jpg",
-                "https://example.com/accessory2.jpg",
-                "https://example.com/accessory3.jpg",
-                "https://example.com/accessory4.jpg"
+               require("../images/ses1.jpg"),
+                require("../images/ses2.avif"),
+                require("../images/ses3.jpg"),
+                require("../images/ses4.avif")
             ],
             title: "Accessories",
             desc: "Our accessories are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
