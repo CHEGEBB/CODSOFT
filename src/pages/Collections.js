@@ -53,8 +53,57 @@ const Collections = () => {
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
+    },
+    // t-shirt
+    {
+      id: 4,
+      name: "Item 4",
+      price: 25,
+      discountedPrice: 20,
+      rating: 4,
+      images: [
+        require("../images/webp/b5.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 5,
+      name: "Item 5",
+      price: 30,
+      discountedPrice: 24,
+      rating: 3,
+      images: [
+        require("../images/webp/a3.webp"),
+        require("../images/webp/b3.webp"),
+        require("../images/webp/d2.webp"),
+        require("../images/webp/suit4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 6,
+      name: "Item 6",
+      price: 35,
+      discountedPrice: 28,
+      rating: 5,
+      images: [
+        require("../images/webp/b1.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
     }
-    // Add more items as needed
+
   ]);
 
   useEffect(() => {

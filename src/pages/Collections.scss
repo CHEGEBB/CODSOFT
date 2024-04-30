@@ -21,13 +21,13 @@ $island:'Island Moments', cursive;
     display: flex;
     flex-direction: row;
     gap: 20px;
-    width: calc(100% - 200px);
+    // width: calc(100% - 200px);
     margin-top: 20px;
 }
 
 .item-container {
     position: relative;
-    width: calc(30.33% - 20px);
+    width:300px;
     margin-bottom: 20px;
     margin-left: 60px;
 }
