@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LeftSideBar from '../components/LeftSideBar';
+import './Collections.scss';
 
 const Collections = () => {
     const [items, setItems] = useState([
