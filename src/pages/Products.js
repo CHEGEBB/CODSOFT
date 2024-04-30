@@ -120,9 +120,9 @@ const Products = () => {
             id: 11,
             images: [
                 require("../images/shorts1.jpg"),
-                require("../images/shorts2.jpg"),
-                require("../images/shorts3.jpg"),
-                require("../images/shorts4.jpg")
+                require("../images/shorts9.jpg"),
+                require("../images/shorts6.jpg"),
+                require("../images/shorts7.jpg")
             ],
             title: "Shorts",
             desc: "Our shorts are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
@@ -130,10 +130,10 @@ const Products = () => {
         {
             id: 12,
             images: [
-                "https://example.com/skirt1.jpg",
-                "https://example.com/skirt2.jpg",
-                "https://example.com/skirt3.jpg",
-                "https://example.com/skirt4.jpg"
+                require("../images/skirt1.jpg"),
+                require("../images/skirt2.jpg"),
+                require("../images/skirt3.jpg"),
+                require("../images/skirt4.jpg")
             ],
             title: "Skirts",
             desc: "Our skirts are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
