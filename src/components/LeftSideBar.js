@@ -97,7 +97,14 @@ const LeftSideBar = () => {
                         <input type="radio" name="productType" value="accessories" checked={productType === 'accessories'} onChange={handleProductTypeChange} />
                         Accessories
                         </label>
-                        <
+                        <label className="square-radio">
+                        <input type="radio" name="productType" value="jackets" checked={productType === 'jackets'} onChange={handleProductTypeChange} />
+                        Jackets
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="productType" value="dress" checked={productType === 'dress'} onChange={handleProductTypeChange} />
+                        Dress
+                    </label>
                 </div>
                 <div className="filter-item">
                     <h4>Brand</h4>
