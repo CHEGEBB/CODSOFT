@@ -142,44 +142,29 @@ const Products = () => {
      
     useEffect(() => {
         const interval = setInterval(() => {
-            setCards(prevCards => prevCards.map(product => ({
-                ...product,
-                images: [...product.images.slice(1), product.images[0]]
-            })));
+            setCards(prevCards => 
+                prevCards.map(product => {
+                    const rotatedImages = [...product.images.slice(1), product.images[0]];
+                    return { ...product, images: rotatedImages };
+                })
+            );
         }, 3000);
 
         return () => clearInterval(interval);
     }, []);
 
-    // Function to render each product card
-    const renderProductCard = (product) => (
-        <div className="product-card" key={product.id}>
-            <h2>{product.title}</h2>
-            <div className="image-container">
-                {product.images.map((image, index) => (
-                    <img src={image} alt={`Product ${index + 1}`} key={index} />
-                ))}
-            </div>
-            <p>{product.desc}</p>
-            <button>Buy Now</button>
-        </div>
-    );
-
-    // Function to split the cards into rows of three
-    const splitIntoRows = (cards) => {
-        const rows = [];
-        for (let i = 0; i < cards.length; i += 3) {
-            rows.push(cards.slice(i, i + 3));
-        }
-        return rows;
-    };
-
-    // Render all rows of product cards
     return (
         <div className="products-page">
-            {splitIntoRows(cards).map((row, index) => (
-                <div className="row" key={index}>
-                    {row.map(renderProductCard)}
+            {cards.map(product => (
+                <div className="product-card" key={product.id}>
+                    <div className="product-images">
+                        <img src={product.images[0]} alt={product.title} />
+                    </div>
+                    <div className="product-info">
+                        <h2>{product.title}</h2>
+                        <p>{product.desc}</p>
+                        <button>Buy Now</button>
+                    </div>
                 </div>
             ))}
             <Footer />

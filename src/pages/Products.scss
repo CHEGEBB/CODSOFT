@@ -36,51 +36,131 @@ $island:'Island Moments', cursive;
         transform: scale(1.02);
     }
 }
-.products-row-one{
-    @include product-cards;
-}
-.products-row-two{
-    @include product-cards;
-}
-.products-row-three{
-    @include product-cards;
-}
-.products-row-four{
-    @include product-cards;
-}
-.t-shirts{
-    @include items-card;
-}
-.hoodies{
-    @include items-card;
-}
-.jackets{
-    @include items-card;
-}
-.trousers{
-    @include items-card;
-}
-.shoes-prod{
-    @include items-card;
-}
-.suits{
-    @include items-card;
-}
-.hats{
-    @include items-card;
-}
-.skirts{
-    @include items-card;
-}
-.shorts{
-    @include items-card;
-}
-.dresses-prod{
-    @include items-card;
-}
-.bags{
-    @include items-card;
-}
-.accessories-prod{
-    @include items-card;
-}
+// .products-row-one{
+//     @include product-cards;
+// }
+// .products-row-two{
+//     @include product-cards;
+// }
+// .products-row-three{
+//     @include product-cards;
+// }
+// .products-row-four{
+//     @include product-cards;
+// }
+// .t-shirts{
+//     @include items-card;
+// }
+// .hoodies{
+//     @include items-card;
+// }
+// .jackets{
+//     @include items-card;
+// }
+// .trousers{
+//     @include items-card;
+// }
+// .shoes-prod{
+//     @include items-card;
+// }
+// .suits{
+//     @include items-card;
+// }
+// .hats{
+//     @include items-card;
+// }
+// .skirts{
+//     @include items-card;
+// }
+// .shorts{
+//     @include items-card;
+// }
+// .dresses-prod{
+//     @include items-card;
+// }
+// .bags{
+//     @include items-card;
+// }
+// .accessories-prod{
+//     @include items-card;
+// }
+.products-page {
+    // Add styles for the products page container
+  
+    .product-card {
+      width: calc(33.33% - 20px); // Adjust the width to fit three cards per row with some margin
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px); // Add a slight hover effect
+      }
+  
+      .product-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.1); // Add a zoom effect on hover
+          }
+        }
+      }
+  
+      .product-info {
+        text-align: center;
+  
+        h2 {
+          margin-top: 10px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+  
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #555;
+        }
+  
+        button {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: crimson; 
+          }
+        }
+      }
+    }
+  
+    // Media query for smaller screens
+    @media (max-width: 768px) {
+      .product-card {
+        width: calc(50% - 20px);
+      }
+    }
+  
+    // Media query for even smaller screens
+    @media (max-width: 480px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+  }
+  
