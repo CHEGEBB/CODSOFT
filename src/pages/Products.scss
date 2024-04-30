@@ -49,40 +49,6 @@ $island:'Island Moments', cursive;
       &:hover {
         transform: translateY(-5px);
       }
-  
-      .product-images {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      
-        img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 8px;
-          transition: transform 0.3s ease;
-        }
-      
-        .zoomed {
-          animation: zoomAnimation 3s ease; /* Apply the zoom animation */
-        }
-      
-        img:hover {
-          transform: scale(1.1); /* Keep the hover effect */
-        }
-      }
-      
-      @keyframes zoomAnimation {
-        0% {
-          transform: scale(1); /* Start with normal size */
-        }
-        50% {
-          transform: scale(1.2); /* Zoom in to 120% size */
-        }
-        100% {
-          transform: scale(1); /* Return to normal size */
-        }
-      }
-      
       .product-info {
         text-align: center;
   
