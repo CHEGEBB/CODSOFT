@@ -109,26 +109,66 @@ const LeftSideBar = () => {
                 <div className="filter-item">
                     <h4>Brand</h4>
                     <label className="square-radio">
-                        <input type="radio" name="brand" value="brand1" checked={brand === 'brand1'} onChange={handleBrandChange} />
-                        Brand 1
+                        <input type="radio" name="brand" value="nike" checked={brand === 'nike'} onChange={handleBrandChange} />
+                        Nike
                     </label>
                     <label className="square-radio">
-                        <input type="radio" name="brand" value="brand2" checked={brand === 'brand2'} onChange={handleBrandChange} />
-                        Brand 2
+                        <input type="radio" name="brand" value="adidas" checked={brand === 'adidas'} onChange={handleBrandChange} />
+                        Adidas
                     </label>
-                    {/* Add other brands as needed */}
+                    {/*Louis Vuitton */}
+                    <label className="square-radio">
+                        <input type="radio" name="brand" value="louisVuitton" checked={brand === 'louisVuitton'} onChange={handleBrandChange} />
+                        Louis Vuitton
+                    </label>
+                    
+                    <label className="square-radio">
+                        <input type="radio" name="brand" value="gucci" checked={brand === 'gucci'} onChange={handleBrandChange} />
+                        Gucci
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="brand" value="zara" checked={brand === 'zara'} onChange={handleBrandChange} />
+                        Zara
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="brand" value="hm" checked={brand === 'hm'} onChange={handleBrandChange} />
+                        H&M
+                    </label>
                 </div>
                 <div className="filter-item">
                     <h4>Color</h4>
                     <label className="square-radio">
-                        <input type="radio" name="color" value="red" checked={color === 'red'} onChange={handleColorChange} />
+                        <input type="radio" name="color" value="red" checked={color === 'red'} onChange={handleColorChange} style={{border:'2px solid red'}} />
                         Red
                     </label>
                     <label className="square-radio">
-                        <input type="radio" name="color" value="blue" checked={color === 'blue'} onChange={handleColorChange} />
+                        <input type="radio" name="color" value="blue" checked={color === 'blue'} onChange={handleColorChange} style={{border:'2px solid blue'}} />
                         Blue
                     </label>
-                    {/* Add other colors as needed */}
+                    <label className="square-radio">
+                        <input type="radio" name="color" value="black" checked={color === 'black'} onChange={handleColorChange} style={{border:'2px solid black'}} />
+                        Black
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="color" value="white" checked={color === 'white'} onChange={handleColorChange} style={{border:'2px solid white'}} />
+                        White
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="color" value="green" checked={color === 'green'} onChange={handleColorChange} style={{border:'2px solid green'}} />
+                        Green
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="color" value="yellow" checked={color === 'yellow'} onChange={handleColorChange} style={{border:'2px solid yellow'}} />
+                        Yellow
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="color" value="purple" checked={color === 'purple'} onChange={handleColorChange} style={{border:'2px solid purple'}} />
+                        Purple
+                    </label>
+                    <label className="square-radio">
+                        <input type="radio" name="color" value="pink" checked={color === 'pink'} onChange={handleColorChange} style={{border:'2px solid pink'}} />
+                        Pink
+                    </label>
                 </div>
                 <div className="filter-item">
                     <h4>Size</h4>
