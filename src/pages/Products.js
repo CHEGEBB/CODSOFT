@@ -20,8 +20,10 @@ const Products = () => {
         {
             id: 2,
             images: [
-               
-                
+                require("../images/webp/suit1.webp"),
+                require("../images/webp/suit2.webp"),
+                require("../images/webp/suit3.webp"),
+                require("../images/webp/suit4.webp")
             ],
             title: "Suits",
             desc: "We sell high-class suits that are made from the finest materials. They are available in a variety of colors and sizes."
@@ -29,10 +31,10 @@ const Products = () => {
         {
             id: 3,
             images: [
-                require("../images/air-jordan-5-anthracite-release-date-5.jpg"),
-                require("../images/airmax2.png"),
-                require("../images/jordans2.png"),
-                require("../images/jorfans3.jpg")
+                require("../images/womshoe.jpg"),
+                require("../images/jumpman-mvp-shoes-wm0F96.png"),
+                require("../images/webp/shoewom.webp"),
+                require("../images/webp/form2.webp")
             ],
             title: "Shoes",
             desc: "Our shoes are made from the finest leather in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
@@ -40,10 +42,10 @@ const Products = () => {
         {
             id: 4,
             images: [
-                "https://example.com/trouser1.jpg",
-                "https://example.com/trouser2.jpg",
-                "https://example.com/trouser3.jpg",
-                "https://example.com/trouser4.jpg"
+                require("../images/pants2.jpg"),
+                require("../images/pants3.jpg"),
+                require("../images/pants4.jpg"),
+                require("../images/pants5.jpg")
             ],
             title: "Trousers",
             desc: "Our trousers are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
@@ -117,10 +119,10 @@ const Products = () => {
         {
             id: 11,
             images: [
-                "https://example.com/short1.jpg",
-                "https://example.com/short2.jpg",
-                "https://example.com/short3.jpg",
-                "https://example.com/short4.jpg"
+                require("../images/shorts1.jpg"),
+                require("../images/shorts2.jpg"),
+                require("../images/shorts3.jpg"),
+                require("../images/shorts4.jpg")
             ],
             title: "Shorts",
             desc: "Our shorts are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
