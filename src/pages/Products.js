@@ -1,4 +1,5 @@
 import React from 'react';
+import '../pages/Products.scss';
 
 const Products = () => {
     return (
@@ -20,26 +21,17 @@ const Products = () => {
                 <p>Our shoes are made from the finest leather in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
                 <button>Buy Now</button>
                 </div>
-                <div className="trousers">
-                <h2>Trousers</h2>
-                <p>Our trousers are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
-                <button>Buy Now</button>
-                </div>
+                
             </div>
             <div className="products-row-two">
-            <div className="jackets">
-                <h2>Jackets</h2>
-                <p>Our jackets are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
+            <div className="trousers">
+                <h2>Trousers</h2>
+                <p>Our trousers are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
                 <button>Buy Now</button>
                 </div>
                 <div className="hoodies">
                 <h2>Hoodies</h2>
                 <p>See our wide array of hoodies</p>
-                <button>Buy Now</button>
-                </div>
-                <div className="shorts">
-                <h2>Shorts</h2>
-                <p>See our wide array of shorts</p>
                 <button>Buy Now</button>
                 </div>
                 <div className="dresses">
@@ -66,11 +58,24 @@ const Products = () => {
                 <p>Our hats are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
                 <button>Buy Now</button>
                 </div>
-                <div className="belts">
-                <h2>Belts</h2>
-                <p>Our belts are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
+            </div>
+            <div className="products-row-four">
+            <div className="jackets">
+                <h2>Jackets</h2>
+                <p>Our jackets are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
                 <button>Buy Now</button>
                 </div>
+                <div className="shorts">
+                <h2>Shorts</h2>
+                <p>Our shorts are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
+                <button>Buy Now</button>
+            </div>
+            
+            <div className="skirts">
+                <h2>Skirts</h2>
+                <p>Our skirts are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes.</p>
+                <button>Buy Now</button>
+            </div>
             </div>
         </div>
     );
