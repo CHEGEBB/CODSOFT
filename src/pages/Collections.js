@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LeftSideBar from '../components/LeftSideBar';
 import './Collections.scss';
-import wishlistIcon from '../images/us/icon-park-outline--love-and-help.svg';
+import wishlistIcon from '../images/us/icon-park-solid--love-and-help.svg';
 import cartIcon from '../images/ic--round-shopping-cart.svg';
 
 const Collections = () => {
