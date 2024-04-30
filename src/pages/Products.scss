@@ -49,6 +49,24 @@ $island:'Island Moments', cursive;
       &:hover {
         transform: translateY(-5px);
       }
+  
+      .product-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+  
       .product-info {
         text-align: center;
   
