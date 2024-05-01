@@ -134,15 +134,16 @@ $special:#141C27;
 .previous-price {
     text-decoration: line-through;
     margin-right: 5px;
-    color: #ff0000;
+    color: black;
     font-size: 20px;
-    font-family: $ropa;
+    font-family: $rubik;
+    font-weight: 700;
 }
 
 .current-price {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
-    font-family: $ropa;
+    font-family: $rubik;
     margin-left: 5px;
 }
 
