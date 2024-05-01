@@ -73,7 +73,7 @@ const Collections = () => {
     },
     {
       id: 5,
-      name: "",
+      name: "UrbanKhaki",
       price: 30,
       discountedPrice: 24,
       rating: 3,
@@ -121,7 +121,7 @@ const Collections = () => {
     },
     {
       id: 8,
-      name: "Item 8",
+      name: "Ladies Denim Delight",
       price: 45,
       discountedPrice: 36,
       rating: 3,
