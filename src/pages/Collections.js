@@ -288,10 +288,10 @@ const Collections = () => {
       discountedPrice: 76,
       rating: 5,
       images: [
-        require("../images/webp/b1.webp"),
-        require("../images/webp/a5.webp"),
-        require("../images/webp/c5.webp"),
-        require("../images/webp/suit3.webp")
+        require("../images/webp/kid1.avif"),
+        require("../images/webp/kid2.jpg"),
+        require("../images/webp/kid3.avif"),
+        require("../images/webp/kid4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -304,10 +304,10 @@ const Collections = () => {
       discountedPrice: 80,
       rating: 4,
       images: [
-        require("../images/webp/b3.webp"),
-        require("../images/webp/a3.webp"),
-        require("../images/webp/d2.webp"),
-        require("../images/webp/suit4.webp")
+        require("../images/webp/jack1.jpg"),
+        require("../images/webp/jack2.jpg"),
+        require("../images/webp/jack3.jpg"),
+        require("../images/webp/jack4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -352,10 +352,10 @@ const Collections = () => {
       discountedPrice: 92,
       rating: 4,
       images: [
-        require("../images/webp/b1.webp"),
-        require("../images/webp/a5.webp"),
-        require("../images/webp/c5.webp"),
-        require("../images/webp/suit3.webp")
+        require("../images/webp/man1.jpg"),
+        require("../images/webp/man2.jpg"),
+        require("../images/webp/man3.jpg"),
+        require("../images/webp/man4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -400,10 +400,10 @@ const Collections = () => {
       discountedPrice: 104,
       rating: 4,
       images: [
-        require("../images/webp/a3.webp"),
-        require("../images/webp/b3.webp"),
-        require("../images/webp/d2.webp"),
-        require("../images/webp/suit4.webp")
+        require("../images/webp/k1.avif"),
+        require("../images/webp/k2.avif"),
+        require("../images/webp/k3.jpg"),
+        require("../images/webp/k4.avif")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
