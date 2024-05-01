@@ -3,6 +3,7 @@ import LeftSideBar from "../components/LeftSideBar";
 import "./Collections.scss";
 import wishlistIcon from "../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../images/ic--round-shopping-cart.svg";
+import Footer from "../components/Footer";
 
 const Collections = () => {
   const [items, setItems] = useState([
@@ -508,6 +509,9 @@ const Collections = () => {
             ))}
           </div>
         ))}
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
