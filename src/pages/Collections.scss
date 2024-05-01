@@ -29,6 +29,14 @@ $special:#141C27;
 .special-card {
     display: inline-block;
   }
+  .item-name {
+    font-family: $jost;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: $celestialOrange;
+}
   
 
 
@@ -126,9 +134,15 @@ $special:#141C27;
 .previous-price {
     text-decoration: line-through;
     margin-right: 5px;
+    color: #ff0000;
+    font-size: 20px;
+    font-family: $ropa;
 }
 
 .current-price {
     font-weight: bold;
+    font-size: 20px;
+    font-family: $ropa;
+    margin-left: 5px;
 }
 
