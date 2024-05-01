@@ -111,6 +111,11 @@ $special:#141C27;
     border-radius: 5px;
     font-family: $ropa;
   }
+  .item-discount:hover{
+    background-color:blueviolet;
+    color: #fff;
+    transition: 0.5s;
+  }
   
 
 .price-container {

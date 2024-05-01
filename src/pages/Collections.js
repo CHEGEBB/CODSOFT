@@ -9,7 +9,7 @@ const Collections = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "Item 1",
+      name: "DapperDaze Designer Tees",
       price: 10,
       discountedPrice: 8,
       rating: 4,
