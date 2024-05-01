@@ -1,3 +1,14 @@
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
 .collections-page {
     display: flex;
     flex-direction: column;
@@ -69,10 +80,11 @@
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: #ff0000; /* Red background color */
-    color: #ffffff; /* White text color */
-    padding: 3px 8px; /* Padding around the text */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 3px 8px; 
+    border-radius: 5px;
+    font-family: $ropa;
   }
   
 
