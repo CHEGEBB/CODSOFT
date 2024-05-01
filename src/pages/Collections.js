@@ -425,7 +425,7 @@ const Collections = () => {
     },
     {
       id: 27,
-      name: "Item 27",
+      name: "EliteElegance three piece suit",
       price: 140,
       discountedPrice: 112,
       rating: 5,
