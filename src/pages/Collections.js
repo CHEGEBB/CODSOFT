@@ -377,7 +377,7 @@ const Collections = () => {
     },
     {
       id: 24,
-      name: "Item 24",
+      name: "Sexy Women's Jeans and top set",
       price: 125,
       discountedPrice: 100,
       rating: 5,
