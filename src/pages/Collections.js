@@ -265,7 +265,7 @@ const Collections = () => {
     },
     {
       id: 17,
-      name: "Item 17",
+      name: "LuminousLace women's wear",
       price: 90,
       discountedPrice: 72,
       rating: 3,
