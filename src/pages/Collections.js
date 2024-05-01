@@ -146,7 +146,6 @@ const Collections = () => {
         require("../images/webp/menstyle2.jpg"),
         require("../images/webp/menstyle3.jpg"),
         require("../images/webp/menstyle4.jpg")
-
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -259,7 +258,6 @@ const Collections = () => {
         require("../images/webp/be5.jpg"),
         require("../images/webp/be3.jpg"),
         require("../images/webp/be4.jpg")
-       
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -447,7 +445,8 @@ const Collections = () => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
         prevItems.map((item) => {
-          const nextImageIndex = (item.currentImageIndex + 1) % item.images.length;
+          const nextImageIndex =
+            (item.currentImageIndex + 1) % item.images.length;
           return { ...item, currentImageIndex: nextImageIndex };
         })
       );
@@ -471,25 +470,55 @@ const Collections = () => {
         {groupedItems.map((row, rowIndex) => (
           <div className="row" key={rowIndex}>
             {row.map((item, columnIndex) => (
-              <div className={`item-container ${item.id >= 10 && item.id <= 15 ? 'special-card' : ''}`} key={item.id}>
+              <div
+                className={`item-container ${
+                  item.id >= 10 && item.id <= 15 ? "special-card" : ""
+                }`}
+                key={item.id}
+              >
+                <div className="item-discount">
+                  {(
+                    ((item.price - item.discountedPrice) / item.price) *
+                    100
+                  ).toFixed(0)}
+                  % off
+                </div>
                 <div className="item-image">
-                  <img src={item.images[item.currentImageIndex]} alt={item.name} />
+                  <img
+                    src={item.images[item.currentImageIndex]}
+                    alt={item.name}
+                  />
                   <div className="item-overlay">
+                    <div className="item-discount">
+                      {(
+                        ((item.price - item.discountedPrice) / item.price) *
+                        100
+                      ).toFixed(0)}
+                      % off
+                    </div>
                     <div className="wish">
-                      <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
+                      <img
+                        src={item.wishlistIconPath}
+                        alt="Wishlist"
+                        className="wishlist-icon"
+                      />
                     </div>
                     <button className="add-to-cart-btn">
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
-                    <div className="discounted-price">{item.discountedPrice}</div>
+                    <div className="discounted-price">
+                      {item.discountedPrice}
+                    </div>
                   </div>
                 </div>
                 <div className="item-info">
                   <div className="item-name">{item.name}</div>
                   <div className="price-container">
                     <span className="previous-price">${item.price}</span>
-                    <span className="current-price">${item.discountedPrice}</span>
+                    <span className="current-price">
+                      ${item.discountedPrice}
+                    </span>
                   </div>
                   <div className="item-rating">
                     {Array.from({ length: item.rating }).map((_, index) => (
@@ -512,8 +541,8 @@ const Collections = () => {
         ))}
       </div>
       <div className="footer">
-      <Footer />
-    </div>
+        <Footer />
+      </div>
     </div>
   );
 };
