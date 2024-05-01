@@ -6,7 +6,7 @@ $placeholder-color: #999;
 $frosted-glass: rgba(255, 255, 255, 0.5);
 $white: #fff;
 $special:#141C27;
-$background-image1: url("./images/pic2.jpg");
+$background-image1: url("./images/wom2.jpg");
 $women-background-image: url("./images/wom2.jpg");
 $mens-background-image: url("./images/pic.jpg");
 $jost: 'Jost', sans-serif;
@@ -95,9 +95,9 @@ body{
   position: relative;
   display: flex;
   align-items: center;
-  background-color:#7777;
   padding: 10px;
-  height: 120px;
+  height: 200px;
+  background-color: #141C27;
 
   input[type="text"] {
     flex: 1;
@@ -170,6 +170,7 @@ body{
   height: 100px;
   font-family: $ropa;
   font-size: 22px;
+  border: 2px solid $celestialOrange;
 }
 
 .container {
@@ -257,3 +258,4 @@ body{
       transition : transform 0.5s;
     }
 }
+
