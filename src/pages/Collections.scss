@@ -9,6 +9,7 @@ $placeholder-color: #999;
 $frosted-glass: rgba(255, 255, 255, 0.5);
 $white: #fff;
 $special:#141C27;
+$silver: #C0C0C0;
 .collections-page {
     display: flex;
     flex-direction: column;
@@ -36,8 +37,18 @@ $special:#141C27;
     margin-top: 10px;
     margin-bottom: 10px;
     color: $celestialOrange;
+
+    &:hover {
+        color: $celestialOrange;
+    }
 }
   
+.item-info{
+    background-color:$silver;
+    padding: 10px;
+    margin-top: -10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
 
 
 .item-container {

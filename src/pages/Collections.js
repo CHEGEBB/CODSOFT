@@ -526,7 +526,7 @@ const Collections = () => {
                         key={index}
                         className="star-icon"
                         style={{
-                          color: "hsla(45, 100%, 50%, 1)",
+                          color: "crimson",
                           fontSize: "1.5em"
                         }}
                       >
