@@ -100,6 +100,9 @@ $Rubik: 'Rubik', sans-serif;
       }
     }
   }
+  .filter-item input[type="range"] {
+    width: 130px;
+  }
 
   input[type="range"],
   select {
