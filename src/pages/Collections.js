@@ -339,7 +339,7 @@ const Collections = () => {
         require("../images/webp/bag1.jpg"),
         require("../images/webp/bag2.jpg"),
         require("../images/webp/bag4.jpg"),
-        require("../images/webp/bag5.jpg")
+        require("../images/webp/bag3.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
