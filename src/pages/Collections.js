@@ -384,10 +384,10 @@ const Collections = () => {
       discountedPrice: 100,
       rating: 5,
       images: [
-        require("../images/webp/b5.webp"),
-        require("../images/webp/a5.webp"),
-        require("../images/webp/c5.webp"),
-        require("../images/webp/suit3.webp")
+        require("../images/webp/jeans1.jpg"),
+        require("../images/webp/jeans2.jpg"),
+        require("../images/webp/jeans3.jpg"),
+        require("../images/webp/jeans4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
