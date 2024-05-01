@@ -511,8 +511,8 @@ const Collections = () => {
         ))}
       </div>
       <div className="footer">
-        <Footer />
-      </div>
+      <Footer />
+    </div>
     </div>
   );
 };

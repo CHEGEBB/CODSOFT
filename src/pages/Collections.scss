@@ -1,5 +1,6 @@
 .collections-page {
     display: flex;
+    flex-direction: column;
 }
 .side-bar {
     width: 200px;
@@ -9,8 +10,10 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Display three cards per row */
     gap: 80px;
-    margin-top: 20px;
+    margin-top: -1500px;
     width: calc(100% - 200px);
+    margin-left: 200px;
+
 }
 .special-card {
     display: inline-block;
