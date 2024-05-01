@@ -13,10 +13,10 @@ const Collections = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../images/webp/b1.webp"),
-        require("../images/webp/suit4.webp"),
-        require("../images/webp/suit4.webp"),
-        require("../images/acc4.jpg")
+        require("../images/webp/ts1.webp"),
+        require("../images/webp/ts2.webp"),
+        require("../images/webp/ts3.webp"),
+        require("../images/webp/ts4.webp")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -29,10 +29,10 @@ const Collections = () => {
       discountedPrice: 12,
       rating: 3,
       images: [
-        require("../images/webp/a5.webp"),
-        require("../images/webp/d2.webp"),
-        require("../images/webp/suit3.webp"),
-        require("../images/webp/b5.webp")
+        require("../images/webp/womsuit1.webp"),
+        require("../images/webp/womsuit2.webp"),
+        require("../images/webp/womsuit3.jpg"),
+        require("../images/webp/womsuit4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -45,10 +45,10 @@ const Collections = () => {
       discountedPrice: 16,
       rating: 5,
       images: [
-        require("../images/webp/b3.webp"),
-        require("../images/webp/c5.webp"),
-        require("../images/webp/a3.webp"),
-        require("../images/webp/suit4.webp")
+        require("../images/webp/tp1.webp"),
+        require("../images/webp/tp2.webp"),
+        require("../images/webp/tp3.webp"),
+        require("../images/webp/tp4.webp")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -61,10 +61,10 @@ const Collections = () => {
       discountedPrice: 20,
       rating: 4,
       images: [
-        require("../images/webp/b5.webp"),
-        require("../images/webp/a5.webp"),
-        require("../images/webp/c5.webp"),
-        require("../images/webp/suit3.webp")
+        require("../images/webp/tz1.webp"),
+        require("../images/webp/tz2.webp"),
+        require("../images/webp/tz5.webp"),
+        require("../images/webp/tz4.webp")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -109,10 +109,10 @@ const Collections = () => {
       discountedPrice: 32,
       rating: 4,
       images: [
-        require("../images/webp/b3.webp"),
-        require("../images/webp/a3.webp"),
-        require("../images/webp/d2.webp"),
-        require("../images/webp/suit4.webp")
+        require("../images/webp/tss1.webp"),
+        require("../images/webp/tss2.webp"),
+        require("../images/webp/tss3.webp"),
+        require("../images/webp/tss4.webp")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -125,10 +125,10 @@ const Collections = () => {
       discountedPrice: 36,
       rating: 3,
       images: [
-        require("../images/webp/b5.webp"),
-        require("../images/webp/a5.webp"),
-        require("../images/webp/c5.webp"),
-        require("../images/webp/suit3.webp")
+        require("../images/webp/womdenim.webp"),
+        require("../images/webp/womdenim1.avif"),
+        require("../images/webp/womdenim2.avif"),
+        require("../images/webp/womdenim3.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -289,6 +289,150 @@ const Collections = () => {
         require("../images/webp/a5.webp"),
         require("../images/webp/c5.webp"),
         require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 19,
+      name: "Item 19",
+      price: 100,
+      discountedPrice: 80,
+      rating: 4,
+      images: [
+        require("../images/webp/b3.webp"),
+        require("../images/webp/a3.webp"),
+        require("../images/webp/d2.webp"),
+        require("../images/webp/suit4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 20,
+      name: "Item 20",
+      price: 105,
+      discountedPrice: 84,
+      rating: 3,
+      images: [
+        require("../images/webp/b5.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 21,
+      name: "Item 21",
+      price: 110,
+      discountedPrice: 88,
+      rating: 5,
+      images: [
+        require("../images/webp/a3.webp"),
+        require("../images/webp/b3.webp"),
+        require("../images/webp/d2.webp"),
+        require("../images/webp/suit4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 22,
+      name: "Item 22",
+      price: 115,
+      discountedPrice: 92,
+      rating: 4,
+      images: [
+        require("../images/webp/b1.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 23,
+      name: "Item 23",
+      price: 120,
+      discountedPrice: 96,
+      rating: 3,
+      images: [
+        require("../images/webp/b3.webp"),
+        require("../images/webp/a3.webp"),
+        require("../images/webp/d2.webp"),
+        require("../images/webp/suit4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 24,
+      name: "Item 24",
+      price: 125,
+      discountedPrice: 100,
+      rating: 5,
+      images: [
+        require("../images/webp/b5.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 25,
+      name: "Item 25",
+      price: 130,
+      discountedPrice: 104,
+      rating: 4,
+      images: [
+        require("../images/webp/a3.webp"),
+        require("../images/webp/b3.webp"),
+        require("../images/webp/d2.webp"),
+        require("../images/webp/suit4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 26,
+      name: "Item 26",
+      price: 135,
+      discountedPrice: 108,
+      rating: 3,
+      images: [
+        require("../images/webp/b1.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 27,
+      name: "Item 27",
+      price: 140,
+      discountedPrice: 112,
+      rating: 5,
+      images: [
+        require("../images/webp/b3.webp"),
+        require("../images/webp/a3.webp"),
+        require("../images/webp/d2.webp"),
+        require("../images/webp/suit4.webp")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
