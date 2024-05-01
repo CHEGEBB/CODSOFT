@@ -249,7 +249,7 @@ const Collections = () => {
     },
     {
       id: 16,
-      name: "Item 16",
+      name: "Urban Elegance Dress",
       price: 85,
       discountedPrice: 68,
       rating: 4,
