@@ -41,7 +41,7 @@ const Collections = () => {
     },
     {
       id: 3,
-      name: "Item 3",
+      name: "ClassyChic Tee Collection",
       price: 20,
       discountedPrice: 16,
       rating: 5,
