@@ -281,7 +281,7 @@ const Collections = () => {
     },
     {
       id: 18,
-      name: "Item 18",
+      name: "Kids' shirt and skirt set",
       price: 95,
       discountedPrice: 76,
       rating: 5,
