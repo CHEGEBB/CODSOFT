@@ -70,6 +70,7 @@ $special:#141C27;
 .wish img {
     width: 30px;
     height: 30px;
+    margin-top: 20px;
 }
 
 .add-to-cart-btn img {
@@ -90,12 +91,19 @@ $special:#141C27;
     cursor: pointer;
     width: 200px;
     margin-left: 50px;
-    margin-top: 200px;
-
+    margin-top: -20px;
+}
+.add-to-cart-btn:hover{
+    background-color: blueviolet;
+    color: #fff;
+    transition: 0.5s;
+}
+.discounted-price{
+   display: none;
 }
 .item-discount {
     position: absolute;
-    top: 5px;
+    top: 25px;
     right: 5px;
     background-color: #ff0000;
     color: #ffffff;
