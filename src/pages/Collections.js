@@ -217,7 +217,7 @@ const Collections = () => {
     },
     {
       id: 14,
-      name: "Item 14",
+      name: "Urban buggy turtle necks and hat",
       price: 75,
       discountedPrice: 60,
       rating: 3,
