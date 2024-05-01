@@ -137,7 +137,7 @@ const Collections = () => {
     },
     {
       id: 9,
-      name: "Item 9",
+      name: "VintageVibe Fancy Men's Wear",
       price: 50,
       discountedPrice: 40,
       rating: 5,
@@ -153,7 +153,7 @@ const Collections = () => {
     },
     {
       id: 10,
-      name: "Item 10",
+      name: "Modern Minimalist Hoodies",
       price: 55,
       discountedPrice: 44,
       rating: 4,
@@ -169,7 +169,7 @@ const Collections = () => {
     },
     {
       id: 11,
-      name: "Item 11",
+      name: "I",
       price: 60,
       discountedPrice: 48,
       rating: 3,
@@ -201,7 +201,7 @@ const Collections = () => {
     },
     {
       id: 13,
-      name: "Item 13",
+      name: "DivineDiva Maxi Marvels dress",
       price: 70,
       discountedPrice: 56,
       rating: 4,
