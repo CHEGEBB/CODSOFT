@@ -169,7 +169,7 @@ const Collections = () => {
     },
     {
       id: 11,
-      name: "I",
+      name: "Urban Edge Jeans",
       price: 60,
       discountedPrice: 48,
       rating: 3,
