@@ -185,7 +185,7 @@ const Collections = () => {
     },
     {
       id: 12,
-      name: "Item 12",
+      name: "Autumn men's wear",
       price: 65,
       discountedPrice: 52,
       rating: 5,
