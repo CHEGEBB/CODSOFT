@@ -329,7 +329,7 @@ const Collections = () => {
     },
     {
       id: 21,
-      name: "Item 21",
+      name: "ClassiqueCarry Purse",
       price: 110,
       discountedPrice: 88,
       rating: 5,
@@ -409,7 +409,7 @@ const Collections = () => {
     },
     {
       id: 26,
-      name: "Item 26",
+      name: "Ladies' skirt + stockings set",
       price: 135,
       discountedPrice: 108,
       rating: 3,
