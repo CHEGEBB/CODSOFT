@@ -25,7 +25,7 @@ const Collections = () => {
     },
     {
       id: 2,
-      name: "SleekStyle Suit Selection",
+      name: "TrendyTwist Tailored Treasures",
       price: 15,
       discountedPrice: 12,
       rating: 3,
