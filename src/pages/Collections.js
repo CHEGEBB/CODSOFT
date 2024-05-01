@@ -233,7 +233,7 @@ const Collections = () => {
     },
     {
       id: 15,
-      name: "Item 15",
+      name: "Smart Casual for Men Full Outfit",
       price: 80,
       discountedPrice: 64,
       rating: 5,
