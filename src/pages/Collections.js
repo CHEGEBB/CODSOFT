@@ -77,10 +77,10 @@ const Collections = () => {
       discountedPrice: 24,
       rating: 3,
       images: [
-        require("../images/webp/a3.webp"),
-        require("../images/webp/b3.webp"),
-        require("../images/webp/d2.webp"),
-        require("../images/webp/suit4.webp")
+        require("../images/webp/khaki1.jpg"),
+        require("../images/webp/khaki2.jpg"),
+        require("../images/webp/khaki3.jpg"),
+        require("../images/webp/khaki4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -93,10 +93,10 @@ const Collections = () => {
       discountedPrice: 28,
       rating: 5,
       images: [
-        require("../images/webp/b1.webp"),
-        require("../images/webp/a5.webp"),
-        require("../images/webp/c5.webp"),
-        require("../images/webp/suit3.webp")
+        require("../images/webp/cool1.webp"),
+        require("../images/webp/cool2.webp"),
+        require("../images/webp/cool3.webp"),
+        require("../images/webp/cool4.webp")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -126,7 +126,7 @@ const Collections = () => {
       rating: 3,
       images: [
         require("../images/webp/womdenim.webp"),
-        require("../images/webp/womdenim1.avif"),
+        require("../images/webp/womendenim6.jpeg"),
         require("../images/webp/womdenim2.avif"),
         require("../images/webp/womdenim3.jpg")
       ],
