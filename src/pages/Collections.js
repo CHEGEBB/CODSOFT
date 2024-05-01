@@ -245,20 +245,67 @@ const Collections = () => {
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
+    },
+    {
+      id: 16,
+      name: "Item 16",
+      price: 85,
+      discountedPrice: 68,
+      rating: 4,
+      images: [
+        require("../images/webp/b5.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 17,
+      name: "Item 17",
+      price: 90,
+      discountedPrice: 72,
+      rating: 3,
+      images: [
+        require("../images/webp/a3.webp"),
+        require("../images/webp/b3.webp"),
+        require("../images/webp/d2.webp"),
+        require("../images/webp/suit4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 18,
+      name: "Item 18",
+      price: 95,
+      discountedPrice: 76,
+      rating: 5,
+      images: [
+        require("../images/webp/b1.webp"),
+        require("../images/webp/a5.webp"),
+        require("../images/webp/c5.webp"),
+        require("../images/webp/suit3.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
     }
-
   ]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
         prevItems.map((item) => {
-          const nextImageIndex =
-            (item.currentImageIndex + 1) % item.images.length;
+          const nextImageIndex = (item.currentImageIndex + 1) % item.images.length;
           return { ...item, currentImageIndex: nextImageIndex };
         })
       );
     }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -276,8 +323,8 @@ const Collections = () => {
       <div className="collections-items">
         {groupedItems.map((row, rowIndex) => (
           <div className="row" key={rowIndex}>
-            {row.map((item) => (
-              <div className="item-container" key={item.id}>
+            {row.map((item, columnIndex) => (
+              <div className={`item-container ${item.id >= 10 && item.id <= 15 ? 'special-card' : ''}`} key={item.id}>
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">

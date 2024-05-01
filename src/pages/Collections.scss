@@ -7,11 +7,17 @@
 
 .collections-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Display three cards per row */
     gap: 20px;
     margin-top: 20px;
     width: calc(100% - 200px);
+    background-color: red;
 }
+.special-card {
+    display: inline-block;
+  }
+  
+
 
 .item-container {
     position: relative;
@@ -82,3 +88,4 @@
 .current-price {
     font-weight: bold;
 }
+
