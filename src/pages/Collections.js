@@ -177,8 +177,8 @@ const Collections = () => {
       images: [
         require("../images/webp/m1.jpg"),
         require("../images/webp/m2.jpg"),
-        require("../images/webp/m3.jpg"),
-        require("../images/webp/m4.jpg")
+        require("../images/webp/m7.jpg"),
+        require("../images/webp/m6.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
