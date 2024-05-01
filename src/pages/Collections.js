@@ -89,7 +89,7 @@ const Collections = () => {
     },
     {
       id: 6,
-      name: "Item 6",
+      name: "Urban Men's Cool Tee",
       price: 35,
       discountedPrice: 28,
       rating: 5,
