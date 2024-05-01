@@ -57,7 +57,7 @@ const Collections = () => {
     },
     {
       id: 4,
-      name: "Item 4",
+      name: "UrbanChic Tee Collection",
       price: 25,
       discountedPrice: 20,
       rating: 4,

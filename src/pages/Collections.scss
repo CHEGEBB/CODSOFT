@@ -21,7 +21,7 @@ $silver: #C0C0C0;
 .collections-items {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Display three cards per row */
-    gap: 80px;
+    gap: 20px;
     margin-top: -1500px;
     width: calc(100% - 200px);
     margin-left: 200px;
@@ -54,7 +54,7 @@ $silver: #C0C0C0;
 .item-container {
     position: relative;
     margin-bottom: 20px;
-    width: 300px;
+    width: 320px;
     margin-left: 0px;
 }
 
@@ -156,5 +156,6 @@ $silver: #C0C0C0;
     font-size: 20px;
     font-family: $jost;
     margin-left: 5px;
+    color:crimson ;
 }
 
