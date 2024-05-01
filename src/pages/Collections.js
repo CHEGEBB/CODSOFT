@@ -223,10 +223,10 @@ const Collections = () => {
       discountedPrice: 60,
       rating: 3,
       images: [
-        require("../images/webp/n1.jpg"),
-        require("../images/webp/n2.jpg"),
-        require("../images/webp/n3.jpg"),
-        require("../images/webp/n4.jpg")
+        require("../images/webp/mid1.jpg"),
+        require("../images/webp/mid2.jpg"),
+        require("../images/webp/mid3.jpg"),
+        require("../images/webp/mid4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -272,10 +272,10 @@ const Collections = () => {
       discountedPrice: 72,
       rating: 3,
       images: [
-        require("../images/webp/a3.webp"),
-        require("../images/webp/b3.webp"),
-        require("../images/webp/d2.webp"),
-        require("../images/webp/suit4.webp")
+        require("../images/webp/bea1.jpg"),
+        require("../images/webp/bea2.jpg"),
+        require("../images/webp/bea3.jpg"),
+        require("../images/webp/bea4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
