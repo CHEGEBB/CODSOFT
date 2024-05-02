@@ -61,59 +61,100 @@ $silver: #C0C0C0;
     // Styles for item image container
   }
   
-  .item-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    // Add any other styles for item overlay
-  }
+.item-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item-container:hover .item-overlay {
+  opacity: 1;
+}
+
+.wish img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.add-to-cart-btn img {
+  width: 20px;
+  height: 20px;
+  
+}
+.add-to-cart-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF6F61;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: $ropa;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 200px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+.add-to-cart-btn:hover{
+  background-color: blueviolet;
+  color: #fff;
+  transition: 0.5s;
+}
+.discounted-price{
+ display: none;
+}
+.item-discount {
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 3px 8px; 
+  border-radius: 5px;
+  font-family: $ropa;
+}
+.item-discount:hover{
+  background-color:blueviolet;
+  color: #fff;
+  transition: 0.5s;
+}
+
+
+.price-container {
+  display: flex;
+  align-items: center;
+}
+
+.previous-price {
+  text-decoration: line-through;
+  margin-right: 5px;
+  color: black;
+  font-size: 20px;
+  font-family: $jost;
+  font-weight: 500;
+}
+
+.current-price {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: $jost;
+  margin-left: 5px;
+  color:crimson ;
+}
+
+
   
   .men-item-container:hover .item-overlay {
     opacity: 1;
   }
-  
-  .wishlist-icon {
-    // Styles for wishlist icon
-  }
-  
-  .add-to-cart-btn {
-    // Styles for add to cart button
-  }
-  
-  .discounted-price {
-    // Styles for discounted price
-  }
-  
-  .item-info {
-    // Styles for item info
-  }
-  
-  .item-name {
-    // Styles for item name
-  }
-  
-  .price-container {
-    // Styles for price container
-  }
-  
-  .previous-price {
-    // Styles for previous price
-  }
-  
-  .current-price {
-    // Styles for current price
-  }
-  
-  .item-rating {
-    // Styles for item rating
-  }
-  
