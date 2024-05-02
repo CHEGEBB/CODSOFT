@@ -67,7 +67,7 @@ body{
   margin-top: 20px;
 }
 .bar{
-    background-color: $celestialOrange;
+    background-color: $special;
     color: white;
     padding: 10px;
     text-align: center;
@@ -89,6 +89,10 @@ body{
     gap: 30px;
     margin-top: 20px;
     margin-right: 50px;
+    border: 1px solid #fff;
+    width: 230px;
+    height: 60px;
+    padding: 10px;
 
 }
 .search-container {
@@ -118,13 +122,18 @@ body{
     }
   }
 button[type="submit"] {
-    right: 274px;
-    background-color: $celestialOrange;
+    background-color: $special;
     cursor: pointer;
     height: 50px;
-    width: 50px;
+    width: 60px;
     margin-top: -1px;
-    border-radius: 0;
+    border-radius: 5px;
+    margin-left: -70px;
+    border: none;
+    transition:  transform 0.5s;
+    &:hover{
+      transform: scale(1.1);
+    }
 
   }
 }
