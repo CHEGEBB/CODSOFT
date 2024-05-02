@@ -212,8 +212,7 @@ const Men = () => {
 
     return () => clearInterval(interval);
   }, []);
-
-  // Divide items into groups of three
+  
   const groupedItems = [];
   for (let i = 0; i < items.length; i += 3) {
     groupedItems.push(items.slice(i, i + 3));
@@ -229,9 +228,6 @@ const Men = () => {
                 className={`men-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
                 key={item.id}
               >
-                <div className="item-discount-men">
-                  {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
-                </div>
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
