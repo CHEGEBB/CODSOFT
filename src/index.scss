@@ -13,6 +13,7 @@ $jost: 'Jost', sans-serif;
 $rubik: 'Rubik', sans-serif;
 $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
+$silver: #C0C0C0;
 @mixin shop{
   display: flex;
   flex-direction: column;
@@ -47,7 +48,7 @@ body{
   width: 20px;
 }
 .header{
-    background-color: $greyish;
+    background-color: $special;
     color: white;
     padding: 10px;
     text-align: center;
@@ -87,12 +88,13 @@ body{
     display: flex;
     flex-direction: row;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-right: 50px;
-    border: 1px solid #fff;
+    border: 1px solid  $celestialOrange;
     width: 230px;
-    height: 60px;
+    height: 50px;
     padding: 10px;
+    border-radius: 16px;
 
 }
 .search-container {
@@ -101,7 +103,7 @@ body{
   align-items: center;
   padding: 10px;
   height: 200px;
-  background-color: #141C27;
+  background-color: $silver;
 
   input[type="text"] {
     flex: 1;
@@ -217,6 +219,12 @@ button[type="submit"] {
   display: flex;
   flex-direction: row;
   gap: 10px;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition : transform 0.5s;
+      color: crimson;
+    }
 }
 .cart img{
   height: 30px;
@@ -231,6 +239,12 @@ button[type="submit"] {
   display: flex;
   flex-direction: row;
   gap: 10px;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition : transform 0.5s;
+      color: crimson;
+    }
 }
 .wishlist img{
   height: 30px;
