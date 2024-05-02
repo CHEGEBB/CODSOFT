@@ -91,7 +91,7 @@ const Men = () => {
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
-                    <div className="item-discount">
+                    <div className="item-discount-men">
                       {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
                     </div>
                     <div className="wish">

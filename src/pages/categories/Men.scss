@@ -28,8 +28,20 @@
     // Styles for special cards, if any
   }
   
-  .item-discount {
-    // Styles for item discount
+  .item-discount-men {
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 3px 8px; 
+    border-radius: 5px;
+    font-family: $ropa;
+  }
+  .item-discount-men:hover{
+    background-color:blueviolet;
+    color: #fff;
+    transition: 0.5s;
   }
   
   .item-image {
