@@ -1,0 +1,95 @@
+.men-page {
+    // Styles for the men page container
+  }
+  
+  .men-items {
+    display: flex;
+    flex-direction: column;
+    // Add any other styles for the men items container
+  }
+  
+  .men-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    // Add any other styles for the men row container
+  }
+  
+  .men-item-container {
+    width: calc(33.33% - 10px); // Adjust the width to fit three items per row
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    // Add any other styles for the men item container
+  }
+  
+  .special-card {
+    // Styles for special cards, if any
+  }
+  
+  .item-discount {
+    // Styles for item discount
+  }
+  
+  .item-image {
+    position: relative;
+    // Styles for item image container
+  }
+  
+  .item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    // Add any other styles for item overlay
+  }
+  
+  .men-item-container:hover .item-overlay {
+    opacity: 1;
+  }
+  
+  .wishlist-icon {
+    // Styles for wishlist icon
+  }
+  
+  .add-to-cart-btn {
+    // Styles for add to cart button
+  }
+  
+  .discounted-price {
+    // Styles for discounted price
+  }
+  
+  .item-info {
+    // Styles for item info
+  }
+  
+  .item-name {
+    // Styles for item name
+  }
+  
+  .price-container {
+    // Styles for price container
+  }
+  
+  .previous-price {
+    // Styles for previous price
+  }
+  
+  .current-price {
+    // Styles for current price
+  }
+  
+  .item-rating {
+    // Styles for item rating
+  }
+  
