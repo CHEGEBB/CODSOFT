@@ -52,6 +52,150 @@ const Men = () => {
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
+    },
+    {
+      id: 4,
+      name: "TrendyTees Designer Collection",
+      price: 25,
+      discountedPrice: 20,
+      rating: 4,
+      images: [
+        require("../../images/webp/ts1.webp"),
+        require("../../images/webp/ts2.webp"),
+        require("../../images/webp/ts3.webp"),
+        require("../../images/webp/ts4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 5,
+      name: "DapperDaze Designer Tees",
+      price: 30,
+      discountedPrice: 24,
+      rating: 3,
+      images: [
+        require("../../images/webp/ts1.webp"),
+        require("../../images/webp/ts2.webp"),
+        require("../../images/webp/ts3.webp"),
+        require("../../images/webp/ts4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 6,
+      name: "TrendyTwist Tailored Treasures",
+      price: 35,
+      discountedPrice: 28,
+      rating: 5,
+      images: [
+        require("../../images/webp/womsuit1.webp"),
+        require("../../images/webp/womsuit2.webp"),
+        require("../../images/webp/womsuit3.jpg"),
+        require("../../images/webp/womsuit4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 7,
+      name: "ClassyChic Tee Collection",
+      price: 40,
+      discountedPrice: 32,
+      rating: 4,
+      images: [
+        require("../../images/webp/tp1.webp"),
+        require("../../images/webp/tp2.webp"),
+        require("../../images/webp/tp3.webp"),
+        require("../../images/webp/tp4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 8,
+      name: "TrendyTees Designer Collection",
+      price: 45,
+      discountedPrice: 36,
+      rating: 3,
+      images: [
+        require("../../images/webp/ts1.webp"),
+        require("../../images/webp/ts2.webp"),
+        require("../../images/webp/ts3.webp"),
+        require("../../images/webp/ts4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 9,
+      name: "DapperDaze Designer Tees",
+      price: 50,
+      discountedPrice: 40,
+      rating: 5,
+      images: [
+        require("../../images/webp/ts1.webp"),
+        require("../../images/webp/ts2.webp"),
+        require("../../images/webp/ts3.webp"),
+        require("../../images/webp/ts4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 10,
+      name: "TrendyTwist Tailored Treasures",
+      price: 55,
+      discountedPrice: 44,
+      rating: 4,
+      images: [
+        require("../../images/webp/womsuit1.webp"),
+        require("../../images/webp/womsuit2.webp"),
+        require("../../images/webp/womsuit3.jpg"),
+        require("../../images/webp/womsuit4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 11,
+      name: "ClassyChic Tee Collection",
+      price: 60,
+      discountedPrice: 48,
+      rating: 3,
+      images: [
+        require("../../images/webp/tp1.webp"),
+        require("../../images/webp/tp2.webp"),
+        require("../../images/webp/tp3.webp"),
+        require("../../images/webp/tp4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 12,
+      name: "TrendyTees Designer Collection",
+      price: 65,
+      discountedPrice: 52,
+      rating: 5,
+      images: [
+        require("../../images/webp/ts1.webp"),
+        require("../../images/webp/ts2.webp"),
+        require("../../images/webp/ts3.webp"),
+        require("../../images/webp/ts4.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
     }
   ]);
 
