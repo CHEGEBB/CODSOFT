@@ -245,7 +245,7 @@ const Men = () => {
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
-                    <div className="discounted-price">
+                    <div className="discounted-price-men">
                       {item.discountedPrice}
                     </div>
                   </div>
