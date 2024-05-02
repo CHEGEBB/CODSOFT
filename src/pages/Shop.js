@@ -29,13 +29,7 @@ const Shop = () => {
                     <button onClick={() => handleCategoryClick('accessories')}>Accessories</button>
                     <button onClick={() => handleCategoryClick('shoes')}>Shoes</button>
                 </div>
-
-                {/* Render products based on selectedCategory */}
-                {selectedCategory === 'flashSales' && (
-                    <div className="flash-sales-products">
-                    <Flash />
-                    </div>
-                )}
+                {selectedCategory === 'flashSales' && <Flash />}
                 {selectedCategory === 'men' && <Men />}
                 {selectedCategory === 'women' && <Women />}
                 {selectedCategory === 'kids' && <Kids />}
