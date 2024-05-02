@@ -5,6 +5,7 @@ import Women from '../pages/categories/women';
 import Kids from '../pages/categories/kids';
 import Accessories from '../pages/categories/accessories';
 import Shoes from '../pages/categories/shoes';
+import LeftSidebar from '../components/LeftSideBar';
 
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
@@ -14,8 +15,10 @@ const Shop = () => {
     };
 
     return (
-        // Navigation to select the category of products to display
         <div className="shop-page">
+        <div className="left-sidebar">
+            <LeftSidebar />
+        </div>
             <div className="categories-nav">
                 <button onClick={() => handleCategoryClick('flashSales')}>Flash Sales</button>
                 <button onClick={() => handleCategoryClick('men')}>Men</button>
