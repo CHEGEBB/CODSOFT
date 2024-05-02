@@ -1,4 +1,9 @@
 import React from 'react';
+import Men from '../pages/categories/men';
+import Women from '../pages/categories/women';
+import Kids from '../pages/categories/kids';
+import Accessories from '../pages/categories/accessories';
+import Shoes from '../pages/categories/';
 
 const Shop = () => {
     return (
