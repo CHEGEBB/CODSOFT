@@ -5,7 +5,6 @@ import Women from '../pages/categories/women';
 import Kids from '../pages/categories/kids';
 import Accessories from '../pages/categories/accessories';
 import Shoes from '../pages/categories/shoes';
-import LeftSidebar from '../components/LeftSideBar';
 import Flash from '../pages/categories/Flash';
 
 const Shop = () => {
@@ -17,9 +16,6 @@ const Shop = () => {
 
     return (
         <div className="shop-page">
-            <div className="left-sidebar">
-                <LeftSidebar />
-            </div>
             <div className="content-container">
                 <div className="categories-nav">
                     <button onClick={() => handleCategoryClick('flashSales')}>Flash Sales</button>
