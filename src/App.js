@@ -12,7 +12,6 @@ import User from "./pages/User";
 import CartIcon from "./images/ic--round-shopping-cart.svg";
 import Wishlist from "./images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "./images/ant-design--search-outlined.svg";
-import FilterIcon from "./images/bx--filter.svg";
 import CallIcon from "./images/ic--round-call.svg";
 import MailIcon from "./images/mdi--email.svg";
 import PersonIcon from "./images/mdi--person.svg";
@@ -75,8 +74,6 @@ const App = () => {
       <div className="search-container">
           <input type="text" className="input-field" placeholder="Search for products here..." />
           <span className="filter-icon">
-            <img src={FilterIcon} alt="Filter Icon" />
-            <p>Filter</p>
           </span>
           <button type="submit">
             <img src={SearchIcon} alt="Search Icon" />

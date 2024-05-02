@@ -105,52 +105,26 @@ body{
     border: none;
     border-radius: 5px;
     margin-left: 350px;
-    height: 40px;
+    height: 60px;
     max-width: 630px;
     outline: none;
-    border: 1.5px solid $celestialOrange;
     box-shadow:  0 0 6px $greyish;
 
     &::placeholder {
       color: $placeholder-color;
+      font-family: $ropa;
+      font-weight: 500;
+      font-size: 18px;
     }
   }
-
-  .filter-icon,
-  button[type="submit"] {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: $celestialOrange;
-  }
-
-  .filter-icon {
-    left: 850px;
-    height: 40px;
-    width: 90px;
-    background-color: $greyish;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    border: 2px solid $celestialOrange;
-    color: $white;
-  }
-  .filter-icon img{
-    height: 20px;
-    width: 20px;
-  }
-
-  button[type="submit"] {
+button[type="submit"] {
     right: 274px;
     background-color: $celestialOrange;
-    border: none;
     cursor: pointer;
-    height: 40px;
+    height: 50px;
     width: 50px;
     margin-top: -1px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 0;
 
   }
 }
