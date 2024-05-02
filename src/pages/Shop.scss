@@ -1,42 +1,46 @@
 .shop-page {
     display: flex;
-    align-items: flex-start;
-  }
   
-  .categories-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: 20px;
-  }
+    .left-sidebar {
+      // Add styles for the left sidebar
+    }
   
-  .categories-nav button {
-    margin-bottom: 10px; 
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; 
-    background-color: #ccc; 
-    background-size: cover;
-    background-position: center; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+    .content-container {
+      flex: 1;
+      padding: 20px;
   
-  .categories-nav button:hover {
-    background-color: #555;
-  }
+      .categories-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
   
-  .flash-sales-products {
-    flex: 1;
+        button {
+          padding: 10px 20px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+  
+          &:hover {
+            background-color: #555;
+          }
+        }
+      }
+  
+      .flash-sales-products,
+      .men-products,
+      .women-products,
+      .kids-products,
+      .accessories-products,
+      .shoes-products {
+        display: none;
+  
+        &.active {
+          display: block;
+        }
+      }
+    }
   }
   
