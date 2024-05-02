@@ -76,16 +76,16 @@ const Men = () => {
   }
 
   return (
-    <div className="men-page"> {/* Updated class name */}
-      <div className="men-items"> {/* Updated class name */}
+    <div className="men-page"> 
+      <div className="men-items">
         {groupedItems.map((row, rowIndex) => (
-          <div className="men-row" key={rowIndex}> {/* Updated class name */}
+          <div className="men-row" key={rowIndex}>
             {row.map((item, columnIndex) => (
               <div
                 className={`men-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
                 key={item.id}
               >
-                <div className="item-discount">
+                <div className="item-discount-men">
                   {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
                 </div>
                 <div className="item-image">
