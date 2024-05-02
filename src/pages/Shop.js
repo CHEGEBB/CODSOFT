@@ -6,6 +6,7 @@ import Kids from '../pages/categories/kids';
 import Accessories from '../pages/categories/accessories';
 import Shoes from '../pages/categories/shoes';
 import LeftSidebar from '../components/LeftSideBar';
+import Flash from '../pages/categories/Flash';
 
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
@@ -32,8 +33,7 @@ const Shop = () => {
                 {/* Render products based on selectedCategory */}
                 {selectedCategory === 'flashSales' && (
                     <div className="flash-sales-products">
-                        {/* Render flash sales products */}
-                        Flash Sales
+                    <Flash />
                     </div>
                 )}
                 {selectedCategory === 'men' && <Men />}

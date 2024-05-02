@@ -41,10 +41,12 @@ const LeftSideBar = () => {
             </div>
                 <div className="ul">
                 <ul>
+                    <li>Flash Sales</li>
                     <li>Men</li>
                     <li>Women</li>
-                    <li>Deals and Discounts</li>
-                    <li>Latest</li>
+                    <li>Kids</li>
+                    <li>Accessories</li>
+                    <li>Shoes</li>
                 </ul>
                 </div>
                 
