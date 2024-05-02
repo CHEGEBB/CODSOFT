@@ -1,0 +1,42 @@
+.shop-page {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .categories-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 20px;
+  }
+  
+  .categories-nav button {
+    margin-bottom: 10px; 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    background-color: #ccc; 
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .categories-nav button:hover {
+    background-color: #555;
+  }
+  
+  .flash-sales-products {
+    flex: 1;
+  }
+  
