@@ -22,31 +22,25 @@ $silver: #C0C0C0;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    // Add any other styles for the men row container
+   
   }
   
   .men-item-container {
-    width: calc(33.33% - 10px); // Adjust the width to fit three items per row
+    width: calc(33.33% - 10px); 
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    // Add any other styles for the men item container
   }
-  
-  .special-card {
-    // Styles for special cards, if any
-  }
-  
   .item-discount-men {
     position: absolute;
-    top: 25px;
     right: 5px;
     background-color: #ff0000;
     color: #ffffff;
     padding: 3px 8px; 
     border-radius: 5px;
     font-family: $ropa;
+
   }
   .item-discount-men:hover{
     background-color:blueviolet;
@@ -112,23 +106,6 @@ $silver: #C0C0C0;
 .discounted-price-men{
  display: none;
 }
-.item-discount {
-  position: absolute;
-  top: 25px;
-  right: 5px;
-  background-color: #ff0000;
-  color: #ffffff;
-  padding: 3px 8px; 
-  border-radius: 5px;
-  font-family: $ropa;
-}
-.item-discount:hover{
-  background-color:blueviolet;
-  color: #fff;
-  transition: 0.5s;
-}
-
-
 .price-container {
   display: flex;
   align-items: center;
@@ -150,8 +127,6 @@ $silver: #C0C0C0;
   margin-left: 5px;
   color:crimson ;
 }
-
-
   
   .men-item-container:hover .item-overlay {
     opacity: 1;
