@@ -53,13 +53,12 @@ $island:'Island Moments', cursive;
   
   .colored-paragraph {
     font-size: 16px;
-    color: darkblue;
+    color: #F5F5DC;
     margin-bottom: 20px;
     width: 500px;
     margin-left: 400px;
     font-family: $jost;
     font-weight: 700;
-    background-color: rgba(255, 255, 255, 0.2);
   }
   
   button {
@@ -476,16 +475,25 @@ $island:'Island Moments', cursive;
   .product-image-1 {
     background-image: url('../images/suit3.jpg');
     @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   
   .product-image-2 {
     background-image: url('../images/women/dress3.jpg');
     @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   
   .product-image-3 {
     background-image: url('../images/shoesrun.jpeg');
     @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   
   .product-image-4 {
