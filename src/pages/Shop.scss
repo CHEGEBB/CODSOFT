@@ -13,6 +13,7 @@ $silver: #C0C0C0;
 .shop-page {
     display: flex;
     flex-direction: column;
+    background-color: $silver;
     
     .content-container {
       flex: 1;
@@ -92,6 +93,7 @@ $silver: #C0C0C0;
       font-size: 1.5rem;
       font-family: $ropa;
       cursor: pointer;
+      color: $celestialOrange;
       transition: transform 0.3s ease; 
       border: 2px solid $celestialOrange;
 
@@ -131,4 +133,8 @@ $silver: #C0C0C0;
           background-image: url('../images/jorfans3.jpg');
       }
   }
+}
+.active {
+  background-color: $celestialOrange;
+  color: #ddd;
 }

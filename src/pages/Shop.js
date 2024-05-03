@@ -10,15 +10,17 @@ import Flash from '../pages/categories/Flash';
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
     const [showZoomOut, setShowZoomOut] = useState(false);
+    const [activeCategory, setActiveCategory] = useState('flashSales');
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
+        setActiveCategory(category);
     };
 
     useEffect(() => {
         const zoomOutTimer = setTimeout(() => {
             setShowZoomOut(true);
-        }, 5000); // 5000 milliseconds = 5 seconds
+        }, 5000);
 
         return () => clearTimeout(zoomOutTimer);
     }, []);
@@ -34,12 +36,12 @@ const Shop = () => {
             </div>
             <div className="content-container">
                 <div className="categories-nav">
-                    <button onClick={() => handleCategoryClick('flashSales')}>Flash Sales</button>
-                    <button onClick={() => handleCategoryClick('men')}>Men</button>
-                    <button onClick={() => handleCategoryClick('women')}>Women</button>
-                    <button onClick={() => handleCategoryClick('kids')}>Kids</button>
-                    <button onClick={() => handleCategoryClick('accessories')}>Accessories</button>
-                    <button onClick={() => handleCategoryClick('shoes')}>Shoes</button>
+                    <button className={activeCategory === 'flashSales' ? 'active' : ''} onClick={() => handleCategoryClick('flashSales')}>Flash Sales</button>
+                    <button className={activeCategory === 'men' ? 'active' : ''} onClick={() => handleCategoryClick('men')}>Men</button>
+                    <button className={activeCategory === 'women' ? 'active' : ''} onClick={() => handleCategoryClick('women')}>Women</button>
+                    <button className={activeCategory === 'kids' ? 'active' : ''} onClick={() => handleCategoryClick('kids')}>Kids</button>
+                    <button className={activeCategory === 'accessories' ? 'active' : ''} onClick={() => handleCategoryClick('accessories')}>Accessories</button>
+                    <button className={activeCategory === 'shoes' ? 'active' : ''} onClick={() => handleCategoryClick('shoes')}>Shoes</button>
                 </div>
                 {selectedCategory === 'flashSales' && <Flash />}
                 {selectedCategory === 'men' && <Men />}
