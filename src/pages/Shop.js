@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Shop.scss';
 import Men from '../pages/categories/men';
 import Women from '../pages/categories/women';
@@ -9,18 +9,29 @@ import Flash from '../pages/categories/Flash';
 
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
+    const [showZoomOut, setShowZoomOut] = useState(false);
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
 
+    useEffect(() => {
+        const zoomOutTimer = setTimeout(() => {
+            setShowZoomOut(true);
+        }, 5000); // 5000 milliseconds = 5 seconds
+
+        return () => clearTimeout(zoomOutTimer);
+    }, []);
+
     return (
-        <div className="shop-page">
-        <div className="shop-intro">
-            <h1>Shop</h1>
-            <p>Discover the latest trends in fashion at glamourgallerie we've got you covered with a wide range of products from various categories.</p>
-            <p>Click on any category to view products.</p>
-        </div>
+        <div className={`shop-page ${showZoomOut ? 'zoom-out' : ''}`}>
+            <div className="overlay">
+                <div className="shop-intro">
+                    <h1>Shop</h1>
+                    <p>Discover the latest trends in fashion at glamourgallerie we've got you covered with a wide range of products from various categories.</p>
+                    <p>Click on any category to view products.</p>
+                </div>
+            </div>
             <div className="content-container">
                 <div className="categories-nav">
                     <button onClick={() => handleCategoryClick('flashSales')}>Flash Sales</button>
