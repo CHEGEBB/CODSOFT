@@ -12,10 +12,10 @@ const Kids = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../../images/webp/kid1.webp"),
-        require("../../images/webp/kid2.webp"),
-        require("../../images/webp/kid3.webp"),
-        require("../../images/webp/kid4.webp")
+        require("../../images/webp/kid1.avif"),
+        require("../../images/webp/kid2.jpg"),
+        require("../../images/webp/kid3.avif"),
+        require("../../images/webp/kid4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -28,10 +28,11 @@ const Kids = () => {
       discountedPrice: 12,
       rating: 3,
       images: [
-        require("../../images/webp/kid1.webp"),
-        require("../../images/webp/kid2.webp"),
-        require("../../images/webp/kid3.webp"),
-        require("../../images/webp/kid4.webp")
+        require("../../images/webp/kid1.avif"),
+        require("../../images/webp/kid2.jpg"),
+        require("../../images/webp/kid3.avif"),
+        require("../../images/webp/kid4.jpg")
+
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -44,10 +45,10 @@ const Kids = () => {
       discountedPrice: 16,
       rating: 5,
       images: [
-        require("../../images/webp/kid1.webp"),
-        require("../../images/webp/kid2.webp"),
-        require("../../images/webp/kid3.webp"),
-        require("../../images/webp/kid4.webp")
+        require("../../images/webp/kid1.avif"),
+        require("../../images/webp/kid2.jpg"),
+        require("../../images/webp/kid3.avif"),
+        require("../../images/webp/kid4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
