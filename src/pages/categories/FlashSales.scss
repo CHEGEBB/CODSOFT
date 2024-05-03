@@ -20,8 +20,8 @@ $special:#141C27;
   height: auto; 
   border-radius: 5px;
   mix-blend-mode: multiply;
-  margin-left: -90px;
-  margin-top: 0px;
+  margin-left: -70px;
+  margin-top: -60px;
 }
 
 
@@ -156,4 +156,17 @@ $special:#141C27;
 .item-name{
   color: #fff;
   font-size: 20px;
+}
+.flash-sales-item-container {
+  position: relative;
+}
+
+.flash-sale-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height:auto; 
+  object-fit: cover;
+  z-index: 1;
 }
