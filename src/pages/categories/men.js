@@ -157,10 +157,10 @@ const Men = () => {
       discountedPrice: 44,
       rating: 4,
       images: [
-        require("../../images/webp/"),
-        require("../../images/webp/"),
-        require("../../images/webp/"),
-        require("../../images/webp/")
+        require("../../images/webp/men/n1.jpg"),
+        require("../../images/webp/men/n2.jpg"),
+        require("../../images/webp/men/n3.jpg"),
+        require("../../images/webp/men/n4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
