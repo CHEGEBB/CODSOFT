@@ -31,7 +31,7 @@ const Shop = () => {
                 <div className="shop-intro">
                     <h1>Shop</h1>
                     <p>Discover the latest trends in fashion at glamourgallerie we've got you covered with a wide range of products from various categories.</p>
-                    <p style={{color:'crimson',textDecoration:'underline'}}>Click on any category to view products.</p>
+                    <p style={{color:'blueViolet',textDecoration:'underline',fontWeight:'bold'}}>Click on any category to view products.</p>
                 </div>
             </div>
             <div className="content-container">
