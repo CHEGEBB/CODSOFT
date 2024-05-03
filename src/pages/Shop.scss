@@ -13,32 +13,13 @@ $silver: #C0C0C0;
 .shop-page {
     display: flex;
     flex-direction: column;
+    
     .content-container {
       flex: 1;
       padding: 20px;
+      width: 100%;
       
-  
-      .categories-nav {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        margin-top: -40px;
-        background-color: red;
-        height: 300px;
-  
-        button {
-          padding: 10px 20px;
-          background-color: #333;
-          color: #fff;
-          border: none;
-          border-radius: 20px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-  
-          &:hover {
-            background-color: #555;
-          }
-        }
+      
       }
   
       .flash-sales-products,
@@ -54,7 +35,6 @@ $silver: #C0C0C0;
         }
       }
     }
-  }
   .shop-intro {
     display: flex;
     flex-direction: column;
@@ -66,7 +46,7 @@ $silver: #C0C0C0;
     font-size: 2rem;
     text-align: center;
     animation: zoomInOut 10s infinite;
-    max-width: 100%;
+    width: 100%;
        h1{
         font-size: 3rem;
         margin-bottom: 20px;
@@ -94,10 +74,15 @@ $silver: #C0C0C0;
   align-items: center;
   margin-bottom: 20px;
   width: 100%;
+  padding: 10px 0;
+  font-family: $ropa;
+  font-size: 1.5rem;
+  height: 300px;
+  margin-top: -40px;
 
   button {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: none;
       margin: 0 10px;
@@ -108,6 +93,7 @@ $silver: #C0C0C0;
       font-family: $ropa;
       cursor: pointer;
       transition: transform 0.3s ease; 
+      border: 2px solid $celestialOrange;
 
       &::after {
           content: '';
