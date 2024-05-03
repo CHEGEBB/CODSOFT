@@ -51,6 +51,7 @@ $silver: #C0C0C0;
     padding: 3px 8px; 
     border-radius: 5px;
     font-family: $ropa;
+    margin-top: 15px;
 
   }
   .item-discount-men:hover{
@@ -125,7 +126,7 @@ $silver: #C0C0C0;
 .previous-price-men {
   text-decoration: line-through;
   margin-right: 5px;
-  color: black;
+  color:#F5F5DC;
   font-size: 20px;
   font-family: $jost;
   font-weight: 500;
@@ -136,7 +137,7 @@ $silver: #C0C0C0;
   font-size: 20px;
   font-family: $jost;
   margin-left: 5px;
-  color:crimson ;
+  color:#F5AD42 ;
 }
   .men-item-container:hover .item-overlay {
     opacity: 1;
@@ -149,7 +150,9 @@ $silver: #C0C0C0;
     height: 200px;
 
   }
-  .item-name{
+  .item-name-men{
     color: #fff;
     font-size: 20px;
+    font-family: $jost;
+    width: 300px;
   }
