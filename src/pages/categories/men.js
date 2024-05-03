@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
-import menBannerMP4 from "../../images/webp/men/ban2.mp4" 
+import menBannerMP4 from "../../images/webp/men/ban5.mp4" 
 
 const Men = () => {
   const [items, setItems] = useState([
