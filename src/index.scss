@@ -115,6 +115,7 @@ body{
     max-width: 630px;
     outline: none;
     box-shadow:  0 0 6px $greyish;
+    font-family: $ropa;
 
     &::placeholder {
       color: $placeholder-color;
