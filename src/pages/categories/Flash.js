@@ -95,10 +95,10 @@ const Flash = () => {
       discountedPrice: 28,
       rating: 5,
       images: [
-        require ("../../images/webp/flash/d1.jpg"),
-        require("../../images/webp/flash/d2.jpg"),
-        require("../../images/webp/flash/d3.jpg"),
-        require("../../images/webp/flash/d4.jpg")
+        require ("../../images/webp/flash/i1.jpg"),
+        require("../../images/webp/flash/i2.jpg"),
+        require("../../images/webp/flash/i3.jpg"),
+        require("../../images/webp/flash/i4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -111,10 +111,10 @@ const Flash = () => {
       discountedPrice: 32,
       rating: 4,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/flash/h1.jpg"),
+        require("../../images/webp/flash/h2.jpg"),
+        require("../../images/webp/flash/h3.jpg"),
+        require("../../images/webp/flash/h2.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -127,10 +127,10 @@ const Flash = () => {
       discountedPrice: 36,
       rating: 3,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/flash/j1.jpg"),
+        require("../../images/webp/flash/j2.jpg"),
+        require("../../images/webp/flash/j3.jpg"),
+        require("../../images/webp/flash/j4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -143,10 +143,10 @@ const Flash = () => {
       discountedPrice: 40,
       rating: 5,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/flash/cp1.jpg"),
+        require("../../images/webp/flash/cp2.jpg"),
+        require("../../images/webp/flash/cp3.jpg"),
+        require("../../images/webp/flash/cp4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -159,10 +159,10 @@ const Flash = () => {
       discountedPrice: 44,
       rating: 4,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/flash/k1.jpg"),
+        require("../../images/webp/flash/k2.jpg"),
+        require("../../images/webp/flash/k3.jpg"),
+        require("../../images/webp/flash/k4.avif")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -175,10 +175,10 @@ const Flash = () => {
       discountedPrice: 48,
       rating: 3,
       images: [
-        require ("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require ("../../images/webp/flash/l1.jpg"),
+        require("../../images/webp/flash/l2.jpg"),
+        require("../../images/webp/flash/l3.jpg"),
+        require("../../images/webp/flash/l4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
