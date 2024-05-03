@@ -79,10 +79,11 @@ const Flash = () => {
       discountedPrice: 24,
       rating: 3,
       images: [
-        require("../../images/webp/flash/c1.jpg"),
-        require("../../images/webp/flash/c2.jpg"),
-        require("../../images/webp/flash/c3.jpg"),
-        require("../../images/webp/flash/c4.jpg")
+        require("../../images/webp/flash/n1.avif"),
+        require("../../images/webp/flash/n2.jpg"),
+        require("../../images/webp/flash/n3.jpg"),
+        require("../../images/webp/flash/n4.jpg")
+       
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -234,13 +235,15 @@ const Flash = () => {
                 }`}
                 key={item.id}
               >
-                {/* Flash sale banner or video */}
-                <video autoPlay loop muted className="flash-sale-banner">
-                  <source src={flashSaleBannerMP4} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                {/* End of flash sale banner or video */}
-  
+                {/* Conditionally render video only on the first card of each row */}
+                {columnIndex === 0 && (
+                  <video autoPlay loop muted className="flash-sale-banner">
+                    <source src={flashSaleBannerMP4} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {/* End of conditional rendering */}
+                
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
@@ -278,6 +281,7 @@ const Flash = () => {
       </div>
     </div>
   );
+  
   
 };
 
