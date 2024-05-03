@@ -55,7 +55,7 @@ $special:#141C27;
   padding: 3px 8px; 
   border-radius: 5px;
   font-family: $ropa;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .item-discount-flash-sales:hover {
@@ -101,7 +101,7 @@ $special:#141C27;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFD00;
+  background-color: $celestialOrange;
   color: #fff;
   padding: 5px;
   border-radius: 5px;
@@ -109,7 +109,7 @@ $special:#141C27;
   font-size: 1rem;
   cursor: pointer;
   width: 200px;
-  margin-left: 50px;
+  margin-left: 30px;
   margin-bottom: 100px;
 }
 
