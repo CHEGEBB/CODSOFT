@@ -46,14 +46,29 @@
       }
     }
   }
-  .shop-intro{
+  .shop-intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url('../images/fashio.jpg') no-repeat center center/cover;
     color: #fff;
-    height: 400px;
+    height: 500px;
     font-size: 2rem;
-  }
+    text-align: center;
+    animation: zoomInOut 10s infinite;
+    max-width: 110%;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+
   
