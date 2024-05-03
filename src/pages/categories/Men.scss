@@ -25,8 +25,7 @@ $silver: #C0C0C0;
   .men-items {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    z-index: -1;
+    gap: 40px;
   }
   
   .men-row {
@@ -139,7 +138,16 @@ $silver: #C0C0C0;
   margin-left: 5px;
   color:crimson ;
 }
-  
   .men-item-container:hover .item-overlay {
     opacity: 1;
+  }
+  .item-info-men{
+    background-color: #483D8B;
+    padding: 10px;
+    margin-top: -10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+  .item-name{
+    color: #fff;
+    font-size: 20px;
   }

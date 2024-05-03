@@ -250,15 +250,15 @@ const Men = () => {
                     </div>
                   </div>
                 </div>
-                <div className="item-info">
+                <div className="item-info-men">
                   <div className="item-name">{item.name}</div>
                   <div className="price-container">
-                    <span className="previous-price">${item.price}</span>
-                    <span className="current-price">${item.discountedPrice}</span>
+                    <span className="previous-price-men">${item.price}</span>
+                    <span className="current-price-men">${item.discountedPrice}</span>
                   </div>
                   <div className="item-rating">
                     {Array.from({ length: item.rating }).map((_, index) => (
-                      <span key={index} className="star-icon" style={{ color: "crimson", fontSize: "1.5em" }}>★</span>
+                      <span key={index} className="star-icon" style={{ color: "#F5AD42", fontSize: "1.5em" }}>★</span>
                     ))}
                   </div>
                 </div>
