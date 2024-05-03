@@ -15,10 +15,10 @@ const Flash = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/flash/a1.jpg"),
+        require("../../images/webp/flash/a2.jpg"),
+        require("../../images/webp/flash/a3.jpg"),
+        require("../../images/webp/flash/a4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -31,10 +31,10 @@ const Flash = () => {
       discountedPrice: 12,
       rating: 3,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/flash/b1.jpg"),
+        require("../../images/webp/flash/b2.jpg"),
+        require("../../images/webp/flash/b3.jpg"),
+        require("../../images/webp/flash/b4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
