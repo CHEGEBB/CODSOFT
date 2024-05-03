@@ -267,7 +267,7 @@ const Flash = () => {
                   </div>
                   <div className="item-rating">
                     {Array.from({ length: item.rating }).map((_, index) => (
-                      <span key={index} className="star-icon" style={{ color: "crimson", fontSize: "1.5em" }}>★</span>
+                      <span key={index} className="star-icon" style={{ color: "#FFFD00", fontSize: "1.5em" }}>★</span>
                     ))}
                   </div>
                 </div>
