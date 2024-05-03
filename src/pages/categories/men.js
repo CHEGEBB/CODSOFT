@@ -214,8 +214,8 @@ const Men = () => {
   }, []);
   
   const groupedItems = [];
-  for (let i = 0; i < items.length; i += 3) {
-    groupedItems.push(items.slice(i, i + 3));
+  for (let i = 0; i < items.length; i += 4) {
+    groupedItems.push(items.slice(i, i + 4));
   }
 
   return (

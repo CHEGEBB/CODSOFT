@@ -16,6 +16,11 @@ const Shop = () => {
 
     return (
         <div className="shop-page">
+        <div className="shop-intro">
+            <h1>Shop</h1>
+            <p>Discover the latest trends in fashion at glamourgallerie we've got you covered with a wide range of products from various categories.</p>
+            <p>Click on any category to view products.</p>
+        </div>
             <div className="content-container">
                 <div className="categories-nav">
                     <button onClick={() => handleCategoryClick('flashSales')}>Flash Sales</button>

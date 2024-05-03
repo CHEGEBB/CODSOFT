@@ -1,5 +1,6 @@
 .shop-page {
     display: flex;
+    flex-direction: column;
   
     .left-sidebar {
       // Add styles for the left sidebar
@@ -13,6 +14,8 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
+        background-color: #333;
+        height: 200px;
   
         button {
           padding: 10px 20px;
@@ -42,5 +45,15 @@
         }
       }
     }
+  }
+  .shop-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/fashio.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    font-size: 2rem;
   }
   
