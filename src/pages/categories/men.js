@@ -28,10 +28,10 @@ const Men = () => {
       discountedPrice: 12,
       rating: 3,
       images: [
-        require("../../images/webp/womsuit1.webp"),
-        require("../../images/webp/womsuit2.webp"),
-        require("../../images/webp/womsuit3.jpg"),
-        require("../../images/webp/womsuit4.jpg")
+        require("../../images/webp/men/business1.jpg"),
+        require("../../images/webp/men/business2.jpg"),
+        require("../../images/webp/men/business3.jpg"),
+        require("../../images/webp/men/business4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,

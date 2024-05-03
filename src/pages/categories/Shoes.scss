@@ -3,7 +3,7 @@ $frosted-glass: rgba(255, 255, 255, 0.5);
 $celestialOrange: #FF6F61;
 $greyish: #555555;
 
-.flash-sales-page {
+.shoes-page {
   width: 100%;
 
   h1 {
@@ -15,18 +15,18 @@ $greyish: #555555;
   }
 }
 
-.flash-sales-items {
+.shoes-items {
   display: flex;
   flex-direction: column;
 }
 
-.flash-sales-row {
+.shoes-row {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
 }
 
-.flash-sales-item-container {
+.shoes-item-container {
   width: calc(33.33% - 10px); 
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -35,10 +35,9 @@ $greyish: #555555;
   position: relative;
 }
 
-.item-discount-flash-sales {
+.item-discount-shoes {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  right: 5px;
   background-color: $celestialOrange;
   color: #fff;
   padding: 3px 8px; 
@@ -46,7 +45,7 @@ $greyish: #555555;
   font-family: $ropa;
 }
 
-.item-discount-flash-sales:hover {
+.item-discount-shoes:hover {
   background-color: blueviolet;
   transition: 0.5s;
 }
@@ -70,7 +69,7 @@ $greyish: #555555;
   transition: opacity 0.3s ease;
 }
 
-.flash-sales-item-container:hover .item-overlay {
+.shoes-item-container:hover .item-overlay {
   opacity: 1;
 }
 
@@ -106,7 +105,7 @@ $greyish: #555555;
   transition: 0.5s;
 }
 
-.discounted-price-flash-sales {
+.discounted-price-shoes {
   display: none;
 }
 
@@ -132,6 +131,6 @@ $greyish: #555555;
   color: crimson;
 }
 
-.flash-sales-item-container:hover .item-overlay {
+.shoes-item-container:hover .item-overlay {
   opacity: 1;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./FlashSales.scss";
+import flashSaleBanner from "../../images/webp/men/banner.jpg";
 
 const Flash = () => {
   const [items, setItems] = useState([
@@ -219,16 +220,22 @@ const Flash = () => {
   }
 
   return (
-    <div className="flash-sales-page"> 
+    <div className="flash-sales-page">
       <h1>Flash Sales</h1>
       <div className="flash-sales-items">
         {groupedItems.map((row, rowIndex) => (
           <div className="flash-sales-row" key={rowIndex}>
             {row.map((item, columnIndex) => (
               <div
-                className={`flash-sales-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
+                className={`flash-sales-item-container ${
+                  item.id >= 10 && item.id <= 15 ? "special-card" : ""
+                }`}
                 key={item.id}
               >
+                {/* Flash sale banner or picture */}
+                <img src={flashSaleBanner} alt="Flash Sale" className="flash-sale-banner" />
+                {/* End of flash sale banner or picture */}
+
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">

@@ -93,9 +93,10 @@ $silver: #C0C0C0;
       font-size: 1.5rem;
       font-family: $ropa;
       cursor: pointer;
-      color: $celestialOrange;
+      color:orangered;
       transition: transform 0.3s ease; 
       border: 2px solid $celestialOrange;
+      font-weight: bold;
 
       &::after {
           content: '';
@@ -115,7 +116,7 @@ $silver: #C0C0C0;
       }
 
       &:nth-child(1)::after {
-          background-image: url('../images/acc4.jpg');
+          background-image: url('../images/webp/men/sale.jpg');
       }
       &:nth-child(2)::after {
           background-image: url('../images/acc6.jpg');
