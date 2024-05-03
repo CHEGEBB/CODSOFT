@@ -220,6 +220,9 @@ const Men = () => {
 
   return (
     <div className="men-page"> 
+      <h1>
+      Men's Collection
+      </h1>
       <div className="men-items">
         {groupedItems.map((row, rowIndex) => (
           <div className="men-row" key={rowIndex}>
