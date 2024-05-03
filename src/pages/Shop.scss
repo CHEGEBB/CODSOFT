@@ -1,3 +1,15 @@
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$silver: #C0C0C0;
 .shop-page {
     display: flex;
     flex-direction: column;
@@ -58,6 +70,17 @@
     text-align: center;
     animation: zoomInOut 10s infinite;
     max-width: 110%;
+       h1{
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-family: $ropa;
+        font-weight: 700;
+        text-transform: uppercase;
+       }
+        p{
+          font-size: 24px;
+          font-family: $jost;
+        }
 }
 
 @keyframes zoomInOut {
