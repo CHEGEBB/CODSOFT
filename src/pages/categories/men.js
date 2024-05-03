@@ -49,9 +49,6 @@ const Men = () => {
         require("../../images/webp/men/f2.jpg"),
         require("../../images/webp/men/f3.jpg"),
         require("../../images/webp/men/f4.jpg")
-        
-
-
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -64,10 +61,10 @@ const Men = () => {
       discountedPrice: 20,
       rating: 4,
       images: [
-        require("../../images/webp/ts1.webp"),
-        require("../../images/webp/ts2.webp"),
-        require("../../images/webp/ts3.webp"),
-        require("../../images/webp/ts4.webp")
+        require("../../images/webp/men/h1.avif"),
+        require("../../images/webp/men/h2.jpg"),
+        require("../../images/webp/men/h3.jpg"),
+        require("../../images/webp/men/h4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -96,10 +93,10 @@ const Men = () => {
       discountedPrice: 28,
       rating: 5,
       images: [
-        require("../../images/webp/womsuit1.webp"),
-        require("../../images/webp/womsuit2.webp"),
-        require("../../images/webp/womsuit3.jpg"),
-        require("../../images/webp/womsuit4.jpg")
+        require("../../images/webp/men/i1.avif"),
+        require("../../images/webp/men/i2.avif"),
+        require("../../images/webp/men/i3.avif"),
+        require("../../images/webp/men/i4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
