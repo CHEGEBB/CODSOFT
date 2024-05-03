@@ -173,10 +173,10 @@ const Men = () => {
       discountedPrice: 48,
       rating: 3,
       images: [
-        require("../../images/webp/tp1.webp"),
-        require("../../images/webp/tp2.webp"),
-        require("../../images/webp/tp3.webp"),
-        require("../../images/webp/tp4.webp")
+        require("../../images/webp/men/o1.jpg"),
+        require("../../images/webp/men/o2.jpg"),
+        require("../../images/webp/men/o3.jpg"),
+        require("../../images/webp/men/o4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -189,10 +189,10 @@ const Men = () => {
       discountedPrice: 52,
       rating: 5,
       images: [
-        require("../../images/webp/ts1.webp"),
-        require("../../images/webp/ts2.webp"),
-        require("../../images/webp/ts3.webp"),
-        require("../../images/webp/ts4.webp")
+        require("../../images/webp/men/p1.jpg"),
+        require("../../images/webp/men/p2.jpg"),
+        require("../../images/webp/men/p3.jpg"),
+        require("../../images/webp/men/p4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
