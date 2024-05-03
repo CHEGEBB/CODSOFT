@@ -40,7 +40,7 @@ $silver: #C0C0C0;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 10px;
-    height: 500px;
+    height: 550px;
     overflow: hidden;
   }
   .item-discount-men {
@@ -122,7 +122,7 @@ $silver: #C0C0C0;
   align-items: center;
 }
 
-.previous-price {
+.previous-price-men {
   text-decoration: line-through;
   margin-right: 5px;
   color: black;
@@ -131,7 +131,7 @@ $silver: #C0C0C0;
   font-weight: 500;
 }
 
-.current-price {
+.current-price-men {
   font-weight: 500;
   font-size: 20px;
   font-family: $jost;
@@ -142,10 +142,12 @@ $silver: #C0C0C0;
     opacity: 1;
   }
   .item-info-men{
-    background-color: #483D8B;
+    background-color: $special;
     padding: 10px;
     margin-top: -10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    height: 200px;
+
   }
   .item-name{
     color: #fff;
