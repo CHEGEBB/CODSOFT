@@ -20,8 +20,8 @@ $special:#141C27;
   height: auto; 
   border-radius: 5px;
   mix-blend-mode: multiply;
-  margin-left: -60px;
-  margin-top: -20px;
+  margin-left: -90px;
+  margin-top: 0px;
 }
 
 
@@ -40,12 +40,11 @@ $special:#141C27;
 .flash-sales-item-container {
   width: calc(33.33% - 10px); 
   box-sizing: border-box;
-  border: 1px solid $special;
+  // border: 1px solid $special;
   border-radius: 5px;
   padding: 10px;
   position: relative;
-  background-color: $frosted-glass;
-  margin-top: -20px;
+  // background-color: #F5F5DC;
 }
 
 .item-discount-flash-sales {
