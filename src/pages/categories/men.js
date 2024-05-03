@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
+import menBannerMP4 from "../../images/webp/men/ban2.mp4" 
 
 const Men = () => {
   const [items, setItems] = useState([
@@ -232,6 +233,14 @@ const Men = () => {
                 className={`men-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
                 key={item.id}
               >
+               {/* Conditionally render video only on the first card of each row */}
+               {columnIndex === 0 && (
+                  <video autoPlay loop muted className="men-banner">
+                    <source src={menBannerMP4} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {/* End of conditional rendering */}
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
