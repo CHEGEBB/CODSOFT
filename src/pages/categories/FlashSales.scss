@@ -130,7 +130,7 @@ $special:#141C27;
 .previous-price {
   text-decoration: line-through;
   margin-right: 5px;
-  color: $greyish;
+  color: #fff;
   font-size: 20px;
   font-family: $ropa;
   font-weight: 500;
@@ -146,4 +146,7 @@ $special:#141C27;
 
 .flash-sales-item-container:hover .item-overlay {
   opacity: 1;
+}
+.item-info{
+  background-color: #483D8B;
 }
