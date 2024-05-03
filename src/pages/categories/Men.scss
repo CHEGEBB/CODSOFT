@@ -42,16 +42,17 @@ $silver: #C0C0C0;
     padding: 10px;
     height: 550px;
     overflow: hidden;
+    background-color: $special;
   }
   .item-discount-men {
     position: absolute;
+    top: 25px;
     right: 5px;
     background-color: #ff0000;
     color: #ffffff;
     padding: 3px 8px; 
     border-radius: 5px;
     font-family: $ropa;
-    margin-top: 15px;
 
   }
   .item-discount-men:hover{
@@ -62,7 +63,6 @@ $silver: #C0C0C0;
   
   .item-image {
     position: relative;
-    // Styles for item image container
   }
   
 .item-overlay {
