@@ -499,25 +499,39 @@ $island:'Island Moments', cursive;
   .product-image-4 {
     background-image: url('../images/wrist.jpeg');
     @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   
   .product-image-5 {
     background-image: url('../images/leather2.jpg');
     @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   
   .product-image-6 {
     background-image: url('../images/fedora.jpeg');
     @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   .product-image-7 {
     background-image: url('../images/sunglasses.jpeg');
     @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   .product-image-8 {
     background-image: url('../images/belts.jpg');
     @include product-images;
-    
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
   }
   .about{
     background-color: #333;
