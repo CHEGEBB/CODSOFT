@@ -12,10 +12,11 @@ const Men = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../../images/webp/ts1.webp"),
-        require("../../images/webp/ts2.webp"),
-        require("../../images/webp/ts3.webp"),
-        require("../../images/webp/ts4.webp")
+        require("../../images/webp/men/jack1.jpg"),
+        require("../../images/webp/men/jack2.jpg"),
+        require("../../images/webp/men/jack3.jpg"),
+        require("../../images/webp/men/jack4.jpg")
+
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -28,10 +29,10 @@ const Men = () => {
       discountedPrice: 12,
       rating: 3,
       images: [
-        require("../../images/webp/men/business1.jpg"),
-        require("../../images/webp/men/business2.jpg"),
-        require("../../images/webp/men/business3.jpg"),
-        require("../../images/webp/men/business4.jpg")
+        require("../../images/webp/men/d1.jpg"),
+        require("../../images/webp/men/d2.jpg"),
+        require("../../images/webp/men/d3.jpg"),
+        require("../../images/webp/men/d4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -44,10 +45,13 @@ const Men = () => {
       discountedPrice: 16,
       rating: 5,
       images: [
-        require("../../images/webp/tp1.webp"),
-        require("../../images/webp/tp2.webp"),
-        require("../../images/webp/tp3.webp"),
-        require("../../images/webp/tp4.webp")
+        require("../../images/webp/men/f1.jpg"),
+        require("../../images/webp/men/f2.jpg"),
+        require("../../images/webp/men/f3.jpg"),
+        require("../../images/webp/men/f4.jpg")
+        
+
+
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
