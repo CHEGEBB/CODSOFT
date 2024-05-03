@@ -49,12 +49,13 @@ $special:#141C27;
 
 .item-discount-flash-sales {
   position: absolute;
-  right: 5px;
-  background-color:#FFFD00;
+  right: 10px;
+  background-color: $celestialOrange;
   color: #fff;
   padding: 3px 8px; 
   border-radius: 5px;
   font-family: $ropa;
+  margin-top: 5px;
 }
 
 .item-discount-flash-sales:hover {
