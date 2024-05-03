@@ -140,3 +140,21 @@ $silver: #C0C0C0;
   .men-item-container:hover .item-overlay {
     opacity: 1;
   }
+  .men-item-container{
+    position: relative;
+  }
+  .men-banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height:auto; 
+    object-fit: cover;
+    z-index: 1;
+    width: 100%; 
+  height: auto; 
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+  margin-left: -70px;
+  margin-top: -60px;
+  }
