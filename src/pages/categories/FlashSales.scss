@@ -127,7 +127,7 @@ $special:#141C27;
   align-items: center;
 }
 
-.previous-price {
+.previous-price-flash{
   text-decoration: line-through;
   margin-right: 5px;
   color: #fff;
@@ -136,7 +136,7 @@ $special:#141C27;
   font-weight: 500;
 }
 
-.current-price {
+.current-price-flash {
   font-weight: 500;
   font-size: 20px;
   font-family: $ropa;

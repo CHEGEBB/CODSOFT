@@ -265,8 +265,8 @@ const Flash = () => {
                 <div className="item-info-flash">
                   <div className="item-name">{item.name}</div>
                   <div className="price-container">
-                    <span className="previous-price">${item.price}</span>
-                    <span className="current-price">${item.discountedPrice}</span>
+                    <span className="previous-price-flash">${item.price}</span>
+                    <span className="current-price-flash">${item.discountedPrice}</span>
                   </div>
                   <div className="item-rating">
                     {Array.from({ length: item.rating }).map((_, index) => (
