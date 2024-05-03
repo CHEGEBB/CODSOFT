@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./FlashSales.scss";
-import flashSaleBanner from "../../images/webp/men/banner.jpg";
+import flashSaleBannerMP4 from "../../images/webp/men/ban.mp4";
+
+
 
 const Flash = () => {
   const [items, setItems] = useState([
@@ -232,10 +234,13 @@ const Flash = () => {
                 }`}
                 key={item.id}
               >
-                {/* Flash sale banner or picture */}
-                <img src={flashSaleBanner} alt="Flash Sale" className="flash-sale-banner" />
-                {/* End of flash sale banner or picture */}
-
+                {/* Flash sale banner or video */}
+                <video autoPlay loop muted className="flash-sale-banner">
+                  <source src={flashSaleBannerMP4} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {/* End of flash sale banner or video */}
+  
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
@@ -273,6 +278,7 @@ const Flash = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Flash;

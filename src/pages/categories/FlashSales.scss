@@ -14,6 +14,14 @@ $greyish: #555555;
     text-transform: uppercase;
   }
 }
+.flash-sale-banner {
+  width: 100%; 
+  height: auto; 
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+  margin-left: -20px;
+}
+
 
 .flash-sales-items {
   display: flex;
@@ -37,8 +45,7 @@ $greyish: #555555;
 
 .item-discount-flash-sales {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  right: 5px;
   background-color: $celestialOrange;
   color: #fff;
   padding: 3px 8px; 
