@@ -234,7 +234,7 @@ const Men = () => {
                 key={item.id}
               >
                {/* Conditionally render video only on the first card of each row */}
-               {columnIndex === 0 && (
+               {columnIndex === 3 && (
                   <video autoPlay loop muted className="men-banner">
                     <source src={menBannerMP4} type="video/mp4" />
                     Your browser does not support the video tag.
