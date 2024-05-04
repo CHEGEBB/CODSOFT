@@ -325,6 +325,22 @@ const Women = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
+        require("../../images/webp/women/t1.jpg"),
+        require("../../images/webp/women/t2.jpg"),
+        require("../../images/webp/women/t3.jpg"),
+        require("../../images/webp/women/t4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 21,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
         require("../../images/webp/women/u1.jpg"),
         require("../../images/webp/women/u2.jpg"),
         require("../../images/webp/women/u3.jpg"),
@@ -334,6 +350,55 @@ const Women = () => {
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
     },
+    {
+      id: 22,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/women/u1.jpg"),
+        require("../../images/webp/women/u2.jpg"),
+        require("../../images/webp/women/u3.jpg"),
+        require("../../images/webp/women/u4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 23,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/women/u1.jpg"),
+        require("../../images/webp/women/u2.jpg"),
+        require("../../images/webp/women/u3.jpg"),
+        require("../../images/webp/women/u4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 24,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/women/u1.jpg"),
+        require("../../images/webp/women/u2.jpg"),
+        require("../../images/webp/women/u3.jpg"),
+        require("../../images/webp/women/u4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    
 
   ]);
 
