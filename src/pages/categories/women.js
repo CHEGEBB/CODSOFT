@@ -476,7 +476,7 @@ const Women = () => {
                     </div>
                   </div>
                 </div>
-                <div className="item-info">
+                <div className="item-info-women">
                   <div className="item-name">{item.name}</div>
                   <div className="price-container">
                     <span className="previous-price">${item.price}</span>
