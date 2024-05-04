@@ -29,10 +29,11 @@ $greyish: #555555;
 .women-item-container {
   width: calc(33.33% - 10px); 
   box-sizing: border-box;
-  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   position: relative;
+  height: 550px;
+  overflow: hidden;
 }
 
 .item-discount-women {
