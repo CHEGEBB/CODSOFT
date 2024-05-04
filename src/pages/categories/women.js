@@ -340,7 +340,7 @@ const Women = () => {
           return { ...item, currentImageIndex: nextImageIndex };
         })
       );
-    }, 3000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
