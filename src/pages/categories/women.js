@@ -198,6 +198,102 @@ const Women = () => {
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
     },
+    {
+      id: 13,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 14,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 15,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 16,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 17,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 18,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    }
 
 
 
