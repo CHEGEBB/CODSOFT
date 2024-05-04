@@ -101,7 +101,6 @@ $greyish: #555555;
   margin-bottom: 100px;
 }
 .item-info-women{
-  background-color: #FF6F61;
   height: 200px;
   margin-top: -15px;
 }
@@ -142,6 +141,7 @@ $greyish: #555555;
 }
 .item-image {
   position: relative;
+  height: 400px;
   overflow: hidden;
 
   img {

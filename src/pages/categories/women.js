@@ -489,7 +489,7 @@ const Women = () => {
                       <span
                         key={index}
                         className="star-icon"
-                        style={{ color: "crimson", fontSize: "1.5em" }}
+                        style={{ color: "#BDB76B", fontSize: "1.5em" }}
                       >
                         ★
                       </span>
