@@ -6,6 +6,7 @@ import Kids from '../pages/categories/kids';
 import Accessories from '../pages/categories/accessories';
 import Shoes from '../pages/categories/shoes';
 import Flash from '../pages/categories/Flash';
+import Clicking from '../images/webp/women/pic.webm';
 
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
@@ -30,8 +31,16 @@ const Shop = () => {
             <div className="overlay">
                 <div className="shop-intro">
                     <h1>Shop</h1>
+                    <div className="video-container">
+            <video autoPlay loop muted>
+                <source src={Clicking} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
                     <p>Discover the latest trends in fashion at glamourgallerie we've got you covered with a wide range of products from various categories.</p>
                     <p style={{color:'blueViolet',textDecoration:'underline',fontWeight:'bold'}}>Click on any category to view products.</p>
+                    {/* mp4 an animation clicking */}
+             
                 </div>
             </div>
             <div className="content-container">
