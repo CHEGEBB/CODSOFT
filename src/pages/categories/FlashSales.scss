@@ -130,7 +130,7 @@ $special:#141C27;
 .previous-price-flash{
   text-decoration: line-through;
   margin-right: 5px;
-  color: #fff;
+  color: $special;
   font-size: 20px;
   font-family: $ropa;
   font-weight: 500;
@@ -141,21 +141,19 @@ $special:#141C27;
   font-size: 20px;
   font-family: $ropa;
   margin-left: 5px;
-  color: #FFFD00;
+  color: #8B008B;
 }
 
 .flash-sales-item-container:hover .item-overlay {
   opacity: 1;
 }
 .item-info-flash{
-  background-color: #483D8B;
   padding: 10px;
   margin-top: -10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .item-name{
-  color: #fff;
-  font-size: 20px;
+  color: $special;
+  font-size: 16px;
 }
 .flash-sales-item-container {
   position: relative;
