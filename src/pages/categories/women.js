@@ -163,10 +163,11 @@ const Women = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/women/j1.jpg"),
+        require("../../images/webp/women/j2.jpg"),
+        require("../../images/webp/women/j3.avif"),
+        require("../../images/webp/women/j4.jpg")
+        
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
@@ -179,10 +180,10 @@ const Women = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/women/k1.jpg"),
+        require("../../images/webp/women/k2.jpg"),
+        require("../../images/webp/women/k3.jpg"),
+        require("../../images/webp/women/k4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
