@@ -134,3 +134,16 @@ $greyish: #555555;
 .women-item-container:hover .item-overlay {
   opacity: 1;
 }
+
+.item-image {
+  position: relative;
+  overflow: hidden;
+  
+  img {
+    transition: transform 0.5s ease;
+    
+    &.next {
+      transform: translateX(100%);
+    }
+  }
+}
