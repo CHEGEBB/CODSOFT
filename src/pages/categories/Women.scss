@@ -77,6 +77,14 @@ $silver: #C0C0C0;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+.item-name-women{
+  font-size: 20px;
+  font-family: $jost;
+  font-weight: 500;
+  margin-top: 10px;
+  color: $special;
+
+}
 
 .women-item-container:hover .item-overlay {
   opacity: 1;
