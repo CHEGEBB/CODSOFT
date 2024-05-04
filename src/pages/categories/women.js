@@ -293,7 +293,40 @@ const Women = () => {
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
-    }
+    },
+    {
+      id: 19,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 20,
+      name: "Women Item 1",
+      price: 10,
+      discountedPrice: 8,
+      rating: 4,
+      images: [
+        require("../../images/webp/a1.webp"),
+        require("../../images/webp/a2.webp"),
+        require("../../images/webp/a4.webp"),
+        require("../../images/webp/a5.webp")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+
 
 
 
