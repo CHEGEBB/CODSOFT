@@ -25,7 +25,7 @@ $silver: #C0C0C0;
   .men-items {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
   
   .men-row {
@@ -151,4 +151,5 @@ $silver: #C0C0C0;
     font-size: 16px;
     font-family: $jost;
     width: 300px;
+    font-weight: 500;
   }
