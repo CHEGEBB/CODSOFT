@@ -196,10 +196,10 @@ const Women = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../../images/webp/a1.webp"),
-        require("../../images/webp/a2.webp"),
-        require("../../images/webp/a4.webp"),
-        require("../../images/webp/a5.webp")
+        require("../../images/webp/women/l1.jpg"),
+        require("../../images/webp/women/l2.jpg"),
+        require("../../images/webp/women/l3.jpg"),
+        require("../../images/webp/women/l4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
