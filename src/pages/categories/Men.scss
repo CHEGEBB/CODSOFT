@@ -38,11 +38,9 @@ $silver: #C0C0C0;
   .men-item-container {
     width: calc(33.33% - 10px); 
     box-sizing: border-box;
-    border-radius: 5px;
     padding: 10px;
     height: 550px;
     overflow: hidden;
-    background-color: $special;
   }
   .item-discount-men {
     position: absolute;
@@ -126,7 +124,7 @@ $silver: #C0C0C0;
 .previous-price-men {
   text-decoration: line-through;
   margin-right: 5px;
-  color:#F5F5DC;
+  color:$special;
   font-size: 20px;
   font-family: $jost;
   font-weight: 500;
@@ -143,16 +141,14 @@ $silver: #C0C0C0;
     opacity: 1;
   }
   .item-info-men{
-    background-color: $special;
     padding: 10px;
     margin-top: -10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     height: 200px;
 
   }
   .item-name-men{
-    color: #fff;
-    font-size: 20px;
+    color: $special;
+    font-size: 16px;
     font-family: $jost;
     width: 300px;
   }
