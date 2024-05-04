@@ -122,7 +122,7 @@ $greyish: #555555;
 .previous-price-women {
   text-decoration: line-through;
   margin-right: 5px;
-  color: $greyish;
+  color: $special;
   font-size: 20px;
   font-family: $ropa;
   font-weight: 500;
@@ -133,7 +133,7 @@ $greyish: #555555;
   font-size: 20px;
   font-family: $ropa;
   margin-left: 5px;
-  color: crimson;
+  color: $celestialOrange;
 }
 
 .women-item-container:hover .item-overlay {
