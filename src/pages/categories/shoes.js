@@ -21,7 +21,438 @@ const Shoes = () => {
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
     },
-    // Add more items as needed
+    {
+      id: 2,
+      name: "FlashSale Shoe 2",
+      price: 20,
+      discountedPrice: 15,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/b1.jpg"),
+        require("../../images/webp/shoes/b2.jpg"),
+        require("../../images/webp/shoes/b3.jpg"),
+        require("../../images/webp/shoes/b4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 3,
+      name: "FlashSale Shoe 3",
+      price: 30,
+      discountedPrice: 25,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/c1.jpg"),
+        require("../../images/webp/shoes/c2.jpg"),
+        require("../../images/webp/shoes/c3.jpg"),
+        require("../../images/webp/shoes/c4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 4,
+      name: "FlashSale Shoe 4",
+      price: 40,
+      discountedPrice: 35,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/d1.jpg"),
+        require("../../images/webp/shoes/d2.jpg"),
+        require("../../images/webp/shoes/d3.jpg"),
+        require("../../images/webp/shoes/d4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 5,
+      name: "FlashSale Shoe 5",
+      price: 50,
+      discountedPrice: 45,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/e1.jpg"),
+        require("../../images/webp/shoes/e2.jpg"),
+        require("../../images/webp/shoes/e3.jpg"),
+        require("../../images/webp/shoes/e4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 6,
+      name: "FlashSale Shoe 6",
+      price: 60,
+      discountedPrice : 55,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/f1.jpg"),
+        require("../../images/webp/shoes/f2.jpg"),
+        require("../../images/webp/shoes/f3.jpg"),
+        require("../../images/webp/shoes/f4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 7,
+      name: "FlashSale Shoe 7",
+      price: 70,
+      discountedPrice: 65,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/g1.jpg"),
+        require("../../images/webp/shoes/g2.jpg"),
+        require("../../images/webp/shoes/g3.jpg"),
+        require("../../images/webp/shoes/g4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 8,
+      name: "FlashSale Shoe 8",
+      price: 80,
+      discountedPrice: 75,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/h1.jpg"),
+        require("../../images/webp/shoes/h2.jpg"),
+        require("../../images/webp/shoes/h3.jpg"),
+        require("../../images/webp/shoes/h4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 9,
+      name: "FlashSale Shoe 9",
+      price: 90,
+      discountedPrice: 85,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/i1.jpg"),
+        require("../../images/webp/shoes/i2.jpg"),
+        require("../../images/webp/shoes/i3.jpg"),
+        require("../../images/webp/shoes/i4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 10,
+      name: "FlashSale Shoe 10",
+      price: 100,
+      discountedPrice: 95,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/j4.jpg"),
+        require("../../images/webp/shoes/j2.jpg"),
+        require("../../images/webp/shoes/j3.jpg"),
+        require("../../images/webp/shoes/j4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 11,
+      name: "FlashSale Shoe 11",
+      price: 110,
+      discountedPrice : 105,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/k1.jpg"),
+        require("../../images/webp/shoes/k2.jpg"),
+        require("../../images/webp/shoes/k3.jpg"),
+        require("../../images/webp/shoes/k4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 12,
+      name: "FlashSale Shoe 12",
+      price: 120,
+      discountedPrice: 115,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/l1.jpg"),
+        require("../../images/webp/shoes/l2.jpg"),
+        require("../../images/webp/shoes/l3.jpg"),
+        require("../../images/webp/shoes/l4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 13,
+      name: "FlashSale Shoe 13",
+      price: 130,
+      discountedPrice: 125,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/m1.jpg"),
+        require("../../images/webp/shoes/m2.jpg"),
+        require("../../images/webp/shoes/m3.jpg"),
+        require("../../images/webp/shoes/m4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 14,
+      name: "FlashSale Shoe 14",
+      price: 140,
+      discountedPrice: 135,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/n1.jpg"),
+        require("../../images/webp/shoes/n2.jpg"),
+        require("../../images/webp/shoes/n3.jpg"),
+        require("../../images/webp/shoes/n4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 15,
+      name: "FlashSale Shoe 15",
+      price: 150,
+      discountedPrice: 145,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/o1.jpg"),
+        require("../../images/webp/shoes/o2.jpg"),
+        require("../../images/webp/shoes/o3.jpg"),
+        require("../../images/webp/shoes/o4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 16,
+      name: "FlashSale Shoe 16",
+      price: 160,
+      discountedPrice: 155,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/p1.jpg"),
+        require("../../images/webp/shoes/p2.jpg"),
+        require("../../images/webp/shoes/p3.jpg"),
+        require("../../images/webp/shoes/p4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 17,
+      name: "FlashSale Shoe 17",
+      price: 170,
+      discountedPrice: 165,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/q1.jpg"),
+        require("../../images/webp/shoes/q2.jpg"),
+        require("../../images/webp/shoes/q3.jpg"),
+        require("../../images/webp/shoes/q4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 18,
+      name: "FlashSale Shoe 18",
+      price: 180,
+      discountedPrice: 175,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/r1.jpg"),
+        require("../../images/webp/shoes/r2.jpg"),
+        require("../../images/webp/shoes/r3.jpg"),
+        require("../../images/webp/shoes/r4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 19,
+      name: "FlashSale Shoe 19",
+      price: 190,
+      discountedPrice: 185,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/s1.jpg"),
+        require("../../images/webp/shoes/s2.jpg"),
+        require("../../images/webp/shoes/s3.jpg"),
+        require("../../images/webp/shoes/s4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 20,
+      name: "FlashSale Shoe 20",
+      price: 200,
+      discountedPrice: 195,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/t1.jpg"),
+        require("../../images/webp/shoes/t2.jpg"),
+        require("../../images/webp/shoes/t3.jpg"),
+        require("../../images/webp/shoes/t4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 21,
+      name: "FlashSale Shoe 21",
+      price: 210,
+      discountedPrice: 205,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/u1.jpg"),
+        require("../../images/webp/shoes/u2.jpg"),
+        require("../../images/webp/shoes/u3.jpg"),
+        require("../../images/webp/shoes/u4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 22,
+      name: "FlashSale Shoe 22",
+      price: 220,
+      discountedPrice: 215,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/v1.jpg"),
+        require("../../images/webp/shoes/v2.jpg"),
+        require("../../images/webp/shoes/v3.jpg"),
+        require("../../images/webp/shoes/v4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 23,
+      name: "FlashSale Shoe 23",
+      price: 230,
+      discountedPrice: 225,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/w1.jpg"),
+        require("../../images/webp/shoes/w2.jpg"),
+        require("../../images/webp/shoes/w3.jpg"),
+        require("../../images/webp/shoes/w4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 24,
+      name: "FlashSale Shoe 24",
+      price: 240,
+      discountedPrice: 235,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/x1.jpg"),
+        require("../../images/webp/shoes/x2.jpg"),
+        require("../../images/webp/shoes/x3.jpg"),
+        require("../../images/webp/shoes/x4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 25,
+      name: "FlashSale Shoe 25",
+      price: 250,
+      discountedPrice: 245,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/y1.jpg"),
+        require("../../images/webp/shoes/y2.jpg"),
+        require("../../images/webp/shoes/y3.jpg"),
+        require("../../images/webp/shoes/y4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 26,
+      name: "FlashSale Shoe 26",
+      price: 260,
+      discountedPrice: 255,
+      rating: 5,
+      images: [
+        require("../../images/webp/shoes/z1.jpg"),
+        require("../../images/webp/shoes/z2.jpg"),
+        require("../../images/webp/shoes/z3.jpg"),
+        require("../../images/webp/shoes/z4.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 27,
+      name: "FlashSale Shoe 27",
+      price: 270,
+      discountedPrice: 265,
+      rating: 3,
+      images: [
+        require("../../images/webp/shoes/a11.jpg"),
+        require("../../images/webp/shoes/a22.jpg"),
+        require("../../images/webp/shoes/a33.jpg"),
+        require("../../images/webp/shoes/a44.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 28,
+      name: "FlashSale Shoe 28",
+      price: 280,
+      discountedPrice: 275,
+      rating: 4,
+      images: [
+        require("../../images/webp/shoes/b11.jpg"),
+        require("../../images/webp/shoes/b22.jpg"),
+        require("../../images/webp/shoes/b33.jpg"),
+        require("../../images/webp/shoes/b44.jpg"),
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    }
   ]);
 
   useEffect(() => {
