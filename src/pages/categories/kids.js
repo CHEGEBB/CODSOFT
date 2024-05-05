@@ -320,7 +320,7 @@ const Kids = () => {
                   </div>
                   <div className="item-rating">
                     {Array.from({ length: item.rating }).map((_, index) => (
-                      <span key={index} className="star-icon" style={{ color: "#00CED1", fontSize: "1.5em" }}>★</span>
+                      <span key={index} className="star-icon" style={{ color: "#F5AD42 ", fontSize: "1.5em" }}>★</span>
                     ))}
                   </div>
                 </div>
