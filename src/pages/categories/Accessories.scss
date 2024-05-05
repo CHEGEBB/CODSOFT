@@ -29,7 +29,6 @@ $greyish: #555555;
 .accessories-item-container {
   width: calc(33.33% - 10px); 
   box-sizing: border-box;
-  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   position: relative;
@@ -43,6 +42,7 @@ $greyish: #555555;
   padding: 3px 8px; 
   border-radius: 5px;
   font-family: $ropa;
+  margin-top: 15px;
 }
 
 .item-discount-accessories:hover {
@@ -133,4 +133,8 @@ $greyish: #555555;
 
 .accessories-item-container:hover .item-overlay {
   opacity: 1;
+}
+.item-info-accessories {
+  padding: 10px;
+  margin-top: -10px;
 }
