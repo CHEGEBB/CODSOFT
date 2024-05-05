@@ -7,6 +7,7 @@ import Accessories from '../pages/categories/accessories';
 import Shoes from '../pages/categories/shoes';
 import Flash from '../pages/categories/Flash';
 import Clicking from '../images/webp/women/pic.webm';
+import Footer from '../components/Footer';
 
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
@@ -44,6 +45,7 @@ const Shop = () => {
                 </div>
             </div>
             <div className="content-container">
+            <div className="back">
                 <div className="categories-nav">
                     <button className={activeCategory === 'flashSales' ? 'active' : ''} onClick={() => handleCategoryClick('flashSales')}>Flash Sales</button>
                     <button className={activeCategory === 'men' ? 'active' : ''} onClick={() => handleCategoryClick('men')}>Men</button>
@@ -52,6 +54,7 @@ const Shop = () => {
                     <button className={activeCategory === 'accessories' ? 'active' : ''} onClick={() => handleCategoryClick('accessories')}>Accessories</button>
                     <button className={activeCategory === 'shoes' ? 'active' : ''} onClick={() => handleCategoryClick('shoes')}>Shoes</button>
                 </div>
+                </div>
                 {selectedCategory === 'flashSales' && <Flash />}
                 {selectedCategory === 'men' && <Men />}
                 {selectedCategory === 'women' && <Women />}
@@ -59,6 +62,10 @@ const Shop = () => {
                 {selectedCategory === 'accessories' && <Accessories />}
                 {selectedCategory === 'shoes' && <Shoes />}
             </div>
+            <div className="footer">
+
+            </div>
+            < Footer />
         </div>
     );
 }

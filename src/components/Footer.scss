@@ -12,7 +12,7 @@ $special:#141C27;
 $silver: #C0C0C0;
 
 .footer {
-    background-color: #c0c0c0;
+    background-color: $special;
     padding: 40px 20px;
     width: 100%;
   
@@ -43,7 +43,7 @@ $silver: #C0C0C0;
           li {
             font-size: 14px;
             margin-bottom: 5px;
-            color: $special;
+            color: #fff;
             cursor: pointer;
             transition: color 0.3s ease;
             font-family: $jost;
@@ -57,7 +57,7 @@ $silver: #C0C0C0;
   
         p {
           font-size: 14px;
-          color: $special;
+          color: #fff;
           line-height: 1.5;
           font-family: $jost;
           font-size: 18px;
@@ -74,6 +74,7 @@ $silver: #C0C0C0;
             height: 30px;
             border-radius: 50%;
             transition: transform 0.3s ease;
+            filter: invert(1);
   
             &:hover {
               transform: scale(1.2);
@@ -90,6 +91,7 @@ $silver: #C0C0C0;
               width: 40px;
               height: 40px;
               transition: transform 0.3s ease;
+              filter: invert(1);
   
               &:hover {
                 transform: scale(1.2);

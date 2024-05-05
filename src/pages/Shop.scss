@@ -22,6 +22,15 @@ $silver: #C0C0C0;
       
       
       }
+      .back{
+        width: 100%;
+        background-color: #0000;
+        margin: 0;
+        width:2000px;
+        overflow: hidden;
+        margin-left: -100px;
+        margin-top: -30px;
+      }
   
       .flash-sales-products,
       .men-products,
@@ -80,7 +89,9 @@ $silver: #C0C0C0;
   font-family: $ropa;
   font-size: 1.5rem;
   height: 300px;
-  margin-top: -40px;
+  margin-top: 10px;
+  margin-left: -180px;
+  
 
   button {
       width: 150px;
