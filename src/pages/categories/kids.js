@@ -45,10 +45,10 @@ const Kids = () => {
       discountedPrice: 16,
       rating: 5,
       images: [
-        require("../../images/webp/kid1.avif"),
-        require("../../images/webp/kid2.jpg"),
-        require("../../images/webp/kid3.avif"),
-        require("../../images/webp/kid4.jpg")
+        require("../../images/webp/kids/b1.jpg"),
+        require("../../images/webp/kids/b2.jpg"),
+        require("../../images/webp/kids/b3.jpg"),
+        require("../../images/webp/kids/b4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
