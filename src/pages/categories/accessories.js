@@ -76,10 +76,10 @@ const Accessories = () => {
       discountedPrice: 45,
       rating: 4,
       images: [
-        require("../../images/webp/accessories/a17.avif"),
-        require("../../images/webp/accessories/a18.jpg"),
-        require("../../images/webp/accessories/a19.jpg"),
-        require("../../images/webp/accessories/a20.jpg"),
+        require("../../images/webp/accessories/e1.jpg"),
+        require("../../images/webp/accessories/e2.jpg"),
+        require("../../images/webp/accessories/e3.jpg"),
+        require("../../images/webp/accessories/e4.jpg")
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
