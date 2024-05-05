@@ -15,7 +15,7 @@ import SearchIcon from "./images/ant-design--search-outlined.svg";
 import CallIcon from "./images/ic--round-call.svg";
 import MailIcon from "./images/mdi--email.svg";
 import PersonIcon from "./images/mdi--person.svg";
-import bg from "./images/webp/kids/bg.mp4";
+import bg from "./images/webp/kids/bg3.mp4";
 import "./index.scss";
 
 const App = () => {
@@ -76,7 +76,7 @@ const App = () => {
             <source src={bg} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="overlay"></div> {/* Overlay */}
+          <div className="overlay-bg"></div> {/* Overlay */}
           <input
             type="text"
             className="input-field"
