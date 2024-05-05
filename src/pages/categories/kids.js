@@ -54,7 +54,86 @@ const Kids = () => {
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
     },
-    // Add more items as needed
+    {
+      id: 4,
+      name: "FlashSale Kid 4",
+      price: 25,
+      discountedPrice: 20,
+      rating: 4,
+      images: [
+        require("../../images/webp/kids/c1.jpg"),
+        require("../../images/webp/kids/c2.jpg"),
+        require("../../images/webp/kids/c3.jpg"),
+        require("../../images/webp/kids/c4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 5,
+      name: "FlashSale Kid 5",
+      price: 30,
+      discountedPrice: 24,
+      rating: 3,
+      images: [
+        require("../../images/webp/kids/d1.avif"),
+        require("../../images/webp/kids/d2.avif"),
+        require("../../images/webp/kids/d3.jpg"),
+        require("../../images/webp/kids/d4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 6,
+      name: "FlashSale Kid 6",
+      price: 35,
+      discountedPrice: 28,
+      rating: 5,
+      images: [
+        require("../../images/webp/kids/e1.jpg"),
+        require("../../images/webp/kids/e2.jpg"),
+        require("../../images/webp/kids/e3.jpg"),
+        require("../../images/webp/kids/e4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 7,
+      name: "FlashSale Kid 7",
+      price: 40,
+      discountedPrice: 32,
+      rating: 4,
+      images: [
+        require("../../images/webp/kids/f1.avif"),
+        require("../../images/webp/kids/f2.jpg"),
+        require("../../images/webp/kids/f3.jpg"),
+        require("../../images/webp/kids/f4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 8,
+      name: "FlashSale Kid 8",
+      price: 45,
+      discountedPrice : 36,
+      rating: 3,
+      images: [
+        require("../../images/webp/kids/h4.jpg"),
+        require("../../images/webp/kids/h2.jpg"),
+        require("../../images/webp/kids/h3.avif"),
+        require("../../images/webp/kids/h4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
   ]);
 
   useEffect(() => {
