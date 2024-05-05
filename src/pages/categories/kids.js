@@ -134,6 +134,134 @@ const Kids = () => {
       addToCartIconPath: cartIcon,
       currentImageIndex: 0
     },
+    {
+      id: 9,
+      name: "FlashSale Kid 9",
+      price: 50,
+      discountedPrice: 40,
+      rating: 5,
+      images: [
+        require("../../images/webp/kids/i1.jpg"),
+        require("../../images/webp/kids/i2.jpg"),
+        require("../../images/webp/kids/i3.jpg"),
+        require("../../images/webp/kids/i4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 10,
+      name: "FlashSale Kid 10",
+      price: 55,
+      discountedPrice: 44,
+      rating: 4,
+      images: [
+        require("../../images/webp/kids/j1.jpg"),
+        require("../../images/webp/kids/j2.jpg"),
+        require("../../images/webp/kids/j3.jpg"),
+        require("../../images/webp/kids/j4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 11,
+      name: "FlashSale Kid 11",
+      price: 60,
+      discountedPrice: 48,
+      rating: 3,
+      images: [
+        require("../../images/webp/kids/k1.jpg"),
+        require("../../images/webp/kids/k2.jpg"),
+        require("../../images/webp/kids/k3.jpg"),
+        require("../../images/webp/kids/k4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 12,
+      name: "FlashSale Kid 12",
+      price: 65,
+      discountedPrice: 52,
+      rating: 5,
+      images: [
+        require("../../images/webp/kids/l1.jpg"),
+        require("../../images/webp/kids/l2.jpg"),
+        require("../../images/webp/kids/l3.jpg"),
+        require("../../images/webp/kids/l4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 13,
+      name: "FlashSale Kid 13",
+      price: 70,
+      discountedPrice : 56,
+      rating: 4,
+      images: [
+        require("../../images/webp/kids/m1.jpg"),
+        require("../../images/webp/kids/m2.jpg"),
+        require("../../images/webp/kids/m3.jpg"),
+        require("../../images/webp/kids/m4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 14,
+      name: "FlashSale Kid 14",
+      price: 75,
+      discountedPrice: 60,
+      rating: 3,
+      images: [
+        require("../../images/webp/kids/n1.jpg"),
+        require("../../images/webp/kids/n2.jpg"),
+        require("../../images/webp/kids/n3.jpg"),
+        require("../../images/webp/kids/n4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 15,
+      name: "FlashSale Kid 15",
+      price: 80,
+      discountedPrice: 64,
+      rating: 5,
+      images: [
+        require("../../images/webp/kids/o1.jpg"),
+        require("../../images/webp/kids/o2.jpg"),
+        require("../../images/webp/kids/o3.jpg"),
+        require("../../images/webp/kids/o4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    },
+    {
+      id: 16,
+      name: "FlashSale Kid 16",
+      price: 85,
+      discountedPrice: 68,
+      rating: 4,
+      images: [
+        require("../../images/webp/kids/p1.jpg"),
+        require("../../images/webp/kids/p2.jpg"),
+        require("../../images/webp/kids/p3.jpg"),
+        require("../../images/webp/kids/p4.jpg")
+      ],
+      wishlistIconPath: wishlistIcon,
+      addToCartIconPath: cartIcon,
+      currentImageIndex: 0
+    }
   ]);
 
   useEffect(() => {
