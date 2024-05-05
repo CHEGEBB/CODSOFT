@@ -2,6 +2,7 @@ $ropa: 'Ropa Sans', sans-serif;
 $frosted-glass: rgba(255, 255, 255, 0.5);
 $celestialOrange: #FF6F61;
 $greyish: #555555;
+$jost: 'Jost', sans-serif;
 
 .shoes-page {
   width: 100%;
@@ -12,6 +13,11 @@ $greyish: #555555;
     font-family: $ropa;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    color: #FF6F61;
+    text-decoration:double underline;
+    font-family: $jost;
   }
 }
 

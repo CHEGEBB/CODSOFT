@@ -3,6 +3,7 @@ $frosted-glass: rgba(255, 255, 255, 0.5);
 $celestialOrange: #FF6F61;
 $greyish: #555555;
 $special:#141C27;
+$jost: 'Jost', sans-serif;
 
 .flash-sales-page {
   width: 100%;
@@ -10,9 +11,13 @@ $special:#141C27;
   h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    font-family: $ropa;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    color: #FF6F61;
+    text-decoration:double underline;
+    font-family: $jost;
   }
 }
 .flash-sale-banner {
