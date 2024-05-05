@@ -12,10 +12,10 @@ const Shoes = () => {
       discountedPrice: 8,
       rating: 4,
       images: [
-        require("../../images/jordans.png"),
-        require("../../images/jordans2.png"),
-        require("../../images/jorfans3.jpg"),
-        require("../../images/jumpman-mvp-shoes-wm0F96.png")
+        require("../../images/webp/shoes/a1.jpg"),
+        require("../../images/webp/shoes/a2.jpg"),
+        require("../../images/webp/shoes/a3.jpg"),
+        require("../../images/webp/shoes/a4.jpg"),
       ],
       wishlistIconPath: wishlistIcon,
       addToCartIconPath: cartIcon,
