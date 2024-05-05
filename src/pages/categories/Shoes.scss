@@ -28,17 +28,22 @@ $jost: 'Jost', sans-serif;
 
 .shoes-row {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 20px;
+}
+.item-info-shoes{
+  padding: 10px;
+  margin-top: -10px;
+  height: 200px;
 }
 
 .shoes-item-container {
   width: calc(33.33% - 10px); 
   box-sizing: border-box;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
   position: relative;
+  width: 350px;
 }
 
 .item-discount-shoes {
@@ -58,6 +63,8 @@ $jost: 'Jost', sans-serif;
 
 .item-image {
   position: relative;
+  width: 290px;
+
 }
 
 .item-overlay {
