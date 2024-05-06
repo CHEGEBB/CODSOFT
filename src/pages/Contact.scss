@@ -11,7 +11,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1; /* Ensure video is behind other content */
+        z-index: -1;
     }
 
     .video-overlay {
@@ -20,8 +20,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
-        z-index: 0; /* Ensure overlay is behind form */
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 0;
     }
 
     .content {
@@ -31,7 +31,11 @@
         transform: translate(-50%, -50%);
         text-align: center;
         color: white;
-        z-index: 1; /* Ensure content is on top of overlay */
+        z-index: 1;
+        border: 2px solid white;
+        width: 550px;
+        padding: 20px;
+        height: 650px;
 
         .contact-form {
             max-width: 400px;
