@@ -99,20 +99,9 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/user" element={<User />} />
-         {/* Route for Sign Up page */}
-         <Route path="/signup" element={<SignupPage />} />
-        {/* Route for Login page */}
-        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );
-};
-const SignupPage = () => {
-  return <Signup />;
-};
-
-const LoginPage = () => {
-  return <Login />;
-};
+}
 
 export default App;
