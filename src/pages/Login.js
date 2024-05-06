@@ -1,3 +1,4 @@
+// Login.js
 import React, { useState } from 'react';
 import './Login.scss';
 import bg from '../images/webp/kids/bg1.mp4';
@@ -11,7 +12,7 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <video autoPlay loop muted className="background-video-login">
+            <video autoPlay loop muted className="background-video">
                 <source src={bg} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

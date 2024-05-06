@@ -15,7 +15,7 @@
     z-index: -1;
   }
   
-  .content {
+  .content{
     text-align: center;
     color: white;
     z-index: 1;
@@ -69,16 +69,18 @@
     font-size: 16px;
     outline: none;
   }
-  
+  .login-form, .signup-form{
   label {
     position: absolute;
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    color: #ccc;
+    color: red;
     pointer-events: none;
     transition: transform 0.3s, font-size 0.3s, color 0.3s;
   }
+
+}
   
   .form-group input:focus + label,
   .form-group input:not(:placeholder-shown) + label {

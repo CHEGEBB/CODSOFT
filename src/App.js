@@ -79,7 +79,7 @@ const App = () => {
           <div className="overlay-bg"></div> {/* Overlay */}
           <input
             type="text"
-            className="input-field"
+            className="input-search"
             placeholder="Search for products here..."
           />
           <span className="filter-icon"></span>
