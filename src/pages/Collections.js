@@ -476,13 +476,6 @@ const Collections = () => {
                 }`}
                 key={item.id}
               >
-                <div className="item-discount">
-                  {(
-                    ((item.price - item.discountedPrice) / item.price) *
-                    100
-                  ).toFixed(0)}
-                  % off
-                </div>
                 <div className="item-image">
                   <img
                     src={item.images[item.currentImageIndex]}
