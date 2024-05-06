@@ -50,11 +50,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
   }
-  
+  .full-form{
+    border: 2px solid #ff6f61;
+    width: 500px;
+    padding: 20px;
+    height: 600px;
+
+  }
   .form-group {
     position: relative;
     margin-bottom: 20px;
+    
   }
   
   input[type='email'],
