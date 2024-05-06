@@ -1,0 +1,124 @@
+
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .background-video-login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .login-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav-dash {
+    margin: 0 10px;
+    color: #ccc;
+  }
+  
+  .login-nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s;
+  }
+  
+  .login-nav button.active {
+    color: #ff6f61;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  input[type='email'],
+  input[type='password'],
+  input[type='text'] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+    pointer-events: none;
+    transition: transform 0.3s, font-size 0.3s, color 0.3s;
+  }
+  
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label {
+    transform: translateY(-120%) scale(0.8);
+    font-size: 14px;
+    color: white;
+  }
+  
+  button {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e04a3f;
+  }
+  
+  .forgot-password,
+  .dont-have-account,
+  .have-account {
+    margin-top: 20px;
+    color: #ccc;
+  }
+  
+  .forgot-password a,
+  .dont-have-account a,
+  .have-account a {
+    color: #ff6f61;
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover,
+  .dont-have-account a:hover,
+  .have-account a:hover {
+    text-decoration: underline;
+  }
+  
