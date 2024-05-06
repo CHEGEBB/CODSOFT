@@ -17,7 +17,6 @@ import PersonIcon from "./images/mdi--person.svg";
 import bg from "./images/webp/kids/bg3.mp4";
 import "./index.scss";
 import Login from "./auth-pages/Login";
-import Signup from "./auth-pages/Signup";
 
 
 const App = () => {

@@ -29,14 +29,6 @@ const Navbar = () => {
                     <li className="nav-item">
                         <Link to="/contact" className="nav-link">Contact</Link>
                     </li>
-                     {/* Link to sign-up page */}
-                     <li className="nav-item">
-                            <Link to="/sign-up" className="nav-link">Sign Up</Link>
-                        </li>
-                        {/* Link to login page */}
-                        <li className="nav-item">
-                            <Link to="/login" className="nav-link">Login</Link>
-                        </li>
                 </ul>
             </div>
             </div>
