@@ -1,3 +1,18 @@
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$background-image1: url("./images/wom2.jpg");
+$women-background-image: url("./images/wom2.jpg");
+$mens-background-image: url("./images/pic.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$silver: #C0C0C0;
 .contact-container {
     position: relative;
     width: 100%;
@@ -36,6 +51,18 @@
         width: 550px;
         padding: 20px;
         height: 650px;
+        border-radius: 15px;
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                font-family: $ropa;
+            }
+            p{
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                font-family: $jost;
+            }
 
         .contact-form {
             max-width: 400px;
@@ -54,6 +81,7 @@
                     font-size: 16px;
                     color: #333;
                     transition: border-color 0.3s;
+                    font-family: $jost;
 
                     &:focus {
                         outline: none;
