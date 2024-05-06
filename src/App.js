@@ -16,8 +16,9 @@ import MailIcon from "./images/mdi--email.svg";
 import PersonIcon from "./images/mdi--person.svg";
 import bg from "./images/webp/kids/bg3.mp4";
 import "./index.scss";
-import SignUp from "./auth-pages/Signup";
 import Login from "./auth-pages/Login";
+import Signup from "./auth-pages/Signup";
+
 
 const App = () => {
   return (
@@ -98,31 +99,20 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/user" element={<User />} />
-         {/* Route for Sign-Up page */}
-         <Route path="/signup" element={<SignUpLayout />} />
+         {/* Route for Sign Up page */}
+         <Route path="/signup" element={<SignupPage />} />
         {/* Route for Login page */}
-        <Route path="/login" element={<LoginLayout />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );
 };
-
-// Layout component for the Sign-Up page
-const SignUpLayout = () => {
-  return (
-    <div className="signup-layout">
-      <SignUp />
-    </div>
-  );
+const SignupPage = () => {
+  return <Signup />;
 };
 
-// Layout component for the Login page
-const LoginLayout = () => {
-  return (
-    <div className="login-layout">
-      <Login />
-    </div>
-  );
+const LoginPage = () => {
+  return <Login />;
 };
 
 export default App;
