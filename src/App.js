@@ -6,7 +6,6 @@ import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Collections from "./pages/Collections";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
 import Shop from "./pages/Shop";
 import User from "./pages/User";
 import CartIcon from "./images/ic--round-shopping-cart.svg";
@@ -95,7 +94,6 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/collections" element={<Collections />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/user" element={<User />} />
       </Routes>
