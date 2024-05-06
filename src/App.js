@@ -16,8 +16,8 @@ import MailIcon from "./images/mdi--email.svg";
 import PersonIcon from "./images/mdi--person.svg";
 import bg from "./images/webp/kids/bg3.mp4";
 import "./index.scss";
-import SignUp from "./pages/Signup";
-import Login from "./pages/Login";
+import SignUp from "./auth-pages/Signup";
+import Login from "./auth-pages/Login";
 
 const App = () => {
   return (
