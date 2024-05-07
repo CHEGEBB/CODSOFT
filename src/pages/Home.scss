@@ -213,7 +213,7 @@ $darkpink: #FF007F;
     background-image: $mens-background-image;
     transition: transform 0.5s ease;
     margin-top: 40px;
-    border: 2px solid $celestialOrange;
+    border: 2px solid $darkpink;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 
@@ -269,7 +269,7 @@ $darkpink: #FF007F;
   }
   
   .active {
-    background-color: #ff6f61;
+    background-color: $darkpink;
   }
   @keyframes fadeIn {
     from {
@@ -314,7 +314,7 @@ $darkpink: #FF007F;
         h1{
             font-size: 2rem;
             margin-bottom: 10px;
-            color: $celestialOrange;
+            color: $darkpink;
             margin-top: 20px;
             text-align: center;
             font-family: $ropa;
@@ -342,7 +342,7 @@ $darkpink: #FF007F;
     margin-top: 50px;
 
         button{
-            background-color: $celestialOrange;
+            background-color: $darkpink;
             color: $white;
             border: none;
             font-size: 1.2rem;
