@@ -2,7 +2,7 @@ import React from 'react';
 import '../pages/Products.scss';
 import Footer from '../components/Footer';
 import { useState,useEffect } from 'react';
-import Nav from '../components/Navbar';
+import Header from '../components/header';
 
 
 const Products = () => {
@@ -156,8 +156,8 @@ const Products = () => {
 
     return (
         <div className="products-page">
-         <div className="header-container">
-    <Nav />
+             <div className="header-container">
+    <Header />
     </div>
             {cards.map(product => (
                 <div className="product-card" key={product.id}>
