@@ -1,101 +1,159 @@
 
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$special:#141C27;
+$silver: #C0C0C0;
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
 .login-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  .overlay {
+    background-color: rgba(29, 137, 204, 0.6);
     height: 100vh;
-  
-    .left-container {
-      /* Styles for left container */
-    }
-  
-    .right-container {
-      /* Styles for right container */
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-  
-      .horizontal-nav {
-        ul {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-  
-          li {
-            display: inline;
-            margin-right: 10px;
-  
-            a {
-              text-decoration: none;
-              color: #333;
-            }
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .card {
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+    position: relative;
+  }
+
+  .right {
+    flex: 1; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1; 
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .overlay-2 {
+    background-color: rgba(10, 11, 11, 0.9);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .left-container {
+    padding: 40px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+    z-index: 1;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    .horizontal-nav {
+      z-index: 1;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: inline;
+          margin-right: 10px;
+
+          a {
+            text-decoration: none;
+            color: #333;
+            background-color: white;
           }
         }
       }
-  
-      .login-form {
-        /* Styles for login form */
-  
-        h2 {
-          font-size: 24px;
-          margin-bottom: 20px;
+    }
+    .signup-form {
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
         }
-  
-        .form-group {
-          margin-bottom: 15px;
-  
-          label {
-            display: block;
-            margin-bottom: 5px;
-          }
-  
-          input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-          }
-        }
-  
-        button {
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
+
+        input {
+          width: 250px;
+          padding: 10px;
+          border: 1px solid #ccc;
           border-radius: 5px;
-          cursor: pointer;
-  
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .login-link {
+        margin-top: 20px;
+
+        a {
+          text-decoration: none;
+          color: #007bff;
+
           &:hover {
-            background-color: #0056b3;
-          }
-        }
-  
-        .forgot-password {
-          margin-top: 10px;
-  
-          a {
-            text-decoration: none;
-            color: #007bff;
-  
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-  
-        .signup-link {
-          margin-top: 10px;
-  
-          a {
-            text-decoration: none;
-            color: #007bff;
-  
-            &:hover {
-              text-decoration: underline;
-            }
+            text-decoration: underline;
           }
         }
       }
     }
   }
-  
+
+  .active {
+    color: $celestialOrange;
+    border-bottom: 2px solid blue;
+  }
+}

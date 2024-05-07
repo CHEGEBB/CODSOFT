@@ -24,10 +24,11 @@ const Login = () => {
 
   return (
     <div className="login-container">
+    <div className="overlay"></div>
+    <div className="card">
+   
+      <div className="left">
       <div className="left-container">
-        {/* Add your image or animation here */}
-      </div>
-      <div className="right-container">
         <nav className="horizontal-nav">
           <ul>
             <li>
@@ -74,6 +75,12 @@ const Login = () => {
             </p>
           </div>
         </div>
+      </div>
+      </div>
+      <div className="right">
+      <div className="right-container">
+      </div>
+      </div>
       </div>
     </div>
   );
