@@ -44,10 +44,11 @@ const SignUp = () => {
       </div>
       </div>
       <div className="right">
-      <div className="overlay"></div>
+      <div className="overlay-2">
       <video autoPlay muted loop>
         <source src={Background} type="video/mp4" />
       </video>
+      </div>
       </div>
       </div>
     </div>
