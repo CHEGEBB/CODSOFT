@@ -1,133 +1,125 @@
-
 .signup-container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    height: 100vh;
-    background-image: url("../images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  
-    .left-container {
-    }
-    .overlay{
-      background-color: rgba(29, 137, 204, 0.6);
-      height: 100vh;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
-    }
-    .card{
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  .overlay {
+    background-color: rgba(29, 137, 204, 0.6);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .card {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+    position: relative; /* Make the card a positioned container */
+  }
+
+  .right {
+    flex: 1; /* Take up remaining space */
+    position: relative; /* Make the video container positioned */
+    overflow: hidden; /* Hide any overflowing content */
+    z-index: 1; /* Ensure the video is above the overlay */
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the video is above the overlay */
+  }
+
+  .left-container {
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    width: 350px;
+
+    .horizontal-nav {
       z-index: 1;
-      width: 800px;
-      display: flex;
-      flex-direction: row;
-      height: 550px;
-    }
-    .right {
-      width: 450px;
-      padding: 0;
-      margin: 0;
-      height: 550px;
-      position: relative;
-      overflow: hidden; 
-      z-index: 1;
-    }
-  
-    video {
-      width: 100%;
-      height: 550px;
-      object-fit: cover; 
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      margin-top: -40px;
-    }
-  
-    .left-container {
-      padding: 20px;
-      border-radius: 5px;
-      position: relative;
-      z-index: 1;
-      width: 350px;
-  
-      .horizontal-nav {
-        z-index: 1;
-        ul {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-  
-          li {
-            display: inline;
-            margin-right: 10px;
-  
-            a {
-              text-decoration: none;
-              color: #333;
-            }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: inline;
+          margin-right: 10px;
+
+          a {
+            text-decoration: none;
+            color: #333;
           }
         }
       }
-  
-      .signup-form {
-        /* Styles for sign-up form */
-  
-        h2 {
-          font-size: 24px;
-          margin-bottom: 20px;
+    }
+
+    .signup-form {
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
         }
-  
-        .form-group {
-          margin-bottom: 15px;
-  
-          label {
-            display: block;
-            margin-bottom: 5px;
-          }
-  
-          input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-          }
-        }
-  
-        button {
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
+
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
           border-radius: 5px;
-          cursor: pointer;
-  
-          &:hover {
-            background-color: #0056b3;
-          }
         }
-  
-        .login-link {
-          margin-top: 10px;
-  
-          a {
-            text-decoration: none;
-            color: #007bff;
-  
-            &:hover {
-              text-decoration: underline;
-            }
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .login-link {
+        margin-top: 10px;
+
+        a {
+          text-decoration: none;
+          color: #007bff;
+
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
     }
   }
-  
+}
