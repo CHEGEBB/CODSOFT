@@ -49,13 +49,17 @@ const SignUp = () => {
             </div>
           </div>
         </div>
-        <div className="right">
-          <div className="overlay-2">
-            <video autoPlay muted loop>
-              <source src={Background} type="video/mp4" />
-            </video>
-          </div>
-        </div>
+        <div class="right">
+    <div class="overlaytwo"></div>
+    <div class="welcome-text">
+        <h2>Welcome to Glamour Galleries!</h2>
+        <p>Step into a world where style meets sophistication, and fashion finds its true expression. At Glamour Galleries, we curate the finest selection of haute couture, trendsetting ensembles, and statement pieces that reflect your unique personality.</p>
+        <p>Whether you're a fashion aficionado or simply seeking inspiration, our galleries are your gateway to sartorial excellence. Explore the latest trends, discover timeless classics, and unleash your inner fashionista with us.</p>
+    </div>
+    <video autoplay muted loop>
+        <source src={Background} type="video/mp4" />
+    </video>
+</div>
       </div>
     </div>
   );
