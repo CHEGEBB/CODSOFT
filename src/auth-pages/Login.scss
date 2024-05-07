@@ -151,6 +151,7 @@ $island: 'Island Moments', cursive;
   z-index: 1;
   position: absolute;
   top: 50%;
+  color: #fff;
 }
 .zoom-in-out {
   animation: zoomInOut 6s infinite alternate;
@@ -189,5 +190,5 @@ $island: 'Island Moments', cursive;
 }
 
 .image-indicator.active {
-  background-color: white;
+  background-color: $celestialOrange;
 }
