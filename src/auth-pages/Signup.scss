@@ -13,6 +13,7 @@ $rubik: 'Rubik', sans-serif;
 $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
 $softpink: #FFC0CB;
+$darkpink: #FF007F;
 .signup-container {
   display: flex;
   align-items: center;
@@ -131,7 +132,7 @@ $softpink: #FFC0CB;
             width: 100%;
             height: 3px;
             transition: width 0.3s ease;
-            background-color: $celestialOrange;
+            background-color: $darkpink;
             border-radius: 8px;
           }
         }
@@ -176,7 +177,7 @@ $softpink: #FFC0CB;
 
       button {
         padding: 10px 20px;
-        background-color: $softpink;
+        background-color: #FF007F;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -206,12 +207,23 @@ $softpink: #FFC0CB;
     }
   }
 }
-
 .welcome-text {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2; /* Ensure the welcome text appears above the video */
-  padding: 20px; /* Adjust padding as needed */
-  color: white; /* Adjust text color as needed */
+  z-index: 2;
+  padding: 20px; 
+  color: white; 
+  text-align: center;
+  margin-top: 200px;
+
+   h2{
+    font-size: 20px;
+    font-family: $ropa;
+    color: #FF007F;
+   }
+    p{
+      font-family: $jost;
+      font-size: 16px;
+    }
 }
