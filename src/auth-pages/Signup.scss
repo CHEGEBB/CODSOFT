@@ -20,38 +20,48 @@
   .card {
     border-radius: 10px;
     padding: 20px;
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
     width: 800px;
     display: flex;
     flex-direction: row;
     height: 550px;
-    position: relative; /* Make the card a positioned container */
+    position: relative;
   }
 
   .right {
-    flex: 1; /* Take up remaining space */
-    position: relative; /* Make the video container positioned */
-    overflow: hidden; /* Hide any overflowing content */
-    z-index: 1; /* Ensure the video is above the overlay */
+    flex: 1; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1; 
   }
 
   video {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire container */
+    height: 500px;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Ensure the video is above the overlay */
+    z-index: 1;
+  }
+  .overlay2{
+    background-color: rgba(10, 11, 11, 0.6);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .left-container {
     padding: 20px;
-    border-radius: 5px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     position: relative;
     z-index: 1;
     width: 350px;
+    background-color: #fff;
+    height: 500px;
 
     .horizontal-nav {
       z-index: 1;

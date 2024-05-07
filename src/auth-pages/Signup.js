@@ -44,6 +44,7 @@ const SignUp = () => {
       </div>
       </div>
       <div className="right">
+      <div className="overlay"></div>
       <video autoPlay muted loop>
         <source src={Background} type="video/mp4" />
       </video>
