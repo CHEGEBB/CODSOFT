@@ -32,6 +32,7 @@ $island:'Island Moments', cursive;
       justify-content: flex-end;
       height: $common-height;
       font-family: $jost;
+      
     
       
   }
@@ -41,6 +42,7 @@ $island:'Island Moments', cursive;
     flex-direction: row;
     gap: 30px;
     margin-top: 20px;
+    margin-right: 380px;
   }
   .bar{
       background-color:$special;
@@ -52,6 +54,7 @@ $island:'Island Moments', cursive;
       gap: 30px;
       justify-content: flex-end;
       height: $common-height;
+      margin-left: -80px;
         h1{
           font-family: $ropa;
           font-size: 16px;
@@ -64,7 +67,7 @@ $island:'Island Moments', cursive;
       flex-direction: row;
       gap: 30px;
       margin-top: 10px;
-      margin-right: 50px;
+      margin-right: 450px;
       border: 2px solid  crimson;
       width: 230px;
       height: 50px;
@@ -79,7 +82,7 @@ $island:'Island Moments', cursive;
     padding: 10px;
     height: 200px;
     background-color: $silver;
-  
+
     input[type="text"] {
       flex: 1;
       padding: 10px 50px 10px 20px; 
@@ -93,6 +96,7 @@ $island:'Island Moments', cursive;
       font-family: $ropa;
       position: relative;
     z-index: 1;
+    margin-right: 190px;
   
       &::placeholder {
         color: $placeholder-color;
@@ -108,10 +112,10 @@ $island:'Island Moments', cursive;
       width: 60px;
       margin-top: -1px;
       border-radius: 5px;
-      margin-left: -70px;
       border: none;
       transition:  transform 0.5s;
       position: relative;
+
     z-index: 1;
       &:hover{
         transform: scale(1.1);
@@ -127,6 +131,7 @@ $island:'Island Moments', cursive;
       color: white;
       padding: 10px;
       height: 97px;
+      margin-left: 350px;
   }
   /* Navbar component */
   .navbar {
@@ -177,6 +182,7 @@ $island:'Island Moments', cursive;
     margin-left: 100px;
     gap: 50px;
     font-size: 22px;
+    margin-left: 100px;
   
   }
   
@@ -239,6 +245,10 @@ $island:'Island Moments', cursive;
     position: relative;
     width: 100%;
     height: 200px;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    margin-left: -40px;
   }
   
   .video-container {
@@ -265,4 +275,5 @@ $island:'Island Moments', cursive;
   }
   .header-section{
     width: 100%;
+    margin-top: 200px;
   }
