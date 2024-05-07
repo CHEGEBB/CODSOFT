@@ -38,28 +38,36 @@ const SignUp = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="confirmPassword">Confirm Password:</label>
-                  <input type="password" id="confirmPassword" name="confirmPassword" />
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                  />
                 </div>
                 {/* Submit button */}
                 <button type="submit">Sign Up</button>
               </form>
               <div className="login-link">
-                <p>Already have an account? <Link to="/">Login</Link></p>
+                <p>
+                  Already have an account? <Link to="/">Login</Link>
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="right">
-    <div class="overlaytwo"></div>
-    <div class="welcome-text">
-        <h2>Welcome to Glamour Galleries!</h2>
-        <p>Step into a world where style meets sophistication, and fashion finds its true expression. At Glamour Galleries, we curate the finest selection of haute couture, trendsetting ensembles, and statement pieces that reflect your unique personality.</p>
-        <p>Whether you're a fashion aficionado or simply seeking inspiration, our galleries are your gateway to sartorial excellence. Explore the latest trends, discover timeless classics, and unleash your inner fashionista with us.</p>
-    </div>
-    <video autoplay muted loop>
-        <source src={Background} type="video/mp4" />
-    </video>
-</div>
+        <div className="right">
+          <div className="overlaytwo"></div>
+          <div class="welcome-text">
+            <h2>Welcome to GlamourGallerie</h2>
+            <p>
+              Explore our curated collection of haute couture and trendsetting
+              ensembles.Step into a world where style meets sophistication, and fashion finds its true expression.
+            </p>
+          </div>
+          <video autoPlay muted loop>
+            <source src={Background} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
   );

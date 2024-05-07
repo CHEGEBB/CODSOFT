@@ -206,3 +206,12 @@ $softpink: #FFC0CB;
     }
   }
 }
+
+.welcome-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ensure the welcome text appears above the video */
+  padding: 20px; /* Adjust padding as needed */
+  color: white; /* Adjust text color as needed */
+}
