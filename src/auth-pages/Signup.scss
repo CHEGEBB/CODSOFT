@@ -115,7 +115,7 @@ $darkpink: #FF007F;
         transition: color 0.3s ease;
 
         &:hover {
-          color: $celestialOrange;
+          color: $darkpink;
         }
 
         &.active {
@@ -162,6 +162,10 @@ $darkpink: #FF007F;
           border-radius: 5px;
           font-family: $jost;
           outline: none;
+
+          &:hover {
+            border: 1px solid $darkpink;
+          }
 
           &::placeholder {
             color: $placeholder-color;
