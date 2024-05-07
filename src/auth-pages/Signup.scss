@@ -59,7 +59,7 @@
   }
 
   .left-container {
-    padding: 20px;
+    padding: 40px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     position: relative;
@@ -79,6 +79,7 @@
         li {
           display: inline;
           margin-right: 10px;
+          background-color: red;
 
           a {
             text-decoration: none;
@@ -103,7 +104,7 @@
         }
 
         input {
-          width: 100%;
+          width: 250px;
           padding: 10px;
           border: 1px solid #ccc;
           border-radius: 5px;
@@ -117,6 +118,7 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        margin-top: 20px;
 
         &:hover {
           background-color: #0056b3;
@@ -124,7 +126,7 @@
       }
 
       .login-link {
-        margin-top: 10px;
+        margin-top: 20px;
 
         a {
           text-decoration: none;
