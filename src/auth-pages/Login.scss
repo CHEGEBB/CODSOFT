@@ -222,3 +222,31 @@ $island: 'Island Moments', cursive;
 .image-indicator.active {
   background-color: crimson;
 }
+.forgot-password {
+  margin-top: 20px;
+  font-family: $jost;
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-family: $jost;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.signup-link {
+  margin-top: 20px;
+  font-family: $jost;
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-family: $jost;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
