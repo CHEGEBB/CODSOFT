@@ -3,7 +3,7 @@ $rubik: 'Rubik', sans-serif;
 $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
 $greyish:#555555;
-$celestialOrange:#FF6F61;
+$celestialOrange:#FF007F;
 $common-height:80px;
 $placeholder-color: #999;
 $frosted-glass: rgba(255, 255, 255, 0.5);
@@ -50,7 +50,7 @@ $silver: #C0C0C0;
             font-size: 18px;
   
             &:hover {
-              color: #ff6600;
+              color: $celestialOrange;
             }
           }
         }
@@ -118,14 +118,14 @@ $silver: #C0C0C0;
             padding: 10px;
             border: none;
             border-radius: 4px;
-            background-color: #ff6600;
+            background-color: $celestialOrange;
             color: #fff;
             font-size: 14px;
             cursor: pointer;
             transition: background-color 0.3s ease;
   
             &:hover {
-              background-color: #e65500;
+              background-color: blueviolet;
             }
           }
         }
