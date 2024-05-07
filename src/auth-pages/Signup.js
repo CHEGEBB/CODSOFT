@@ -6,7 +6,7 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <div className="left-container">
-        {/* Add your image or animation here */}
+      
       </div>
       <div className="right-container">
         <nav className="horizontal-nav">
@@ -17,7 +17,6 @@ const SignUp = () => {
         </nav>
         <div className="signup-form">
           <h2>Create an Account</h2>
-          {/* Your sign-up form */}
           <form>
             {/* Form fields */}
             <div className="form-group">
