@@ -132,11 +132,13 @@ $island:'Island Moments', cursive;
   .home-content {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: -5px;
     gap: 20px;
     padding: 20px;
     background-color: $silver;
     font-family: $ropa;
+    width: 100%;
+    height: 500px;
   }
   .women-shop {
     display: flex;
