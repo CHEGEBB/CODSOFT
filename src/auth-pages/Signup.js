@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Signup.scss";
+import Background from "../images/webp/women/Background.mp4";
 
 
 const SignUp = () => {
@@ -43,6 +44,9 @@ const SignUp = () => {
       </div>
       </div>
       <div className="right">
+      <video autoPlay muted loop>
+        <source src={Background} type="video/mp4" />
+      </video>
       </div>
       </div>
     </div>
