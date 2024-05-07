@@ -145,12 +145,16 @@ $darkpink: #FF007F;
         }
 
         input {
-          width: 250px;
+          width: 270px;
           padding: 10px;
-          border: 1px solid $celestialOrange;
+          border: 1px solid $softpink;
           border-radius: 5px;
           font-family: $jost;
           outline: none;
+
+          &:hover {
+            border: 1px solid $darkpink;
+          }
 
           &::placeholder {
             color: $placeholder-color;
