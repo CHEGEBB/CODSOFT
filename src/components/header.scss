@@ -12,6 +12,8 @@ $jost: "Jost", sans-serif;
 $rubik: "Rubik", sans-serif;
 $ropa: "Ropa Sans", sans-serif;
 $island: "Island Moments", cursive;
+$softpink: #FFC0CB;
+$darkpink: #FF007F;
 
 .phone,
 .email,
@@ -74,7 +76,7 @@ $island: "Island Moments", cursive;
   gap: 30px;
   margin-top: 10px;
   margin-right: 450px;
-  border: 2px solid crimson;
+  border: 2px solid $darkpink;
   width: 230px;
   height: 50px;
   padding: 10px;
@@ -113,7 +115,7 @@ $island: "Island Moments", cursive;
   }
 
   button[type="submit"] {
-    background-color: $special;
+    background-color: $darkpink;
     cursor: pointer;
     height: 50px;
     width: 90px;
@@ -136,22 +138,20 @@ $island: "Island Moments", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $celestialOrange;
+  background-color: $darkpink;
   color: white;
   padding: 10px;
   height: 97px;
   margin-left: 320px;
   width: 300px;
 }
-
-/* Navbar component */
 .navbar {
   background-color: $special;
   color: #fff;
   height: 100px;
   font-family: $ropa;
   font-size: 22px;
-  border: 2px solid $celestialOrange;
+  border: 2px solid $darkpink;
 }
 
 .container {
