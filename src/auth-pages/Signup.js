@@ -12,7 +12,7 @@ const SignUp = () => {
         <nav className="horizontal-nav">
           <ul>
             <li><Link to="/signup">Sign Up</Link></li>
-            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/">Login</Link></li>
           </ul>
         </nav>
         <div className="signup-form">
@@ -36,7 +36,7 @@ const SignUp = () => {
             <button type="submit">Sign Up</button>
           </form>
           <div className="login-link">
-            <p>Already have an account? <Link to="/login">Login</Link></p>
+            <p>Already have an account? <Link to="/">Login</Link></p>
           </div>
         </div>
       </div>

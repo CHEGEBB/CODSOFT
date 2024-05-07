@@ -9,6 +9,7 @@ import Shop from "./pages/Shop";
 import User from "./pages/User";
 import "./index.scss";
 import Login from "./auth-pages/Login";
+import SignUp from "./auth-pages/Signup";
 
 
 const App = () => {
@@ -23,6 +24,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/user" element={<User />} />
+        <Route path="/signup" element={<SignUp />} />
+        
       </Routes>
     </Router>
   );
