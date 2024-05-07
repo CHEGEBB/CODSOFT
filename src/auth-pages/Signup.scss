@@ -4,7 +4,6 @@ $celestialOrange:#FF6F61;
 $common-height:80px;
 $placeholder-color: #999;
 $frosted-glass: rgba(255, 255, 255, 0.5);
-$white: #fff;
 $special:#141C27;
 $silver: #C0C0C0;
 $women-background-image: url("../images/wom.jpg");
@@ -80,8 +79,8 @@ $island:'Island Moments', cursive;
     position: relative;
     z-index: 1;
     width: 350px;
-    background-color: #fff;
     height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
 
     .horizontal-nav {
       z-index: 1;
@@ -98,6 +97,7 @@ $island:'Island Moments', cursive;
           a {
             text-decoration: none;
             color: #333;
+            background-color: white;
           }
         }
       }
@@ -128,7 +128,6 @@ $island:'Island Moments', cursive;
       button {
         padding: 10px 20px;
         background-color: #007bff;
-        color: #fff;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -155,7 +154,7 @@ $island:'Island Moments', cursive;
   }
 
   .active {
-    color: $celestialOrange; // Set the color for the active link
+    color: $celestialOrange;
     border-bottom: 2px solid blue;
   }
 }
