@@ -64,8 +64,8 @@ $softpink: #FFC0CB;
     border-bottom-right-radius: 16px;
   }
 
-  .overlay-2 {
-    background-color: rgba(10, 11, 11, 0.9);
+  .overlaytwo{
+    background-color: rgba(157, 170, 172, 0.6);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -73,6 +73,7 @@ $softpink: #FFC0CB;
     left: 0;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    z-index: 2;
   }
 
   .left-container {
