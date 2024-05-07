@@ -12,6 +12,7 @@ $jost: 'Jost', sans-serif;
 $rubik: 'Rubik', sans-serif;
 $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
+$softpink: #FFC0CB;
 .signup-container {
   display: flex;
   align-items: center;
@@ -181,15 +182,19 @@ $island:'Island Moments', cursive;
         }
       }
 
+    
       .login-link {
         margin-top: 20px;
+        font-family: $jost;
 
         a {
           text-decoration: none;
           color: #007bff;
+          font-family: $jost;
 
           &:hover {
             text-decoration: underline;
+
           }
         }
       }
