@@ -152,3 +152,42 @@ $island: 'Island Moments', cursive;
   position: absolute;
   top: 50%;
 }
+.zoom-in-out {
+  animation: zoomInOut 6s infinite alternate;
+}
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+.zoom-in-out {
+  animation: zoomInOut 3s ease-in-out infinite alternate;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.99);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.image-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+}
+
+.image-indicator.active {
+  background-color: white;
+}

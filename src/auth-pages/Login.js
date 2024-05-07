@@ -7,10 +7,10 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    require("../images/webp/men/q1.jpg"),
-    require("../images/webp/shirt2.webp"),
-    require("../images/webp/a6.webp"),
-    require("../images/webp/a5.webp")
+    require("../images/webp/login/a1.jpg"),
+    require("../images/webp/login/a2.jpg"),
+    require("../images/webp/login/a3.jpg"),
+    require("../images/webp/login/a4.jpg")
   ];
   const messages = [
     "Our T-Shirts are made from the finest cotton in the world. They are soft, comfortable, and durable. They are available in a variety of colors and sizes.",
@@ -95,8 +95,20 @@ const Login = () => {
         </div>
         <div className="right">
           <div className="right-container">
-            <img src={images[currentImageIndex]} alt="Product" className="product-image" />
+            <img
+              src={images[currentImageIndex]}
+              alt="Product"
+              className={`product-image ${currentImageIndex === 0 ? "zoom-in-out" : ""}`}
+            />
             <p className="product-description">{messages[currentImageIndex]}</p>
+            <div className="image-container">
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  className={`image-indicator ${index === currentImageIndex ? "active" : ""}`}
+                ></div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
