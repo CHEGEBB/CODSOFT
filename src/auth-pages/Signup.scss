@@ -5,13 +5,14 @@
     flex-direction: row;
     justify-content: center;
     height: 100vh;
+    background-image: url("../images/wom2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   
     .left-container {
-      /* Styles for left container */
     }
   
     .right-container {
-      /* Styles for right container */
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;

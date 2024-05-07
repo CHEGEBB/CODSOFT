@@ -6,6 +6,7 @@ import "./Signup.scss";
 const SignUp = () => {
   return (
     <div className="signup-container">
+    <div className="overlay"></div>
       <div className="left-container">
 
       </div>
