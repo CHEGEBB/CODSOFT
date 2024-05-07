@@ -88,15 +88,17 @@ $island: 'Island Moments', cursive;
     .login-form {
       h2 {
         font-size: 24px;
-        margin-bottom: 20px;
+        margin-top: 15px;
+        font-family: $ropa;
       }
 
       .form-group {
-        margin-bottom: 15px;
+        margin-top: 20px;
 
         label {
           display: block;
           margin-bottom: 5px;
+          font-family: $jost;
         }
 
         input {
@@ -104,6 +106,7 @@ $island: 'Island Moments', cursive;
           padding: 10px;
           border: 1px solid #ccc;
           border-radius: 5px;
+          font-family: $jost;
         }
       }
 
@@ -113,7 +116,7 @@ $island: 'Island Moments', cursive;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        margin-top: 20px;
+        margin-top: 50px;
 
         &:hover {
           background-color: #0056b3;
@@ -122,13 +125,16 @@ $island: 'Island Moments', cursive;
 
       .login-link {
         margin-top: 20px;
+        font-family: $jost;
 
         a {
           text-decoration: none;
           color: #007bff;
+          font-family: $jost;
 
           &:hover {
             text-decoration: underline;
+
           }
         }
       }
