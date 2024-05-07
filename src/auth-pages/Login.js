@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    require("../images/webp/c1.webp"),
+    require("../images/webp/men/q1.jpg"),
     require("../images/webp/shirt2.webp"),
     require("../images/webp/a6.webp"),
     require("../images/webp/a5.webp")
