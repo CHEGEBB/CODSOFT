@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
+import Background from "../images/webp/women/Background.mp4";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -79,6 +80,11 @@ const Login = () => {
       </div>
       <div className="right">
       <div className="right-container">
+      <div className="overlay-2">
+            <video autoPlay muted loop>
+              <source src={Background} type="video/mp4" />
+            </video>
+          </div>
       </div>
       </div>
       </div>
