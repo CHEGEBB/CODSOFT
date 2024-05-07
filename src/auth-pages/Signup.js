@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Signup.scss";
 
+
 const SignUp = () => {
   return (
     <div className="signup-container">
       <div className="left-container">
-      
+
       </div>
       <div className="right-container">
         <nav className="horizontal-nav">
