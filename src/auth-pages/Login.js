@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
@@ -18,6 +18,7 @@ const Login = () => {
     "Our shoes are made from the finest leather in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
   ];
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -48,10 +49,10 @@ const Login = () => {
             <nav className="horizontal-nav">
               <ul>
                 <li>
-                  <Link to="/signup">Sign Up</Link>
+                  <Link to="/signup" className={location.pathname === "/signup" ? "active" : ""}>Sign Up</Link>
                 </li>
                 <li>
-                  <Link to="/login">Login</Link>
+                  <Link to="/login" className={location.pathname === "/login" ? "active" : ""}>Login</Link>
                 </li>
               </ul>
             </nav>
