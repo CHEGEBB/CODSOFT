@@ -7,11 +7,11 @@ const SignUp = () => {
   return (
     <div className="signup-container">
     <div className="overlay"></div>
-      <div className="left">
-
-      </div>
+    <div className="card">
       <div className="right">
-      <div className="right-container">
+      </div>
+      <div className="left">
+      <div className="left-container">
         <nav className="horizontal-nav">
           <ul>
             <li><Link to="/signup">Sign Up</Link></li>
@@ -41,6 +41,7 @@ const SignUp = () => {
             <p>Already have an account? <Link to="/">Login</Link></p>
           </div>
         </div>
+      </div>
       </div>
       </div>
     </div>
