@@ -119,9 +119,10 @@ const Home = () => {
 
   return (
     <div className="Homepage">
-    <div className="header">
+    <div className="header-container">
     <Header />
     </div>
+      
       <div
         className="home-intro"
         style={{
@@ -218,7 +219,7 @@ const Home = () => {
         </div>
       </div>
       <div className="about">
-      <div className="rectangle"></div>
+        <div className="rectangle"></div>
         <h1>Elevate Your New Style With GlamourGellerie’s Wide range of fashion products </h1>
         <p>Step into GalmourGallerie, where fashion meets enchantment, and every corner whispers tales of elegance and style.</p>
         <div className="image-container">
@@ -234,42 +235,42 @@ const Home = () => {
         </div>
       </div>
       <div className="set-apart">
-      <h1>We are best known for</h1>
-      <div className="unique">
-      <div className="free-delivery">
-      <div className="DeliveryIcon">
-        <img src={DeliveryIcon} alt="Deliver" />
-      </div>
-        <h2>Free Delivery</h2>
-        <p>Free shipping on all orders over $500</p>
-      </div>
-      <div className="support">
-      <div className="SupportIcon">
-        <img src={SupportIcon} alt="Support" />
-      </div>
-        <h2>24/7 Customer Support</h2>
-        <p>Our customer support team is available 24/7</p>
-      </div>
-      <div className="discount">
-      <div className="DiscountIcon">
-        <img src={DiscountIcon} alt="Discount" />
-      </div>
-        <h2>Exclusive Discounts</h2>
-        <p>Get exclusive discounts on your favorite products</p>
-      </div>
-      <div className="secure-payments">
-      <div className="SecurePaymentsIcon">
-        <img src={SecurePaymentsIcon} alt="Secure Payments" />
-      </div>
-        <h2>Secure Payments</h2>
-        <p>100% secure payment options</p>
-      </div>
+        <h1>We are best known for</h1>
+        <div className="unique">
+          <div className="free-delivery">
+            <div className="DeliveryIcon">
+              <img src={DeliveryIcon} alt="Deliver" />
+            </div>
+            <h2>Free Delivery</h2>
+            <p>Free shipping on all orders over $500</p>
+          </div>
+          <div className="support">
+            <div className="SupportIcon">
+              <img src={SupportIcon} alt="Support" />
+            </div>
+            <h2>24/7 Customer Support</h2>
+            <p>Our customer support team is available 24/7</p>
+          </div>
+          <div className="discount">
+            <div className="DiscountIcon">
+              <img src={DiscountIcon} alt="Discount" />
+            </div>
+            <h2>Exclusive Discounts</h2>
+            <p>Get exclusive discounts on your favorite products</p>
+          </div>
+          <div className="secure-payments">
+            <div className="SecurePaymentsIcon">
+              <img src={SecurePaymentsIcon} alt="Secure Payments" />
+            </div>
+            <h2>Secure Payments</h2>
+            <p>100% secure payment options</p>
+          </div>
+
+        </div>
 
       </div>
-     
-      </div>
       <div className="footer">
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

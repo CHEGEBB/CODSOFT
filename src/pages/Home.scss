@@ -80,6 +80,13 @@ $island:'Island Moments', cursive;
   button:hover {
     background-color: darken($celestialOrange, 10%);
   }
+  .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
   
 /*Homepage component*/
 .Homepage {
