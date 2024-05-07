@@ -148,11 +148,15 @@ $softpink: #FFC0CB;
 
       .form-group {
         margin-top: 20px;
-
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-family: $jost;
+        }
         input {
           width: 250px;
           padding: 10px;
-          border: 1px solid $celestialOrange;
+          border: 1px solid $softpink;
           border-radius: 5px;
           font-family: $jost;
           outline: none;
