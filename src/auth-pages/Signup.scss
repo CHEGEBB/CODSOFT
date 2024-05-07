@@ -146,28 +146,35 @@ $island:'Island Moments', cursive;
       }
 
       .form-group {
-        margin-bottom: 15px;
-
-        label {
-          display: block;
-          margin-bottom: 5px;
-        }
+        margin-top: 20px;
 
         input {
           width: 250px;
           padding: 10px;
-          border: 1px solid #ccc;
+          border: 1px solid $celestialOrange;
           border-radius: 5px;
+          font-family: $jost;
+          outline: none;
+
+          &::placeholder {
+            color: $placeholder-color;
+          }
+        
+        &.error {
+          input {
+            border: 1px solid red;
+          }
         }
+      }
       }
 
       button {
         padding: 10px 20px;
-        background-color: #007bff;
+        background-color: $celestialOrange;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        margin-top: 20px;
+        margin-top: 50px;
 
         &:hover {
           background-color: #0056b3;
