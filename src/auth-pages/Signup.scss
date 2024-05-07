@@ -5,19 +5,31 @@
     flex-direction: row;
     justify-content: center;
     height: 100vh;
-    background-image: url("../images/wom2.jpg");
+    background-image: url("../images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   
     .left-container {
+    }
+    .overlay{
+      background-color: rgba(29, 137, 204, 0.6);
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
     }
   
     .right-container {
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      position: relative;
+      z-index: 1;
   
       .horizontal-nav {
+        z-index: 1;
         ul {
           list-style-type: none;
           padding: 0;

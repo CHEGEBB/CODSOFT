@@ -7,9 +7,10 @@ const SignUp = () => {
   return (
     <div className="signup-container">
     <div className="overlay"></div>
-      <div className="left-container">
+      <div className="left">
 
       </div>
+      <div className="right">
       <div className="right-container">
         <nav className="horizontal-nav">
           <ul>
@@ -40,6 +41,7 @@ const SignUp = () => {
             <p>Already have an account? <Link to="/">Login</Link></p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
