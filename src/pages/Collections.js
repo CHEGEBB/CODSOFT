@@ -5,7 +5,6 @@ import wishlistIcon from "../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../images/ic--round-shopping-cart.svg";
 import Footer from "../components/Footer";
 import Header from "../components/header";
-import "../components/header.scss"
 
 const Collections = () => {
   const [items, setItems] = useState([
