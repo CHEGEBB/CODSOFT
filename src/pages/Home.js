@@ -10,6 +10,7 @@ import DeliveryIcon from "../images/us/carbon--delivery.svg";
 import SupportIcon from "../images/us/mdi--customer-service.svg";
 import DiscountIcon from "../images/us/streamline--discount-percent-badge.svg";
 import SecurePaymentsIcon from "../images/us/ri--secure-payment-fill.svg";
+import Header from '../components/header';
 
 const images = [
   {
@@ -118,6 +119,9 @@ const Home = () => {
 
   return (
     <div className="Homepage">
+    <div className="header">
+    <Header />
+    </div>
       <div
         className="home-intro"
         style={{
