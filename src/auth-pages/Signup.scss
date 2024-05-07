@@ -33,13 +33,15 @@ $island:'Island Moments', cursive;
 
   .card {
     border-radius: 10px;
-    padding: 20px;
+    padding: 0px;
     z-index: 1;
     width: 800px;
     display: flex;
     flex-direction: row;
     height: 550px;
     position: relative;
+    border: 2px solid $celestialOrange; 
+    border-radius: 17px;
   }
 
   .right {
@@ -57,8 +59,8 @@ $island:'Island Moments', cursive;
     top: 0;
     left: 0;
     z-index: 1;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 
   .overlay-2 {
