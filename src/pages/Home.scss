@@ -505,21 +505,19 @@ $darkpink: #FF007F;
   
     h3 {
       margin-top:180px;
-      color:#141C27;
+      color:$darkpink;
       font-family: $ropa;
       font-size: 1.5rem;
-      background-color:rgba(255, 255, 255, 0.4);
-      width: 120px;
+      width: 190px;
     }
   
     p {
       margin: 5px 0;
-      color: #333;
+      color: $celestialOrange;
       font-family: $ropa;
-      color: #000;
       font-weight: bold;
-      background-color:rgba(255, 255, 255, 0.4);
       width: 170px;
+      margin-left: -30px;
 
     }
   
@@ -527,7 +525,7 @@ $darkpink: #FF007F;
       margin-top: 10px;
       padding: 5px 10px;
       font-size: 14px;
-      background-color: $celestialOrange;
+      background-color: $darkpink;
       color: white;
       border: none;
       border-radius: 3px;
@@ -558,7 +556,7 @@ $darkpink: #FF007F;
     margin-right: 20px;
     width: 250px;
     height: 350px;
-    border: 2px solid $celestialOrange;
+    border: 2px solid $darkpink;
   }
   .product-image-1 {
     background-image: url('../images/suit3.jpg');
@@ -633,7 +631,7 @@ $darkpink: #FF007F;
   h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: $celestialOrange;
+    color: $darkpink;
     font-family: $ropa;
     width: 800px;
     margin-left: 270px;
@@ -652,7 +650,7 @@ $darkpink: #FF007F;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-top: 40px;
     .image {
       width: 300px;
       height: 360px;
@@ -683,14 +681,14 @@ $darkpink: #FF007F;
   margin-top: 50px;
 }
 .set-apart{
-  background-color: #141C27;
+  background-color: #666666;
   width: 100%;
   color: #fff;
   height: 300px;
     h1{
         font-size: 2rem;
         margin-bottom: 10px;
-        color: $celestialOrange;
+        color: $darkpink;
         margin-top: 20px;
         text-align: center;
         font-family: $ropa;
