@@ -8,8 +8,7 @@ const SignUp = () => {
     <div className="signup-container">
     <div className="overlay"></div>
     <div className="card">
-      <div className="right">
-      </div>
+      
       <div className="left">
       <div className="left-container">
         <nav className="horizontal-nav">
@@ -42,6 +41,8 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      </div>
+      <div className="right">
       </div>
       </div>
     </div>
