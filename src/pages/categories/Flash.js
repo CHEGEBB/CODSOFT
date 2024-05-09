@@ -59,7 +59,7 @@ const Flash = () => {
     },
     {
       id: 4,
-      name: "FlashSale Item 4",
+      name: "Men's Shirt and Trousers",
       price: 25,
       discountedPrice: 20,
       rating: 4,
@@ -75,7 +75,7 @@ const Flash = () => {
     },
     {
       id: 5,
-      name: "FlashSale Item 5",
+      name: "CityChic Skinny Jeans",
       price: 30,
       discountedPrice: 24,
       rating: 3,
