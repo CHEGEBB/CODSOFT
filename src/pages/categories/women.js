@@ -225,8 +225,8 @@ const Women = () => {
     {
       id: 14,
       name: "Stylish jeans and top",
-      price: 10,
-      discountedPrice: 8,
+      price: 100,
+      discountedPrice: 80,
       rating: 4,
       images: [
         require("../../images/webp/women/n1.jpg"),
@@ -242,8 +242,8 @@ const Women = () => {
     {
       id: 15,
       name: "Gentle Glow women attire",
-      price: 10,
-      discountedPrice: 8,
+      price: 200,
+      discountedPrice: 180.99,
       rating: 4,
       images: [
         require("../../images/webp/women/o1.jpg"),
@@ -258,8 +258,8 @@ const Women = () => {
     {
       id: 16,
       name: "Modern Muse Hoodie",
-      price: 10,
-      discountedPrice: 8,
+      price: 100,
+      discountedPrice: 68.98,
       rating: 4,
       images: [
         require("../../images/webp/women/p1.jpg"),
