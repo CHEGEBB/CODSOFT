@@ -109,7 +109,7 @@ const Women = () => {
 
     {
       id: 7,
-      name: "Women Item 1",
+      name: "Urban Chic stylish dress",
       price: 10,
       discountedPrice: 8,
       rating: 4,
