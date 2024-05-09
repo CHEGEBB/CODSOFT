@@ -41,7 +41,7 @@ const Men = () => {
     },
     {
       id: 3,
-      name: "ClassyChic Tee Collection",
+      name: "Urban Fit Leather Jacket",
       price: 20,
       discountedPrice: 16,
       rating: 5,
