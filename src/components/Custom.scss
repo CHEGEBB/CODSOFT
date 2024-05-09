@@ -74,7 +74,7 @@ $darkpink: #FF007F;
       margin-right: 10px; 
     }
   
-    .close-btn {
+    .close-btn button{
       background-color: #f8d7da; 
       color: #721c24; 
       border: none;
@@ -84,6 +84,25 @@ $darkpink: #FF007F;
   
       &:hover {
         background-color: #f5c6cb;
+      }
+    }
+    .buttons-container{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      flex-direction: row;
+
+    }
+    .view-cart-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 8px 15px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #0056b3;
       }
     }
   
