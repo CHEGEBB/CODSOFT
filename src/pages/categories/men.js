@@ -226,7 +226,7 @@ const Men = () => {
   }
 
   const showSuccessMessage = () => {
-    alert( "added to cart successfully!");
+    alert( "added to cart successfully You can view the item in the cart by clicking on the cart icon inthe homepage!");
 
   };
 
