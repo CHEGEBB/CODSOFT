@@ -140,7 +140,7 @@ const Flash = () => {
     },
     {
       id: 9,
-      name: "FlashSale Item 9",
+      name: "His&Her Harmony Collection",
       price: 50,
       discountedPrice: 40,
       rating: 5,
