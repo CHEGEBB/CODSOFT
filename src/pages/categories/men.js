@@ -230,10 +230,12 @@ const Men = () => {
   const handleAddToCart = (item) => {
     setAlertMessage(`${item.name} has been added to your cart`);
     setShowAlert(true);
+    setIsModalOpen(false);
   };
 
   const handleCloseAlert = () => {
     setShowAlert(false);
+    setIsModalOpen(false);
   };
 
   useEffect(() => {
@@ -268,9 +270,9 @@ const Men = () => {
                 className={`men-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
                 key={item.id}
               >
-                <div className="item-image" onClick={() => handleOpenModal(item)}>
+                <div className="item-image" >
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
-                  <div className="item-overlay" >
+                  <div className="item-overlay" onClick={() => handleOpenModal(item)}>
                     <div className="item-discount-men">
                       {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
                     </div>
