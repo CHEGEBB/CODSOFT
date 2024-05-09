@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
+import Modal from "../../components/Modal";
 
 const Men = () => {
   const [items, setItems] = useState([
@@ -200,6 +201,30 @@ const Men = () => {
     }
   ]);
 
+  
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const handleOpenModal = (item) =>{
+    setSelectedProduct(item);
+    setIsModalOpen(true);
+  }
+
+  const handleCloseModal = () =>{
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+    setSelectedImageIndex(0);
+  }
+
+  const handleNextImage = () =>{
+    setSelectedImageIndex((prevIndex) => (prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1));
+  }
+
+  const handlePrevImage = () =>{
+    setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
@@ -232,16 +257,16 @@ const Men = () => {
                 className={`men-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
                 key={item.id}
               >
-                <div className="item-image">
+                <div className="item-image" onClick={() => handleOpenModal(item)}>
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
-                  <div className="item-overlay">
+                  <div className="item-overlay" onClick={() => handleOpenModal(item)}>
                     <div className="item-discount-men">
                       {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
                     </div>
                     <div className="wish">
                       <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
-                    <button className="add-to-cart-btn">
+                    <button className="add-to-cart-btn" onClick={() => handleOpenModal(item)}>
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
@@ -267,6 +292,14 @@ const Men = () => {
           </div>
         ))}
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        handleClose={handleCloseModal}
+        product={selectedProduct}
+        selectedImageIndex={selectedImageIndex}
+        handleNextImage={handleNextImage}
+        handlePrevImage={handlePrevImage}
+      />
     </div>
   );
 };

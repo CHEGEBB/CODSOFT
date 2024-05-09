@@ -402,6 +402,30 @@ const Women = () => {
 
   ]);
 
+  
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const handleOpenModal = (item) =>{
+    setSelectedProduct(item);
+    setIsModalOpen(true);
+  }
+
+  const handleCloseModal = () =>{
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+    setSelectedImageIndex(0);
+  }
+
+  const handleNextImage = () =>{
+    setSelectedImageIndex((prevIndex) => (prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1));
+  }
+
+  const handlePrevImage = () =>{
+    setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
@@ -434,7 +458,7 @@ const Women = () => {
                 }`}
                 key={item.id}
               >
-                <div className="item-image">
+                <div className="item-image" onClick={() => handleOpenModal(item)}>
                   <img
                     src={item.images[item.currentImageIndex]}
                     alt={item.name}
@@ -449,7 +473,7 @@ const Women = () => {
                       );
                     }}
                   />
-                  <div className="item-overlay">
+                  <div className="item-overlay" onClick={() => handleOpenModal(item)}>
                     <div className="item-discount-women">
                       {(
                         ((item.price - item.discountedPrice) / item.price) *
@@ -464,7 +488,7 @@ const Women = () => {
                         className="wishlist-icon"
                       />
                     </div>
-                    <button className="add-to-cart-btn">
+                    <button className="add-to-cart-btn" onClick={() => handleOpenModal(item)}>
                       <img
                         src={item.addToCartIconPath}
                         alt="Add to Cart"
@@ -501,6 +525,14 @@ const Women = () => {
           </div>
         ))}
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        handleClose={handleCloseModal}
+        product={selectedProduct}
+        selectedImageIndex={selectedImageIndex}
+        handleNextImage={handleNextImage}
+        handlePrevImage={handlePrevImage}
+      />
     </div>
   );
 };
