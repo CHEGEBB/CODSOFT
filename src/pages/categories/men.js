@@ -225,10 +225,9 @@ const Men = () => {
     setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
   }
 
-  const showSuccessMessage = () => {
-    alert( "added to cart successfully You can view the item in the cart by clicking on the cart icon inthe homepage!");
-
-  };
+  const handleAddToCart = (item) => {
+    alert(`${item.name} has been added to your cart`);
+}
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -271,7 +270,7 @@ const Men = () => {
                     <div className="wish">
                       <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
-                    <button className="add-to-cart-btn" onClick={() => showSuccessMessage(item)}>
+                    <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
