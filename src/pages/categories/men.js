@@ -8,7 +8,7 @@ const Men = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "DapperDaze Designer Tees",
+      name: "Business Class Attire",
       price: 10,
       discountedPrice: 8,
       rating: 4,
