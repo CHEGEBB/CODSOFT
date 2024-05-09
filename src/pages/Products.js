@@ -149,20 +149,15 @@ const Products = () => {
         setSelectedProduct(product);
         setIsModalOpen(true);
     };
-
-    // Function to handle closing modal
     const handleCloseModal = () => {
         setSelectedProduct(null);
         setIsModalOpen(false);
-        setSelectedImageIndex(0); // Reset selected image index
+        setSelectedImageIndex(0);
     };
-
-    // Function to handle selecting next image in modal
+    
     const handleNextImage = () => {
         setSelectedImageIndex((prevIndex) => (prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1));
     };
-
-    // Function to handle selecting previous image in modal
     const handlePrevImage = () => {
         setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
     };
