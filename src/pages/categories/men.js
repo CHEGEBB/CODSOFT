@@ -137,7 +137,7 @@ const Men = () => {
     },
     {
       id: 9,
-      name: "DapperDaze Designer Tees",
+      name: "UrbanEssence Sweatshirt Hoodie",
       price: 50,
       discountedPrice: 40,
       rating: 5,
