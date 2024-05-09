@@ -126,8 +126,8 @@ const Women = () => {
     {
       id: 8,
       name: "stylish women smart casual",
-      price: 10,
-      discountedPrice: 8,
+      price: 100,
+      discountedPrice: 80,
       rating: 4,
       images: [
         require("../../images/webp/women/h1.jpg"),
@@ -143,8 +143,8 @@ const Women = () => {
     {
       id: 9,
       name: "Full work-out attire",
-      price: 10,
-      discountedPrice: 8,
+      price: 160,
+      discountedPrice: 150,
       rating: 4,
       images: [
         require("../../images/webp/women/i1.jpg"),
@@ -160,8 +160,8 @@ const Women = () => {
     {
       id: 10,
       name: "Stylish women jeans and top",
-      price: 10,
-      discountedPrice: 8,
+      price: 105,
+      discountedPrice: 88,
       rating: 4,
       images: [
         require("../../images/webp/women/j1.jpg"),
@@ -177,8 +177,8 @@ const Women = () => {
     {
       id: 11,
       name: "urban chic stylish attire",
-      price: 10,
-      discountedPrice: 8,
+      price: 200,
+      discountedPrice: 175,
       rating: 4,
       images: [
         require("../../images/webp/women/k1.jpg"),
@@ -193,8 +193,8 @@ const Women = () => {
     {
       id: 12,
       name: "Chic Charm dress",
-      price: 10,
-      discountedPrice: 8,
+      price: 109.99,
+      discountedPrice: 89.99,
       rating: 4,
       images: [
         require("../../images/webp/women/l1.jpg"),
