@@ -369,9 +369,9 @@ const Women = () => {
     },
     {
       id: 23,
-      name: "Women Item 1",
-      price: 10,
-      discountedPrice: 8,
+      name: "UbanTone dress and coat",
+      price: 250,
+      discountedPrice: 200,
       rating: 4,
       images: [
         require("../../images/webp/women/y1.jpg"),
