@@ -30,12 +30,19 @@ $darkpink: #FF007F;
     border-radius: 8px;
     padding: 20px;
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width:60%;
+    max-height: 800px;
     overflow-y: auto;
+
+    img{
+        width: 500px;
+        height: 700px;
+        overflow: hidden;
+
+    }
 }
 
-.close {
+.close {    
     position: absolute;
     top: 10px;
     right: 10px;
@@ -52,8 +59,8 @@ $darkpink: #FF007F;
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
-    color: #fff;
-    font-size: 54px;
+    color: $darkpink;
+    font-size: 74px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding: 5px;
