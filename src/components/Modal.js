@@ -4,7 +4,7 @@ import './Modal.scss';
 const Modal = ({ isOpen, handleClose, product, selectedImageIndex, handleNextImage, handlePrevImage }) => {
     if (!isOpen || !product) return null;
 
-    const { title, desc, images } = product;
+    const { title, desc, images,currentPrice } = product;
 
     return (
         <div className="modal-overlay">
@@ -25,8 +25,8 @@ const Modal = ({ isOpen, handleClose, product, selectedImageIndex, handleNextIma
                     <div className="product-info">
                         <h2>{title}</h2>
                         <p>{desc}</p>
-                        {/* Add more product details, size options, color options, etc. */}
-                        <button>Add to Cart</button>
+                        <p>{currentPrice}</p>
+                        <button >Add to Cart</button>
                     </div>
                 </div>
             </div>
