@@ -73,7 +73,7 @@ const Men = () => {
     },
     {
       id: 5,
-      name: "DapperDaze Designer Tees",
+      name: "CityGlam cotton Shirt",
       price: 30,
       discountedPrice: 24,
       rating: 3,
