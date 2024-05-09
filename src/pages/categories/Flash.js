@@ -76,8 +76,8 @@ const Flash = () => {
     {
       id: 5,
       name: "CityChic Skinny Jeans",
-      price: 30,
-      discountedPrice: 24,
+      price: 100,
+      discountedPrice: 75,
       rating: 3,
       images: [
         require("../../images/webp/flash/n1.avif"),
@@ -93,8 +93,8 @@ const Flash = () => {
     {
       id: 6,
       name: "CoupleCouture Collection",
-      price: 35,
-      discountedPrice: 28,
+      price: 350,
+      discountedPrice: 280,
       rating: 5,
       images: [
         require ("../../images/webp/flash/i1.jpg"),
