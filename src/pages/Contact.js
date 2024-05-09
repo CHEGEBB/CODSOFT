@@ -1,10 +1,12 @@
 import React from 'react';
 import './Contact.scss';
 import bg from '../images/webp/kids/bg1.mp4';
+import Nav from '../components/Navbar';
 
 const Contact = () => {
     return (
         <div>
+            <Nav />
             <div className="contact-container">
                 <div className="video-overlay"></div>
                 <video autoPlay loop muted className="background-video">
