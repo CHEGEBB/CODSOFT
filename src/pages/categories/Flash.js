@@ -60,8 +60,8 @@ const Flash = () => {
     {
       id: 4,
       name: "Men's Shirt and Trousers",
-      price: 25,
-      discountedPrice: 20,
+      price: 250,
+      discountedPrice: 200,
       rating: 4,
       images: [
         require("../../images/webp/flash/f1.jpg"),
