@@ -3,13 +3,13 @@ import './Cart.scss'; // Import your cart page styles here
 
 const Cart = ({ cartItems }) => {
   // Calculate total price
-  const totalPrice = cartItems.reduce((total, item) => total + item.discountedPrice, 0);
+  const totalPrice = cartItems ? cartItems.reduce((total, item) => total + item.discountedPrice, 0) : 0;
 
   return (
     <div className="cart-container">
       <h1>Shopping Cart</h1>
       <div className="cart-items">
-        {cartItems.map(item => (
+        {cartItems && cartItems.map(item => (
           <div key={item.id} className="cart-item">
             <div className="item-image">
               <img src={item.image} alt={item.name} />

@@ -3,12 +3,11 @@ import './Custom.scss';
 import { useNavigate } from 'react-router-dom';
 
 const CustomAlert = ({ message, onClose }) => {
-  const navigate = useNavigate(); // Get the navigate function from React Router
+  const navigate = useNavigate();
 
   const handleViewCart = () => {
-    // Navigate to the Cart page
-    navigate('/cart');
-    onClose(); // Close the alert after viewing the cart
+    navigate('/cart'); // Make sure the route is '/cart' (or the correct path)
+    onClose(); 
   };
 
   return (
