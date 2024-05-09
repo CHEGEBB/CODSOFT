@@ -442,31 +442,32 @@ const Collections = () => {
       currentImageIndex: 0
     }
   ]);
-
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const handleOpenModal = (item) =>{
+  const handleOpenModal = (item) => {
     setSelectedProduct(item);
     setIsModalOpen(true);
+  };
 
-  }
-
-  const handleCloseModal = (item)=>{
+  const handleCloseModal = () => {
     setSelectedProduct(null);
     setIsModalOpen(false);
     setSelectedImageIndex(0);
+  };
 
-  }
+  const handleNextImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-  const handleNextImage = ( )=>{
-    setSelectedImageIndex((prevIndex) => (prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1));
-  }
-
-  const handlePrevImage = ( )=>{
-    setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
-  }
+  const handlePrevImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1
+    );
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -489,9 +490,9 @@ const Collections = () => {
 
   return (
     <div className="collections-page">
-     <div className="header-container">
-    <Nav />
-    </div>
+      <div className="header-container">
+        <Nav />
+      </div>
       <div className="side-bar">
         <LeftSideBar />
       </div>
@@ -505,7 +506,10 @@ const Collections = () => {
                 }`}
                 key={item.id}
               >
-                <div className="item-image" onClick={() => handleOpenModal(item)}>
+                <div
+                  className="item-image"
+                  onClick={() => handleOpenModal(item)}
+                >
                   <img
                     src={item.images[item.currentImageIndex]}
                     alt={item.name}
@@ -525,7 +529,10 @@ const Collections = () => {
                         className="wishlist-icon"
                       />
                     </div>
-                    <button className="add-to-cart-btn" onClick={() => handleOpenModal(item)}>
+                    <button
+                      className="add-to-cart-btn"
+                      onClick={() => handleOpenModal(item)}
+                    >
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
@@ -561,15 +568,16 @@ const Collections = () => {
             ))}
           </div>
         ))}
-        <Modal>
+      </div>
+      {/* Render the Modal component inside the return statement */}
+      <Modal
         isOpen={isModalOpen}
         handleClose={handleCloseModal}
         product={selectedProduct}
         selectedImageIndex={selectedImageIndex}
         handleNextImage={handleNextImage}
         handlePrevImage={handlePrevImage}
-      </Modal>
-      </div>
+      />
       <div className="footer">
         <Footer />
       </div>

@@ -3,6 +3,7 @@ import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./FlashSales.scss";
 import flashSaleBannerMP4 from "../../images/webp/men/ban.mp4";
+import Modal from "../../components/Modal";
 
 
 
@@ -203,6 +204,29 @@ const Flash = () => {
     }
   ]);
 
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const handleOpenModal = (item) =>{
+    setSelectedProduct(item);
+    setIsModalOpen(true);
+  }
+
+  const handleCloseModal = () =>{
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+    setSelectedImageIndex(0);
+  }
+
+  const handleNextImage = () =>{
+    setSelectedImageIndex((prevIndex) => (prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1));
+  }
+
+  const handlePrevImage = () =>{
+    setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
@@ -235,16 +259,7 @@ const Flash = () => {
                 }`}
                 key={item.id}
               >
-                {/* Conditionally render video only on the first card of each row */}
-                {columnIndex === 0 && (
-                  <video autoPlay loop muted className="flash-sale-banner">
-                    <source src={flashSaleBannerMP4} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                )}
-                {/* End of conditional rendering */}
-                
-                <div className="item-image">
+                <div className="item-image" onClick={() => handleOpenModal(item)}>
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
                     <div className="item-discount-flash-sales">
@@ -279,10 +294,16 @@ const Flash = () => {
           </div>
         ))}
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        handleClose={handleCloseModal}
+        product={selectedProduct}
+        selectedImageIndex={selectedImageIndex}
+        handleNextImage={handleNextImage}
+        handlePrevImage={handlePrevImage}
+      />
     </div>
   );
-  
-  
 };
 
 export default Flash;
