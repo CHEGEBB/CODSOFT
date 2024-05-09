@@ -391,7 +391,7 @@ $darkpink: #FF007F;
   
   .dresses {
     @include card-item;
-    background-image: url("../images/women/dress2.jpg");
+    background-image: url("../images/webp/women/c1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
