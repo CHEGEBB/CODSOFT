@@ -50,12 +50,6 @@ const Modal = ({ isOpen, handleClose, product, selectedImageIndex, handleNextIma
                     </div>
                 </div>
             </div>
-            {showAlert && (
-                <div className="custom-alert">
-                    <span>{alertMessage}</span>
-                    <button className="close-btn" onClick={handleCloseAlert}>Close</button>
-                </div>
-            )}
         </div>
     );
 };
