@@ -77,8 +77,8 @@ const Women = () => {
     {
       id: 5,
       name: "Executive lady suit",
-      price: 10,
-      discountedPrice: 8,
+      price: 170,
+      discountedPrice: 150,
       rating: 4,
       images: [
         require("../../images/webp/women/e1.jpg"),
