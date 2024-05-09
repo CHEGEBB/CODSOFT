@@ -270,7 +270,7 @@ const Flash = () => {
                 {/* End of conditional rendering */}
                 
                 <div className="item-image">
-                  <img src={item.images[item.currentImageIndex]} alt={item.name} />
+                  <img src={item.images[item.currentImageIndex]} alt={item.name}  onClick={() => handleOpenModal(item)}/>
                   <div className="item-overlay">
                     <div className="item-discount-flash-sales">
                       {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
@@ -278,7 +278,7 @@ const Flash = () => {
                     <div className="wish">
                       <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
-                    <button className="add-to-cart-btn">
+                    <button className="add-to-cart-btn" onClick={() => handleOpenModal(item)}>
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
