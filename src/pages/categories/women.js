@@ -224,7 +224,7 @@ const Women = () => {
     },
     {
       id: 14,
-      name: "Women Item 1",
+      name: "Stylish jeans and top",
       price: 10,
       discountedPrice: 8,
       rating: 4,
@@ -241,7 +241,7 @@ const Women = () => {
     },
     {
       id: 15,
-      name: "Women Item 1",
+      name: "Gentle Glow women attire",
       price: 10,
       discountedPrice: 8,
       rating: 4,
