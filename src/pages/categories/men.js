@@ -169,7 +169,7 @@ const Men = () => {
     },
     {
       id: 11,
-      name: "ClassyChic Tee Collection",
+      name: "Stylish Polo sweater",
       price: 60,
       discountedPrice: 48,
       rating: 3,
