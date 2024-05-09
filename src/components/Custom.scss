@@ -18,7 +18,7 @@ $darkpink: #FF007F;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color:$darkpink; 
+    background-color:white; 
     color: #721c24;
     border: 1px solid #f5c6cb;
     border-radius: 5px;
@@ -28,6 +28,46 @@ $darkpink: #FF007F;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-family: $jost;
+
+    }
+    @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideUp {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+      
+      .custom-alert {
+        animation: slideDown 0.5s forwards;
+      }
+      
+      .custom-alert.hide {
+        animation: slideUp 0.5s forwards;
+      }
+      
+      .close-btn {
+        background-color: #f8d7da; 
+        color: #721c24; 
+        border: none;
+        border-radius: 3px;
+        padding: 8px 15px;
+        cursor: pointer;
+      
+        &:hover {
+          background-color: #f5c6cb;
+        }
+      }
   
     .message {
       flex: 1; 
@@ -46,5 +86,4 @@ $darkpink: #FF007F;
         background-color: #f5c6cb;
       }
     }
-  }
   
