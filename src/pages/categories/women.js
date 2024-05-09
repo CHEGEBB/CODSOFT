@@ -161,7 +161,7 @@ const Women = () => {
       id: 10,
       name: "Stylish women jeans and top",
       price: 105,
-      discountedPrice: 88,
+      discountedPrice: 88.99,
       rating: 4,
       images: [
         require("../../images/webp/women/j1.jpg"),
@@ -178,7 +178,7 @@ const Women = () => {
       id: 11,
       name: "urban chic stylish attire",
       price: 200,
-      discountedPrice: 175,
+      discountedPrice: 175.96,
       rating: 4,
       images: [
         require("../../images/webp/women/k1.jpg"),
@@ -209,8 +209,8 @@ const Women = () => {
     {
       id: 13,
       name: "Modern stylish crop top and trouser",
-      price: 10,
-      discountedPrice: 8,
+      price: 199.99,
+      discountedPrice: 129.99,
       rating: 4,
       images: [
         require("../../images/webp/women/m1.jpg"),
