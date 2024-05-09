@@ -12,8 +12,8 @@ const Flash = () => {
     {
       id: 1,
       name: "Stylish Women's v-neck blouse",
-      price: 10,
-      discountedPrice: 8,
+      price: 170,
+      discountedPrice: 150,
       rating: 4,
       images: [
         require("../../images/webp/flash/a1.jpg"),
@@ -28,8 +28,8 @@ const Flash = () => {
     {
       id: 2,
       name: "Ladies' Stylish jeans",
-      price: 15,
-      discountedPrice: 12,
+      price: 150,
+      discountedPrice: 120,
       rating: 3,
       images: [
         require("../../images/webp/flash/b1.jpg"),
@@ -44,8 +44,8 @@ const Flash = () => {
     {
       id: 3,
       name: "Men's Urban Denim Jacket",
-      price: 20,
-      discountedPrice: 16,
+      price: 200,
+      discountedPrice: 160,
       rating: 5,
       images: [
         require("../../images/webp/flash/e1.jpg"),
