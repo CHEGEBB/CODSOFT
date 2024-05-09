@@ -257,7 +257,7 @@ const Women = () => {
     },
     {
       id: 16,
-      name: "Women Item 1",
+      name: "Modern Muse Hoodie",
       price: 10,
       discountedPrice: 8,
       rating: 4,
