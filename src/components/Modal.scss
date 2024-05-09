@@ -97,3 +97,18 @@ $darkpink: #FF007F;
 .next {
     right: 10px;
 }
+.product-info {
+  
+    h2{
+        font-family: $ropa;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 16px;
+        font-family: $jost;
+        width: 500px;
+        margin-bottom:20px;
+    }
+}
