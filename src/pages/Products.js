@@ -3,6 +3,7 @@ import '../pages/Products.scss';
 import Footer from '../components/Footer';
 import { useState,useEffect } from 'react';
 import Nav from '../components/Navbar';
+import Modal from '../components/Modal';
 
 
 const Products = () => {
@@ -140,6 +141,32 @@ const Products = () => {
             desc: "Our skirts are made from the finest materials in the world. They are comfortable, durable, and stylish. They are available in a variety of colors and sizes."
         }
     ]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+    const handleOpenModal = (product) => {
+        setSelectedProduct(product);
+        setIsModalOpen(true);
+    };
+
+    // Function to handle closing modal
+    const handleCloseModal = () => {
+        setSelectedProduct(null);
+        setIsModalOpen(false);
+        setSelectedImageIndex(0); // Reset selected image index
+    };
+
+    // Function to handle selecting next image in modal
+    const handleNextImage = () => {
+        setSelectedImageIndex((prevIndex) => (prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1));
+    };
+
+    // Function to handle selecting previous image in modal
+    const handlePrevImage = () => {
+        setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
+    };
+
      
     useEffect(() => {
         const interval = setInterval(() => {
@@ -161,16 +188,24 @@ const Products = () => {
     </div>
             {cards.map(product => (
                 <div className="product-card" key={product.id}>
-                    <div className="product-images">
+                    <div className="product-images"  onClick={() => handleOpenModal(product)}>
                         <img src={product.images[0]} alt={product.title} />
                     </div>
                     <div className="product-info">
                         <h2>{product.title}</h2>
                         <p>{product.desc}</p>
-                        <button>Buy Now</button>
+                        <button onClick={() => handleOpenModal(product)}>Buy Now</button>
                     </div>
                 </div>
             ))}
+            <Modal
+                isOpen={isModalOpen}
+                handleClose={handleCloseModal}
+                product={selectedProduct}
+                selectedImageIndex={selectedImageIndex}
+                handleNextImage={handleNextImage}
+                handlePrevImage={handlePrevImage}
+            />
             <Footer />
         </div>
     );
