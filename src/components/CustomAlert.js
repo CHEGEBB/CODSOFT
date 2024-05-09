@@ -1,4 +1,5 @@
 import React from 'react';
+import './Custom.scss';
 
 const CustomAlert = ({ message, onClose }) => {
   return (

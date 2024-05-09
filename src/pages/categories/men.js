@@ -270,7 +270,7 @@ const Men = () => {
               >
                 <div className="item-image" onClick={() => handleOpenModal(item)}>
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
-                  <div className="item-overlay" onClick={() => handleOpenModal(item)}>
+                  <div className="item-overlay" >
                     <div className="item-discount-men">
                       {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
                     </div>
