@@ -57,7 +57,7 @@ const Men = () => {
     },
     {
       id: 4,
-      name: "TrendyTees Designer Collection",
+      name: "FlexiStyle t-shirt",
       price: 25,
       discountedPrice: 20,
       rating: 4,
