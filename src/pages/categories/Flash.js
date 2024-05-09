@@ -109,8 +109,8 @@ const Flash = () => {
     {
       id: 7,
       name: "Urban Dapper Suit",
-      price: 40,
-      discountedPrice: 32,
+      price: 140,
+      discountedPrice: 120,
       rating: 4,
       images: [
         require("../../images/webp/flash/h1.jpg"),
@@ -125,8 +125,8 @@ const Flash = () => {
     {
       id: 8,
       name: "CoupleElegance Ensemble",
-      price: 45,
-      discountedPrice: 36,
+      price: 450,
+      discountedPrice: 300,
       rating: 3,
       images: [
         require("../../images/webp/flash/j1.jpg"),
@@ -141,8 +141,8 @@ const Flash = () => {
     {
       id: 9,
       name: "His&Her Harmony Collection",
-      price: 50,
-      discountedPrice: 40,
+      price: 250,
+      discountedPrice: 150,
       rating: 5,
       images: [
         require("../../images/webp/flash/cp1.jpg"),
