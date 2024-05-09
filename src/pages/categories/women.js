@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Women.scss";
+import Modal from "../../components/Modal";
 
 const Women = () => {
   const [items, setItems] = useState([
