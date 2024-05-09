@@ -188,7 +188,7 @@ const Flash = () => {
     },
     {
       id: 12,
-      name: "FlashSale Item 12",
+      name: "UrbanEssence dress",
       price: 65,
       discountedPrice: 52,
       rating: 5,
