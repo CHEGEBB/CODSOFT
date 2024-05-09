@@ -8,6 +8,7 @@ import Shoes from '../pages/categories/shoes';
 import Flash from '../pages/categories/Flash';
 import Clicking from '../images/webp/women/pic.webm';
 import Footer from '../components/Footer';
+import Nav from '../components/Navbar';
 
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
@@ -29,6 +30,7 @@ const Shop = () => {
 
     return (
         <div className={`shop-page ${showZoomOut ? 'zoom-out' : ''}`}>
+            <Nav />
             <div className="overlay">
                 <div className="shop-intro">
                     <h1>Shop</h1>
