@@ -93,8 +93,8 @@ const Women = () => {
     {
       id: 6,
       name: "Graceful Garnet Dress",
-      price: 10,
-      discountedPrice: 8,
+      price: 180,
+      discountedPrice: 175,
       rating: 4,
       images: [
         require("../../images/webp/women/f1.jpg"),
@@ -110,8 +110,8 @@ const Women = () => {
     {
       id: 7,
       name: "Urban Chic stylish dress",
-      price: 10,
-      discountedPrice: 8,
+      price: 210,
+      discountedPrice: 185,
       rating: 4,
       images: [
         require("../../images/webp/women/g1.jpg"),
