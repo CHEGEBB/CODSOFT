@@ -189,8 +189,8 @@ const Flash = () => {
     {
       id: 12,
       name: "UrbanEssence dress",
-      price: 65,
-      discountedPrice: 52,
+      price: 165,
+      discountedPrice: 150,
       rating: 5,
       images: [
         require("../../images/webp/flash/m1.jpg"),
