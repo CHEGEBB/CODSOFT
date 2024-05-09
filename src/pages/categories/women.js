@@ -26,8 +26,8 @@ const Women = () => {
     {
       id: 2,
       name: "Elegant Essence Dress",
-      price: 10,
-      discountedPrice: 8,
+      price: 210,
+      discountedPrice: 180,
       rating: 4,
       images: [
         require("../../images/webp/women/b1.avif"),
@@ -43,8 +43,8 @@ const Women = () => {
     {
       id: 3,
       name: "Urban Chic Bodycon Dress",
-      price: 10,
-      discountedPrice: 8,
+      price: 90,
+      discountedPrice: 75,
       rating: 4,
       images: [
         require("../../images/webp/women/c1.jpg"),
@@ -61,8 +61,8 @@ const Women = () => {
     {
       id: 4,
       name: "Sleek turtle-neck and trousers",
-      price: 10,
-      discountedPrice: 8,
+      price: 100,
+      discountedPrice: 80,
       rating: 4,
       images: [
         require("../../images/webp/women/d1.jpg"),
