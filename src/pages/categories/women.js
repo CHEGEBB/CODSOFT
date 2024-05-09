@@ -274,8 +274,8 @@ const Women = () => {
     {
       id: 17,
       name: "Street Style Hoodie",
-      price: 10,
-      discountedPrice: 8,
+      price: 109.99,
+      discountedPrice: 87.99,
       rating: 4,
       images: [
         require("../../images/webp/women/q1.jpg"),
@@ -290,8 +290,8 @@ const Women = () => {
     {
       id: 18,
       name: "Cozy Chic Hoodie",
-      price: 10,
-      discountedPrice: 8,
+      price: 109.99,
+      discountedPrice: 89.99,
       rating: 4,
       images: [
         require("../../images/webp/women/r1.jpg"),
