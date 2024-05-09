@@ -81,6 +81,8 @@ $darkpink: #FF007F;
       border-radius: 3px;
       padding: 8px 15px;
       cursor: pointer;
+      margin-left: -40px;
+      margin-top: 50px;
   
       &:hover {
         background-color: #f5c6cb;
@@ -88,9 +90,9 @@ $darkpink: #FF007F;
     }
     .buttons-container{
       display: flex;
-      justify-content: space-between;
       margin-top: 50px;
       flex-direction: row;
+      gap: 20px;
 
     }
     .view-cart-btn {
