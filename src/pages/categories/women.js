@@ -306,8 +306,8 @@ const Women = () => {
     {
       id: 19,
       name: "Magnificence Dress",
-      price: 10,
-      discountedPrice: 8,
+      price: 307.99,
+      discountedPrice: 280.99,
       rating: 4,
       images: [
         require("../../images/webp/women/s1.jpg"),
@@ -322,8 +322,8 @@ const Women = () => {
     {
       id: 20,
       name: "Warm women sweater",
-      price: 10,
-      discountedPrice: 8,
+      price: 75.00,
+      discountedPrice: 58.99,
       rating: 4,
       images: [
         require("../../images/webp/women/t1.jpg"),
@@ -338,8 +338,8 @@ const Women = () => {
     {
       id: 21,
       name: "Executive women's coat",
-      price: 10,
-      discountedPrice: 8,
+      price: 200,
+      discountedPrice: 199.99,
       rating: 4,
       images: [
         require("../../images/webp/women/v1.jpg"),
@@ -354,8 +354,8 @@ const Women = () => {
     {
       id: 22,
       name: "Smart casual business attire",
-      price: 10,
-      discountedPrice: 8,
+      price: 300,
+      discountedPrice: 275,
       rating: 4,
       images: [
         require("../../images/webp/women/w1.jpg"),
@@ -386,8 +386,8 @@ const Women = () => {
     {
       id: 24,
       name: "TrendyTwist stylish attire",
-      price: 10,
-      discountedPrice: 8,
+      price: 155,
+      discountedPrice: 145,
       rating: 4,
       images: [
         require("../../images/webp/women/x1.jpg"),
