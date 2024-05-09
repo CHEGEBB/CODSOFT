@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './Shop.scss';
 import Men from '../pages/categories/men';
 import Women from '../pages/categories/women';
@@ -12,7 +12,6 @@ import Nav from '../components/Navbar';
 
 const Shop = () => {
     const [selectedCategory, setSelectedCategory] = useState('flashSales');
-    const [showZoomOut, setShowZoomOut] = useState(false);
     const [activeCategory, setActiveCategory] = useState('flashSales');
 
     const handleCategoryClick = (category) => {
@@ -20,16 +19,8 @@ const Shop = () => {
         setActiveCategory(category);
     };
 
-    useEffect(() => {
-        const zoomOutTimer = setTimeout(() => {
-            setShowZoomOut(true);
-        }, 5000);
-
-        return () => clearTimeout(zoomOutTimer);
-    }, []);
-
     return (
-        <div className={`shop-page ${showZoomOut ? 'zoom-out' : ''}`}>
+        <div className='shop-page'>
             <Nav />
             <div className="overlay">
                 <div className="shop-intro">
@@ -42,7 +33,6 @@ const Shop = () => {
         </div>
                     <p>Discover the latest trends in fashion at glamourgallerie we've got you covered with a wide range of products from various categories.</p>
                     <p style={{color:'blueViolet',textDecoration:'underline',fontWeight:'bold'}}>Click on any category to view products.</p>
-                    {/* mp4 an animation clicking */}
              
                 </div>
             </div>

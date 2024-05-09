@@ -57,7 +57,6 @@ $silver: #C0C0C0;
     height: 500px;
     font-size: 2rem;
     text-align: center;
-    animation: zoomInOut 10s infinite;
     width: 100%;
     overflow: hidden;
        h1{
@@ -72,15 +71,6 @@ $silver: #C0C0C0;
           font-family: $jost;
           width: 500px;
         }
-}
-
-@keyframes zoomInOut {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
 }
 .categories-nav {
   display: flex;
