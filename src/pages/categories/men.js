@@ -25,7 +25,7 @@ const Men = () => {
     },
     {
       id: 2,
-      name: "TrendyTwist Tailored Treasures",
+      name: "UrbanEssence Casual Shirt",
       price: 15,
       discountedPrice: 12,
       rating: 3,
