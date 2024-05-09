@@ -157,8 +157,8 @@ const Flash = () => {
     {
       id: 10,
       name: "PartnerStyle Collection",
-      price: 55,
-      discountedPrice: 44,
+      price: 550,
+      discountedPrice: 440,
       rating: 4,
       images: [
         require("../../images/webp/flash/k1.jpg"),
@@ -173,8 +173,8 @@ const Flash = () => {
     {
       id: 11,
       name: "Contemporary Skirt & Vest Set",
-      price: 60,
-      discountedPrice: 48,
+      price: 160,
+      discountedPrice: 148.99,
       rating: 3,
       images: [
         require ("../../images/webp/flash/l1.jpg"),
