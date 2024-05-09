@@ -462,11 +462,6 @@ const Collections = () => {
       prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1
     );
   };
-// this will show a success message with the item name when the user clicks on the add to cart button
-
-const handleAddToCart = (item) => {
-    alert(`${item.name} has been added to your cart`);
-}
 
 
   const handlePrevImage = () => {
@@ -537,7 +532,6 @@ const handleAddToCart = (item) => {
                     </div>
                     <button
                       className="add-to-cart-btn"
-                      onClick={() =>handleAddToCart(item)}
                     >
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
