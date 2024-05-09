@@ -8,7 +8,7 @@ const Women = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "Women Item 1",
+      name: "Stylish all-pink outfit",
       price: 10,
       discountedPrice: 8,
       rating: 4,
@@ -25,7 +25,7 @@ const Women = () => {
     },
     {
       id: 2,
-      name: "Women Item 1",
+      name: "Elegant Essence Dress",
       price: 10,
       discountedPrice: 8,
       rating: 4,
