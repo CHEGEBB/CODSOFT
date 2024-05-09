@@ -271,7 +271,7 @@ const Flash = () => {
                 
                 <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name}  onClick={() => handleOpenModal(item)}/>
-                  <div className="item-overlay">
+                  <div className="item-overlay" onClick={() => handleOpenModal(item)}>
                     <div className="item-discount-flash-sales">
                       {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
                     </div>
