@@ -42,7 +42,7 @@ const Women = () => {
     },
     {
       id: 3,
-      name: "Women Item 1",
+      name: "Urban Chic Bodycon Dress",
       price: 10,
       discountedPrice: 8,
       rating: 4,
