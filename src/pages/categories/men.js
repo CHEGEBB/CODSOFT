@@ -185,7 +185,7 @@ const Men = () => {
     },
     {
       id: 12,
-      name: "TrendyTees Designer Collection",
+      name: "Men V-neck short-sleeved sweater",
       price: 65,
       discountedPrice: 52,
       rating: 5,
