@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Modal.scss';
+import CustomAlert from './CustomAlert';
 
 const Modal = ({ isOpen, handleClose, product, selectedImageIndex, handleNextImage, handlePrevImage }) => {
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+
     if (!isOpen || !product) return null;
 
-    const { title, desc, images,currentPrice } = product;
+    const { title, desc, images, currentPrice } = product;
+
+    const handleAddToCart = (item) => {
+        setAlertMessage(`${item.name} has been added to your cart`);
+        setShowAlert(true);
+    };
+
+    const handleCloseAlert = () => {
+        setShowAlert(false);
+    };
 
     return (
         <div className="modal-overlay">
@@ -27,12 +40,22 @@ const Modal = ({ isOpen, handleClose, product, selectedImageIndex, handleNextIma
                         <p>{desc}</p>
                         <p>{currentPrice}</p>
                         <div className="modal-btn">
-                        <button >Add to Cart</button>
+                            <button
+                                onClick={() => handleAddToCart(product)} 
+                            >Add to Cart</button>
                         </div>
-                        
+                        {showAlert && (
+        <CustomAlert message={alertMessage} onClose={handleCloseAlert} />
+      )}
                     </div>
                 </div>
             </div>
+            {showAlert && (
+                <div className="custom-alert">
+                    <span>{alertMessage}</span>
+                    <button className="close-btn" onClick={handleCloseAlert}>Close</button>
+                </div>
+            )}
         </div>
     );
 };

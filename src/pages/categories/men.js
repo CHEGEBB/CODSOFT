@@ -3,7 +3,6 @@ import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
 import Modal from "../../components/Modal";
-import CustomAlert from '../../components/CustomAlert';
 
 const Men = () => {
   const [items, setItems] = useState([
@@ -206,8 +205,6 @@ const Men = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertMessage, setAlertMessage] = useState('');
 
   const handleOpenModal = (item) =>{
     setSelectedProduct(item);
@@ -227,16 +224,6 @@ const Men = () => {
   const handlePrevImage = () =>{
     setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
   }
-  const handleAddToCart = (item) => {
-    setAlertMessage(`${item.name} has been added to your cart`);
-    setShowAlert(true);
-    setIsModalOpen(false);
-  };
-
-  const handleCloseAlert = () => {
-    setShowAlert(false);
-    setIsModalOpen(false);
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -279,13 +266,10 @@ const Men = () => {
                     <div className="wish">
                       <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
-                    <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
+                    <button className="add-to-cart-btn">
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
-                    {showAlert && (
-        <CustomAlert message={alertMessage} onClose={handleCloseAlert} />
-      )}
                     <div className="discounted-price-men">
                       {item.discountedPrice}
                     </div>
