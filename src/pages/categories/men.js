@@ -137,7 +137,7 @@ const Men = () => {
     },
     {
       id: 9,
-      name: "UrbanEssence Sweatshirt Hoodie",
+      name: "UrbanEssence Sweatshirt",
       price: 50,
       discountedPrice: 40,
       rating: 5,
@@ -153,7 +153,7 @@ const Men = () => {
     },
     {
       id: 10,
-      name: "TrendyTwist Tailored Treasures",
+      name: "The Dark Knot Men's coat",
       price: 55,
       discountedPrice: 44,
       rating: 4,
