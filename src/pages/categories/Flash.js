@@ -11,7 +11,7 @@ const Flash = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "FlashSale Item 1",
+      name: "Stylish Women's v-neck blouse",
       price: 10,
       discountedPrice: 8,
       rating: 4,
@@ -27,7 +27,7 @@ const Flash = () => {
     },
     {
       id: 2,
-      name: "FlashSale Item 2",
+      name: "Ladies' Stylish jeans",
       price: 15,
       discountedPrice: 12,
       rating: 3,
