@@ -105,7 +105,7 @@ const Men = () => {
     },
     {
       id: 7,
-      name: "ClassyChic Tee Collection",
+      name: "Suave Cityscape  coat",
       price: 40,
       discountedPrice: 32,
       rating: 4,
@@ -121,7 +121,7 @@ const Men = () => {
     },
     {
       id: 8,
-      name: "TrendyTees Designer Collection",
+      name: "Trendy casual men's shirt",
       price: 45,
       discountedPrice: 36,
       rating: 3,
