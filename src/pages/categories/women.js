@@ -159,7 +159,7 @@ const Women = () => {
     },
     {
       id: 10,
-      name: "Women Item 1",
+      name: "Stylish women jeans and top",
       price: 10,
       discountedPrice: 8,
       rating: 4,
@@ -176,7 +176,7 @@ const Women = () => {
     },
     {
       id: 11,
-      name: "Women Item 1",
+      name: "urban chic stylish attire",
       price: 10,
       discountedPrice: 8,
       rating: 4,
