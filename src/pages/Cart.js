@@ -3,7 +3,10 @@ import './Cart.scss'; // Import your cart page styles here
 
 const Cart = ({ cartItems }) => {
   // Calculate total price
-  const totalPrice = cartItems ? cartItems.reduce((total, item) => total + item.discountedPrice, 0) : 0;
+  let totalPrice = 0;
+  if (cartItems && cartItems.length > 0) {
+    totalPrice = cartItems.reduce((total, item) => total + item.discountedPrice, 0);
+  }
 
   return (
     <div className="cart-container">
