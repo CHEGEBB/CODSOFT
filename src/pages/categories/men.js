@@ -225,6 +225,11 @@ const Men = () => {
     setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
   }
 
+  const showSuccessMessage = () => {
+    alert( "added to cart successfully!");
+
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
@@ -266,7 +271,7 @@ const Men = () => {
                     <div className="wish">
                       <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
-                    <button className="add-to-cart-btn" onClick={() => handleOpenModal(item)}>
+                    <button className="add-to-cart-btn" onClick={() => showSuccessMessage(item)}>
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
