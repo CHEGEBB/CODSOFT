@@ -60,7 +60,7 @@ const Women = () => {
     },
     {
       id: 4,
-      name: "Sleek turtle-neck and trousers outfit",
+      name: "Sleek turtle-neck and trousers",
       price: 10,
       discountedPrice: 8,
       rating: 4,
@@ -76,7 +76,7 @@ const Women = () => {
     },
     {
       id: 5,
-      name: "Smart Style Suit Combo",
+      name: "Executive lady suit",
       price: 10,
       discountedPrice: 8,
       rating: 4,
