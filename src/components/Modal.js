@@ -26,7 +26,10 @@ const Modal = ({ isOpen, handleClose, product, selectedImageIndex, handleNextIma
                         <h2>{title}</h2>
                         <p>{desc}</p>
                         <p>{currentPrice}</p>
+                        <div className="modal-btn">
                         <button >Add to Cart</button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
