@@ -204,6 +204,7 @@ const Flash = () => {
     }
   ]);
 
+  
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -259,7 +260,16 @@ const Flash = () => {
                 }`}
                 key={item.id}
               >
-                <div className="item-image" onClick={() => handleOpenModal(item)}>
+                {/* Conditionally render video only on the first card of each row */}
+                {columnIndex === 0 && (
+                  <video autoPlay loop muted className="flash-sale-banner">
+                    <source src={flashSaleBannerMP4} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {/* End of conditional rendering */}
+                
+                <div className="item-image">
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div className="item-overlay">
                     <div className="item-discount-flash-sales">
@@ -304,6 +314,8 @@ const Flash = () => {
       />
     </div>
   );
+  
+  
 };
 
 export default Flash;
