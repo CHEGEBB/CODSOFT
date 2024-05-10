@@ -10,6 +10,14 @@ const SignUp = () => {
     confirmPassword: ""
   });
 
+  const showRegistrationSuccess= () =>{
+    <div className="success">
+      <h2>Registration Successful</h2>
+      <p>Thank you for signing up with GlamourGallerie. You can now log in to your account.</p>
+      <button><Link to="/">Login</Link></button>
+    </div>
+  }
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -32,7 +40,7 @@ const SignUp = () => {
       if (response.ok) {
         // Registration successful
         console.log("User registered successfully");
-        alert("User registered successfully");
+        showRegistrationSuccess(true);
       } else {
         // Registration failed
         console.error("User registration failed");
