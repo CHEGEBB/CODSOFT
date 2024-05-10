@@ -28,15 +28,29 @@ const Login = () => {
     return () => clearInterval(intervalId);
   }, [images.length]);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const hardcodedEmail = "example@gmail.com";
-    const hardcodedPassword = "password";
 
-    if (email === hardcodedEmail && password === hardcodedPassword) {
-      navigate("/home");
-    } else {
-      alert("Invalid email or password");
+    try {
+      const response = await fetch('http://localhost:3000/auth/login', { // Assuming your backend API endpoint is '/auth/login'
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const { token } = data;
+        localStorage.setItem('token', token); // Store the token in local storage
+        navigate('/home'); // Redirect to the home page or any other authenticated route
+      } else {
+        alert('Invalid email or password'); // Handle invalid credentials
+      }
+    } catch (error) {
+      console.error('Login failed:', error.message);
+      alert('Login failed. Please try again later.'); // Handle other errors
     }
   };
 
