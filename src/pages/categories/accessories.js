@@ -217,7 +217,7 @@ const Accessories = () => {
     },
     {
       id: 14,
-      name: "FlashSale Accessory 14",
+      name: "Executive leather purse",
       price: 140,
       discountedPrice: 135,
       rating: 5,
@@ -233,9 +233,9 @@ const Accessories = () => {
     },
     {
       id: 15,
-      name: "Executive Leather purse",
-      price: 150,
-      discountedPrice: 145,
+      name: "Classic Fedora Hat",
+      price: 50,
+      discountedPrice: 45,
       rating: 4,
       images: [
         require("../../images/webp/accessories/o1.jpg"),
@@ -249,7 +249,7 @@ const Accessories = () => {
     },
     {
       id: 16,
-      name: "Classic Fedora Hat",
+      name: "Urban male belt",
       price: 70,
       discountedPrice: 55,
       rating: 3,
