@@ -1,15 +1,17 @@
-// backend/app.js
-
 // Import required modules
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const cors = require('cors');
 
 // Create Express app
 const app = express();
 
-// Middleware
+// CORS middleware
+app.use(cors());
+
+// Other middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
