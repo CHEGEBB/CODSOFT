@@ -9,14 +9,8 @@ const SignUp = () => {
     password: "",
     confirmPassword: ""
   });
-
-  const showRegistrationSuccess= () =>{
-    <div className="success">
-      <h2>Registration Successful</h2>
-      <p>Thank you for signing up with GlamourGallerie. You can now log in to your account.</p>
-      <button><Link to="/">Login</Link></button>
-    </div>
-  }
+  
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -40,7 +34,7 @@ const SignUp = () => {
       if (response.ok) {
         // Registration successful
         console.log("User registered successfully");
-        showRegistrationSuccess(true);
+        setRegistrationSuccess(true);
       } else {
         // Registration failed
         console.error("User registration failed");
@@ -105,7 +99,7 @@ const SignUp = () => {
                   />
                 </div>
                 {/* Submit button */}
-                <button type="submit" onClick={handleSubmit}>Sign Up</button>
+                <button type="submit">Sign Up</button>
               </form>
               <div className="login-link">
                 <p>
@@ -121,7 +115,7 @@ const SignUp = () => {
             <h2>Welcome to GlamourGallerie</h2>
             <p>
               Explore our curated collection of haute couture and trendsetting
-              ensembles.Step into a world where style meets sophistication, and fashion finds its true expression.
+              ensembles. Step into a world where style meets sophistication, and fashion finds its true expression.
             </p>
           </div>
           <video autoPlay muted loop>
@@ -129,6 +123,13 @@ const SignUp = () => {
           </video>
         </div>
       </div>
+      {registrationSuccess && (
+        <div className={`success ${registrationSuccess ? '' : 'hide'}`}>
+          <h2>Registration Successful</h2>
+          <p>Thank you for signing up with GlamourGallerie. You can now log in to your account.</p>
+          <button><Link to="/">Login</Link></button>
+        </div>
+      )}
     </div>
   );
 };
