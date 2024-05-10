@@ -169,8 +169,8 @@ const Shoes = () => {
     {
       id: 11,
       name: "Nike Air force 1",
-      price: 110,
-      discountedPrice : 105,
+      price: 70,
+      discountedPrice : 65,
       rating: 4,
       images: [
         require("../../images/webp/shoes/k1.jpg"),
