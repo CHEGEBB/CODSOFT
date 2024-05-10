@@ -56,9 +56,9 @@ const Accessories = () => {
     },
     {
       id: 4,
-      name: "FlashSale Accessory 4",
-      price: 40,
-      discountedPrice: 35,
+      name: "Luxury Statement Watch",
+      price: 140,
+      discountedPrice: 135,
       rating: 3,
       images: [
         require("../../images/webp/accessories/d1.avif"),
