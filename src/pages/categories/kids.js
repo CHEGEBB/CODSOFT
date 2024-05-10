@@ -105,7 +105,7 @@ const Kids = () => {
     },
     {
       id: 7,
-      name: "FlashSale Kid 7",
+      name: "Cute sweaters and skirt combo for kids",
       price: 40,
       discountedPrice: 32,
       rating: 4,
