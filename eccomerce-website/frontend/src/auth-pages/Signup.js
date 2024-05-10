@@ -21,7 +21,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/register", {
+      const response = await fetch("http://localhost:3000/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -96,7 +96,7 @@ const SignUp = () => {
                   />
                 </div>
                 {/* Submit button */}
-                <button type="submit">Sign Up</button>
+                <button type="submit" onClick={handleSubmit}>Sign Up</button>
               </form>
               <div className="login-link">
                 <p>
