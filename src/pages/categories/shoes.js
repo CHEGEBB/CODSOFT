@@ -264,9 +264,9 @@ const Shoes = () => {
     },
     {
       id: 17,
-      name: "FlashSale Shoe 17",
-      price: 170,
-      discountedPrice: 165,
+      name: "Ladies sneakers",
+      price: 70,
+      discountedPrice: 65,
       rating: 5,
       images: [
         require("../../images/webp/shoes/q1.jpg"),
