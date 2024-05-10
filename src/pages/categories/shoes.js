@@ -40,7 +40,7 @@ const Shoes = () => {
     },
     {
       id: 3,
-      name: "FlashSale Shoe 3",
+      name: "UrbanStep Casuals",
       price: 30,
       discountedPrice: 25,
       rating: 5,
