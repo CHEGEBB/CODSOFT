@@ -8,9 +8,9 @@ const Kids = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "FlashSale Kid 1",
-      price: 10,
-      discountedPrice: 8,
+      name: "Kid's Denim skirt with shirt",
+      price: 250,
+      discountedPrice: 150,
       rating: 4,
       images: [
         require("../../images/webp/kid1.avif"),
