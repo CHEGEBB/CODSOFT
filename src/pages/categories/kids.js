@@ -106,8 +106,8 @@ const Kids = () => {
     {
       id: 7,
       name: "Cute sweaters and skirt combo for kids",
-      price: 40,
-      discountedPrice: 32,
+      price: 140,
+      discountedPrice: 130,
       rating: 4,
       images: [
         require("../../images/webp/kids/f1.avif"),
@@ -121,9 +121,9 @@ const Kids = () => {
     },
     {
       id: 8,
-      name: "FlashSale Kid 8",
-      price: 45,
-      discountedPrice : 36,
+      name: "urban dress and jeans for kids",
+      price: 145,
+      discountedPrice : 130,
       rating: 3,
       images: [
         require("../../images/webp/kids/h4.jpg"),
