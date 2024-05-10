@@ -169,7 +169,7 @@ const Accessories = () => {
     },
     {
       id: 11,
-      name: "FlashSale Accessory 11",
+      name: "Vintage Chic Accessories",
       price: 110,
       discountedPrice: 105,
       rating: 4,
