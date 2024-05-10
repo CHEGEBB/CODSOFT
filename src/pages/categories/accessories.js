@@ -345,9 +345,9 @@ const Accessories = () => {
     },
     {
       id: 22,
-      name: "FlashSale Accessory 22",
-      price: 220,
-      discountedPrice: 215,
+      name: "Classic Headwrap",
+      price: 50,
+      discountedPrice: 35,
       rating: 5,
       images: [
         require("../../images/webp/accessories/v1.jpg"),
