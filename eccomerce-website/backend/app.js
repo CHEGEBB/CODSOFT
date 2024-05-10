@@ -8,21 +8,8 @@ const authRoutes = require('./routes/authRoutes');
 // Middleware to parse JSON requests
 app.use(express.json());
 
-// MongoDB Atlas connection URI
-const MONGODB_URI = 'mongodb+srv://CHEGEBB:Phil@2003@glamour.cjncwua.mongodb.net/?retryWrites=true&w=majority&appName=Glamour';
-
-// Connect to MongoDB
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-})
-.then(() => {
-  console.log('Connected to MongoDB');
-})
-.catch((error) => {
-  console.error('Error connecting to MongoDB:', error);
-});
+// MongoDB connection
+mongoose.connect('mongodb+srv://CHEGEBB:Phil@2003@glamour.cjncwua.mongodb.net/Glamour', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Use auth routes
 app.use('/api/auth', authRoutes);
