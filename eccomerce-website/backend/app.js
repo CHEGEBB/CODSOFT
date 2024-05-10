@@ -1,60 +1,34 @@
+// backend/app.js
+
 const express = require('express');
-const _ = require('lodash');
-const http = require('http');
-const moongose = require('mongoose');
-const bcrypt  = require('bcrypt');
-
-
-const PORT = process.env.PORT || 3000;
-
-// Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to MongoDB Atlas');
-}).catch((error) => {
-  console.error('Error connecting to MongoDB Atlas:', error);
-});
-
-// Define user schema
-const userSchema = new mongoose.Schema({
-  username: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
-});
-
-// Define user model
-const User = mongoose.model('User', userSchema);
+const mongoose = require('mongoose');
+const app = express();
+const authRoutes = require('./routes/authRoutes');
 
 // Middleware to parse JSON requests
 app.use(express.json());
 
-// User registration route
-app.post('/register', async (req, res) => {
-  const { username, password } = req.body;
+// MongoDB Atlas connection URI
+const MONGODB_URI = 'mongodb+srv://CHEGEBB:Phil@2003@glamour.cjncwua.mongodb.net/?retryWrites=true&w=majority&appName=Glamour';
 
-  try {
-    // Check if user already exists
-    const existingUser = await User.findOne({ username });
-    if (existingUser) {
-      return res.status(400).json({ message: 'Username already exists' });
-    }
-
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Create new user
-    const newUser = new User({ username, password: hashedPassword });
-    await newUser.save();
-
-    res.status(201).json({ message: 'User registered successfully' });
-  } catch (error) {
-    console.error('Error registering user:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
+// Connect to MongoDB
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((error) => {
+  console.error('Error connecting to MongoDB:', error);
 });
 
-// Start the server
+// Use auth routes
+app.use('/api/auth', authRoutes);
+
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
