@@ -152,7 +152,7 @@ const Shoes = () => {
     },
     {
       id: 10,
-      name: "FlashSale Shoe 10",
+      name: "Nike Air force 1",
       price: 100,
       discountedPrice: 95,
       rating: 5,
@@ -168,7 +168,7 @@ const Shoes = () => {
     },
     {
       id: 11,
-      name: "Nike Air force 1",
+      name: "ClassicChic Sneakers",
       price: 70,
       discountedPrice : 65,
       rating: 4,
@@ -184,10 +184,10 @@ const Shoes = () => {
     },
     {
       id: 12,
-      name: "FlashSale Shoe 12",
-      price: 120,
-      discountedPrice: 115,
-      rating: 3,
+      name: "StyleSprint ladies sneakers",
+      price: 50,
+      discountedPrice: 35,
+      rating: 4,
       images: [
         require("../../images/webp/shoes/l1.jpg"),
         require("../../images/webp/shoes/l2.jpg"),
