@@ -249,9 +249,9 @@ const Accessories = () => {
     },
     {
       id: 16,
-      name: "FlashSale Accessory 16",
-      price: 160,
-      discountedPrice: 155,
+      name: "Classic Fedora Hat",
+      price: 70,
+      discountedPrice: 55,
       rating: 3,
       images: [
         require("../../images/webp/accessories/p1.jpg"),
