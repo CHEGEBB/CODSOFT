@@ -297,9 +297,9 @@ const Accessories = () => {
     },
     {
       id: 19,
-      name: "FlashSale Accessory 19",
-      price: 190,
-      discountedPrice: 185,
+      name: "Classic Elegance Hairpieces 10 in 1 set",
+      price: 90,
+      discountedPrice: 75,
       rating: 4,
       images: [
         require("../../images/webp/accessories/s1.jpg"),
