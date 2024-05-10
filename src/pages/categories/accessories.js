@@ -152,9 +152,9 @@ const Accessories = () => {
     },
     {
       id: 10,
-      name: "Classic Elegance Golden necklace",
-      price: 100,
-      discountedPrice: 95,
+      name: "Classic Elegance Golden necklace 24k gold plated",
+      price: 1000,
+      discountedPrice: 950,
       rating: 5,
       images: [
         require("../../images/webp/accessories/j1.jpg"),
