@@ -152,7 +152,7 @@ const Accessories = () => {
     },
     {
       id: 10,
-      name: "FlashSale Accessory 10",
+      name: "Classic Elegance Golden necklace",
       price: 100,
       discountedPrice: 95,
       rating: 5,
