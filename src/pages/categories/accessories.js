@@ -8,9 +8,9 @@ const Accessories = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "FlashSale Accessory 1",
-      price: 10,
-      discountedPrice: 8,
+      name: "Timeless Elegance Rolex Watch",
+      price: 210,
+      discountedPrice: 180,
       rating: 4,
       images: [
         require("../../images/webp/accessories/a1.avif"),
@@ -24,9 +24,9 @@ const Accessories = () => {
     },
     {
       id: 2,
-      name: "FlashSale Accessory 2",
-      price: 20,
-      discountedPrice: 15,
+      name: "Vintage Glamour Men's wallet(all leather)",
+      price: 200,
+      discountedPrice: 150,
       rating: 5,
       images: [
         require("../../images/webp/accessories/b1.jpg"),
@@ -40,9 +40,9 @@ const Accessories = () => {
     },
     {
       id: 3,
-      name: "FlashSale Accessory 3",
-      price: 30,
-      discountedPrice: 25,
+      name: "Urban Edge Eyewear",
+      price: 130,
+      discountedPrice: 105,
       rating: 4,
       images: [
         require("../../images/webp/accessories/c1.jpg"),
