@@ -233,7 +233,7 @@ const Accessories = () => {
     },
     {
       id: 15,
-      name: "FlashSale Accessory 15",
+      name: "Executive Leather purse",
       price: 150,
       discountedPrice: 145,
       rating: 4,
