@@ -1,21 +1,32 @@
 // backend/app.js
 
+// Import required modules
 const express = require('express');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+require('dotenv').config();
+
+// Create Express app
 const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Routes
 const authRoutes = require('./routes/authRoutes');
+app.use('/auth', authRoutes);
 
-// Middleware to parse JSON requests
-app.use(express.json());
+// MongoDB Atlas connection string
+const MONGODB_URI = process.env.MONGODB_URI;
 
-// MongoDB connection
-mongoose.connect('mongodb+srv://CHEGEBB:Phil@2003@glamour.cjncwua.mongodb.net/Glamour', { useNewUrlParser: true, useUnifiedTopology: true });
+// Connect to MongoDB Atlas
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.log(err));
 
-// Use auth routes
-app.use('/api/auth', authRoutes);
-
+// Start server
 const PORT = process.env.PORT || 3000;
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
