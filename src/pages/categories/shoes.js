@@ -88,7 +88,7 @@ const Shoes = () => {
     },
     {
       id: 6,
-      name: "FlashSale Shoe 6",
+      name: "AeroFlex Casual Sneakers",
       price: 60,
       discountedPrice : 55,
       rating: 4,
