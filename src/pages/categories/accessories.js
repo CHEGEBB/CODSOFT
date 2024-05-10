@@ -361,9 +361,9 @@ const Accessories = () => {
     },
     {
       id: 23,
-      name: "FlashSale Accessory 23",
-      price: 230,
-      discountedPrice: 225,
+      name: "EliteGlow Skin Cream",
+      price: 50,
+      discountedPrice: 45,
       rating: 4,
       images: [
         require("../../images/webp/accessories/w1.jpg"),
