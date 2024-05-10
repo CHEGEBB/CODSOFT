@@ -201,7 +201,7 @@ const Accessories = () => {
     },
     {
       id: 13,
-      name: "FlashSale Accessory 13",
+      name: "Vintage Pearl necklace",
       price: 130,
       discountedPrice: 125,
       rating: 4,
