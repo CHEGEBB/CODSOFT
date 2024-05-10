@@ -9,8 +9,8 @@ const Shoes = () => {
     {
       id: 1,
       name: "UrbanTech Sneakers",
-      price: 100,
-      discountedPrice: 80,
+      price: 40,
+      discountedPrice: 30,
       rating: 4,
       images: [
         require("../../images/webp/shoes/a1.jpg"),
@@ -25,8 +25,8 @@ const Shoes = () => {
     {
       id: 2,
       name: "StrideFlex Sneakers",
-      price: 120,
-      discountedPrice: 105,
+      price: 60,
+      discountedPrice: 35,
       rating: 3,
       images: [
         require("../../images/webp/shoes/b4.jpg"),
