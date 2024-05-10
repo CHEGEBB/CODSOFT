@@ -249,9 +249,9 @@ const Kids = () => {
     },
     {
       id: 16,
-      name: "FlashSale Kid 16",
-      price: 85,
-      discountedPrice: 68,
+      name: "Kids warm wear with hat",
+      price: 185,
+      discountedPrice: 175,
       rating: 4,
       images: [
         require("../../images/webp/kids/p1.jpg"),
