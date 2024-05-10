@@ -8,9 +8,9 @@ const Shoes = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "FlashSale Shoe 1",
-      price: 10,
-      discountedPrice: 8,
+      name: "UrbanTech Sneakers",
+      price: 100,
+      discountedPrice: 80,
       rating: 4,
       images: [
         require("../../images/webp/shoes/a1.jpg"),
