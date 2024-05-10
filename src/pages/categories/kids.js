@@ -42,8 +42,8 @@ const Kids = () => {
     {
       id: 3,
       name: "Kid's Stylish shirt with white trousers",
-      price: 20,
-      discountedPrice: 16,
+      price: 200,
+      discountedPrice: 180,
       rating: 5,
       images: [
         require("../../images/webp/kids/b1.jpg"),
