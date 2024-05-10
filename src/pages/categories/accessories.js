@@ -185,7 +185,7 @@ const Accessories = () => {
     },
     {
       id: 12,
-      name: "FlashSale Accessory 12",
+      name: "Elegant Embrace Ring",
       price: 120,
       discountedPrice: 115,
       rating: 3,
