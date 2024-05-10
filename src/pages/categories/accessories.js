@@ -329,9 +329,9 @@ const Accessories = () => {
     },
     {
       id: 21,
-      name: "FlashSale Accessory 21",
-      price: 210,
-      discountedPrice: 205,
+      name: "Chic Lace Top Stockings",
+      price: 70,
+      discountedPrice: 55,
       rating: 4,
       images: [
         require("../../images/webp/accessories/u1.jpg"),
