@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Signup.scss";
 import Background from "../images/webp/women/Background.mp4";
 
 const SignUp = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        // Registration successful
+        console.log("User registered successfully");
+      } else {
+        // Registration failed
+        console.error("User registration failed");
+      }
+    } catch (error) {
+      console.error("Error registering user:", error);
+    }
+  };
+
   return (
     <div className="signup-container">
       <div className="overlay"></div>
@@ -26,15 +63,27 @@ const SignUp = () => {
             </nav>
             <div className="signup-form">
               <h2>Create an Account</h2>
-              <form>
+              <form onSubmit={handleSubmit}>
                 {/* Form fields */}
                 <div className="form-group">
                   <label htmlFor="email">Email:</label>
-                  <input type="email" id="email" name="email" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="form-group">
                   <label htmlFor="password">Password:</label>
-                  <input type="password" id="password" name="password" />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="form-group">
                   <label htmlFor="confirmPassword">Confirm Password:</label>
@@ -42,6 +91,8 @@ const SignUp = () => {
                     type="password"
                     id="confirmPassword"
                     name="confirmPassword"
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
                   />
                 </div>
                 {/* Submit button */}
