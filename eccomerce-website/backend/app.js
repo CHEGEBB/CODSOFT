@@ -27,6 +27,12 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
+// Generate JWT secret key if not already present in .env
+if (!process.env.JWT_SECRET) {
+    process.env.JWT_SECRET = require('crypto').randomBytes(64).toString('hex');
+    console.log('Generated JWT secret key:', process.env.JWT_SECRET);
+}
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
