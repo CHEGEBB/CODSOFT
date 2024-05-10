@@ -328,9 +328,9 @@ const Shoes = () => {
     },
     {
       id: 21,
-      name: "FlashSale Shoe 21",
-      price: 210,
-      discountedPrice: 205,
+      name: "CityChic  Flats",
+      price: 60,
+      discountedPrice: 55,
       rating: 3,
       images: [
         require("../../images/webp/shoes/u1.jpg"),
@@ -344,9 +344,9 @@ const Shoes = () => {
     },
     {
       id: 22,
-      name: "FlashSale Shoe 22",
-      price: 220,
-      discountedPrice: 215,
+      name: "Modern Chic sandals",
+      price: 40,
+      discountedPrice: 35,
       rating: 4,
       images: [
         require("../../images/webp/shoes/v1.jpg"),
