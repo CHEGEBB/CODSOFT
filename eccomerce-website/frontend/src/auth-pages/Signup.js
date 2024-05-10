@@ -40,6 +40,7 @@ const SignUp = () => {
         console.error("User registration failed");
       }
     } catch (error) {
+      alert("The error" + error + " occurred. Please try again later.");
       console.error("Error registering user:", error);
     }
   };
@@ -127,7 +128,7 @@ const SignUp = () => {
         <div className={`success ${registrationSuccess ? '' : 'hide'}`}>
           <h2>Registration Successful</h2>
           <p>Thank you for signing up with GlamourGallerie. You can now log in to your account.</p>
-          <button><Link to="/">Login</Link></button>
+          <button><Link to="/" style={{color:'white'}}>Login</Link></button>
         </div>
       )}
     </div>

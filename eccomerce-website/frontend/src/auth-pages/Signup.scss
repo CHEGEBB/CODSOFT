@@ -32,6 +32,43 @@ $darkpink: #FF007F;
     top: 0;
     left: 0;
   }
+  .success {
+    position: fixed;
+    width: 500px;
+    height: 180px;
+    z-index: 45;
+    align-items: center;
+    justify-content: center;
+    margin-top: -370px;
+    margin-left: 80px; 
+    background-color: $darkpink;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform: translateY(-100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    font-family: $jost;
+    padding: 20px;
+      button{
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        &:hover {
+          background-color: $softpink;
+        }
+      
+      }
+  }
+  
+  .success.hide {
+    transform: translateY(-100%);
+  }
+  
 
   .card {
     border-radius: 10px;
