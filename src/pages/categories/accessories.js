@@ -88,9 +88,9 @@ const Accessories = () => {
     },
     {
       id: 6,
-      name: "FlashSale Accessory 6",
-      price : 60,
-      discountedPrice: 55,
+      name: "Glamorous Crystal Earrings",
+      price : 160,
+      discountedPrice: 155,
       rating: 5,
       images: [
         require("../../images/webp/accessories/f1.jpg"),
