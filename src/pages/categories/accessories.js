@@ -188,7 +188,7 @@ const Accessories = () => {
       name: "Elegant Embrace Ring",
       price: 120,
       discountedPrice: 115,
-      rating: 3,
+      rating: 4,
       images: [
         require("../../images/webp/accessories/l1.jpg"),
         require("../../images/webp/accessories/l2.jpg"),
