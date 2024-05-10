@@ -265,9 +265,9 @@ const Accessories = () => {
     },
     {
       id: 17,
-      name: "FlashSale Accessory 17",
-      price: 170,
-      discountedPrice: 165,
+      name: "Urban Edge Cuff",
+      price: 70,
+      discountedPrice: 55,
       rating: 4,
       images: [
         require("../../images/webp/accessories/q1.jpg"),
