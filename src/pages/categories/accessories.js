@@ -104,7 +104,7 @@ const Accessories = () => {
     },
     {
       id: 7,
-      name: "FlashSale Accessory 7",
+      name: "Classic Hoop Earrings",
       price: 70,
       discountedPrice: 65,
       rating: 4,
