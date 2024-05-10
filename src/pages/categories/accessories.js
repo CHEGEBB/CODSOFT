@@ -281,7 +281,7 @@ const Accessories = () => {
     },
     {
       id: 18,
-      name: "FlashSale Accessory 18",
+      name: "Vintage Glamour Business leather bag",
       price: 180,
       discountedPrice: 175,
       rating: 5,
