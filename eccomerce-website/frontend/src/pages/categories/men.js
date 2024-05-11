@@ -230,9 +230,10 @@ const Men = () => {
   };
 
   useEffect(() => {
+
     const postProductsToDatabase = async () => {
       try {
-        const response = await fetch("/products",{
+        const response = await fetch("http://localhost:3000/products",{
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -242,14 +243,14 @@ const Men = () => {
         if (!response.ok) {
           throw new Error("Failed to post products");
         }
-        const data = await response.json();
-        setItems(data.products);
+        console.log("Products posted successfully");
+        // const data = await response.json();
+        // setItems(data.products);
       } catch (error) {
         console.error("Error posting products:", error.message);
       }
     };
-
-    fetchProducts();
+    postProductsToDatabase();
 
     const id = setInterval(() => {
       setItems((prevItems) =>
