@@ -233,14 +233,31 @@ const Men = () => {
 // the data sent will be in object form and have the same properties as the items array that is the id, name, price, discountedPrice, rating, images, wishlistIconPath, addToCartIconPath, currentImageIndex
 
 const sendData = async () => {
-  const response = await fetch('http://localhost:3000/products', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(items)
-  });
+  try {
+    // Sending data immediately after the page is loaded
+    window.addEventListener('load', async () => {
+      // Sending the data from the items array to the database
+      const response = await fetch('http://localhost:3000/products', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // Pass items array directly without converting to JSON format
+        body: items
+      });
+
+      // Checking if the response is successful
+      if (!response.ok) {
+        throw new Error('Failed to send data to the server');
+      }
+
+      console.log('Data sent successfully');
+    }, { once: true }); // Ensuring data is sent only once after the page load
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
 }
+sendData();
 
 
   useEffect(() => {
