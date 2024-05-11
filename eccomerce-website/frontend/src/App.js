@@ -10,6 +10,7 @@ import User from "./pages/User";
 import "./index.scss";
 import Login from "./auth-pages/Login";
 import SignUp from "./auth-pages/Signup";
+import AdminLogin from "./auth-pages/AdminLogin";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/admin" element={<AdminLogin />} />
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />

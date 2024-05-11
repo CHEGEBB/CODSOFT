@@ -4,7 +4,7 @@ import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
 import Modal from "../../components/Modal";
 
-const Men = () => {
+const Men = ({ isAdmin }) => {
   const [items, setItems] = useState([
     {
       id: 1,

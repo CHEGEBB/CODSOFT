@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./AdminLogin.scss";
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@admin.com"); // Hardcoded admin email
+  const [password, setPassword] = useState("admin"); // Hardcoded admin password
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -23,7 +23,7 @@ const AdminLogin = () => {
         const data = await response.json();
         const { token } = data;
         localStorage.setItem('adminToken', token); // Store the admin token in local storage
-        navigate('/admin/dashboard'); // Redirect to the admin dashboard
+        navigate('/'); // Redirect to the homepage
       } else {
         alert('Invalid email or password'); // Handle invalid credentials
       }

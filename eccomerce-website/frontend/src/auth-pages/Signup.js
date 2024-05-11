@@ -63,6 +63,11 @@ const SignUp = () => {
                     Login
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink exact to="/admin" activeClassName="active">
+                    Admin
+                  </NavLink>
+                </li>
               </ul>
             </nav>
             <div className="signup-form">
