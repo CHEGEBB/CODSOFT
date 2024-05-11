@@ -272,6 +272,7 @@ const Home = () => {
       <div className="footer">
         <Footer />
       </div>
+     
     </div>
   );
 }
