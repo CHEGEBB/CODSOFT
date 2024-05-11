@@ -232,7 +232,7 @@ const Men = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("/products/men");
+        const response = await fetch("http://localhost:3000/products/men");
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }
@@ -283,7 +283,8 @@ const Men = () => {
               >
                 <div className="item-image">
                   {/* Placeholder for image */}
-                  <img src="" alt={item.name} />
+                 
+                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div
                     className="item-overlay"
                     onClick={() => handleOpenModal(item)}
