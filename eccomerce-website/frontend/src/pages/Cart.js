@@ -1,18 +1,38 @@
-import React from 'react';
-import './Cart.scss'; // Import your cart page styles here
+import React, { useState, useEffect } from 'react';
+import './Cart.scss';
 
-const Cart = ({ cartItems }) => {
-  // Calculate total price
-  let totalPrice = 0;
-  if (cartItems && cartItems.length > 0) {
-    totalPrice = cartItems.reduce((total, item) => total + item.discountedPrice, 0);
-  }
+const Cart = () => {
+  const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    fetch('/api/cart')
+      .then(res => res.json())
+      .then(data => {
+        setCartItems(data);
+        calculateTotalPrice(data);
+      })
+      .catch(error => console.error('Error fetching cart items:', error));
+  }, []);
+
+  const calculateTotalPrice = (items) => {
+    let total = 0;
+    items.forEach(item => {
+      total += item.discountedPrice;
+    });
+    setTotalPrice(total);
+  };
+
+  const handleCheckout = () => {
+    // Implement checkout logic here
+    // Redirect user to the checkout page or perform other actions
+  };
 
   return (
     <div className="cart-container">
       <h1>Shopping Cart</h1>
       <div className="cart-items">
-        {cartItems && cartItems.map(item => (
+        {cartItems.map(item => (
           <div key={item.id} className="cart-item">
             <div className="item-image">
               <img src={item.image} alt={item.name} />
@@ -26,7 +46,7 @@ const Cart = ({ cartItems }) => {
       </div>
       <div className="cart-summary">
         <p>Total: ${totalPrice}</p>
-        <button className="checkout-btn">Proceed to Checkout</button>
+        <button className="checkout-btn" onClick={handleCheckout}>Proceed to Checkout</button>
       </div>
     </div>
   );
