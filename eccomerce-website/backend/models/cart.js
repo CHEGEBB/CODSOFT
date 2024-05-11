@@ -1,11 +1,12 @@
+// models/Product.js
 const mongoose = require('mongoose');
 
-const cartSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    discountedPrice: { type: Number, required: true },
-    image: { type: String, required: true }
+const productSchema = new mongoose.Schema({
+  name: String,
+  price: Number,
+  discountedPrice: Number,
+  rating: Number,
+  images: [String] // Assuming image paths are stored as strings
 });
 
-const Cart = mongoose.model('Cart', cartSchema);
-
-module.exports = Cart;
+module.exports = mongoose.model('Product', productSchema);

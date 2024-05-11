@@ -11,13 +11,19 @@ const app = express();
 // CORS middleware
 app.use(cors());
 
+// the app to use json
+app.use(express.json());
+
 // Other middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 const authRoutes = require('./routes/authRoutes');
-app.use('/auth', authRoutes);
+const productRoutes = require('./routes/productRoutes');
+
+app.use('/auth', authRoutes); // Authentication routes
+app.use('/products', productRoutes); // Product routes
 
 // MongoDB Atlas connection string
 const MONGODB_URI = process.env.MONGODB_URI;
