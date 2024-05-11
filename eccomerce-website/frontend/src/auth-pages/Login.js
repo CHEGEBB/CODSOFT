@@ -31,7 +31,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const isAdmin = false;
+    const isAdmin = true;
     <Men isAdmin={isAdmin} />
 
     try {
