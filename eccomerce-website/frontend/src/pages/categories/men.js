@@ -5,6 +5,10 @@ import "./Men.scss";
 import Modal from "../../components/Modal";
 
 const Men = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [intervalId, setIntervalId] = useState(null); 
   const [items, setItems] = useState([
     {
       id: 1,
@@ -201,32 +205,47 @@ const Men = () => {
     }
   ]);
 
-  
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const handleOpenModal = (item) =>{
+  const handleOpenModal = (item) => {
     setSelectedProduct(item);
     setIsModalOpen(true);
-  }
+  };
 
-  const handleCloseModal = () =>{
+  const handleCloseModal = () => {
     setSelectedProduct(null);
     setIsModalOpen(false);
     setSelectedImageIndex(0);
-  }
+  };
 
-  const handleNextImage = () =>{
-    setSelectedImageIndex((prevIndex) => (prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1));
-  }
+  const handleNextImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-  const handlePrevImage = () =>{
-    setSelectedImageIndex((prevIndex) => (prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1));
-  }
+  const handlePrevImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1
+    );
+  };
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("/products/men");
+        if (!response.ok) {
+          throw new Error("Failed to fetch products");
+        }
+        const data = await response.json();
+        setItems(data.products);
+      } catch (error) {
+        console.error("Error fetching products:", error.message);
+      }
+    };
+
+    fetchProducts();
+
+    const id = setInterval(() => {
       setItems((prevItems) =>
         prevItems.map((item) => {
           const nextImageIndex =
@@ -236,38 +255,58 @@ const Men = () => {
       );
     }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
-  
+    // Save the intervalId to state
+    setIntervalId(id);
+
+    // Cleanup function to clear the interval
+    return () => clearInterval(intervalId);
+  }, []); // Make sure to add intervalId to the dependency array to prevent stale closures
+
+  // Group items into rows
   const groupedItems = [];
   for (let i = 0; i < items.length; i += 4) {
     groupedItems.push(items.slice(i, i + 4));
   }
 
   return (
-    <div className="men-page"> 
-      <h1>
-      Men's Collection
-      </h1>
+    <div className="men-page">
+      <h1>Men's Collection</h1>
       <div className="men-items">
         {groupedItems.map((row, rowIndex) => (
           <div className="men-row" key={rowIndex}>
             {row.map((item, columnIndex) => (
               <div
-                className={`men-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
+                className={`men-item-container ${
+                  item.id >= 10 && item.id <= 15 ? "special-card" : ""
+                }`}
                 key={item.id}
               >
-                <div className="item-image" >
-                  <img src={item.images[item.currentImageIndex]} alt={item.name} />
-                  <div className="item-overlay" onClick={() => handleOpenModal(item)}>
+                <div className="item-image">
+                  {/* Placeholder for image */}
+                  <img src="" alt={item.name} />
+                  <div
+                    className="item-overlay"
+                    onClick={() => handleOpenModal(item)}
+                  >
                     <div className="item-discount-men">
-                      {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
+                      {(
+                        ((item.price - item.discountedPrice) / item.price) *
+                        100
+                      ).toFixed(0)}
+                      % off
                     </div>
                     <div className="wish">
-                      <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
+                      <img
+                        src={item.wishlistIconPath}
+                        alt="Wishlist"
+                        className="wishlist-icon"
+                      />
                     </div>
                     <button className="add-to-cart-btn">
-                      <img src={item.addToCartIconPath} alt="Add to Cart" />
+                      <img
+                        src={item.addToCartIconPath}
+                        alt="Add to Cart"
+                      />
                       Add to Cart
                     </button>
                     <div className="discounted-price-men">
@@ -278,12 +317,22 @@ const Men = () => {
                 <div className="item-info-men">
                   <div className="item-name-men">{item.name}</div>
                   <div className="price-container">
-                    <span className="previous-price-men">${item.price}</span>
-                    <span className="current-price-men">${item.discountedPrice}</span>
+                    <span className="previous-price-men">
+                      ${item.price}
+                    </span>
+                    <span className="current-price-men">
+                      ${item.discountedPrice}
+                    </span>
                   </div>
                   <div className="item-rating">
                     {Array.from({ length: item.rating }).map((_, index) => (
-                      <span key={index} className="star-icon" style={{ color: "#F5AD42", fontSize: "1.5em" }}>★</span>
+                      <span
+                        key={index}
+                        className="star-icon"
+                        style={{ color: "#F5AD42", fontSize: "1.5em" }}
+                      >
+                        ★
+                      </span>
                     ))}
                   </div>
                 </div>
