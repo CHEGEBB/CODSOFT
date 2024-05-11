@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
-import Men from "../pages/categories/men";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -31,8 +30,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const isAdmin = true;
-    <Men isAdmin={isAdmin} />
+
 
     try {
       const response = await fetch('http://localhost:3000/auth/login', { // Assuming your backend API endpoint is '/auth/login'
