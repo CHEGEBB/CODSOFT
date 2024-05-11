@@ -229,6 +229,26 @@ const Men = () => {
     );
   };
 
+  const postProductsToDatabase = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/products",{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ products: items }),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to post products");
+      }
+      console.log("Products posted successfully");
+      // const data = await response.json();
+      // setItems(data.products);
+    } catch (error) {
+      console.error("Error posting products:", error.message);
+    }
+  }
+
   useEffect(() => {
 
     const postProductsToDatabase = async () => {
@@ -310,7 +330,9 @@ const Men = () => {
                         className="wishlist-icon"
                       />
                     </div>
-                    <button className="add-to-cart-btn">
+                    <button className="add-to-cart-btn" 
+                    onClick={() => postProductsToDatabase()}
+                    >
                       <img
                         src={item.addToCartIconPath}
                         alt="Add to Cart"
