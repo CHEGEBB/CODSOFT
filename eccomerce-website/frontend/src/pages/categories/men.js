@@ -230,9 +230,15 @@ const Men = () => {
   };
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const postProductsToDatabase = async () => {
       try {
-        const response = await fetch("/products/men");
+        const response = await fetch("/products",{
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ products: items }), // Sending the array of items
+        });
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }
