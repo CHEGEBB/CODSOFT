@@ -228,49 +228,22 @@ const Men = () => {
       prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1
     );
   };
+// we are sending the data in the the items array to the database using the post method it will be sent to the backend as json data
+// data will be sent immediately after the page is loaded only once  for all the data in the items array 
+// the data sent will be in object form and have the same properties as the items array that is the id, name, price, discountedPrice, rating, images, wishlistIconPath, addToCartIconPath, currentImageIndex
 
-  const postProductsToDatabase = async () => {
-    try {
-      const response = await fetch("http://localhost:3000/products",{
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ products: items }),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to post products");
-      }
-      console.log("Products posted successfully");
-      // const data = await response.json();
-      // setItems(data.products);
-    } catch (error) {
-      console.error("Error posting products:", error.message);
-    }
-  }
+const sendData = async () => {
+  const response = await fetch('http://localhost:3000/products', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(items)
+  });
+}
+
 
   useEffect(() => {
-
-    const postProductsToDatabase = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/products",{
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ products: items }),
-        });
-        if (!response.ok) {
-          throw new Error("Failed to post products");
-        }
-        console.log("Products posted successfully");
-        // const data = await response.json();
-        // setItems(data.products);
-      } catch (error) {
-        console.error("Error posting products:", error.message);
-      }
-    };
-    postProductsToDatabase();
 
     const id = setInterval(() => {
       setItems((prevItems) =>
@@ -330,9 +303,7 @@ const Men = () => {
                         className="wishlist-icon"
                       />
                     </div>
-                    <button className="add-to-cart-btn" 
-                    onClick={() => postProductsToDatabase()}
-                    >
+                    <button className="add-to-cart-btn">
                       <img
                         src={item.addToCartIconPath}
                         alt="Add to Cart"
