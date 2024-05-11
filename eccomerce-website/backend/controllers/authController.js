@@ -3,7 +3,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const Admin = require('../models/Admin');
+
 
 exports.signup = async (req, res) => {
     try {
@@ -43,33 +43,6 @@ exports.login = async (req, res) => {
         // Generate JWT token
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' }); // Token expires in 1 hour
         res.status(200).json({ message: 'Login successful', token });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Server error' });
-    }
-};
-// Controller method for admin login
-exports.adminLogin = async (req, res) => {
-    try {
-        // Hardcoded admin credentials
-        const hardcodedEmail = "admin@admin.com";
-        const hardcodedPassword = "admin";
-
-        // Check if admin exists
-        const admin = await Admin.findOne({ email: hardcodedEmail });
-        if (!admin) {
-            return res.status(404).json({ message: 'Admin not found' });
-        }
-
-        // Check if password is correct
-        const isPasswordValid = await bcrypt.compare(hardcodedPassword, admin.password);
-        if (!isPasswordValid) {
-            return res.status(401).json({ message: 'Invalid password' });
-        }
-
-        // Generate JWT token
-        const token = jwt.sign({ adminId: admin._id }, process.env.JWT_SECRET, { expiresIn: '1h' }); // Token expires in 1 hour
-        res.status(200).json({ message: 'Admin login successful', token });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server error' });
