@@ -4,7 +4,7 @@ import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
 import Modal from "../../components/Modal";
 
-const Men = ({ isAdmin }) => {
+const Men = () => {
   const [items, setItems] = useState([
     {
       id: 1,
@@ -244,66 +244,12 @@ const Men = ({ isAdmin }) => {
     groupedItems.push(items.slice(i, i + 4));
   }
 
-   // Function to fetch products from backend
-   const fetchProducts = async () => {
-    try {
-      const response = await fetch('/api/products');
-      const data = await response.json();
-      setItems(data.products);
-    } catch (error) {
-      console.error('Error fetching products:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  // Function to handle adding a new product
-  const handleAddProduct = async () => {
-    try {
-      const response = await fetch('/api/products', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          // Provide product data here
-        })
-      });
-      const data = await response.json();
-      setItems([...items, data.product]); // Update state with the new product
-    } catch (error) {
-      console.error('Error adding product:', error);
-    }
-  };
-
-  // Function to handle deleting a product
-  const handleDeleteProduct = async (id) => {
-    try {
-      await fetch(`/api/products/${id}`, {
-        method: 'DELETE'
-      });
-      setItems(items.filter(item => item.id !== id)); // Filter out the deleted product
-    } catch (error) {
-      console.error('Error deleting product:', error);
-    }
-  };
-
   return (
     <div className="men-page"> 
       <h1>
       Men's Collection
       </h1>
-      {isAdmin && <button onClick={handleAddProduct}>Add Product</button>} {/* Show add button only if isAdmin */}
       <div className="men-items">
-      {items.map(item => (
-          <div key={item.id}>
-            <p>{item.name}</p>
-            {isAdmin && <button onClick={() => handleDeleteProduct(item.id)}>Delete</button>} {/* Show delete button only if isAdmin */}
-          </div>
-        ))}
-
         {groupedItems.map((row, rowIndex) => (
           <div className="men-row" key={rowIndex}>
             {row.map((item, columnIndex) => (
