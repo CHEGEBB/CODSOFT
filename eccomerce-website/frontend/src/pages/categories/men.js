@@ -237,15 +237,15 @@ const Men = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ products: items }), // Sending the array of items
+          body: JSON.stringify({ products: items }),
         });
         if (!response.ok) {
-          throw new Error("Failed to fetch products");
+          throw new Error("Failed to post products");
         }
         const data = await response.json();
         setItems(data.products);
       } catch (error) {
-        console.error("Error fetching products:", error.message);
+        console.error("Error posting products:", error.message);
       }
     };
 
