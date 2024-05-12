@@ -10,7 +10,7 @@ const Men = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [intervalId, setIntervalId] = useState(null); 
-  const [isItemsSent, setIsItemsSent] = useState(false);
+  // const [isItemsSent, setIsItemsSent] = useState(false);
   const [items, setItems] = useState([
     {
       id: 1,
@@ -231,41 +231,45 @@ const Men = () => {
     );
   };
 
+  useEffect(() => {
+    sendItemsToBackend();
+  }, []); 
+  
   const sendItemsToBackend = useCallback(async () => {
     try {
       // Fetch existing items from the backend
       const { data: existingItems } = await axios.get('http://localhost:3000/products');
+      let productsFound = false;
   
-      // Filter out existing items
-      const newItems = items.filter(item => {
-        return !existingItems.some(existingItem => existingItem.id === item.id);
-      });
+      // Check if any existing items are found
+      if (existingItems.length > 0) {
+        productsFound = true;
+        console.log('Existing items found:', existingItems);
+      }
   
-      // If there are new items, send them to the backend
-      if (newItems.length > 0) {
-        for (const item of newItems) {
-          const response = await axios.post('http://localhost:3000/products', item);
-          console.log('Item sent to backend:', response.data);
+      // If no existing items found, send new items to the backend
+      if (!productsFound) {
+        // Filter out existing items
+        const newItems = items.filter(item => {
+          return !existingItems.some(existingItem => existingItem.id === item.id);
+        });
+    
+        // If there are new items, send them to the backend
+        if (newItems.length > 0) {
+          for (const item of newItems) {
+            const response = await axios.post('http://localhost:3000/products', item);
+            console.log('Item sent to backend:', response.data);
+          }
+        } else {
+          console.log('All items are already in the backend');
         }
-      } else {
-        console.log('All items are already in the backend');
       }
     } catch (error) {
       console.error('Error sending items to backend:', error);
     }
-  }, [items]);
-
-  useEffect(() => {
-    sendItemsToBackend();
-  }, []);
+  }, [items]); // Include items in the dependency array
   
-
-  useEffect(() => {
-    if (!isItemsSent) {
-      sendItemsToBackend();
-      setIsItemsSent(true);
-    }
-  }, [isItemsSent, sendItemsToBackend]);
+ 
 
   useEffect(() => {
     const id = setInterval(() => {
