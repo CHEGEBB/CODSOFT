@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
@@ -230,30 +230,44 @@ const Men = () => {
       prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1
     );
   };
-  //  send the data in  const [items, setItems] = useState to database
-  // check if items exist in the database using get and comparing the id if it exist dont send it to the database if it does not exist send it to the database
- 
-  const sendItemsToBackend = async () => {
+
+  const sendItemsToBackend = useCallback(async () => {
     try {
-      for (const item of items) {
-        const response = await axios.post('http://localhost:3000/products', item);
-        console.log('Item sent to backend:', response.data);
+      // Fetch existing items from the backend
+      const { data: existingItems } = await axios.get('http://localhost:3000/products');
+  
+      // Filter out existing items
+      const newItems = items.filter(item => {
+        return !existingItems.some(existingItem => existingItem.id === item.id);
+      });
+  
+      // If there are new items, send them to the backend
+      if (newItems.length > 0) {
+        for (const item of newItems) {
+          const response = await axios.post('http://localhost:3000/products', item);
+          console.log('Item sent to backend:', response.data);
+        }
+      } else {
+        console.log('All items are already in the backend');
       }
     } catch (error) {
       console.error('Error sending items to backend:', error);
     }
-  };
+  }, [items]);
+
+  useEffect(() => {
+    sendItemsToBackend();
+  }, []);
+  
 
   useEffect(() => {
     if (!isItemsSent) {
       sendItemsToBackend();
       setIsItemsSent(true);
     }
-  }, [isItemsSent, sendItemsToBackend])
+  }, [isItemsSent, sendItemsToBackend]);
 
   useEffect(() => {
-
-
     const id = setInterval(() => {
       setItems((prevItems) =>
         prevItems.map((item) => {
@@ -269,7 +283,7 @@ const Men = () => {
 
     // Cleanup function to clear the interval
     return () => clearInterval(intervalId);
-  },  [isItemsSent, sendItemsToBackend, intervalId]); // Make sure to add intervalId to the dependency array to prevent stale closures
+  }, [intervalId]);
 
   // Group items into rows
   const groupedItems = [];
@@ -292,8 +306,7 @@ const Men = () => {
               >
                 <div className="item-image">
                   {/* Placeholder for image */}
-                 
-                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
+                  <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div
                     className="item-overlay"
                     onClick={() => handleOpenModal(item)}
