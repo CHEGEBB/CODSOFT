@@ -44,3 +44,16 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+// Add route to handle POST request for storing items data
+app.post('/save-items', async (req, res) => {
+    try {
+        const items = req.body;
+        // Save items data to the database
+        await Product.insertMany(items);
+        res.status(200).json({ message: 'Items data stored successfully' });
+    } catch (error) {
+        console.error('Error storing items data:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});

@@ -3,12 +3,14 @@ import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
 import Modal from "../../components/Modal";
+import axios from 'axios';
 
 const Men = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [intervalId, setIntervalId] = useState(null); 
+  const [isItemsSent, setIsItemsSent] = useState(false);
   const [items, setItems] = useState([
     {
       id: 1,
@@ -228,24 +230,24 @@ const Men = () => {
       prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1
     );
   };
-// we are sending the data in the the items array to the database using the post method it will be sent to the backend as json data
-// data will be sent immediately after the page is loaded only once  for all the data in the items array 
-// the data sent will be in object form and have the same properties as the items array that is the id, name, price, discountedPrice, rating, images, wishlistIconPath, addToCartIconPath, currentImageIndex
-
-const sendData = async () => {
-  const response = await fetch('http://localhost:3000/products', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: items
-  });
-}
-sendData();
-
-
+  //  send the data in  const [items, setItems] = useState to database
+  const sendItemsToBackend = async () => {
+    try {
+      for (const item of items) {
+        const response = await axios.post('http://localhost:3000/products', item);
+        console.log('Item sent to backend:', response.data);
+      }
+    } catch (error) {
+      console.error('Error sending items to backend:', error);
+    }
+  };
 
   useEffect(() => {
+    if (!isItemsSent) {
+      sendItemsToBackend();
+      setIsItemsSent(true);
+    }
+
 
     const id = setInterval(() => {
       setItems((prevItems) =>
@@ -262,7 +264,7 @@ sendData();
 
     // Cleanup function to clear the interval
     return () => clearInterval(intervalId);
-  }, []); // Make sure to add intervalId to the dependency array to prevent stale closures
+  },  [isItemsSent, sendItemsToBackend, intervalId]); // Make sure to add intervalId to the dependency array to prevent stale closures
 
   // Group items into rows
   const groupedItems = [];
