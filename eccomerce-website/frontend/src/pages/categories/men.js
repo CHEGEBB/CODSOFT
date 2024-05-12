@@ -235,43 +235,36 @@ const Men = () => {
     sendItemsToBackend();
   }, []); 
   
-  
   const sendItemsToBackend = useCallback(async () => {
     try {
-      // Fetch existing items from the backend
-      const { data: existingItems } = await axios.get('http://localhost:3000/products');
-  
-      // Extract existing item names to check for duplicates
-      const existingItemNames = new Set(existingItems.map(item => item.name));
-  
-      let allItemsSent = true;
-  
-      // Iterate through each item in the frontend list
-      for (const item of items) {
-        // Check if the item name exists in the set of existing item names (i.e., it's a duplicate)
-        if (!existingItemNames.has(item.name)) {
-          // If the item name is not a duplicate, send it to the backend
-          const response = await axios.post('http://localhost:3000/products', item);
-          console.log('Item sent to backend:', response.data);
-        } else {
-          // If the item name is a duplicate, set the flag to false
-          allItemsSent = false;
-          console.log('Item already exists in the backend:', item.name);
+        const { data: existingItems } = await axios.get('http://localhost:3000/products');
+
+        // Create a set of existing item names and prices
+        const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
+
+        let allItemsSent = true;
+
+        for (const item of items) {
+            const itemNameAndPrice = `${item.name},${item.price}`;
+            if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
+                const response = await axios.post('http://localhost:3000/products', item);
+                console.log('Item sent to backend:', response.data);
+            } else {
+                allItemsSent = false;
+                console.log('Item already exists in the backend:', item.name);
+            }
         }
-      }
-  
-      // Check if all items have been sent
-      if (allItemsSent) {
-        console.log('All items have been sent to the backend.');
-      } else {
-        console.log('Not all items have been sent to the backend.');
-      }
+
+        if (allItemsSent) {
+            console.log('All items have been sent to the backend.');
+        } else {
+            console.log('Not all items have been sent to the backend.');
+        }
     } catch (error) {
-      console.error('Error sending items to backend:', error);
+        console.error('Error sending items to backend:', error);
     }
-  }, [items]);
-  
-  
+}, [items]);
+
   
   
   
