@@ -231,6 +231,8 @@ const Men = () => {
     );
   };
   //  send the data in  const [items, setItems] = useState to database
+  // check if items exist in the database using get and comparing the id if it exist dont send it to the database if it does not exist send it to the database
+ 
   const sendItemsToBackend = async () => {
     try {
       for (const item of items) {
@@ -247,6 +249,9 @@ const Men = () => {
       sendItemsToBackend();
       setIsItemsSent(true);
     }
+  }, [isItemsSent, sendItemsToBackend])
+
+  useEffect(() => {
 
 
     const id = setInterval(() => {
