@@ -1,12 +1,18 @@
-// models/Product.js
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const productSchema = new mongoose.Schema({
-  name: String,
-  price: Number,
-  discountedPrice: Number,
-  rating: Number,
-  images: [String] // Assuming image paths are stored as strings
+const productSchema = new Schema({
+    name: { type: String, required: true },
+    price: { type: Number, required: true },
+    discountedPrice: { type: Number, required: true },
+    rating: { type: Number, required: true },
+    images: [{ type: String, required: true }],
+    // Other fields...
 });
 
-module.exports = mongoose.model('Product', productSchema);
+// Create a compound index on the 'name' and 'price' fields
+productSchema.index({ name: 1, price: 1 }, { unique: true });
+
+const Product = mongoose.model('Product', productSchema);
+
+module.exports = Product;
