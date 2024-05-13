@@ -297,8 +297,8 @@ const Men = () => {
     setIntervalId(id);
 
     // Cleanup function to clear the interval
-    return () => clearInterval(intervalId);
-  }, [intervalId]);
+    return () => clearInterval(id); // Use id here instead of intervalId
+  }, []);
 
   // Group items into rows
   const groupedItems = [];
