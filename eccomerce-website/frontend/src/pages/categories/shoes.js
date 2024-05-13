@@ -27,6 +27,7 @@ const Shoes = () => {
     {
       id: 2,
       name: "StrideFlex Sneakers",
+      category: "shoes",
       price: 60,
       discountedPrice: 35,
       rating: 3,
@@ -43,6 +44,7 @@ const Shoes = () => {
     {
       id: 3,
       name: "UrbanStep Casuals",
+      category: "shoes",
       price: 30,
       discountedPrice: 25,
       rating: 5,
@@ -59,6 +61,7 @@ const Shoes = () => {
     {
       id: 4,
       name: "PowerStep men's shoes",
+      category: "shoes",
       price: 80,
       discountedPrice: 75,
       rating: 5,
@@ -75,6 +78,7 @@ const Shoes = () => {
     {
       id: 5,
       name: "EliteStride Derby Shoes",
+      category: "shoes",
       price: 50,
       discountedPrice: 45,
       rating: 3,
@@ -91,6 +95,7 @@ const Shoes = () => {
     {
       id: 6,
       name: "AeroFlex Casual Sneakers",
+      category: "shoes",
       price: 60,
       discountedPrice : 55,
       rating: 4,
@@ -107,6 +112,7 @@ const Shoes = () => {
     {
       id: 7,
       name: "FashionFlex for men",
+      category: "shoes",
       price: 70,
       discountedPrice: 65,
       rating: 5,
@@ -123,6 +129,7 @@ const Shoes = () => {
     {
       id: 8,
       name: "GlideEase Slip-Ons",
+      category: "shoes",
       price: 80,
       discountedPrice: 75,
       rating: 3,
@@ -139,6 +146,7 @@ const Shoes = () => {
     {
       id: 9,
       name: "UrbanFlex Sneakers",
+      category: "shoes",
       price: 60,
       discountedPrice: 55,
       rating: 4,
@@ -155,6 +163,7 @@ const Shoes = () => {
     {
       id: 10,
       name: "Nike Air force 1",
+      category: "shoes",
       price: 100,
       discountedPrice: 95,
       rating: 5,
@@ -171,6 +180,7 @@ const Shoes = () => {
     {
       id: 11,
       name: "ClassicChic Sneakers",
+      category: "shoes",
       price: 70,
       discountedPrice : 65,
       rating: 4,
@@ -187,6 +197,7 @@ const Shoes = () => {
     {
       id: 12,
       name: "StyleSprint ladies sneakers",
+      category: "shoes",
       price: 50,
       discountedPrice: 35,
       rating: 4,
@@ -203,6 +214,7 @@ const Shoes = () => {
     {
       id: 13,
       name: "NovaGlam  sneakers",
+      category: "shoes",
       price: 60,
       discountedPrice: 55,
       rating: 5,
@@ -219,6 +231,7 @@ const Shoes = () => {
     {
       id: 14,
       name: "UrbanStyle ladies Sneakers",
+      category: "shoes",
       price: 70,
       discountedPrice: 55,
       rating: 4,
@@ -235,6 +248,7 @@ const Shoes = () => {
     {
       id: 15,
       name: "ActiveStride Walking Shoes",
+      category: "shoes",
       price: 80,
       discountedPrice: 75,
       rating: 3,
