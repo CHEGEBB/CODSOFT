@@ -281,12 +281,13 @@ const handleAddToCart = async (product) => {
   try {
     const { name, price, category } = product;
     // Send a POST request to the backend
-    const response = await axios.post('http://localhost:3000/products/add-to-cart', { name, price, category });
+    const response = await axios.post('http://localhost:3000/add-to-cart', { name, price, category });
     // Handle the response, update the cart state, or perform other actions
     console.log('Product added to cart:', response.data);
   } catch (error) {
     console.error('Error adding product to cart:', error);
     // Handle errors
+
   }
 };
   
