@@ -146,6 +146,7 @@ const Accessories = () => {
     {
       id: 9,
       name: "Urban Muse Perfume",
+      category: "Accessories",
       price: 90,
       discountedPrice: 85,
       rating: 4,
@@ -162,6 +163,7 @@ const Accessories = () => {
     {
       id: 10,
       name: "Classic Elegance Golden necklace 24k gold plated",
+      category: "Accessories",
       price: 1000,
       discountedPrice: 950,
       rating: 5,
@@ -179,6 +181,7 @@ const Accessories = () => {
     {
       id: 11,
       name: "Vintage Chic Accessories",
+      category: "Accessories",
       price: 110,
       discountedPrice: 105,
       rating: 4,
@@ -195,6 +198,7 @@ const Accessories = () => {
     {
       id: 12,
       name: "Elegant Embrace Ring",
+      category: "Accessories",
       price: 120,
       discountedPrice: 115,
       rating: 4,
@@ -211,6 +215,7 @@ const Accessories = () => {
     {
       id: 13,
       name: "Vintage Pearl necklace",
+      category: "Accessories",
       price: 130,
       discountedPrice: 125,
       rating: 4,
@@ -227,6 +232,7 @@ const Accessories = () => {
     {
       id: 14,
       name: "Executive leather purse",
+      category: "Accessories",
       price: 140,
       discountedPrice: 135,
       rating: 5,
@@ -243,6 +249,7 @@ const Accessories = () => {
     {
       id: 15,
       name: "Classic Fedora Hat",
+      category: "Accessories",
       price: 50,
       discountedPrice: 45,
       rating: 4,
@@ -259,6 +266,7 @@ const Accessories = () => {
     {
       id: 16,
       name: "Urban male belt",
+      category: "Accessories",
       price: 70,
       discountedPrice: 55,
       rating: 3,
@@ -275,6 +283,7 @@ const Accessories = () => {
     {
       id: 17,
       name: "Urban Edge Cuff",
+      category: "Accessories",
       price: 70,
       discountedPrice: 55,
       rating: 4,
@@ -291,6 +300,7 @@ const Accessories = () => {
     {
       id: 18,
       name: "Vintage Glamour Business leather bag",
+      category: "Accessories",
       price: 180,
       discountedPrice: 175,
       rating: 5,
@@ -307,6 +317,7 @@ const Accessories = () => {
     {
       id: 19,
       name: "Classic Elegance Hairpieces 10 in 1 set",
+      category: "Accessories",
       price: 90,
       discountedPrice: 75,
       rating: 4,
@@ -323,6 +334,7 @@ const Accessories = () => {
     {
       id: 20,
       name: "Elegant Sheer Stockings",
+      category: "Accessories",
       price: 60,
       discountedPrice: 55,
       rating: 3,
