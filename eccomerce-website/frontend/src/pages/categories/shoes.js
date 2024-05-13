@@ -316,6 +316,7 @@ const Shoes = () => {
     {
       id: 19,
       name: "EleganceElevate Heels",
+      category: "shoes",
       price:50,
       discountedPrice: 45,
       rating: 4,
