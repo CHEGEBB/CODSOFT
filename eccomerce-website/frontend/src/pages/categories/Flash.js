@@ -4,7 +4,7 @@ import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./FlashSales.scss";
 import flashSaleBannerMP4 from "../../images/webp/men/ban.mp4";
 import Modal from "../../components/Modal";
-
+import axios from 'axios';
 
 
 const Flash = () => {
