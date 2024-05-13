@@ -44,10 +44,19 @@ $Rubik: 'Rubik', sans-serif;
     font-size: 18px;
     font-weight: 500;
 
+
     li {
       font-size: 14px;
       margin-bottom: 5px;
       cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+
+      a{
+        text-decoration: none;
+        color: #fff;
+      
+      }
 
       &:hover {
         border: 1px solid #ccc;
