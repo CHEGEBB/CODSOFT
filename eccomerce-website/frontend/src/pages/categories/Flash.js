@@ -12,6 +12,7 @@ const Flash = () => {
     {
       id: 1,
       name: "Stylish Women's v-neck blouse",
+      category :"flash",
       price: 170,
       discountedPrice: 150,
       rating: 4,
