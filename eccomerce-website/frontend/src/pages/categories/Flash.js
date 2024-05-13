@@ -29,6 +29,7 @@ const Flash = () => {
     {
       id: 2,
       name: "Ladies' Stylish jeans",
+      category :"flash",
       price: 150,
       discountedPrice: 120,
       rating: 3,
@@ -45,6 +46,7 @@ const Flash = () => {
     {
       id: 3,
       name: "Men's Urban Denim Jacket",
+      category :"flash",
       price: 200,
       discountedPrice: 160,
       rating: 5,
@@ -61,6 +63,7 @@ const Flash = () => {
     {
       id: 4,
       name: "Men's Shirt and Trousers",
+      category :"flash",
       price: 250,
       discountedPrice: 200,
       rating: 4,
@@ -77,6 +80,7 @@ const Flash = () => {
     {
       id: 5,
       name: "CityChic Skinny Jeans",
+      category :"flash",
       price: 100,
       discountedPrice: 75,
       rating: 3,
@@ -94,6 +98,7 @@ const Flash = () => {
     {
       id: 6,
       name: "CoupleCouture Collection",
+      category :"flash",
       price: 350,
       discountedPrice: 280,
       rating: 5,
@@ -110,6 +115,7 @@ const Flash = () => {
     {
       id: 7,
       name: "Urban Dapper Suit",
+      category :"flash",
       price: 140,
       discountedPrice: 120,
       rating: 4,
@@ -126,6 +132,7 @@ const Flash = () => {
     {
       id: 8,
       name: "CoupleElegance Ensemble",
+      category :"flash",
       price: 450,
       discountedPrice: 300,
       rating: 3,
@@ -142,6 +149,7 @@ const Flash = () => {
     {
       id: 9,
       name: "His&Her Harmony Collection",
+      category :"flash",
       price: 250,
       discountedPrice: 150,
       rating: 5,
@@ -158,6 +166,7 @@ const Flash = () => {
     {
       id: 10,
       name: "PartnerStyle Collection",
+      category :"flash",
       price: 550,
       discountedPrice: 440,
       rating: 4,
@@ -174,6 +183,7 @@ const Flash = () => {
     {
       id: 11,
       name: "Contemporary Skirt & Vest Set",
+      category :"flash",
       price: 160,
       discountedPrice: 148.99,
       rating: 3,
@@ -190,6 +200,7 @@ const Flash = () => {
     {
       id: 12,
       name: "UrbanEssence dress",
+      category :"flash",
       price: 165,
       discountedPrice: 150,
       rating: 5,
