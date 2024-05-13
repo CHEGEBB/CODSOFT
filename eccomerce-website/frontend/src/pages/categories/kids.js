@@ -181,6 +181,7 @@ const Kids = () => {
     {
       id: 11,
       name: "Cute kid's trouser with shirt",
+      category : "kids",
       price: 160,
       discountedPrice: 145,
       rating: 3,
@@ -197,6 +198,7 @@ const Kids = () => {
     {
       id: 12,
       name: "Kid's stylish shirt with jeans",
+      category : "kids",
       price: 165,
       discountedPrice: 150,
       rating: 5,
@@ -213,6 +215,7 @@ const Kids = () => {
     {
       id: 13,
       name: "Kid's Denim jacket with urban trousers",
+      category : "kids",
       price: 170,
       discountedPrice : 155,
       rating: 4,
@@ -229,6 +232,7 @@ const Kids = () => {
     {
       id: 14,
       name: "Urban jeans and shirt combo",
+      category : "kids",
       price: 175,
       discountedPrice: 160,
       rating: 4,
@@ -245,6 +249,7 @@ const Kids = () => {
     {
       id: 15,
       name: "Stylish jacket for kids",
+      category : "kids",
       price: 180,
       discountedPrice: 160,
       rating: 5,
@@ -261,6 +266,7 @@ const Kids = () => {
     {
       id: 16,
       name: "Kids warm wear with hat",
+      category : "kids",
       price: 185,
       discountedPrice: 175,
       rating: 4,
