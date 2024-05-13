@@ -452,6 +452,7 @@ const Shoes = () => {
     {
       id: 27,
       name: "StylishStep loafers",
+      category: "shoes",
       price: 70,
       discountedPrice: 65,
       rating: 4,
@@ -468,6 +469,7 @@ const Shoes = () => {
     {
       id: 28,
       name: "ClassicStyle Sneakers",
+      category: "shoes",
       price: 50,
       discountedPrice: 45,
       rating: 4,
