@@ -15,6 +15,7 @@ const Men = () => {
     {
       id: 1,
       name: "Business Class Attire",
+      itemNumber : 1,
       price: 10,
       discountedPrice: 8,
       rating: 4,
@@ -32,6 +33,7 @@ const Men = () => {
     {
       id: 2,
       name: "UrbanEssence Casual Shirt",
+      itemNumber : 2,
       price: 15,
       discountedPrice: 12,
       rating: 3,
