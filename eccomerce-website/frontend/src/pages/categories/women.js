@@ -46,6 +46,7 @@ const Women = () => {
     {
       id: 3,
       name: "Urban Chic Bodycon Dress",
+      category :"women",
       price: 90,
       discountedPrice: 75,
       rating: 4,
@@ -64,6 +65,7 @@ const Women = () => {
     {
       id: 4,
       name: "Sleek turtle-neck and trousers",
+      category :"women",
       price: 100,
       discountedPrice: 80,
       rating: 4,
@@ -80,6 +82,7 @@ const Women = () => {
     {
       id: 5,
       name: "Executive lady suit",
+      category :"women",
       price: 170,
       discountedPrice: 150,
       rating: 4,
@@ -96,6 +99,7 @@ const Women = () => {
     {
       id: 6,
       name: "Graceful Garnet Dress",
+      category :"women",
       price: 180,
       discountedPrice: 175,
       rating: 4,
@@ -113,6 +117,7 @@ const Women = () => {
     {
       id: 7,
       name: "Urban Chic stylish dress",
+      category :"women",
       price: 210,
       discountedPrice: 185,
       rating: 4,
@@ -129,6 +134,7 @@ const Women = () => {
     {
       id: 8,
       name: "stylish women smart casual",
+      category :"women",
       price: 100,
       discountedPrice: 80,
       rating: 4,
