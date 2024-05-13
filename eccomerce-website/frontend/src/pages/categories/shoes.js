@@ -299,6 +299,7 @@ const Shoes = () => {
     {
       id: 18,
       name: "VogueGlide Ankle Boots",
+      category: "shoes",
       price: 80,
       discountedPrice: 75,
       rating: 5,
