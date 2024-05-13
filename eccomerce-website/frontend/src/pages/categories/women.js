@@ -10,6 +10,7 @@ const Women = () => {
     {
       id: 1,
       name: "Stylish all-pink outfit",
+      category :"women",
       price: 150,
       discountedPrice: 110,
       rating: 4,
@@ -27,6 +28,7 @@ const Women = () => {
     {
       id: 2,
       name: "Elegant Essence Dress",
+      category :"women",
       price: 210,
       discountedPrice: 180,
       rating: 4,
