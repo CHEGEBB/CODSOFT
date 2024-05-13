@@ -1,23 +1,31 @@
 const Cart = require('../models/cart');
 
-exports.addToCart = async (req, res, next) => {
-  try {
-    const { name, discountedPrice, image } = req.body;
-    const cartItem = new Cart({ name, discountedPrice, image });
-    await cartItem.save();
-    res.json(cartItem);
-  } catch (error) {
-    next(error);
-  }
-};
 
-exports.getCartItems = async (req, res, next) => {
-  try {
-    const cartItems = await Cart.find();
-    res.json(cartItems);
-  } catch (error) {
-    next(error);
-  }
-};
 
-// Other controller functions (deleteCartItem, calculateTotalPrice, clearCart, updateCartItem) are similar to addToCart and getCartItems
+exports.addToCart = async (req, res) => {
+  try {
+    const { name, price, category } = req.body;
+    // Find the product in the database based on the provided information
+    const product = await Product.findOne({ name, price, category });
+    if (product) {
+      // If a matching product is found, return it
+      return res.status(200).json(product);
+    } else {
+      // If no matching product is found, return an error message
+      return res.status(404).json({ message: "Product not found" });
+    }
+  } catch (error) {
+    console.error('Error adding product to cart:', error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+}
+exports.getCartItems = async (req, res) => {
+  try {
+    // Fetch cart items from the database
+    const cartItems = await CartItem.find();
+    res.status(200).json(cartItems);
+  } catch (error) {
+    console.error('Error fetching cart items:', error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+}
