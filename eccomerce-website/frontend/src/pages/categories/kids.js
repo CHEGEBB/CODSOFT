@@ -10,6 +10,7 @@ const Kids = () => {
     {
       id: 1,
       name: "Kid's Denim skirt with shirt",
+      category : "kids",
       price: 250,
       discountedPrice: 150,
       rating: 4,
@@ -26,6 +27,7 @@ const Kids = () => {
     {
       id: 2,
       name: "Kid's Denim jacket with urban trousers",
+      category : "kids",
       price: 150,
       discountedPrice: 120,
       rating: 3,
@@ -43,6 +45,7 @@ const Kids = () => {
     {
       id: 3,
       name: "Kid's Stylish shirt with white trousers",
+      category : "kids",
       price: 200,
       discountedPrice: 180,
       rating: 5,
@@ -59,6 +62,7 @@ const Kids = () => {
     {
       id: 4,
       name: "Kid's Casual wear with hat",
+      category : "kids",
       price: 180,
       discountedPrice: 150,
       rating: 4,
@@ -75,6 +79,7 @@ const Kids = () => {
     {
       id: 5,
       name: "Kid's t-shirt with trousers",
+      category : "kids",
       price: 190,
       discountedPrice: 140,
       rating: 3,
@@ -91,6 +96,7 @@ const Kids = () => {
     {
       id: 6,
       name: "Stylish sweaters for kids",
+      category : "kids",
       price: 135.00,
       discountedPrice: 129.99,
       rating: 5,
@@ -107,6 +113,7 @@ const Kids = () => {
     {
       id: 7,
       name: "Cute sweaters and skirt combo for kids",
+      category : "kids",
       price: 140,
       discountedPrice: 130,
       rating: 4,
@@ -123,6 +130,7 @@ const Kids = () => {
     {
       id: 8,
       name: "urban dress and jeans for kids",
+      category : "kids",
       price: 145,
       discountedPrice : 130,
       rating: 3,
@@ -139,6 +147,7 @@ const Kids = () => {
     {
       id: 9,
       name: "Kid's Crop top with trousers",
+      category : "kids",
       price: 250,
       discountedPrice: 180,
       rating: 5,
@@ -155,6 +164,7 @@ const Kids = () => {
     {
       id: 10,
       name: "Kid's cozy wear with hat",
+      category : "kids",
       price: 185,
       discountedPrice: 175,
       rating: 4,
