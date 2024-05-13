@@ -393,6 +393,7 @@ const Women = () => {
     {
       id: 23,
       name: "UbanTone dress and coat",
+      category :"women",
       price: 250,
       discountedPrice: 200,
       rating: 4,
@@ -409,6 +410,7 @@ const Women = () => {
     {
       id: 24,
       name: "TrendyTwist stylish attire",
+      category :"women",
       price: 155,
       discountedPrice: 145,
       rating: 4,
