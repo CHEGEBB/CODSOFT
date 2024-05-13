@@ -170,6 +170,7 @@ const Women = () => {
     {
       id: 10,
       name: "Stylish women jeans and top",
+      category :"women",
       price: 105,
       discountedPrice: 88.99,
       rating: 4,
@@ -187,6 +188,7 @@ const Women = () => {
     {
       id: 11,
       name: "urban chic stylish attire",
+      category :"women",
       price: 200,
       discountedPrice: 175.96,
       rating: 4,
@@ -203,6 +205,7 @@ const Women = () => {
     {
       id: 12,
       name: "Chic Charm dress",
+      category :"women",
       price: 109.99,
       discountedPrice: 89.99,
       rating: 4,
@@ -219,6 +222,7 @@ const Women = () => {
     {
       id: 13,
       name: "Modern stylish crop top and trouser",
+      category :"women",
       price: 199.99,
       discountedPrice: 129.99,
       rating: 4,
@@ -235,6 +239,7 @@ const Women = () => {
     {
       id: 14,
       name: "Stylish jeans and top",
+      category :"women",
       price: 100,
       discountedPrice: 80,
       rating: 4,
@@ -252,6 +257,7 @@ const Women = () => {
     {
       id: 15,
       name: "Gentle Glow women attire",
+      category :"women",
       price: 200,
       discountedPrice: 180.99,
       rating: 4,
@@ -268,6 +274,7 @@ const Women = () => {
     {
       id: 16,
       name: "Modern Muse Hoodie",
+      category :"women",
       price: 100,
       discountedPrice: 68.98,
       rating: 4,
@@ -284,6 +291,7 @@ const Women = () => {
     {
       id: 17,
       name: "Street Style Hoodie",
+      category :"women",
       price: 109.99,
       discountedPrice: 87.99,
       rating: 4,
@@ -300,6 +308,7 @@ const Women = () => {
     {
       id: 18,
       name: "Cozy Chic Hoodie",
+      category :"women",
       price: 109.99,
       discountedPrice: 89.99,
       rating: 4,
@@ -316,6 +325,7 @@ const Women = () => {
     {
       id: 19,
       name: "Magnificence Dress",
+      category :"women",
       price: 307.99,
       discountedPrice: 280.99,
       rating: 4,
@@ -332,6 +342,7 @@ const Women = () => {
     {
       id: 20,
       name: "Warm women sweater",
+      category :"women",
       price: 75.00,
       discountedPrice: 58.99,
       rating: 4,
@@ -348,6 +359,7 @@ const Women = () => {
     {
       id: 21,
       name: "Executive women's coat",
+      category :"women",
       price: 200,
       discountedPrice: 199.99,
       rating: 4,
@@ -364,6 +376,7 @@ const Women = () => {
     {
       id: 22,
       name: "Smart casual business attire",
+      category :"women",
       price: 300,
       discountedPrice: 275,
       rating: 4,
