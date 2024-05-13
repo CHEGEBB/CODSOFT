@@ -152,6 +152,7 @@ const Women = () => {
     {
       id: 9,
       name: "Full work-out attire",
+      category :"women",
       price: 160,
       discountedPrice: 150,
       rating: 4,
