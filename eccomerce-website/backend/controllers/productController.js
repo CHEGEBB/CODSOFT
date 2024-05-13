@@ -75,3 +75,22 @@ exports.deleteProduct = async (req, res) => {
     res.status(404).json({ message: 'Product not found' });
   }
 }
+
+exports.addToCart = async (req, res) => {
+  try {
+    const { name, price, category } = req.body;
+
+    // Fetch the product from the database based on name, price, and category
+    const product = await Product.findOne({ name, price, category });
+
+    if (!product) {
+      return res.status(404).json({ message: 'Product not found' });
+    }
+
+    // Optionally, you can send the fetched product back to the client
+    return res.status(200).json({ message: 'Product added to cart', product });
+  } catch (error) {
+    console.error('Error adding product to cart:', error);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+}

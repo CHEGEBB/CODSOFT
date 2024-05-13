@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LeftSideBar.scss';
+import { Link } from 'react-router-dom';
 
 const LeftSideBar = () => {
     const [availability, setAvailability] = useState('');
@@ -41,7 +42,9 @@ const LeftSideBar = () => {
             </div>
                 <div className="ul">
                 <ul>
-                    <li>Flash Sales</li>
+                    <li>
+                    <Link to="/shop">Flash Sales</Link>
+                    </li>
                     <li>Men</li>
                     <li>Women</li>
                     <li>Kids</li>

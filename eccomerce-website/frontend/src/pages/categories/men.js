@@ -277,6 +277,18 @@ const Men = () => {
     }
 }, [items]);
 
+const handleAddToCart = async (product) => {
+  try {
+    const { name, price, category } = product;
+    // Send a POST request to the backend
+    const response = await axios.post('http://localhost:3000/add-to-cart', { name, price, category });
+    // Handle the response, update the cart state, or perform other actions
+    console.log('Product added to cart:', response.data);
+  } catch (error) {
+    console.error('Error adding product to cart:', error);
+    // Handle errors
+  }
+};
   
   
   
@@ -340,7 +352,7 @@ const Men = () => {
                         className="wishlist-icon"
                       />
                     </div>
-                    <button className="add-to-cart-btn">
+                    <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
                       <img
                         src={item.addToCartIconPath}
                         alt="Add to Cart"
