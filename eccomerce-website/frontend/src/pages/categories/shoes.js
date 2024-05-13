@@ -350,6 +350,7 @@ const Shoes = () => {
     {
       id: 21,
       name: "CityChic  Flats",
+      category: "shoes",
       price: 60,
       discountedPrice: 55,
       rating: 3,
@@ -366,6 +367,7 @@ const Shoes = () => {
     {
       id: 22,
       name: "Modern Chic sandals",
+      category: "shoes",
       price: 40,
       discountedPrice: 35,
       rating: 4,
@@ -382,6 +384,7 @@ const Shoes = () => {
     {
       id: 23,
       name: "DreamStep sneakers",
+      category: "shoes",
       price: 50,
       discountedPrice: 45,
       rating: 5,
@@ -398,6 +401,7 @@ const Shoes = () => {
     {
       id: 24,
       name: "UrbanStyle sneakers",
+      category: "shoes",
       price: 70,
       discountedPrice: 55,
       rating: 5,
