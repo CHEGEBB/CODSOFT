@@ -351,6 +351,7 @@ const Accessories = () => {
     {
       id: 21,
       name: "Chic Lace Top Stockings",
+      category: "Accessories",
       price: 70,
       discountedPrice: 55,
       rating: 4,
@@ -367,6 +368,7 @@ const Accessories = () => {
     {
       id: 22,
       name: "Classic Headwrap",
+      category: "Accessories",
       price: 50,
       discountedPrice: 35,
       rating: 5,
@@ -383,6 +385,7 @@ const Accessories = () => {
     {
       id: 23,
       name: "EliteGlow Skin Cream",
+      category: "Accessories",
       price: 50,
       discountedPrice: 45,
       rating: 4,
@@ -399,6 +402,7 @@ const Accessories = () => {
     {
       id: 24,
       name: "Classic Elegance Scent",
+      category: "Accessories",
       price: 120,
       discountedPrice: 105,
       rating: 3,
