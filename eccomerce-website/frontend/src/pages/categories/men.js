@@ -15,7 +15,7 @@ const Men = () => {
     {
       id: 1,
       name: "Business Class Attire",
-      itemNumber : 1,
+      category :"men",
       price: 10,
       discountedPrice: 8,
       rating: 4,
@@ -33,7 +33,7 @@ const Men = () => {
     {
       id: 2,
       name: "UrbanEssence Casual Shirt",
-      itemNumber : 2,
+      category :"men",
       price: 15,
       discountedPrice: 12,
       rating: 3,
@@ -50,7 +50,7 @@ const Men = () => {
     {
       id: 3,
       name: "Urban Fit Leather Jacket",
-      itemNumber : 3,
+      category :"men",
       price: 20,
       discountedPrice: 16,
       rating: 5,
@@ -67,7 +67,7 @@ const Men = () => {
     {
       id: 4,
       name: "FlexiStyle t-shirt",
-      itemNumber : 4,
+      category :"men",
       price: 25,
       discountedPrice: 20,
       rating: 4,
@@ -84,7 +84,7 @@ const Men = () => {
     {
       id: 5,
       name: "CityGlam cotton Shirt",
-      itemNumber : 5,
+      category :"men",
       price: 30,
       discountedPrice: 24,
       rating: 3,
@@ -101,7 +101,7 @@ const Men = () => {
     {
       id: 6,
       name: "UrbanEssence Casual Shirt",
-      itemNumber : 6,
+      category :"men",
       price: 35,
       discountedPrice: 28,
       rating: 5,
@@ -118,7 +118,7 @@ const Men = () => {
     {
       id: 7,
       name: "Suave Cityscape  coat",
-      itemNumber : 7,
+      category :"men",
       price: 40,
       discountedPrice: 32,
       rating: 4,
@@ -135,7 +135,7 @@ const Men = () => {
     {
       id: 8,
       name: "Trendy casual men's shirt",
-      itemNumber : 8,
+      category :"men",
       price: 45,
       discountedPrice: 36,
       rating: 3,
@@ -152,7 +152,7 @@ const Men = () => {
     {
       id: 9,
       name: "UrbanEssence Sweatshirt",
-      itemNumber : 9,
+      category :"men",
       price: 50,
       discountedPrice: 40,
       rating: 5,
@@ -169,7 +169,7 @@ const Men = () => {
     {
       id: 10,
       name: "The Dark Knot Men's coat",
-      itemNumber : 10,
+      category :"men",
       price: 55,
       discountedPrice: 44,
       rating: 4,
@@ -186,7 +186,7 @@ const Men = () => {
     {
       id: 11,
       name: "Stylish Polo sweater",
-      itemNumber : 11,
+      category :"men",
       price: 60,
       discountedPrice: 48,
       rating: 3,
@@ -203,7 +203,7 @@ const Men = () => {
     {
       id: 12,
       name: "Men V-neck short-sleeved sweater",
-      itemNumber : 12,
+      category :"men",
       price: 65,
       discountedPrice: 52,
       rating: 5,
