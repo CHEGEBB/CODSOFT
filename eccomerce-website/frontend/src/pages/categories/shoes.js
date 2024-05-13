@@ -418,6 +418,7 @@ const Shoes = () => {
     {
       id: 25,
       name: "Men's sneakers",
+      category: "shoes",
       price: 80,
       discountedPrice: 75,
       rating: 4,
@@ -434,6 +435,7 @@ const Shoes = () => {
     {
       id: 26,
       name: "ModernMan sneakers",
+      category: "shoes",
       price: 60,
       discountedPrice: 55,
       rating: 5,
