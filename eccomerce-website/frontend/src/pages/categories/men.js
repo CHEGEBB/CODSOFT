@@ -352,7 +352,7 @@ const handleAddToCart = async (product) => {
                         className="wishlist-icon"
                       />
                     </div>
-                    <button className="add-to-cart-btn" onClick={() => handleAddToCart()}>
+                    <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
                       <img
                         src={item.addToCartIconPath}
                         alt="Add to Cart"

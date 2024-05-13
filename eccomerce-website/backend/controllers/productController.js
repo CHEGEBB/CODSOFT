@@ -79,18 +79,27 @@ exports.deleteProduct = async (req, res) => {
 exports.addToCart = async (req, res) => {
   try {
     const { name, price, category } = req.body;
-
-    // Fetch the product from the database based on name, price, and category
+    // Find the product in the database based on the provided information
     const product = await Product.findOne({ name, price, category });
-
-    if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+    if (product) {
+      // If a matching product is found, return it
+      return res.status(200).json(product);
+    } else {
+      // If no matching product is found, return an error message
+      return res.status(404).json({ message: "Product not found" });
     }
-
-    // Optionally, you can send the fetched product back to the client
-    return res.status(200).json({ message: 'Product added to cart', product });
   } catch (error) {
     console.error('Error adding product to cart:', error);
-    return res.status(500).json({ message: 'Internal server error' });
+    res.status(500).json({ message: "Internal server error" });
+  }
+}
+exports.getCartItems = async (req, res) => {
+  try {
+    // Fetch cart items from the database
+    const cartItems = await CartItem.find();
+    res.status(200).json(cartItems);
+  } catch (error) {
+    console.error('Error fetching cart items:', error);
+    res.status(500).json({ message: "Internal server error" });
   }
 }
