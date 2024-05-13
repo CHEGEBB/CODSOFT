@@ -203,6 +203,7 @@ const Men = () => {
     {
       id: 12,
       name: "Men V-neck short-sleeved sweater",
+      itemNumber : 12,
       price: 65,
       discountedPrice: 52,
       rating: 5,
