@@ -1,5 +1,7 @@
 // backend/controllers/productController.js
 const Product = require('../models/Product');
+const CartItem = require('../models/cart');
+
 
 exports.getAllProducts = async (req, res) => {
   try {
@@ -90,6 +92,16 @@ exports.addToCart = async (req, res) => {
     }
   } catch (error) {
     console.error('Error adding product to cart:', error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+}
+exports.getCartItems = async (req, res) => {
+  try {
+    // Fetch cart items from the database
+    const cartItems = await CartItem.find();
+    res.status(200).json(cartItems);
+  } catch (error) {
+    console.error('Error fetching cart items:', error);
     res.status(500).json({ message: "Internal server error" });
   }
 }
