@@ -27,6 +27,7 @@ const Accessories = () => {
     {
       id: 2,
       name: "Vintage Glamour Men's wallet(all leather)",
+      category: "Accessories",
       price: 200,
       discountedPrice: 150,
       rating: 5,
@@ -43,6 +44,7 @@ const Accessories = () => {
     {
       id: 3,
       name: "Urban Edge Eyewear",
+      category: "Accessories",
       price: 130,
       discountedPrice: 105,
       rating: 4,
@@ -59,6 +61,7 @@ const Accessories = () => {
     {
       id: 4,
       name: "Luxury Statement Watch",
+      category: "Accessories",
       price: 140,
       discountedPrice: 135,
       rating: 3,
@@ -75,6 +78,7 @@ const Accessories = () => {
     {
       id: 5,
       name: "Retro Chic Eyeglasses",
+      category: "Accessories",
       price: 150,
       discountedPrice: 145,
       rating: 4,
@@ -91,6 +95,7 @@ const Accessories = () => {
     {
       id: 6,
       name: "Glamorous Crystal Earrings",
+      category: "Accessories",
       price : 160,
       discountedPrice: 155,
       rating: 5,
@@ -107,6 +112,7 @@ const Accessories = () => {
     {
       id: 7,
       name: "Classic Hoop Earrings",
+      category: "Accessories",
       price: 70,
       discountedPrice: 65,
       rating: 4,
@@ -123,6 +129,7 @@ const Accessories = () => {
     {
       id: 8,
       name: "Statement Chandelier Earrings and bracelets",
+      category: "Accessories",
       price: 80,
       discountedPrice: 75,
       rating: 3,
