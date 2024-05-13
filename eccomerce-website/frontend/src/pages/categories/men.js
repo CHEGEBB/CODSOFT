@@ -50,6 +50,7 @@ const Men = () => {
     {
       id: 3,
       name: "Urban Fit Leather Jacket",
+      itemNumber : 3,
       price: 20,
       discountedPrice: 16,
       rating: 5,
@@ -66,6 +67,7 @@ const Men = () => {
     {
       id: 4,
       name: "FlexiStyle t-shirt",
+      itemNumber : 4,
       price: 25,
       discountedPrice: 20,
       rating: 4,
@@ -82,6 +84,7 @@ const Men = () => {
     {
       id: 5,
       name: "CityGlam cotton Shirt",
+      itemNumber : 5,
       price: 30,
       discountedPrice: 24,
       rating: 3,
@@ -98,6 +101,7 @@ const Men = () => {
     {
       id: 6,
       name: "UrbanEssence Casual Shirt",
+      itemNumber : 6,
       price: 35,
       discountedPrice: 28,
       rating: 5,
@@ -114,6 +118,7 @@ const Men = () => {
     {
       id: 7,
       name: "Suave Cityscape  coat",
+      itemNumber : 7,
       price: 40,
       discountedPrice: 32,
       rating: 4,
@@ -130,6 +135,7 @@ const Men = () => {
     {
       id: 8,
       name: "Trendy casual men's shirt",
+      itemNumber : 8,
       price: 45,
       discountedPrice: 36,
       rating: 3,
@@ -146,6 +152,7 @@ const Men = () => {
     {
       id: 9,
       name: "UrbanEssence Sweatshirt",
+      itemNumber : 9,
       price: 50,
       discountedPrice: 40,
       rating: 5,
@@ -162,6 +169,7 @@ const Men = () => {
     {
       id: 10,
       name: "The Dark Knot Men's coat",
+      itemNumber : 10,
       price: 55,
       discountedPrice: 44,
       rating: 4,
@@ -178,6 +186,7 @@ const Men = () => {
     {
       id: 11,
       name: "Stylish Polo sweater",
+      itemNumber : 11,
       price: 60,
       discountedPrice: 48,
       rating: 3,
