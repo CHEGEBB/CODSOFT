@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
     name: { type: String, required: true },
+    category : { type: String, required: true },
     price: { type: Number, required: true },
     discountedPrice: { type: Number, required: true },
     rating: { type: Number, required: true },
     images: [{ type: String, required: true }],
-    // Other fields...
 });
 
 // Create a compound index on the 'name' and 'price' fields

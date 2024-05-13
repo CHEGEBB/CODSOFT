@@ -13,6 +13,7 @@ exports.getAllProducts = async (req, res) => {
 exports.createProduct = async (req, res) => {
   const product = new Product({
     name: req.body.name,
+    category : req.body.category,
     price: req.body.price,
     discountedPrice: req.body.discountedPrice,
     rating: req.body.rating,
@@ -41,6 +42,9 @@ exports.updateProduct = async (req, res) => {
     const product = await Product.findById(req.params.id);
     if (req.body.name) {
       product.name = req.body.name;
+    }
+    if (req.body.category) {
+      product.category = req.body.category;
     }
     if (req.body.price) {
       product.price = req.body.price;
