@@ -10,6 +10,7 @@ const Accessories = () => {
     {
       id: 1,
       name: "Timeless Elegance Rolex Watch",
+      category: "Accessories",
       price: 210,
       discountedPrice: 180,
       rating: 4,
