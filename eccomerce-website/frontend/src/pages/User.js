@@ -2,8 +2,9 @@ import React from 'react';
 
 const User = () => {
     return (
-        <div>
-            {/* User page content */}
+
+        <div className="user-account">
+            <p>This is the user account data</p>
         </div>
     );
 }
