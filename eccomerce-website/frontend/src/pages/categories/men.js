@@ -249,7 +249,7 @@ const Men = () => {
   
   const sendItemsToBackend = useCallback(async () => {
     try {
-        const { data: existingItems } = await axios.get('http://localhost:3000/products');
+        const { data: existingItems } = await axios.get('http://localhost:3000/cart/add-to-cart');
 
         // Create a set of existing item names and prices
         const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
