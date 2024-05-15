@@ -219,7 +219,7 @@ const Men = () => {
     }
   ]);
 
-  const history = useHistory(); // Hook for navigation
+  const history = useNavigate(); 
 
   const handleOpenModal = (item) => {
     setSelectedProduct(item);
