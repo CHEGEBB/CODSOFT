@@ -219,7 +219,7 @@ const Men = () => {
     }
   ]);
 
-  const history = useNavigate(); 
+  const navigate = useNavigate(); 
 
   const handleOpenModal = (item) => {
     setSelectedProduct(item);
@@ -281,13 +281,13 @@ const Men = () => {
 
 const handleAddToCart = async (item) => {
   try {
-      const name = encodeURIComponent(item.name);
-      const category = encodeURIComponent(item.category);
-      const { data } = await axios.get(`http://localhost:3000/cart/add-to-cart/${name}/${item.price}/${category}`);
-      console.log('Item fetched from the backend:', data);
-      history.push('/cart', { state: { item: data } });
+    const name = encodeURIComponent(item.name);
+    const category = encodeURIComponent(item.category);
+    const { data } = await axios.get(`http://localhost:3000/cart/add-to-cart/${name}/${item.price}/${category}`);
+    console.log('Item fetched from the backend:', data);
+    navigate('/cart', { state: { item: data } });
   } catch (error) {
-      console.error('Error fetching item from the backend:', error);
+    console.error('Error fetching item from the backend:', error);
   }
 };
 
