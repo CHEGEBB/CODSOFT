@@ -244,38 +244,40 @@ const Men = () => {
     );
   };
 
-  const sendItemsToBackend = useCallback(async () => {
-    try {
-      const { data: existingItems } = await axios.get('http://localhost:3000/add-to-cart');
-
-      const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
-
-      let allItemsSent = true;
-
-      for (const item of items) {
-        const itemNameAndPrice = `${item.name},${item.price}`;
-        if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
-          const response = await axios.post('http://localhost:3000/products', item);
-          console.log('Item sent to backend:', response.data);
-        } else {
-          allItemsSent = false;
-          console.log('Item already exists in the backend:', item.name);
-        }
-      }
-
-      if (allItemsSent) {
-        console.log('All items have been sent to the backend.');
-      } else {
-        console.log('Not all items have been sent to the backend.');
-      }
-    } catch (error) {
-      console.error('Error sending items to backend:', error);
-    }
-  }, [items]);
-
   useEffect(() => {
     sendItemsToBackend();
-  }, [sendItemsToBackend]);
+  }, []);
+
+  
+  const sendItemsToBackend = useCallback(async () => {
+    try {
+        const { data: existingItems } = await axios.get('http://localhost:3000/products');
+
+        // Create a set of existing item names and prices
+        const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
+
+        let allItemsSent = true;
+
+        for (const item of items) {
+            const itemNameAndPrice = `${item.name},${item.price}`;
+            if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
+                const response = await axios.post('http://localhost:3000/products', item);
+                console.log('Item sent to backend:', response.data);
+            } else {
+                allItemsSent = false;
+                console.log('Item already exists in the backend:', item.name);
+            }
+        }
+
+        if (allItemsSent) {
+            console.log('All items have been sent to the backend.');
+        } else {
+            console.log('Not all items have been sent to the backend.');
+        }
+    } catch (error) {
+        console.error('Error sending items to backend:', error);
+    }
+}, [items]);
 
   const handleAddToCart = async (item) => {
     try {
