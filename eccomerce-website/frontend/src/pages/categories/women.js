@@ -428,6 +428,7 @@ const Women = () => {
     
 
   ]);
+  const navigate = useNavigate();
   
 
   
@@ -489,7 +490,6 @@ const Women = () => {
     }
 }, [items]);
 
-const navigate = useNavigate();
 
 
 const handleAddToCart = async (item) => {
