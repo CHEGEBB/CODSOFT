@@ -282,7 +282,7 @@ const Men = () => {
   const handleAddToCart = async (item) => {
     try {
       const { data } = await axios.get(`http://localhost:3000/add-to-cart/${item.name},${item.price},${item.category}`);
-      console.log('Item fetched from the backend:', data);
+      console.log('Items fetched from the backend:', data);
 
       // Assuming Cart.js expects an item object
       history.push('/cart', { item: data });
