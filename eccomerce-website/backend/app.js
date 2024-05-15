@@ -27,6 +27,7 @@ app.use('/images/webp/women', express.static(path.join(__dirname, 'images/webp/w
 app.use('/images/webp/flash', express.static(path.join(__dirname, 'images/webp/flash')));
 app.use('/images/webp/kids', express.static(path.join(__dirname, 'images/webp/kids')));
 app.use('/images/webp/accessories', express.static(path.join(__dirname, 'images/webp/accessories')));
+app.use('/images/webp/shoes', express.static(path.join(__dirname, 'images/webp/shoes')));
 
 // Routes
 const authRoutes = require('./routes/authRoutes');
