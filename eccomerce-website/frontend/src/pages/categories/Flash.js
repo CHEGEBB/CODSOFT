@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useCallback,useNavigate } from "react";
+import React, { useState, useEffect, useCallback} from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./FlashSales.scss";
 import flashSaleBannerMP4 from "../../images/webp/men/ban.mp4";
 import Modal from "../../components/Modal";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
 
 
 
