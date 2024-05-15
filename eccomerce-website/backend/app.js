@@ -4,9 +4,12 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
+const path = require('path');
 
 // Create Express app
 const app = express();
+
+
 
 // CORS middleware
 app.use(cors());
@@ -18,6 +21,13 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// image paths
+app.use('/images/webp/men', express.static(path.join(__dirname, 'images/webp/men')));
+app.use('/images/webp/women', express.static(path.join(__dirname, 'images/webp/women')));
+app.use('/images/webp/flash', express.static(path.join(__dirname, 'images/webp/flash')));
+app.use('/images/webp/kids', express.static(path.join(__dirname, 'images/webp/kids')));
+app.use('/images/webp/accessories', express.static(path.join(__dirname, 'images/webp/accessories')));
+
 // Routes
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
@@ -26,6 +36,7 @@ const cartRoutes = require('./routes/cartRoutes'); // Add cart routes
 app.use('/auth', authRoutes); // Authentication routes
 app.use('/products', productRoutes); // Product routes
 app.use('/cart', cartRoutes); // Cart routes
+
 
 // MongoDB Atlas connection string
 const MONGODB_URI = process.env.MONGODB_URI;
