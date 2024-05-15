@@ -279,17 +279,17 @@ const Men = () => {
     }
 }, [items]);
 
-  const handleAddToCart = async (item) => {
-    try {
-      const { data } = await axios.get(`http://localhost:3000/add-to-cart/${item.name},${item.price},${item.category}`);
-      console.log('Items fetched from the backend:', data);
-
-      // Assuming Cart.js expects an item object
-      history.push('/cart', { item: data });
-    } catch (error) {
-      console.error('Error fetching item from the backendd:', error);
-    }
-  };
+const handleAddToCart = async (item) => {
+  try {
+      const name = encodeURIComponent(item.name);
+      const category = encodeURIComponent(item.category);
+      const { data } = await axios.get(`http://localhost:3000/cart/add-to-cart/${name}/${item.price}/${category}`);
+      console.log('Item fetched from the backend:', data);
+      history.push('/cart', { state: { item: data } });
+  } catch (error) {
+      console.error('Error fetching item from the backend:', error);
+  }
+};
 
   useEffect(() => {
     const id = setInterval(() => {

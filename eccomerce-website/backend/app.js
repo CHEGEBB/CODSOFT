@@ -21,9 +21,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
+const cartRoutes = require('./routes/cartRoutes'); // Add cart routes
 
 app.use('/auth', authRoutes); // Authentication routes
 app.use('/products', productRoutes); // Product routes
+app.use('/cart', cartRoutes); // Cart routes
 
 // MongoDB Atlas connection string
 const MONGODB_URI = process.env.MONGODB_URI;
