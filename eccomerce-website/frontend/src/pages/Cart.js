@@ -1,7 +1,5 @@
-// Cart.js
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-
 
 const Cart = () => {
   // Use the useLocation hook to get the current location
@@ -22,7 +20,8 @@ const Cart = () => {
           <p>Name: {fetchedItem.name}</p>
           <p>Price: ${fetchedItem.price}</p>
           <p>Category: {fetchedItem.category}</p>
-          <img src={`${baseURL}${fetchedItem.images[fetchedItem.currentImageIndex]}`} alt={fetchedItem.name} />
+          {/* Construct the relative image URL */}
+          <img src={`../../images/${fetchedItem.images[fetchedItem.currentImageIndex]}`} alt={fetchedItem.name} />
         </div>
       )}
     </div>
