@@ -287,7 +287,7 @@ const Men = () => {
       // Assuming Cart.js expects an item object
       history.push('/cart', { item: data });
     } catch (error) {
-      console.error('Error fetching item from the backend:', error);
+      console.error('Error fetching item from the backendd:', error);
     }
   };
 
