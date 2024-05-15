@@ -1,78 +1,50 @@
 .cart-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  
-    .cart-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      grid-gap: 20px;
-    }
-  
-    .cart-item {
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-  
-      &:hover {
-        transform: translateY(-5px);
-      }
-  
-      .item-image {
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-  
-      .item-details {
-        padding: 10px;
-  
-        .item-name {
-          font-size: 16px;
-          margin-bottom: 5px;
-        }
-  
-        .item-price {
-          font-size: 14px;
-          color: #666;
-        }
-      }
-    }
-  
-    .cart-summary {
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  
-      p {
-        font-size: 18px;
-      }
-  
-      .checkout-btn {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
-      }
-    }
-  }
-  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.delete-button,
+.checkout-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.checkout-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.checkout-button:hover {
+  background-color: #388e3c;
+}
