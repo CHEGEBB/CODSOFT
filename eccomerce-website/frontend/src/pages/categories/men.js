@@ -285,7 +285,7 @@ const handleAddToCart = async (item) => {
     const category = encodeURIComponent(item.category);
     const { data } = await axios.get(`http://localhost:3000/cart/add-to-cart/${name}/${item.price}/${category}`);
     console.log('Item fetched from the backend:', data);
-    navigate('/cart', { state: { item: data } }); // Pass selected item data to Cart.js
+    navigate('/cart', { state: { item: data } });
   } catch (error) {
     console.error('Error fetching item from the backend:', error);
   }
