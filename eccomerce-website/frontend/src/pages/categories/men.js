@@ -4,13 +4,13 @@ import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Men.scss";
 import Modal from "../../components/Modal";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Men = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [intervalId, setIntervalId] = useState(null); 
-  // const [isItemsSent, setIsItemsSent] = useState(false);
+  const [intervalId, setIntervalId] = useState(null);
   const [items, setItems] = useState([
     {
       id: 1,
@@ -219,6 +219,7 @@ const Men = () => {
     }
   ]);
 
+  const history = useHistory(); // Hook for navigation
 
   const handleOpenModal = (item) => {
     setSelectedProduct(item);
@@ -243,57 +244,50 @@ const Men = () => {
     );
   };
 
-  useEffect(() => {
-    sendItemsToBackend();
-  }, []); 
-  
   const sendItemsToBackend = useCallback(async () => {
     try {
-        const { data: existingItems } = await axios.get('http://localhost:3000/add-to-cart');
+      const { data: existingItems } = await axios.get('http://localhost:3000/add-to-cart');
 
-        // Create a set of existing item names and prices
-        const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
+      const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
 
-        let allItemsSent = true;
+      let allItemsSent = true;
 
-        for (const item of items) {
-            const itemNameAndPrice = `${item.name},${item.price}`;
-            if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
-                const response = await axios.post('http://localhost:3000/products', item);
-                console.log('Item sent to backend:', response.data);
-            } else {
-                allItemsSent = false;
-                console.log('Item already exists in the backend:', item.name);
-            }
-        }
-
-        if (allItemsSent) {
-            console.log('All items have been sent to the backend.');
+      for (const item of items) {
+        const itemNameAndPrice = `${item.name},${item.price}`;
+        if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
+          const response = await axios.post('http://localhost:3000/products', item);
+          console.log('Item sent to backend:', response.data);
         } else {
-            console.log('Not all items have been sent to the backend.');
+          allItemsSent = false;
+          console.log('Item already exists in the backend:', item.name);
         }
+      }
+
+      if (allItemsSent) {
+        console.log('All items have been sent to the backend.');
+      } else {
+        console.log('Not all items have been sent to the backend.');
+      }
     } catch (error) {
-        console.error('Error sending items to backend:', error);
+      console.error('Error sending items to backend:', error);
     }
-}, [items]);
+  }, [items]);
 
-const handleAddToCart = async (product) => {
-  try {
-    const { name, price, category } = product;
-    // Send a POST request to the backend
-    const response = await axios.post('http://localhost:3000/add-to-cart', { name, price, category });
-    // Handle the response, update the cart state, or perform other actions
-    console.log('Product added to cart:', response.data);
-  } catch (error) {
-    console.error('Error adding product to cart:', error);
-    // Handle errors
+  useEffect(() => {
+    sendItemsToBackend();
+  }, [sendItemsToBackend]);
 
-  }
-};
-  
-  
-  
- 
+  const handleAddToCart = async (item) => {
+    try {
+      const { data } = await axios.get(`http://localhost:3000/add-to-cart/${item.name},${item.price},${item.category}`);
+      console.log('Item fetched from the backend:', data);
+
+      // Assuming Cart.js expects an item object
+      history.push('/cart', { item: data });
+    } catch (error) {
+      console.error('Error fetching item from the backend:', error);
+    }
+  };
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -306,14 +300,11 @@ const handleAddToCart = async (product) => {
       );
     }, 3000);
 
-    // Save the intervalId to state
     setIntervalId(id);
 
-    // Cleanup function to clear the interval
-    return () => clearInterval(id); // Use id here instead of intervalId
+    return () => clearInterval(id);
   }, []);
 
-  // Group items into rows
   const groupedItems = [];
   for (let i = 0; i < items.length; i += 4) {
     groupedItems.push(items.slice(i, i + 4));
@@ -327,61 +318,39 @@ const handleAddToCart = async (product) => {
           <div className="men-row" key={rowIndex}>
             {row.map((item, columnIndex) => (
               <div
-                className={`men-item-container ${
-                  item.id >= 10 && item.id <= 15 ? "special-card" : ""
-                }`}
+                className={`men-item-container ${item.id >= 10 && item.id <= 15 ? "special-card" : ""}`}
                 key={item.id}
               >
                 <div className="item-image">
-                  {/* Placeholder for image */}
                   <img src={item.images[item.currentImageIndex]} alt={item.name} />
                   <div
                     className="item-overlay"
                     onClick={() => handleOpenModal(item)}
                   >
                     <div className="item-discount-men">
-                      {(
-                        ((item.price - item.discountedPrice) / item.price) *
-                        100
-                      ).toFixed(0)}
-                      % off
+                      {((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% off
                     </div>
                     <div className="wish">
-                      <img
-                        src={item.wishlistIconPath}
-                        alt="Wishlist"
-                        className="wishlist-icon"
-                      />
+                      <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
                     <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
-                      <img
-                        src={item.addToCartIconPath}
-                        alt="Add to Cart"
-                      />
+                      <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
                     <div className="discounted-price-men">
-                      {item.discountedPrice}
+                      ${item.discountedPrice}
                     </div>
                   </div>
                 </div>
                 <div className="item-info-men">
                   <div className="item-name-men">{item.name}</div>
                   <div className="price-container">
-                    <span className="previous-price-men">
-                      ${item.price}
-                    </span>
-                    <span className="current-price-men">
-                      ${item.discountedPrice}
-                    </span>
+                    <span className="previous-price-men">${item.price}</span>
+                    <span className="current-price-men">${item.discountedPrice}</span>
                   </div>
                   <div className="item-rating">
                     {Array.from({ length: item.rating }).map((_, index) => (
-                      <span
-                        key={index}
-                        className="star-icon"
-                        style={{ color: "#F5AD42", fontSize: "1.5em" }}
-                      >
+                      <span key={index} className="star-icon" style={{ color: "#F5AD42", fontSize: "1.5em" }}>
                         ★
                       </span>
                     ))}
