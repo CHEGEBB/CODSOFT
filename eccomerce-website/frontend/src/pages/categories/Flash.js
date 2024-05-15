@@ -216,6 +216,7 @@ const Flash = () => {
       currentImageIndex: 0
     }
   ]);
+  const navigate =useNavigate();
 
   
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -276,7 +277,7 @@ const Flash = () => {
     }
 }, [items]);
 
-const navigate =useNavigate();
+
 
 const handleAddToCart = async (item) => {
   try {
