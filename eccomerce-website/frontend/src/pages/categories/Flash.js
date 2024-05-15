@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback,useNavigate } from "react";
 import wishlistIcon from "../../images/us/icon-park-solid--love-and-help.svg";
 import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./FlashSales.scss";
 import flashSaleBannerMP4 from "../../images/webp/men/ban.mp4";
 import Modal from "../../components/Modal";
 import axios from 'axios';
+
 
 
 const Flash = () => {
@@ -275,6 +276,21 @@ const Flash = () => {
     }
 }, [items]);
 
+const navigate =useNavigate();
+
+const handleAddToCart = async (item) => {
+  try {
+    const name = encodeURIComponent(item.name);
+    const category = encodeURIComponent(item.category);
+    const { data } = await axios.get(`http://localhost:3000/cart/add-to-cart/${name}/${item.price}/${category}`);
+    console.log('Item fetched from the backend:', data);
+    navigate('/cart', { state: { item: data } }); // Navigate to Cart.js and pass the fetched item as state
+  } catch (error) {
+    console.error('Error fetching item from the backend:', error);
+  }
+};
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
@@ -325,7 +341,7 @@ const Flash = () => {
                     <div className="wish">
                       <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
-                    <button className="add-to-cart-btn" onClick={() => handleOpenModal(item)}>
+                    <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
