@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import CartIcon from "../images/ic--round-shopping-cart.svg";
 import Wishlist from "../images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "../images/ant-design--search-outlined.svg";
@@ -8,11 +9,26 @@ import bg from "../images/webp/kids/bg3.mp4";
 import Navbar from "../components/Navbar";
 import './header.scss';
 
-
 const Header = () => {
-    return ( 
-        <div className="header-section">
-        <div className="header">
+  // State for search query and results
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  // Function to handle search
+  const handleSearch = async () => {
+    try {
+      // Replace 'https://your-atlas-search-endpoint/search' with your actual endpoint
+      const response = await fetch(`https://your-atlas-search-endpoint/search?q=${searchQuery}`);
+      const data = await response.json();
+      setSearchResults(data.results);
+    } catch (error) {
+      console.error("Error fetching search results:", error);
+    }
+  };
+
+  return ( 
+    <div className="header-section">
+      <div className="header">
         <div className="reach">
           <div className="phone">
             <div className="call-icon">
@@ -61,8 +77,8 @@ const Header = () => {
         </div>
       </div>
       <div className="search-container">
-      {/* Video with overlay as background */}
-      <div className="video-container-bg">
+        {/* Video with overlay as background */}
+        <div className="video-container-bg">
           <video autoPlay loop muted className="background-video">
             <source src={bg} type="video/mp4" />
             Your browser does not support the video tag.
@@ -72,16 +88,26 @@ const Header = () => {
             type="text"
             className="input-search"
             placeholder="Search for products here..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
           <span className="filter-icon"></span>
-          <button type="submit">
+          <button type="button" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
         </div>
+        {/* Display search results */}
+        <div className="search-results">
+          <ul>
+            {searchResults.map((result, index) => (
+              <li key={index}>{result.name}</li>
+            ))}
+          </ul>
+        </div>
       </div>
       <Navbar />
-      </div>
-     );
+    </div>
+  );
 }
- 
+
 export default Header;
