@@ -18,7 +18,7 @@ const Header = () => {
   const handleSearch = async () => {
     try {
       // Replace 'https://your-atlas-search-endpoint/search' with your actual endpoint
-      const response = await fetch(`https://your-atlas-search-endpoint/search?q=${searchQuery}`);
+      const response = await fetch(`https://ap-south-1.aws.data.mongodb-api.com/app/data-cjemoyi/endpoint/search?q=${searchQuery}`);
       const data = await response.json();
       setSearchResults(data.results);
     } catch (error) {
@@ -92,7 +92,7 @@ const Header = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <span className="filter-icon"></span>
-          <button type="button" onClick={handleSearch}>
+          <button type="submit" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
         </div>
