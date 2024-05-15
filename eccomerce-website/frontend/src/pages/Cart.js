@@ -11,7 +11,7 @@ const Cart = () => {
 
   const fetchCartItems = async () => {
     try {
-      const { data } = await axios.get('http://localhost:3000/cart-items');
+      const { data } = await axios.get('http://localhost:3000/cart/cart-items');
       setCartItems(data);
     } catch (error) {
       console.error('Error fetching cart items:', error);
