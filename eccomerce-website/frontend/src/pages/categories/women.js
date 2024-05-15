@@ -4,6 +4,7 @@ import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Women.scss";
 import Modal from "../../components/Modal";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const Women = () => {
   const [items, setItems] = useState([
@@ -488,6 +489,22 @@ const Women = () => {
     }
 }, [items]);
 
+const navigate = useNavigate();
+
+
+const handleAddToCart = async (item) => {
+  try {
+    const name = encodeURIComponent(item.name);
+    const category = encodeURIComponent(item.category);
+    const { data } = await axios.get(`http://localhost:3000/cart/add-to-cart/${name}/${item.price}/${category}`);
+    console.log('Item fetched from the backend:', data);
+    navigate('/cart', { state: { item: data } }); // Navigate to Cart.js and pass the fetched item as state
+  } catch (error) {
+    console.error('Error fetching item from the backend:', error);
+  }
+};
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
@@ -520,7 +537,7 @@ const Women = () => {
                 }`}
                 key={item.id}
               >
-                <div className="item-image" onClick={() => handleOpenModal(item)}>
+                <div className="item-image" onClick={() => handleAddToCart(item)}>
                   <img
                     src={item.images[item.currentImageIndex]}
                     alt={item.name}
