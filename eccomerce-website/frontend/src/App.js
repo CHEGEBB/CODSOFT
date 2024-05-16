@@ -11,6 +11,7 @@ import "./index.scss";
 import Login from "./auth-pages/Login";
 import SignUp from "./auth-pages/Signup";
 import ProductPage from "./pages/ProductPage";
+import Men from "./pages/categories/men";
 
 
 const App = () => {
@@ -26,6 +27,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/user" element={<User />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/shop/men" element={<Men />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/product/:id" component={ProductPage} />
         
