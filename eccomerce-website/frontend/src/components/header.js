@@ -10,15 +10,12 @@ import Navbar from "../components/Navbar";
 import './header.scss';
 
 const Header = () => {
-  // State for search query and results
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  // Function to handle search
   const handleSearch = async () => {
     try {
-      // Replace 'https://your-atlas-search-endpoint/search' with your actual endpoint
-      const response = await fetch(`https://your-atlas-search-endpoint/search?q=${searchQuery}`);
+      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}`);
       const data = await response.json();
       setSearchResults(data.results);
     } catch (error) {
@@ -77,13 +74,12 @@ const Header = () => {
         </div>
       </div>
       <div className="search-container">
-        {/* Video with overlay as background */}
         <div className="video-container-bg">
           <video autoPlay loop muted className="background-video">
             <source src={bg} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="overlay-bg"></div> {/* Overlay */}
+          <div className="overlay-bg"></div>
           <input
             type="text"
             className="input-search"
@@ -92,11 +88,10 @@ const Header = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <span className="filter-icon"></span>
-          <button type="button" onClick={handleSearch}>
+          <button type="submit" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
         </div>
-        {/* Display search results */}
         <div className="search-results">
           <ul>
             {searchResults.map((result, index) => (

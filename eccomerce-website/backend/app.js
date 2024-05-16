@@ -9,8 +9,6 @@ const path = require('path');
 // Create Express app
 const app = express();
 
-
-
 // CORS middleware
 app.use(cors());
 
@@ -38,7 +36,6 @@ app.use('/auth', authRoutes); // Authentication routes
 app.use('/products', productRoutes); // Product routes
 app.use('/cart', cartRoutes); // Cart routes
 
-
 // MongoDB Atlas connection string
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -53,11 +50,8 @@ if (!process.env.JWT_SECRET) {
     console.log('Generated JWT secret key:', process.env.JWT_SECRET);
 }
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// Import Product model
+const Product = require('./models/Product');
 
 // Add route to handle POST request for storing items data
 app.post('/save-items', async (req, res) => {
@@ -70,4 +64,21 @@ app.post('/save-items', async (req, res) => {
         console.error('Error storing items data:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
+});
+
+// Add search endpoint
+app.get('/search', async (req, res) => {
+  const query = req.query.q;
+  try {
+    const results = await Product.find({ name: new RegExp(query, 'i') }); // Case insensitive search
+    res.json({ results });
+  } catch (error) {
+    res.status(500).json({ error: 'Error fetching search results' });
+  }
+});
+
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
