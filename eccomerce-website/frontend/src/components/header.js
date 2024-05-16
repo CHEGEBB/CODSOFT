@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import CartIcon from "../images/ic--round-shopping-cart.svg";
 import Wishlist from "../images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "../images/ant-design--search-outlined.svg";
@@ -11,22 +12,23 @@ import './header.scss';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [category, setCategory] = useState("all");
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null); // State to manage the selected product
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
-    if (searchQuery.length > 0) {
+    if (searchQuery.length > 0 || category !== "all") {
       handleSearch();
     } else {
       setSearchResults([]);
       setDropdownVisible(false);
     }
-  }, [searchQuery]);
+  }, [searchQuery, category]);
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}`);
+      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}&category=${category}`);
       const data = await response.json();
       setSearchResults(data.results);
       setDropdownVisible(true);
@@ -36,9 +38,14 @@ const Header = () => {
   };
 
   const handleSelectSuggestion = (product) => {
-    setSelectedProduct(product);
+    navigate(`/shop/${product.category}`, { state: { productId: product._id } }); // Navigate to the category page
     setDropdownVisible(false);
     setSearchQuery("");
+    setCategory("all");
+  };
+
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
   };
 
   return (
@@ -105,8 +112,17 @@ const Header = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
+          <select className="category-filter" value={category} onChange={handleCategoryChange}>
+            <option value="all">All</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="kids">Kids</option>
+            <option value="accessories">Accessories</option>
+            <option value="shoes">Shoes</option>
+            <option value="flash">Flash Sales</option>
+          </select>
           <span className="filter-icon"></span>
-          <button type="submit" onClick={handleSearch}>
+          <button type="button" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
           {isDropdownVisible && searchResults.length > 0 && (
@@ -119,24 +135,10 @@ const Header = () => {
             </ul>
           )}
         </div>
-        {selectedProduct && (
-          <div className="product-details">
-            <h2>{selectedProduct.name}</h2>
-            <p>Price: ${selectedProduct.price}</p>
-            {/* Add more product details as needed */}
-          </div>
-        )}
-        <div className="search-results">
-          <ul>
-            {searchResults.map((result, index) => (
-              <li key={index}>{result.name}</li>
-            ))}
-          </ul>
-        </div>
       </div>
       <Navbar />
     </div>
   );
-}
+};
 
 export default Header;
