@@ -378,4 +378,23 @@ $darkpink: #FF007F;
   height: 30px;
   width: 30px;
 }
+.cart {
+  position: relative;
+  
+  .catcon {
+    position: relative;
+  }
 
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px; 
+    background-color: #ff4081; 
+    color: #ffffff; 
+    border-radius: 50%; 
+    padding: 4px 8px;
+    font-size: 12px; 
+    z-index: 1000;
+    font-family: $jost;
+  }
+}

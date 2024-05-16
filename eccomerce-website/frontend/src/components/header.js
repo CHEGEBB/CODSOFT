@@ -104,7 +104,7 @@ const Header = () => {
           <div className="cart" onClick={handleCartClick}>
             <div className="catcon">
               <img src={CartIcon} alt="Cart Icon" />
-              {cartCount > 0 && (
+              {cartCount >= 0 && (
                 <div className="cart-count">{cartCount}</div>
               )}
             </div>
