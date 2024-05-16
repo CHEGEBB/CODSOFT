@@ -24,8 +24,9 @@ const Cart = () => {
       setCartItems(JSON.parse(storedCartItems));
     }
     if (location.state && location.state.item) {
-      setCartItems(prevCartItems => [...prevCartItems, location.state.item]);
-      localStorage.setItem('cartItems', JSON.stringify([...cartItems, location.state.item]));
+      const newItem = location.state.item;
+      setCartItems(prevCartItems => [...prevCartItems, newItem]);
+      localStorage.setItem('cartItems', JSON.stringify([...cartItems, newItem]));
     }
   }, [location.state]);
 
