@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import { useNavigate } from "react-router-dom";
 import CartIcon from "../images/ic--round-shopping-cart.svg";
 import Wishlist from "../images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "../images/ant-design--search-outlined.svg";
@@ -44,14 +44,14 @@ const Header = () => {
     setSearchQuery("");
     setCategory("all");
   };
-  
 
   const handleCategoryChange = (e) => {
-    setCategory(e.target.value);
-    setCategory(selectedCategory);
-    navigate(`/shop/${setSelectedCategory}`);
+    const selectedCategory = e.target.value; // Get the selected category
+    setCategory(selectedCategory); // Update category state
+    setSelectedCategory(selectedCategory); // Update selectedCategory state
+    navigate(`/shop/${selectedCategory}`); // Navigate to selected category
   };
-
+  
   return (
     <div className="header-section">
       <div className="header">
@@ -111,8 +111,10 @@ const Header = () => {
           <div className="overlay-bg"></div>
           <div className="filter-functionality">
             <label className="category-label" style={{ color: "white" }}>Filter:
-              <select className="category-filter" value={category} onChange={handleCategoryChange}
-              onClick={(e) => setSelectedCategory(e.target.value)}
+              <select
+                className="category-filter"
+                value={category}
+                onChange={handleCategoryChange}
               >
                 <option value="all">All</option>
                 <option value="men">Men</option>
