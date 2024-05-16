@@ -99,6 +99,18 @@ const Header = () => {
             Your browser does not support the video tag.
           </video>
           <div className="overlay-bg"></div>
+          <div className="filter-functionality">
+          <h1>Shop for the best deals</h1>
+          <select className="category-filter">
+            <option value="all">All</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="kids">Kids</option>
+            <option value="accessories">Accessories</option>
+            <option value="shoes">Shoes</option>
+            <option value="flash">Flash Sales</option>
+          </select>
+          </div>
           <input
             type="text"
             className="input-search"
