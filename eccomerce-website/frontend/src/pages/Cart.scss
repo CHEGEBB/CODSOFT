@@ -48,21 +48,3 @@
 .checkout-button:hover {
   background-color: #388e3c;
 }
-.cart {
-  position: relative;
-  
-  .catcon {
-    position: relative;
-  }
-
-  .cart-count {
-    position: absolute;
-    top: -5px; /* Adjust top position as needed */
-    right: -10px; /* Adjust right position as needed */
-    background-color: #ff4081; /* Dark pink background color */
-    color: #ffffff; /* Text color */
-    border-radius: 50%; /* Make it circular */
-    padding: 4px 8px; /* Adjust padding as needed */
-    font-size: 12px; /* Adjust font size as needed */
-  }
-}
