@@ -336,6 +336,24 @@ $darkpink: #FF007F;
 .filter-functionality{
   z-index: 100;
   position: absolute;
+   
+  select{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    outline: none;
+  }
+  label{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
 }
 
 
