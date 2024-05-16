@@ -17,7 +17,19 @@ const Header = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [cartCount, setCartCount] = useState(0); // State to track cart count
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Update cart count from localStorage or any other source when component mounts
+    const cartCountFromStorage = parseInt(localStorage.getItem('cartCount')) || 0;
+    setCartCount(cartCountFromStorage);
+  }, []);
+
+  useEffect(() => {
+    // Update localStorage when cart count changes
+    localStorage.setItem('cartCount', cartCount.toString());
+  }, [cartCount]);
 
   useEffect(() => {
     if (searchQuery.length > 0) {
@@ -44,7 +56,6 @@ const Header = () => {
     setDropdownVisible(false);
     setSearchQuery("");
     setCategory("all");
-    console.log(selectedCategory);
   };
 
   const handleCategoryChange = (e) => {
@@ -52,6 +63,10 @@ const Header = () => {
     setCategory(selectedCategory);
     setSelectedCategory(selectedCategory); 
     navigate(`/shop/${selectedCategory}`); 
+  };
+
+  const handleCartClick = () => {
+    navigate("/cart");
   };
   
   return (
@@ -86,9 +101,12 @@ const Header = () => {
       </div>
       <div className="bar">
         <div className="choice">
-          <div className="cart">
+          <div className="cart" onClick={handleCartClick}>
             <div className="catcon">
               <img src={CartIcon} alt="Cart Icon" />
+              {cartCount > 0 && (
+                <div className="cart-count">{cartCount}</div>
+              )}
             </div>
             <div className="cart-content">
               <h1>Cart</h1>
