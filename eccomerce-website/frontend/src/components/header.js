@@ -39,10 +39,11 @@ const Header = () => {
   };
 
   const handleSelectSuggestion = (product) => {
-    navigate(`/shop/${product.category}`, { state: { productId: product._id } });
+    navigate("/shop", { state: { productId: product.category } });
     setDropdownVisible(false);
     setSearchQuery("");
     setCategory("all");
+    console.log(result.category);
   };
 
   const handleCategoryChange = (e) => {
