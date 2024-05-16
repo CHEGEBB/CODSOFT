@@ -32,6 +32,7 @@ const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes'); // Add cart routes
 
+
 app.use('/auth', authRoutes); // Authentication routes
 app.use('/products', productRoutes); // Product routes
 app.use('/cart', cartRoutes); // Cart routes
