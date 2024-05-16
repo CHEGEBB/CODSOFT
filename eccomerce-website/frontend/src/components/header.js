@@ -9,9 +9,11 @@ import PersonIcon from "../images/mdi--person.svg";
 import bg from "../images/webp/kids/bg3.mp4";
 import Navbar from "../components/Navbar";
 import './header.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [category, setCategory] = useState("all");
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate
@@ -23,11 +25,11 @@ const Header = () => {
       setSearchResults([]);
       setDropdownVisible(false);
     }
-  }, [searchQuery]);
+  }, [searchQuery, category]);
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}`);
+      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}&category=${category}`);
       const data = await response.json();
       setSearchResults(data.results);
       setDropdownVisible(true);
@@ -36,10 +38,17 @@ const Header = () => {
     }
   };
 
-  const handleSelectSuggestion = (productId) => {
-    navigate("/shop");
+  const handleSelectSuggestion = (product) => {
+    navigate(`/shop/${product.category}`, { state: { productId: product._id } });
     setDropdownVisible(false);
     setSearchQuery("");
+    setCategory("all");
+  };
+  
+
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
+    navigate("/shop");
   };
 
   return (
@@ -100,17 +109,17 @@ const Header = () => {
           </video>
           <div className="overlay-bg"></div>
           <div className="filter-functionality">
-          <label className="category-label" style={{color:"white"}}>Filter:
-          <select className="category-filter">
-            <option value="all">All</option>
-            <option value="men">Men</option>
-            <option value="women">Women</option>
-            <option value="kids">Kids</option>
-            <option value="accessories">Accessories</option>
-            <option value="shoes">Shoes</option>
-            <option value="flash">Flash Sales</option>
-          </select>
-          </label>
+            <label className="category-label" style={{ color: "white" }}>Filter:
+              <select className="category-filter" value={category} onChange={handleCategoryChange}>
+                <option value="all">All</option>
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+                <option value="kids">Kids</option>
+                <option value="accessories">Accessories</option>
+                <option value="shoes">Shoes</option>
+                <option value="flash">Flash Sales</option>
+              </select>
+            </label>
           </div>
           <input
             type="text"
@@ -125,7 +134,7 @@ const Header = () => {
           {isDropdownVisible && searchResults.length > 0 && (
             <ul className="autocomplete-dropdown">
               {searchResults.map((result, index) => (
-                <li key={index} onClick={() => handleSelectSuggestion(result._id)}>
+                <li key={index} onClick={() => handleSelectSuggestion(result)}>
                   {result.name} - ${result.price}
                 </li>
               ))}
