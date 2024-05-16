@@ -111,6 +111,8 @@ $darkpink: #FF007F;
       font-family: $ropa;
       font-weight: 500;
       font-size: 18px;
+      width: 300px;
+     padding-left: 30px;
     }
   }
 
@@ -304,7 +306,7 @@ $darkpink: #FF007F;
   list-style: none;
   padding: 0;
   margin: 0;
-  background: $softpink;
+  // background: $softpink;
   max-height: 50px;
   overflow-y: auto;
   position: absolute;
@@ -318,7 +320,6 @@ $darkpink: #FF007F;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 5px;
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.9);
   overflow-y: auto;
   overflow-x: hidden;
@@ -355,7 +356,8 @@ $darkpink: #FF007F;
     height: 62px;
     font-family: $jost;
     margin-left:50px;
-    color: #fff;
+    font-size: 16px;
+    width: 120px;
   }
 .category-label{
   font-family: $jost;

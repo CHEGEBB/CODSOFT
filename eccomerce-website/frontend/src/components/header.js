@@ -81,6 +81,7 @@ const Header = () => {
             <div className="account">
               <p>My Account</p>
             </div>
+            console.log(selectedCategory);
           </div>
         </div>
       </div>
@@ -146,7 +147,7 @@ const Header = () => {
             <ul className="autocomplete-dropdown">
               {searchResults.map((result, index) => (
                 <li key={index} onClick={() => handleSelectSuggestion(result)}>
-                  {result.name}-
+                  {result.name}
                 </li>
               ))}
             </ul>
