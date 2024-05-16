@@ -29,7 +29,7 @@ const Header = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}&category=${category}`);
+      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}`);
       const data = await response.json();
       setSearchResults(data.results);
       setDropdownVisible(true);
