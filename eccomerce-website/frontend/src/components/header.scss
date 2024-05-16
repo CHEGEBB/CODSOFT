@@ -332,8 +332,10 @@ $darkpink: #FF007F;
   }
 }
 .res{
-  background-color: #555555;
+  background-color: $darkpink;
   color: white;
+  width: 200px;
+  border-radius: 5px;
 }
 .product-details {
   margin-top: 20px;
