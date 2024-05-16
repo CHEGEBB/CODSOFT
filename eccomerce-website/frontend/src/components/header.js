@@ -130,7 +130,7 @@ const Header = () => {
           </video>
           <div className="overlay-bg"></div>
           <div className="filter-functionality">
-            <label className="category-label" style={{ color: "white" }}>Filter:
+            <label className="category-label">
               <select
                 className="category-filter"
                 value={category}
