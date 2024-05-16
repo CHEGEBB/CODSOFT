@@ -358,5 +358,27 @@ $darkpink: #FF007F;
 }
   
 }
-
+.filter-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.filter-icon img{
+  height: 30px;
+  width: 30px;
+}
+select{
+  padding: 10px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: white;
+  margin-top: 3px;
+  outline: none;
+  height: 62px;
+  font-family: $jost;
+}
 

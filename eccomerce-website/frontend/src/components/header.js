@@ -119,7 +119,7 @@ const Header = () => {
                 onChange={handleCategoryChange}
               >
               
-                <option value="all">All</option>
+                <option value="all">Filter</option>
                 <option value="men">Men</option>
                 <option value="women">Women</option>
                 <option value="kids">Kids</option>
@@ -127,7 +127,9 @@ const Header = () => {
                 <option value="shoes">Shoes</option>
                 <option value="flash">Flash Sales</option>
               </select>
+              <div className="filter-icon">
               <img src={FilterIcon} alt="Filter Icon" />
+              </div>
             </label>
           </div>
           <input
