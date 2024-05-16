@@ -95,7 +95,7 @@ $darkpink: #FF007F;
     flex: 1;
     padding: 10px 50px 10px 20px;
     border: none;
-    border-radius: 5px;
+    // border-radius: 5px;
     margin-left: 350px;
     height: 60px;
     width: 700px;
@@ -340,15 +340,16 @@ $darkpink: #FF007F;
   select{
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
     background-color: $darkpink;
+    margin-top: 3px;
     outline: none;
-    height: 55px;
+    height: 62px;
     font-family: $jost;
-    margin-left:20px;
+    margin-left:50px;
   }
 .category-label{
   font-family: $jost;

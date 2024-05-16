@@ -9,6 +9,7 @@ import PersonIcon from "../images/mdi--person.svg";
 import bg from "../images/webp/kids/bg3.mp4";
 import Navbar from "../components/Navbar";
 import './header.scss';
+import FilterIcon from "../images/filter-32.svg";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -117,6 +118,7 @@ const Header = () => {
                 value={category}
                 onChange={handleCategoryChange}
               >
+              
                 <option value="all">All</option>
                 <option value="men">Men</option>
                 <option value="women">Women</option>
@@ -125,6 +127,7 @@ const Header = () => {
                 <option value="shoes">Shoes</option>
                 <option value="flash">Flash Sales</option>
               </select>
+              <img src={FilterIcon} alt="Filter Icon" />
             </label>
           </div>
           <input
