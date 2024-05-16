@@ -23,29 +23,16 @@ const Cart = () => {
     if (storedCartItems) {
       setCartItems(JSON.parse(storedCartItems));
     }
-  }, []);
-
-  useEffect(() => {
     if (location.state && location.state.item) {
       const newItem = location.state.item;
-      // Check if the new item already exists in the cart
-      const isItemInCart = cartItems.some(item => item._id === newItem._id);
-      if (!isItemInCart) {
-        // If the item is not already in the cart, add it
-        const updatedCartItems = [...cartItems, newItem];
-        setCartItems(updatedCartItems);
-        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-      }
+      setCartItems(prevCartItems => [...prevCartItems, newItem]);
+      localStorage.setItem('cartItems', JSON.stringify([...cartItems, newItem]));
     }
-  }, [location.state, cartItems]);
-
-  // Calculate the total number of items in the cart
-  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  }, [location.state]);
 
   return (
     <div className="cart-container">
       <h1>Cart</h1>
-      <div className="cart-count">{cartItemCount}</div>
       {cartItems.length > 0 ? (
         <div>
           {cartItems.map(item => (
