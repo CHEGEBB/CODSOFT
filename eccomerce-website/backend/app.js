@@ -68,14 +68,15 @@ app.post('/save-items', async (req, res) => {
 
 // Add search endpoint
 app.get('/search', async (req, res) => {
-  const query = req.query.q;
-  try {
-    const results = await Product.find({ name: new RegExp(query, 'i') }); // Case insensitive search
-    res.json({ results });
-  } catch (error) {
-    res.status(500).json({ error: 'Error fetching search results' });
-  }
-});
+    const query = req.query.q;
+    try {
+      const results = await Product.find({ name: new RegExp(query, 'i') }, 'name _id'); // Return name and ID only
+      res.json({ results });
+    } catch (error) {
+      res.status(500).json({ error: 'Error fetching search results' });
+    }
+  });
+  
 
 // Start server
 const PORT = process.env.PORT || 3000;
