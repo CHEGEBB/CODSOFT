@@ -9,14 +9,14 @@ import PersonIcon from "../images/mdi--person.svg";
 import bg from "../images/webp/kids/bg3.mp4";
 import Navbar from "../components/Navbar";
 import './header.scss';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState("all");
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (searchQuery.length > 0) {
@@ -48,7 +48,8 @@ const Header = () => {
 
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
-    navigate("/shop");
+    setCategory(selectedCategory);
+    navigate(`/shop/${selectedCategory}`);
   };
 
   return (
@@ -110,7 +111,9 @@ const Header = () => {
           <div className="overlay-bg"></div>
           <div className="filter-functionality">
             <label className="category-label" style={{ color: "white" }}>Filter:
-              <select className="category-filter" value={category} onChange={handleCategoryChange}>
+              <select className="category-filter" value={category} onChange={handleCategoryChange}
+              onClick={(e) => setSelectedCategory(e.target.value)}
+              >
                 <option value="all">All</option>
                 <option value="men">Men</option>
                 <option value="women">Women</option>
