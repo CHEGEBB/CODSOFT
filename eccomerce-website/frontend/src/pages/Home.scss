@@ -58,12 +58,24 @@ $darkpink: #FF007F;
   
   .colored-paragraph {
     font-size: 16px;
-    color: #F5F5DC;
+    color:white;
     margin-bottom: 20px;
     width: 500px;
     margin-left: 400px;
     font-family: $jost;
     font-weight: 700;
+    background-color: rgba(1,1,1,0.5);
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 6px solid white;
+    border: 2px solid $darkpink;
+    padding: 10px;
+    background-repeat: no-repeat;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 6s ease-in-out infinite alternate;
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+
   }
   
   button {
