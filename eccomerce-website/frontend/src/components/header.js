@@ -49,7 +49,7 @@ const Header = () => {
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
     setCategory(selectedCategory);
-    navigate(`/shop/${selectedCategory}`);
+    navigate(`/shop/${setSelectedCategory}`);
   };
 
   return (
