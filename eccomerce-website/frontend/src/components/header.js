@@ -14,7 +14,7 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (searchQuery.length > 0) {
@@ -37,7 +37,8 @@ const Header = () => {
   };
 
   const handleSelectSuggestion = (productId) => {
-    history.push(`/product/${productId}`); // Navigate to the product page
+   // Navigate to the product page
+    navigate(`/product/${productId}`);
     setDropdownVisible(false);
     setSearchQuery("");
   };
@@ -107,7 +108,7 @@ const Header = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <span className="filter-icon"></span>
-          <button type="button" onClick={handleSearch}>
+          <button type="submit" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
           {isDropdownVisible && searchResults.length > 0 && (
