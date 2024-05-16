@@ -146,7 +146,7 @@ const Header = () => {
             <ul className="autocomplete-dropdown">
               {searchResults.map((result, index) => (
                 <li key={index} onClick={() => handleSelectSuggestion(result)}>
-                  {result.name} - ${result.price}
+                  {result.name}-
                 </li>
               ))}
             </ul>
