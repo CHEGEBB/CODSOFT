@@ -12,23 +12,22 @@ import './header.scss';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [category, setCategory] = useState("all");
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
-    if (searchQuery.length > 0 || category !== "all") {
+    if (searchQuery.length > 0) {
       handleSearch();
     } else {
       setSearchResults([]);
       setDropdownVisible(false);
     }
-  }, [searchQuery, category]);
+  }, [searchQuery]);
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}&category=${category}`);
+      const response = await fetch(`http://localhost:3000/search?q=${searchQuery}`);
       const data = await response.json();
       setSearchResults(data.results);
       setDropdownVisible(true);
@@ -37,15 +36,10 @@ const Header = () => {
     }
   };
 
-  const handleSelectSuggestion = (product) => {
-    navigate(`/shop/${product.category}`, { state: { productId: product._id } }); // Navigate to the category page
+  const handleSelectSuggestion = (productId) => {
+    navigate("/shop");
     setDropdownVisible(false);
     setSearchQuery("");
-    setCategory("all");
-  };
-
-  const handleCategoryChange = (e) => {
-    setCategory(e.target.value);
   };
 
   return (
@@ -112,23 +106,14 @@ const Header = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <select className="category-filter" value={category} onChange={handleCategoryChange}>
-            <option value="all">All</option>
-            <option value="men">Men</option>
-            <option value="women">Women</option>
-            <option value="kids">Kids</option>
-            <option value="accessories">Accessories</option>
-            <option value="shoes">Shoes</option>
-            <option value="flash">Flash Sales</option>
-          </select>
           <span className="filter-icon"></span>
-          <button type="button" onClick={handleSearch}>
+          <button type="submit" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
           {isDropdownVisible && searchResults.length > 0 && (
             <ul className="autocomplete-dropdown">
               {searchResults.map((result, index) => (
-                <li key={index} onClick={() => handleSelectSuggestion(result)}>
+                <li key={index} onClick={() => handleSelectSuggestion(result._id)}>
                   {result.name} - ${result.price}
                 </li>
               ))}
