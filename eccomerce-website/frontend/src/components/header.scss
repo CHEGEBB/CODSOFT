@@ -40,6 +40,7 @@ $darkpink: #FF007F;
   justify-content: flex-end;
   height: $common-height;
   font-family: $jost;
+  gap: 400px;
 }
 
 .reach {
@@ -409,4 +410,18 @@ $darkpink: #FF007F;
     z-index: 1000;
     font-family: $jost;
   }
+}
+.logo{
+  margin-left: -200px;
+
+  h1{
+    font-size: 40px;
+    font-family: $island;
+  }
+
+}
+.logo img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }

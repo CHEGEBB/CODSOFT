@@ -9,6 +9,7 @@ import PersonIcon from "../images/mdi--person.svg";
 import bg from "../images/webp/kids/bg3.mp4";
 import Navbar from "../components/Navbar";
 import './header.scss';
+import MyLogo from '../images/glamour.png'
 import FilterIcon from "../images/filter-32.svg";
 
 const Header = () => {
@@ -72,6 +73,10 @@ const Header = () => {
   return (
     <div className="header-section">
       <div className="header">
+      <div className="logo">
+        <img src={MyLogo} alt="logo"></img>
+        <h1>GlamourGallerie</h1>
+        </div>
         <div className="reach">
           <div className="phone">
             <div className="call-icon">
