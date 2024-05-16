@@ -315,9 +315,13 @@ $darkpink: #FF007F;
   width:300px; 
   z-index: 1000;
   margin-left: 650px;
-  margin-top: 20px;
+  margin-top: 17px;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: underline;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.9);
 
   li {
     padding: 10px;
