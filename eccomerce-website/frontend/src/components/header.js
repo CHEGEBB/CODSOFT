@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom"; 
 import CartIcon from "../images/ic--round-shopping-cart.svg";
 import Wishlist from "../images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "../images/ant-design--search-outlined.svg";
@@ -14,7 +14,7 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const history = useHistory(); // Initialize useHistory
+  const history = useNavigate();
 
   useEffect(() => {
     if (searchQuery.length > 0) {
