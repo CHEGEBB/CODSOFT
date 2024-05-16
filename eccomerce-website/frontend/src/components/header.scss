@@ -343,18 +343,18 @@ $darkpink: #FF007F;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 20px;
-    margin-top: 20px;
-    background-color: #f9f9f9;
+    margin-top: 10px;
+    background-color: $darkpink;
     outline: none;
     height: 50px;
     font-family: $jost;
+    margin-left:20px;
   }
-  label{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 20px;
-  }
+.category-label{
+  font-family: $jost;
+  font-size: 20px;
+  margin-left: 150px;
+}
   
 }
 
