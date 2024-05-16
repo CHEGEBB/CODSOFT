@@ -46,10 +46,10 @@ const Header = () => {
   };
 
   const handleCategoryChange = (e) => {
-    const selectedCategory = e.target.value; // Get the selected category
-    setCategory(selectedCategory); // Update category state
-    setSelectedCategory(selectedCategory); // Update selectedCategory state
-    navigate(`/shop/${selectedCategory}`); // Navigate to selected category
+    const selectedCategory = e.target.value;
+    setCategory(selectedCategory);
+    setSelectedCategory(selectedCategory); 
+    navigate(`/shop/${selectedCategory}`); 
   };
   
   return (
