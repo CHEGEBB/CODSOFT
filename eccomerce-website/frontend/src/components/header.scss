@@ -304,15 +304,16 @@ $darkpink: #FF007F;
   list-style: none;
   padding: 0;
   margin: 0;
-  background: red;
+  background: white;
   border: 1px solid #ccc;
   max-height: 100px;
   overflow-y: auto;
   position: absolute;
   top: 60px; /* Adjust according to your layout */
   left: 20px; /* Adjust according to your layout */
-  width:60%;
+  width:500px; 
   z-index: 1000;
+  margin-left: 200px;
 
   li {
     padding: 10px;
@@ -323,3 +324,15 @@ $darkpink: #FF007F;
     }
   }
 }
+
+.product-details {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+

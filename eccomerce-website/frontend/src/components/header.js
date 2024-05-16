@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; 
 import CartIcon from "../images/ic--round-shopping-cart.svg";
 import Wishlist from "../images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "../images/ant-design--search-outlined.svg";
@@ -14,7 +13,7 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const navigate = useNavigate();
+  const [selectedProduct, setSelectedProduct] = useState(null); // State to manage the selected product
 
   useEffect(() => {
     if (searchQuery.length > 0) {
@@ -36,9 +35,8 @@ const Header = () => {
     }
   };
 
-  const handleSelectSuggestion = (productId) => {
-   // Navigate to the product page
-    navigate(`/product/${productId}`);
+  const handleSelectSuggestion = (product) => {
+    setSelectedProduct(product);
     setDropdownVisible(false);
     setSearchQuery("");
   };
@@ -114,13 +112,20 @@ const Header = () => {
           {isDropdownVisible && searchResults.length > 0 && (
             <ul className="autocomplete-dropdown">
               {searchResults.map((result, index) => (
-                <li key={index} onClick={() => handleSelectSuggestion(result._id)}>
-                  {result.name}
+                <li key={index} onClick={() => handleSelectSuggestion(result)}>
+                  {result.name} - ${result.price}
                 </li>
               ))}
             </ul>
           )}
         </div>
+        {selectedProduct && (
+          <div className="product-details">
+            <h2>{selectedProduct.name}</h2>
+            <p>Price: ${selectedProduct.price}</p>
+            {/* Add more product details as needed */}
+          </div>
+        )}
         <div className="search-results">
           <ul>
             {searchResults.map((result, index) => (
