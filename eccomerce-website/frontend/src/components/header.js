@@ -43,7 +43,7 @@ const Header = () => {
     setDropdownVisible(false);
     setSearchQuery("");
     setCategory("all");
-    console.log(result.category);
+    console.log(selectedCategory);
   };
 
   const handleCategoryChange = (e) => {
