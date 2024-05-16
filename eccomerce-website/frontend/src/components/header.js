@@ -106,7 +106,6 @@ const Header = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <span className="filter-icon"></span>
           <button type="submit" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
