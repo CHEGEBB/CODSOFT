@@ -328,7 +328,6 @@ $darkpink: #FF007F;
     cursor: pointer;
   }
 }
-
 .product-details {
   margin-top: 20px;
   background: #fff;
@@ -350,12 +349,13 @@ $darkpink: #FF007F;
     border-bottom-left-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background-color: $darkpink;
+    background-color:$darkpink;
     margin-top: 3px;
     outline: none;
     height: 62px;
     font-family: $jost;
     margin-left:50px;
+    color: #fff;
   }
 .category-label{
   font-family: $jost;
