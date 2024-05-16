@@ -81,7 +81,6 @@ const Header = () => {
             <div className="account">
               <p>My Account</p>
             </div>
-            console.log(selectedCategory);
           </div>
         </div>
       </div>
