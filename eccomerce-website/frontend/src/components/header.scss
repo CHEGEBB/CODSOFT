@@ -105,6 +105,8 @@ $darkpink: #FF007F;
     position: relative;
     z-index: 1;
     margin-right: 410px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 
     &::placeholder {
       color: $placeholder-color;
