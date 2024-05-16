@@ -70,12 +70,13 @@ app.post('/save-items', async (req, res) => {
 app.get('/search', async (req, res) => {
     const query = req.query.q;
     try {
-      const results = await Product.find({ name: new RegExp(query, 'i') }, 'name _id'); // Return name and ID only
+      const results = await Product.find({ name: new RegExp(query, 'i') }, 'name price _id'); // Return name, price, and ID
       res.json({ results });
     } catch (error) {
       res.status(500).json({ error: 'Error fetching search results' });
     }
   });
+  
   
 
 // Start server
