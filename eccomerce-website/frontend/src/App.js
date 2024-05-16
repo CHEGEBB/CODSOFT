@@ -12,6 +12,11 @@ import Login from "./auth-pages/Login";
 import SignUp from "./auth-pages/Signup";
 import ProductPage from "./pages/ProductPage";
 import Men from "./pages/categories/men";
+import Women from "./pages/categories/women";
+import Kids from "./pages/categories/kids";
+import Accessories from "./pages/categories/accessories";
+import Shoes from "./pages/categories/shoes";
+import Flash from "./pages/categories/Flash";
 
 
 const App = () => {
@@ -29,6 +34,11 @@ const App = () => {
         <Route path="/user" element={<User />} />
         <Route path="/user" element={<User />} />
         <Route path="/shop/men" element={<Men />} />
+        <Route path="/shop/women" element={<Women />} />
+        <Route path="/shop/kids" element={<Kids />} />
+        <Route path="/shop/accessories" element={<Accessories/>} />
+        <Route path="/shop/shoes" element={<Shoes />} />
+        <Route path="/shop/flash" element={<Flash />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/product/:id" component={ProductPage} />
         
