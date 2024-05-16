@@ -100,7 +100,6 @@ const Header = () => {
           </video>
           <div className="overlay-bg"></div>
           <div className="filter-functionality">
-          <h1>Shop for the best deals</h1>
           <select className="category-filter">
             <option value="all">All</option>
             <option value="men">Men</option>
