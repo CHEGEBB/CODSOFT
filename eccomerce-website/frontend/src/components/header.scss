@@ -306,7 +306,7 @@ $darkpink: #FF007F;
   margin: 0;
   background: $softpink;
   // border: 1px solid #ccc;
-  max-height: 60px;
+  max-height: 50px;
   overflow-y: auto;
   position: absolute;
   font-family: $jost;
@@ -315,7 +315,9 @@ $darkpink: #FF007F;
   width:300px; 
   z-index: 1000;
   margin-left: 650px;
-  margin-top: 12px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
 
   li {
     padding: 10px;
@@ -367,18 +369,5 @@ $darkpink: #FF007F;
 .filter-icon img{
   height: 30px;
   width: 30px;
-}
-select{
-  padding: 10px;
-  border: none;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-color: white;
-  margin-top: 3px;
-  outline: none;
-  height: 62px;
-  font-family: $jost;
 }
 
