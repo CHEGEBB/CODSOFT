@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom"; 
 import CartIcon from "../images/ic--round-shopping-cart.svg";
 import Wishlist from "../images/icon-park-solid--love-and-help.svg";
 import SearchIcon from "../images/ant-design--search-outlined.svg";
@@ -12,18 +13,36 @@ import './header.scss';
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const history = useHistory(); // Initialize useHistory
+
+  useEffect(() => {
+    if (searchQuery.length > 0) {
+      handleSearch();
+    } else {
+      setSearchResults([]);
+      setDropdownVisible(false);
+    }
+  }, [searchQuery]);
 
   const handleSearch = async () => {
     try {
       const response = await fetch(`http://localhost:3000/search?q=${searchQuery}`);
       const data = await response.json();
       setSearchResults(data.results);
+      setDropdownVisible(true);
     } catch (error) {
       console.error("Error fetching search results:", error);
     }
   };
 
-  return ( 
+  const handleSelectSuggestion = (productId) => {
+    history.push(`/product/${productId}`); // Navigate to the product page
+    setDropdownVisible(false);
+    setSearchQuery("");
+  };
+
+  return (
     <div className="header-section">
       <div className="header">
         <div className="reach">
@@ -88,9 +107,18 @@ const Header = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <span className="filter-icon"></span>
-          <button type="submit" onClick={handleSearch}>
+          <button type="button" onClick={handleSearch}>
             <img src={SearchIcon} alt="Search Icon" />
           </button>
+          {isDropdownVisible && searchResults.length > 0 && (
+            <ul className="autocomplete-dropdown">
+              {searchResults.map((result, index) => (
+                <li key={index} onClick={() => handleSelectSuggestion(result._id)}>
+                  {result.name}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className="search-results">
           <ul>
