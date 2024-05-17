@@ -6,7 +6,6 @@ import Cart from "./pages/Cart";
 import Collections from "./pages/Collections";
 import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
-import User from "./pages/User";
 import "./index.scss";
 import Login from "./auth-pages/Login";
 import SignUp from "./auth-pages/Signup";
@@ -31,7 +30,6 @@ const App = () => {
         <Route path="/collections" element={<Collections />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/user" element={<User />} />
         <Route path="/shop/men" element={<Men />} />
         <Route path="/shop/women" element={<Women />} />
         <Route path="/shop/kids" element={<Kids />} />

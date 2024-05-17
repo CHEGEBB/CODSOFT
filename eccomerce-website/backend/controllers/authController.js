@@ -52,7 +52,12 @@ exports.login = async (req, res) => {
 
 exports.me = async (req, res) => {
     try {
-        // Logic to fetch and return user details
+        // Fetch user details based on email
+        const user = await User.findOne({ email: req.user.email });
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        res.json(user);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Server Error' });
