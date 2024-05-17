@@ -14,8 +14,17 @@ $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
 $softpink: #FFC0CB;
 $darkpink: #FF007F;
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    background-color: $special;
+
+}
 .checkout-container {
-    max-width: 50%;
+    max-width: 40%;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -24,6 +33,8 @@ $darkpink: #FF007F;
     display: flex;
     flex-direction: column;
     border: 2px solid $darkpink;
+    color: #fff;
+    font-family: $jost;
 }
 
 .checkout-title {
@@ -55,7 +66,12 @@ $darkpink: #FF007F;
 
 .payment-method {
     margin-top: 20px;
-    background-color: #555555;
+
+    img{
+        height: 40px;
+        width: 50px;
+        filter:invert(1);
+    }
 }
 
 .payment-method-options {
