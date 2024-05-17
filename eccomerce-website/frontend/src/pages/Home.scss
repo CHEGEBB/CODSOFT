@@ -71,10 +71,6 @@ $darkpink: #FF007F;
     border: 2px solid $darkpink;
     padding: 10px;
     background-repeat: no-repeat;
-    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 6s ease-in-out infinite alternate;
-    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
-    filter: contrast(80%);
-    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
 
   }
   
