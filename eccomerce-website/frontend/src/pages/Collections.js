@@ -492,7 +492,7 @@ const Collections = () => {
   return (
     <div className="collections-page">
       <div className="header-container">
-        <Nav />
+      <Nav />
       </div>
       <div className="side-bar">
         <LeftSideBar />
