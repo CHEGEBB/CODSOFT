@@ -47,6 +47,11 @@ const CheckoutPage = () => {
         // You can handle form submission here
     };
 
+    const hide = () => {
+        // hide the form and dispaly the payment method form only
+        setShowCardDetails(false);
+    }
+
     return (
         <div className="container">
         <div className="checkout-container">
@@ -160,6 +165,8 @@ const CheckoutPage = () => {
                                     type="radio"
                                     name="paymentMethod"
                                     value="visa"
+                                    onClick={hide}
+                                    style = {{display: 'none'}}
                                     onChange={handlePaymentMethodChange}
                                     required
                                 />
@@ -180,6 +187,7 @@ const CheckoutPage = () => {
                                     type="radio"
                                     name="paymentMethod"
                                     value="paypal"
+                                    style = {{display: 'none'}}
                                     onChange={handlePaymentMethodChange}
                                     required
                                 />
