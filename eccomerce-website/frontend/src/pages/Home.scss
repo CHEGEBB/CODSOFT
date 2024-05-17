@@ -132,7 +132,9 @@ $darkpink: #FF007F;
     width: 100%;
     animation: zoomIn 5s ease infinite alternate;
   }
-  
+  .navigation{
+    margin-left: -1300px;
+  }
   .home-intro h1 {
     font-size: 2rem;
     margin-bottom: 10px;

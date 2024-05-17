@@ -2,12 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CategoryIcon from "../images/ic--baseline-apps.svg";
 import "./Navbar.scss";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Navbar = () => {
+
+    const navigate =useNavigate();
+
+    const navigateToCollections = () => {
+        navigate("/collections");
+    }
     return (
         <nav className="navbar-main">
             <div className="container">
-                <div className="categories">
+                <div className="categories" onClick={navigateToCollections}>
                     <span className="category-icon">
                         <img src={CategoryIcon} alt="Category Icon" />
                         <h2>Categories</h2>

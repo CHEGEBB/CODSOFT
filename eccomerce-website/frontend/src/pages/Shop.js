@@ -21,7 +21,10 @@ const Shop = () => {
 
     return (
         <div className='shop-page'>
-            <Nav />
+        <div className="navbar">
+        <Nav />
+        </div>
+            
             <div className="overlay">
                 <div className="shop-intro">
                     <h1>Shop</h1>

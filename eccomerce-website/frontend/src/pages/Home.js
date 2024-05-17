@@ -11,6 +11,7 @@ import SupportIcon from "../images/us/mdi--customer-service.svg";
 import DiscountIcon from "../images/us/streamline--discount-percent-badge.svg";
 import SecurePaymentsIcon from "../images/us/ri--secure-payment-fill.svg";
 import Header from '../components/header';
+import Navbar from '../components/Navbar';
 
 const images = [
   {
@@ -121,6 +122,9 @@ const Home = () => {
     <div className="Homepage">
     <div className="header-container">
     <Header />
+    </div>
+    <div className="navigation">
+    <Navbar />
     </div>
       
       <div
