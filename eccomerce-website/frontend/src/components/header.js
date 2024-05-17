@@ -71,7 +71,7 @@ const Header = () => {
   };
 
   const userProfile = () => {
-    navigate("/user");
+    navigate("/");
   }
   
   return (
@@ -105,7 +105,7 @@ const Header = () => {
               <img src={PersonIcon} alt="PersonIcon" />
             </div>
             <div className="account">
-              <p>My Account</p>
+              <p>Login</p>
             </div>
           </div>
         </div>
