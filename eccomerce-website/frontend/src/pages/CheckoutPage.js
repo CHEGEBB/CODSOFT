@@ -48,6 +48,7 @@ const CheckoutPage = () => {
     };
 
     return (
+        <div className="container">
         <div className="checkout-container">
             <h2 className="checkout-title">Checkout</h2>
             <form className="checkout-form" onSubmit={handleSubmit}>
@@ -188,6 +189,7 @@ const CheckoutPage = () => {
                     </div>
                 )}
             </form>
+        </div>
         </div>
     );
 };
