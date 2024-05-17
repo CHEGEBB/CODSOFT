@@ -16,7 +16,12 @@ const CheckoutPage = () => {
         zip: '',
         country: '',
         paymentMethod: '',
+        cardNumber: '',
+        expirationDate: '',
+        cvv: '',
     });
+
+    const [showCardDetails, setShowCardDetails] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -26,26 +31,26 @@ const CheckoutPage = () => {
         }));
     };
 
+    const handlePaymentMethodChange = (e) => {
+        const { value } = e.target;
+        setFormData((prevState) => ({
+            ...prevState,
+            paymentMethod: value,
+        }));
+        // If payment method is selected, show card details form
+        setShowCardDetails(true);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-        setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            address: '',
-            city: '',
-            zip: '',
-            country: '',
-            paymentMethod: '',
-        });
+        // You can handle form submission here
     };
 
     return (
         <div className="checkout-container">
             <h2 className="checkout-title">Checkout</h2>
             <form className="checkout-form" onSubmit={handleSubmit}>
-                {/* Form fields */}
                 <div className="form">
                     <label>First Name:</label>
                     <input
@@ -56,7 +61,6 @@ const CheckoutPage = () => {
                         className="checkout-input"
                         required
                     />
-
                     <label>Last Name:</label>
                     <input
                         type="text"
@@ -66,7 +70,6 @@ const CheckoutPage = () => {
                         className="checkout-input"
                         required
                     />
-
                     <label>Email:</label>
                     <input
                         type="email"
@@ -76,7 +79,6 @@ const CheckoutPage = () => {
                         className="checkout-input"
                         required
                     />
-
                     <label>Address:</label>
                     <input
                         type="text"
@@ -86,7 +88,6 @@ const CheckoutPage = () => {
                         className="checkout-input"
                         required
                     />
-
                     <label>City:</label>
                     <input
                         type="text"
@@ -96,7 +97,6 @@ const CheckoutPage = () => {
                         className="checkout-input"
                         required
                     />
-
                     <label>Zip:</label>
                     <input
                         type="text"
@@ -106,7 +106,6 @@ const CheckoutPage = () => {
                         className="checkout-input"
                         required
                     />
-
                     <label>Country:</label>
                     <input
                         type="text"
@@ -118,43 +117,76 @@ const CheckoutPage = () => {
                     />
                 </div>
 
-                <div className="payment-method">
-                    <label>Payment Method:</label>
-                    <div className="payment-method-options">
-                        {/* Payment method options */}
-                        <div>
-                            <input
-                                type="radio"
-                                name="paymentMethod"
-                                value="visa"
-                                onChange={handleChange}
-                                required
-                            />
-                            <img src={VisaIcon} alt="Visa" />
-
-                            <input
-                                type="radio"
-                                name="paymentMethod"
-                                value="mastercard"
-                                onChange={handleChange}
-                                required
-                            />
-                            <img src={MasterCardIcon} alt="MasterCard" />
-
-                            <input
-                                type="radio"
-                                name="paymentMethod"
-                                value="paypal"
-                                onChange={handleChange}
-                                required
-                            />
-                            <img src={PayPalIcon} alt="PayPal" />
-                            </div>
+                {showCardDetails ? (
+                    <div className="card-details-form">
+                        <label>Card Number:</label>
+                        <input
+                            type="text"
+                            name="cardNumber"
+                            value={formData.cardNumber}
+                            onChange={handleChange}
+                            className="checkout-input"
+                            required
+                        />
+                        <label>Expiration Date:</label>
+                        <input
+                            type="text"
+                            name="expirationDate"
+                            value={formData.expirationDate}
+                            onChange={handleChange}
+                            className="checkout-input"
+                            required
+                        />
+                        <label>CVV:</label>
+                        <input
+                            type="text"
+                            name="cvv"
+                            value={formData.cvv}
+                            onChange={handleChange}
+                            className="checkout-input"
+                            required
+                        />
+                        <button type="submit" className="checkout-button">
+                            Place Order
+                        </button>
                     </div>
-                </div>
-                <button type="submit" className="checkout-button">
-                    Place Order
-                </button>
+                ) : (
+                    <div className="payment-method">
+                        <label>Payment Method:</label>
+                        <div className="payment-method-options">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="visa"
+                                    onChange={handlePaymentMethodChange}
+                                    required
+                                />
+                                <img src={VisaIcon} alt="Visa" />
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="mastercard"
+                                    onChange={handlePaymentMethodChange}
+                                    required
+                                />
+                                <img src={MasterCardIcon} alt="MasterCard" />
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="paypal"
+                                    onChange={handlePaymentMethodChange}
+                                    required
+                                />
+                                <img src={PayPalIcon} alt="PayPal" />
+                            </label>
+                        </div>
+                    </div>
+                )}
             </form>
         </div>
     );
