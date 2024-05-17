@@ -27,6 +27,23 @@ $darkpink: #FF007F;
   border-radius: 5px;
   padding: 5px;
   margin-right: 10px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    color: crimson;
+  }
+  img{
+    height: 20px;
+    width: 20px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
+  }
 }
 
 .call-icon img,
