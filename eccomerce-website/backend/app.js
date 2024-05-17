@@ -30,7 +30,10 @@ app.use('/images/webp/shoes', express.static(path.join(__dirname, 'images/webp/s
 // Routes
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
-const cartRoutes = require('./routes/cartRoutes'); // Add cart routes
+const cartRoutes = require('./routes/cartRoutes');
+
+// User details routes
+
 
 
 app.use('/auth', authRoutes); // Authentication routes
