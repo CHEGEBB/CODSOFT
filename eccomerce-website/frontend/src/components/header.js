@@ -69,6 +69,10 @@ const Header = () => {
   const handleCartClick = () => {
     navigate("/cart");
   };
+
+  const userProfile = () => {
+    navigate("/user");
+  }
   
   return (
     <div className="header-section">
