@@ -98,7 +98,9 @@ const Header = () => {
               <p>info@glamourgallerie.com</p>
             </div>
           </div>
-          <div className="my-account">
+          <div className="my-account" onClick={
+            userProfile
+          }>
             <div className="person-icon">
               <img src={PersonIcon} alt="PersonIcon" />
             </div>
