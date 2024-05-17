@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './User.scss'; // Import the SCSS file
 
 const User = () => {
     const [user, setUser] = useState({});
@@ -49,7 +50,7 @@ const User = () => {
     };
 
     return (
-        <div>
+        <div className="user-container">
             <h1>User Profile</h1>
             <div>
                 <label>Name:</label>

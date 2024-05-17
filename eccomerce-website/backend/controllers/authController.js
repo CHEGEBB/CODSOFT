@@ -49,6 +49,14 @@ exports.login = async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 };
+exports.me = async (req, res) => {
+    try {
+        // Logic to fetch and return user details
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Server Error' });
+    }
+};
 
 //  Configure multer for profile picture uploads
 const storage = multer.diskStorage({
