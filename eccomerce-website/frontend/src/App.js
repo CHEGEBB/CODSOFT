@@ -16,6 +16,7 @@ import Kids from "./pages/categories/kids";
 import Accessories from "./pages/categories/accessories";
 import Shoes from "./pages/categories/shoes";
 import Flash from "./pages/categories/Flash";
+import Checkout from "./pages/CheckoutPage";
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/shop/shoes" element={<Shoes />} />
         <Route path="/shop/flash" element={<Flash />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/product/:id" component={ProductPage} />
         
       </Routes>

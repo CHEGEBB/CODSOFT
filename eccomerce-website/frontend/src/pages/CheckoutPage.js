@@ -1,9 +1,12 @@
+// CheckoutPage.js
 
 import React, { useState } from 'react';
 import './Checkout.scss';
+import VisaIcon from '../images/us/fontisto--visa.svg';
+import MasterCardIcon from '../images/us/fontisto--mastercard.svg';
+import PayPalIcon from '../images/us/fontisto--paypal.svg';
 
 const CheckoutPage = () => {
-    // State for storing form data
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -12,25 +15,20 @@ const CheckoutPage = () => {
         city: '',
         zip: '',
         country: '',
-        paymentMethod: '', // Store the selected payment method
+        paymentMethod: '',
     });
 
-    // Handle form input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prevState => ({
+        setFormData((prevState) => ({
             ...prevState,
             [name]: value,
         }));
     };
 
-    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Submit form data to backend for payment processing and order creation
-        // You'll need to implement this part using Axios or fetch
         console.log(formData);
-        // Reset form after submission
         setFormData({
             firstName: '',
             lastName: '',
@@ -44,47 +42,59 @@ const CheckoutPage = () => {
     };
 
     return (
-        <div>
-            <h2>Checkout</h2>
-            <form onSubmit={handleSubmit}>
+        <div className="checkout-container">
+            <h2 className="checkout-title">Checkout</h2>
+            <form className="checkout-form" onSubmit={handleSubmit}>
+                {/* Form fields */}
                 <div>
                     <label>First Name:</label>
-                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+                    <input
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className="checkout-input"
+                        required
+                    />
                 </div>
-                <div>
-                    <label>Last Name:</label>
-                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-                </div>
-                <div>
-                    <label>Email:</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-                </div>
-                <div>
-                    <label>Address:</label>
-                    <input type="text" name="address" value={formData.address} onChange={handleChange} required />
-                </div>
-                <div>
-                    <label>City:</label>
-                    <input type="text" name="city" value={formData.city} onChange={handleChange} required />
-                </div>
-                <div>
-                    <label>Zip Code:</label>
-                    <input type="text" name="zip" value={formData.zip} onChange={handleChange} required />
-                </div>
-                <div>
-                    <label>Country:</label>
-                    <input type="text" name="country" value={formData.country} onChange={handleChange} required />
-                </div>
-                <div>
+                {/* Other form fields */}
+                <div className="payment-method">
                     <label>Payment Method:</label>
-                    <select name="paymentMethod" value={formData.paymentMethod} onChange={handleChange} required>
-                        <option value="">Select Payment Method</option>
-                        <option value="visa">Visa</option>
-                        <option value="mastercard">MasterCard</option>
-                        <option value="paypal">PayPal</option>
-                    </select>
+                    <div className="payment-method-options">
+                        {/* Payment method options */}
+                        <div>
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="visa"
+                                onChange={handleChange}
+                                required
+                            />
+                            <img src={VisaIcon} alt="Visa" />
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="mastercard"
+                                onChange={handleChange}
+                                required
+                            />
+                            <img src={MasterCardIcon} alt="MasterCard" />
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="paypal"
+                                onChange={handleChange}
+                                required
+                            />
+                            <img src={PayPalIcon} alt="PayPal" />
+                            </div>
+                    </div>
                 </div>
-                <button type="submit">Place Order</button>
+                <button type="submit" className="checkout-button">
+                    Place Order
+                </button>
             </form>
         </div>
     );

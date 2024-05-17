@@ -3,12 +3,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
-  const history = useNavigate();
+  const navigate = useNavigate();
   const location = useLocation();
 
   // Function to handle checkout button click
   const handleCheckout = () => {
-    history.push('/checkout');
+    navigate('/checkout');
   };
 
   // Function to handle delete button click for a specific item

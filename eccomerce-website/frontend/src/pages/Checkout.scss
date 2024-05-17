@@ -1,70 +1,95 @@
-/* styles/checkout.scss */
-
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$silver: #C0C0C0;
 .checkout-container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f9fa;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .checkout-heading {
-    font-size: 24px;
-    font-weight: bold;
+    background-color: $frosted-glass;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+.checkout-title {
+    font-family: $island;
+    font-size: 36px;
+    color: $celestialOrange;
     margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .form-input {
+}
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.checkout-input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ced4da;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .form-input:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  .button {
+    background-color: $white;
+    font-family: $jost;
+    color: $special;
+    transition: box-shadow 0.3s ease;
+}
+
+.checkout-input:focus {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method {
+    margin-top: 20px;
+}
+
+.payment-method-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-method-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method-option img {
+    margin-left: 5px;
+    height: 40px;
+}
+
+.checkout-button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: $celestialOrange;
+    color: $white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: $jost;
     font-size: 16px;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  .payment-methods {
-    margin-top: 20px;
-  }
-  
-  .payment-method {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .payment-method img {
-    width: 50px;
-    height: auto;
-  }
-  
-  /* Example usage */
-  
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: darken($celestialOrange, 10%);
+}
+
+// Animations
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
