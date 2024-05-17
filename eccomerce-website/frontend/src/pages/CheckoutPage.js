@@ -46,7 +46,7 @@ const CheckoutPage = () => {
             <h2 className="checkout-title">Checkout</h2>
             <form className="checkout-form" onSubmit={handleSubmit}>
                 {/* Form fields */}
-                <div>
+                <div className="form">
                     <label>First Name:</label>
                     <input
                         type="text"
@@ -56,8 +56,68 @@ const CheckoutPage = () => {
                         className="checkout-input"
                         required
                     />
+
+                    <label>Last Name:</label>
+                    <input
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className="checkout-input"
+                        required
+                    />
+
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="checkout-input"
+                        required
+                    />
+
+                    <label>Address:</label>
+                    <input
+                        type="text"
+                        name="address"
+                        value={formData.address}
+                        onChange={handleChange}
+                        className="checkout-input"
+                        required
+                    />
+
+                    <label>City:</label>
+                    <input
+                        type="text"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
+                        className="checkout-input"
+                        required
+                    />
+
+                    <label>Zip:</label>
+                    <input
+                        type="text"
+                        name="zip"
+                        value={formData.zip}
+                        onChange={handleChange}
+                        className="checkout-input"
+                        required
+                    />
+
+                    <label>Country:</label>
+                    <input
+                        type="text"
+                        name="country"
+                        value={formData.country}
+                        onChange={handleChange}
+                        className="checkout-input"
+                        required
+                    />
                 </div>
-                {/* Other form fields */}
+
                 <div className="payment-method">
                     <label>Payment Method:</label>
                     <div className="payment-method-options">

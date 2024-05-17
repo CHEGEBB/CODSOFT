@@ -1,7 +1,3 @@
-$jost: 'Jost', sans-serif;
-$rubik: 'Rubik', sans-serif;
-$ropa: 'Ropa Sans', sans-serif;
-$island:'Island Moments', cursive;
 $greyish:#555555;
 $celestialOrange:#FF6F61;
 $common-height:80px;
@@ -10,14 +6,24 @@ $frosted-glass: rgba(255, 255, 255, 0.5);
 $white: #fff;
 $special:#141C27;
 $silver: #C0C0C0;
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$softpink: #FFC0CB;
+$darkpink: #FF007F;
 .checkout-container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 50%;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: $frosted-glass;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $darkpink;
 }
 
 .checkout-title {
@@ -28,15 +34,14 @@ $silver: #C0C0C0;
 }
 
 .checkout-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+   display: flex;
+   flex-direction: column;
 }
 
 .checkout-input {
     width: 100%;
     padding: 10px;
-    border: none;
+    border: 1px solid $darkpink;
     border-radius: 5px;
     background-color: $white;
     font-family: $jost;
@@ -50,6 +55,7 @@ $silver: #C0C0C0;
 
 .payment-method {
     margin-top: 20px;
+    background-color: #555555;
 }
 
 .payment-method-options {
