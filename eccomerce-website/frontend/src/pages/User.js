@@ -12,7 +12,7 @@ const User = () => {
 
     useEffect(() => {
         // Fetch user details
-        axios.get('/api/auth/me', { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+        axios.get('http://localhost:3000/auth/me', { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
             .then(response => {
                 setUser(response.data);
                 setName(response.data.name);
@@ -22,7 +22,7 @@ const User = () => {
 
     const handleUpdate = () => {
         // Update user details
-        axios.put('/api/auth/me', { name, email }, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+        axios.put('http://localhost:3000/auth/me', { name, email }, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
             .then(response => {
                 setUser(response.data);
                 alert('Details updated successfully');
@@ -31,7 +31,7 @@ const User = () => {
 
     const handleChangePassword = () => {
         // Update password
-        axios.put('/api/auth/me/password', { currentPassword, newPassword }, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+        axios.put('http://localhost:3000/auth/me/password', { currentPassword, newPassword }, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
             .then(() => {
                 alert('Password updated successfully');
             });
@@ -42,7 +42,7 @@ const User = () => {
         const formData = new FormData();
         formData.append('profilePicture', profilePicture);
 
-        axios.post('/api/auth/me/profile-picture', formData, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+        axios.post('http://localhost:3000/auth/me/profile-picture', formData, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
             .then(response => {
                 setUser(response.data);
                 alert('Profile picture updated successfully');

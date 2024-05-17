@@ -32,7 +32,6 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/user" element={<User />} />
-        <Route path="/user" element={<User />} />
         <Route path="/shop/men" element={<Men />} />
         <Route path="/shop/women" element={<Women />} />
         <Route path="/shop/kids" element={<Kids />} />
@@ -40,7 +39,6 @@ const App = () => {
         <Route path="/shop/shoes" element={<Shoes />} />
         <Route path="/shop/flash" element={<Flash />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/profile" component={User} />
         <Route path="/product/:id" component={ProductPage} />
         
       </Routes>
