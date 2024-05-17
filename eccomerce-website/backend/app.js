@@ -39,6 +39,8 @@ const cartRoutes = require('./routes/cartRoutes');
 app.use('/auth', authRoutes); // Authentication routes
 app.use('/products', productRoutes); // Product routes
 app.use('/cart', cartRoutes); // Cart routes
+// User details routes
+app.use('/me', require('./routes/authRoutes'));
 
 // MongoDB Atlas connection string
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -80,8 +82,6 @@ app.get('/search', async (req, res) => {
       res.status(500).json({ error: 'Error fetching search results' });
     }
   });
-  
-  
 
 // Start server
 const PORT = process.env.PORT || 3000;
