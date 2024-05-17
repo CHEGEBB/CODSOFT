@@ -3,7 +3,6 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const multer = require('multer');
 
 
 exports.signup = async (req, res) => {
@@ -49,75 +48,3 @@ exports.login = async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 };
-
-exports.me = async (req, res) => {
-    try {
-        // Fetch user details based on email
-        const user = await User.findOne({ email: req.user.email });
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
-        }
-        res.json(user);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Server Error' });
-    }
-};
-
-//  Configure multer for profile picture uploads
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads/');
-    },
-    filename: (req, file, cb) => {
-        cb(null, `${Date.now()}_${file.originalname}`);
-    }
-});
-const upload = multer({ storage });
-
-exports.getUserDetails = async (req, res) => {
-    try {
-        const user = await User.findById(req.user.id);
-        res.json(user);
-    } catch (error) {
-        res.status(500).json({ error: 'Server Error' });
-    }
-};
-
-exports.updateUserDetails = async (req, res) => {
-    const { name, email } = req.body;
-    try {
-        const user = await User.findByIdAndUpdate(req.user.id, { name, email }, { new: true });
-        res.json(user);
-    } catch (error) {
-        res.status(500).json({ error: 'Server Error' });
-    }
-};
-
-exports.updatePassword = async (req, res) => {
-    const { currentPassword, newPassword } = req.body;
-    try {
-        const user = await User.findById(req.user.id);
-        const isMatch = await bcrypt.compare(currentPassword, user.password);
-        if (!isMatch) {
-            return res.status(400).json({ error: 'Invalid current password' });
-        }
-        user.password = await bcrypt.hash(newPassword, 10);
-        await user.save();
-        res.json({ message: 'Password updated successfully' });
-    } catch (error) {
-        res.status(500).json({ error: 'Server Error' });
-    }
-};
-
-exports.uploadProfilePicture = [
-    upload.single('profilePicture'),
-    async (req, res) => {
-        try {
-            const user = await User.findByIdAndUpdate(req.user.id, { profilePicture: req.file.path }, { new: true });
-            res.json(user);
-        } catch (error) {
-            res.status(500).json({ error: 'Server Error' });
-        }
-    }
-];
