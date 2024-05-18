@@ -39,6 +39,32 @@ $silver: #C0C0C0;
     font-size: 18px;
     margin-left: -4px;
 
+    .us-name{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        margin-bottom: 20px;
+
+        h1{
+            color: #fff;
+            font-size: 30px;
+            font-family: $ropa;
+            display: flex;
+            justify-content:start;
+            margin-left: -100px;
+        }
+        p{
+            color: #fff;
+            font-size: 15px;
+            font-family: $jost;
+            display: flex;
+            justify-content:start;
+            margin-top: -10px;
+            margin-left: -60px;
+        }
+    }
+
     ul {
         list-style-type: none;
         padding: 0;

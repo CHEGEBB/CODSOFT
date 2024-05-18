@@ -20,6 +20,14 @@ const SideNav = () => {
 
     return (
         <nav className="side-nav">
+        <div className="us-name">
+        <div className="title">
+        <h1>ProjectProctor</h1>
+        </div>
+        <div className="para">
+        <p>Project Management Tool</p>
+        </div>
+        </div>
         <div className="my-dashboard">
         <div className="dash">
         <img src={DashboardIcon} alt="Dashboard Icon" />
