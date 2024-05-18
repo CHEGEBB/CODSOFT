@@ -12,7 +12,6 @@ const App = () => {
         <Sidenav />
 
             <Routes>
-
                 <Route path="/" element={<HomePage />} />
                 <Route path="/project" element={<ProjectPage />} />
             </Routes>
