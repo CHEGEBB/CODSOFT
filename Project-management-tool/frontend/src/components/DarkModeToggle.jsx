@@ -1,14 +1,16 @@
 import React from 'react';
+import Switch from 'react-switch';
+import LightThemeIcon from '../images/light.svg';
+import DarkThemeIcon from '../images/dark.svg';
 
 const DarkModeToggle = () => {
     const toggleDarkMode = () => {
         const isDarkMode = document.body.style.backgroundColor === 'rgb(51, 51, 51)';
         document.body.style.backgroundColor = isDarkMode ? '#fff' : '#333';
-        document.body.style.color = isDarkMode ? '#333' : '#fff';
+        document.body.style.color = isDarkMode ? '#000' : '#fff';
         localStorage.setItem('darkMode', isDarkMode ? 'false' : 'true');
     };
-
-    // Check local storage for dark mode preference
+    
     React.useEffect(() => {
         const isDarkMode = localStorage.getItem('darkMode') === 'true';
         if (isDarkMode) {
@@ -19,13 +21,16 @@ const DarkModeToggle = () => {
 
     return (
         <div className="dark-mode-toggle">
-            <input
-                type="checkbox"
-                id="darkModeToggle"
+            <img src={LightThemeIcon} alt="Light Theme" /> {/* Use the light theme icon image */}
+            <Switch
                 onChange={toggleDarkMode}
                 checked={document.body.style.backgroundColor === 'rgb(51, 51, 51)'}
+                onColor="#333"
+                offColor="#fff"
+                checkedIcon={false}
+                uncheckedIcon={false}
             />
-            <label htmlFor="darkModeToggle">Dark Mode</label>
+            <img src={DarkThemeIcon} alt="Dark Theme" /> {/* Use the dark theme icon image */}
         </div>
     );
 }
