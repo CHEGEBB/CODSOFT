@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidenav.scss';
-
+import Home from '../images/home.svg';
 import dropdownIcon from '../images/drop2.svg';
 import DashboardIcon from '../images/ic--sharp-dashboard.svg';
 import ProjectIcon from '../images/project.svg';
@@ -20,24 +20,24 @@ const SideNav = () => {
 
     return (
         <nav className="side-nav">
-            <div className="my-dashboard">
-                <div className="dash">
-                    <img src={DashboardIcon} alt="Dashboard Icon" />
-                </div>
-                <div className="board">
-                    <h1>My Dashboard</h1>
-                </div>
-            </div>
+        <div className="my-dashboard">
+        <div className="dash">
+        <img src={DashboardIcon} alt="Dashboard Icon" />
+        </div>
+        <div className="board">
+        <h1>My Dashboard</h1>
+        </div>
+        </div>
             <ul>
                 <li>
                     <Link to="/">
-                        <img src={Home} alt="Home Icon" className="nav-icon" />
+                        <img src={Home} alt="Home Icon" />
                         Dashboard
                     </Link>
                 </li>
                 <li>
                     <div onClick={() => handleDropdownClick('project')} className="dropdown-toggle">
-                        <img src={ProjectIcon} alt="Project Icon" className="nav-icon" />
+                        <img src={ProjectIcon} alt="Project Icon" />
                         Project
                         <img src={dropdownIcon} alt="Dropdown Icon" className="dropdown-icon" />
                     </div>
@@ -50,7 +50,7 @@ const SideNav = () => {
                 </li>
                 <li>
                     <div onClick={() => handleDropdownClick('tasks')} className="dropdown-toggle">
-                        <img src={TaskIcon} alt="Task Icon" className="nav-icon" />
+                       <img src={TaskIcon} alt="Task Icon" /> 
                         Tasks
                         <img src={dropdownIcon} alt="Dropdown Icon" className="dropdown-icon" />
                     </div>
@@ -64,7 +64,7 @@ const SideNav = () => {
                 </li>
                 <li>
                     <div onClick={() => handleDropdownClick('progress')} className="dropdown-toggle">
-                        <img src={ProgressIcon} alt="Progress Icon" className="nav-icon" />
+                       <img src={ProgressIcon} alt="Progress Icon" />
                         Progress
                         <img src={dropdownIcon} alt="Dropdown Icon" className="dropdown-icon" />
                     </div>
@@ -77,7 +77,7 @@ const SideNav = () => {
                 </li>
                 <li>
                     <div onClick={() => handleDropdownClick('timeline')} className="dropdown-toggle">
-                        <img src={TimelineIcon} alt="Timeline Icon" className="nav-icon" />
+                       <img src={TimelineIcon} alt="Timeline Icon" />
                         Timeline
                         <img src={dropdownIcon} alt="Dropdown Icon" className="dropdown-icon" />
                     </div>
@@ -90,7 +90,7 @@ const SideNav = () => {
                 </li>
                 <li>
                     <Link to="/teams">
-                        <img src={TeamIcon} alt="Team Icon" className="nav-icon" />
+                        <img src={TeamIcon} alt="Team Icon" />
                         Teams
                     </Link>
                 </li>

@@ -6,6 +6,7 @@ import Tasks from './pages/Tasks'
 import Progress from './pages/Progress';
 import Timeline from './pages/Timeline';
 import Sidenav from './components/Sidenav'
+import Team from './pages/Teams';
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path="/tasks" element={<Tasks />} />
                 <Route path="/progress" element={<Progress />} />
                 <Route path="/timeline" element={<Timeline />} />
+                <Route path="/team" element={<Team />} />
             </Routes>
             </div>
             </div>
