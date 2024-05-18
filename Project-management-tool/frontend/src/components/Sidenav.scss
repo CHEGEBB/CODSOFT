@@ -1,0 +1,22 @@
+// src/components/SideNav.scss
+.side-nav {
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}
