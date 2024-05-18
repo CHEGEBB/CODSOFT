@@ -8,103 +8,95 @@ import CalendarIcon from '../images/ion--calendar-sharp.svg';
 import Chart from 'chart.js/auto';
 
 const Home = () => {
-    const chartRef = useRef(null); 
+    const lineChartRef = useRef(null);
 
     useEffect(() => {
-        return () => {
-            if (chartRef.current) {
-                chartRef.current.destroy();
-            }
-        };
-    }, []);
-
-    useEffect(() => {
-        if (chartRef.current) {
-            chartRef.current.destroy();
+        if (lineChartRef.current) {
+            lineChartRef.current.destroy();
         }
 
-        const ctx = document.getElementById('myChart');
-        if (ctx) {
-            const newChart = new Chart(ctx, {
-                type: 'bar',
+        const lineCtx = document.getElementById('lineChart');
+        if (lineCtx) {
+            const newLineChart = new Chart(lineCtx, {
+                type: 'line',
                 data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                     datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
+                        label: 'Contribution to Projects',
+                        data: [65, 59, 80, 81, 56, 55, 40, 70, 60, 65, 55, 50],
+                        fill: false,
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        tension: 0.1
                     }]
                 },
                 options: {
+                    animation: {
+                        duration: 2000, // Animation duration in milliseconds
+                        easing: 'easeInOutQuart' // Easing function for animation
+                    },
                     scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide X-axis grid lines
+                            }
+                        },
                         y: {
-                            beginAtZero: true
+                            beginAtZero: true // Start Y-axis from 0
                         }
                     }
                 }
             });
 
-            chartRef.current = newChart; 
+            lineChartRef.current = newLineChart;
         }
     }, []);
 
-    return ( 
+    return (
         <div className="home">
-         <canvas id="myChart"></canvas>
-        <div className="header">
-        <div className="intro">
-        <h1>Dashboard</h1>
-        </div>
-        <div className="search">
-        <img src={SearchIcon} alt="Search" />
-        <input type="text" placeholder="Search here..." />
-        </div>
-        <div className="reach">
-        <div className="emails">
-        <img src={EmailIcon} alt="Email" />
-        <p>My Emails</p>
-        </div>
-        <div className="notifications">
-        <img src={NotificationIcon} alt="Notification" />
-        <p>Notifications</p>
-        </div>
-        <div className="calendar">
-        <img src={CalendarIcon} alt="Calendar" />
-        <p>Schedule</p>
-        </div>
-        </div>
+            <div className="header">
+                <div className="intro">
+                    <h1>Dashboard</h1>
+                </div>
+                <div className="search">
+                    <img src={SearchIcon} alt="Search" />
+                    <input type="text" placeholder="Search here..." />
+                </div>
+                <div className="reach">
+                    <div className="emails">
+                        <img src={EmailIcon} alt="Email" />
+                        <p>My Emails</p>
+                    </div>
+                    <div className="notifications">
+                        <img src={NotificationIcon} alt="Notification" />
+                        <p>Notifications</p>
+                    </div>
+                    <div className="calendar">
+                        <img src={CalendarIcon} alt="Calendar" />
+                        <p>Schedule</p>
+                    </div>
+                </div>
 
-        <div className="user-logged-in">
-        <div className="profile-picture">
-        <img src={user} alt="User" />
-        </div>
-        <div className="user-info">
-        <div className="name">
-        <p>John Doe</p>
-        </div>
-        <div className="email">
-        <p>Johndoe@gmail.com</p>
-        </div>
-        </div>
-        </div>
-            
-        </div>
+                <div className="user-logged-in">
+                    <div className="profile-picture">
+                        <img src={user} alt="User" />
+                    </div>
+                    <div className="user-info">
+                        <div className="name">
+                            <p>John Doe</p>
+                        </div>
+                        <div className="email">
+                            <p>Johndoe@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div className="my-project-statistics">
+                <h2>My Project Statistics</h2>
+                <canvas id="lineChart"></canvas>
+                <p>Manage your project in one touch</p>
+                <p>At ProjectProctor we manage your project automatically with our best AI systems</p>
+            </div>
             <div className="financial-stats">
                 <h2>$ 24,567.33</h2>
                 <p>+2.7% than last week</p>
@@ -132,19 +124,16 @@ const Home = () => {
                         <p>+0.5%</p>
                         <p>71%</p>
                     </div>
-                    {/* Add more project statistics here */}
                 </div>
             </div>
             <div className="project-categories">
                 <h2>Project Categories</h2>
-                {/* Add project categories here */}
             </div>
             <div className="messages">
                 <h2>Messages</h2>
-                {/* Add messages and conversations here */}
             </div>
         </div>
     );
 }
- 
+
 export default Home;
