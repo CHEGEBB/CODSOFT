@@ -10,8 +10,9 @@ import TaskIcon from '../images/task.svg';
 import ProgressIcon from '../images/progress.svg';
 import TimelineIcon from '../images/timeline.svg';
 import TeamIcon from '../images/team.svg';
+import DarkModeToggle from '../components/DarkModeToggle';
 
-const SideNav = () => {
+const SideNav = ({ isDarkMode, toggleDarkMode }) => {
     const [openDropdown, setOpenDropdown] = useState(null);
 
     const handleDropdownClick = (dropdown) => {
@@ -102,6 +103,7 @@ const SideNav = () => {
                         Teams
                     </Link>
                 </li>
+                <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
             </ul>
         </nav>
     );
