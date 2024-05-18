@@ -14,8 +14,8 @@ const Home = () => {
         <h1>Dashboard</h1>
         </div>
         <div className="search">
-        <img src={SearchIcon} alt="Search here..." />
-        <input type="text" placeholder="Search" />
+        <img src={SearchIcon} alt="Search" />
+        <input type="text" placeholder="Search here..." />
         </div>
         <div className="emails">
         <img src={EmailIcon} alt="Email" />
