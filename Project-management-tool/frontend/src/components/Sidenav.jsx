@@ -1,8 +1,16 @@
+// src/components/SideNav.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Sidenav= () => {
+const SideNav = () => {
     return (
-        <h1>Sidebar</h1>
-      );
-}
- 
-export default Sidenav;
+        <nav className="side-nav">
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                {/* Add other navigation links here */}
+            </ul>
+        </nav>
+    );
+};
+
+export default SideNav;
