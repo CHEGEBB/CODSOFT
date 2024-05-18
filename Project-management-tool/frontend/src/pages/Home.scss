@@ -31,7 +31,28 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 50px;
-    background-color: red;
+
+    .reach{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+
+        .emails, .notifications{
+            margin-top: 10px;
+        }
+
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        p{
+            font-size: 12px;
+            color: $greyish;
+            width: 100px;
+            margin-top: -13px;
+        }
+    }
 
     .search{
         display: flex;
@@ -42,7 +63,9 @@ body{
             padding: 10px;
             border-radius: 5px;
             border: none;
+            width: 160px;
             outline: none;
+            font-family: $jost;
         }
         img{
             width: 20px;
@@ -63,7 +86,7 @@ body{
         flex-direction: row;
         align-items: center;
         gap: 10px;
-        margin-left: 40px;
+        margin-left: -30px;
         color: $greyish;
         font-size: 16px;
         .user-info{

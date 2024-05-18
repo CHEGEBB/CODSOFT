@@ -17,12 +17,15 @@ const Home = () => {
         <img src={SearchIcon} alt="Search" />
         <input type="text" placeholder="Search here..." />
         </div>
+        <div className="reach">
         <div className="emails">
         <img src={EmailIcon} alt="Email" />
+        <p>My Emails</p>
         </div>
         <div className="notifications">
         <img src={NotificationIcon} alt="Notification" />
-
+        <p>Notifications</p>
+        </div>
         </div>
 
         <div className="user-logged-in">
