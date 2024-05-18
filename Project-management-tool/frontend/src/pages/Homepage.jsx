@@ -6,6 +6,7 @@ import NotificationIcon from '../images/mingcute--notification-fill.svg';
 import SearchIcon from '../images/fluent--search-32-filled.svg';
 import user from '../images/john.jpg';
 import CalendarIcon from '../images/ion--calendar-sharp.svg';
+import Chart from 'chart.js/auto';
 
 const Home = () => {
     return ( 
