@@ -9,7 +9,8 @@ const SideNav = () => {
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to ="/project">Project</Link></li>
-                
+                <li><Link to ="/tasks">Tasks</Link></li>
+
             </ul>
         </nav>
     );
