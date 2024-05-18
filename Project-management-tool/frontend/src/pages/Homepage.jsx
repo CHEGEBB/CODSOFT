@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Home.scss';
-import EmailIcon from '../images/dashicons--email-alt.svg';
-import NotificationIcon from '../images/mingcute--notification-fill.svg';
+import EmailIcon from '../images/em.svg';
+import NotificationIcon from '../images/bell.svg';
 import SearchIcon from '../images/fluent--search-32-filled.svg';
 import user from '../images/john.jpg';
-import CalendarIcon from '../images/ion--calendar-sharp.svg';
+import CalendarIcon from '../images/calendar.svg';
 import Chart from 'chart.js/auto';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
