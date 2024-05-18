@@ -1,11 +1,68 @@
+$greyish:#555555;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$silver: #C0C0C0;
+
 .home{
-    background-color: #8B008B;
     height:100vh;
     display: flex;
     width: 80%;
     margin-left: 270px;
-
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: $jost;
+    font-size: 18px;
+    margin-top: 10px;
 }
 body{
     overflow-x: hidden;
-  }
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    background-color: red;
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    .user-logged-in{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-left: 40px;
+        color: $greyish;
+        font-size: 16px;
+        .user-info{
+            display: flex;
+            flex-direction: column;
+            .name{
+                font-weight: bold;
+                margin-top: 20px;
+            }
+            .email{
+                color: $placeholder-color;
+                margin-top: -20px;
+            }
+        }
+    }
+    .profile-picture img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid $greyish;
+
+    }
+}
