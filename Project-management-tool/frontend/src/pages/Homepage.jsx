@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Home.scss';
 import EmailIcon from '../images/dashicons--email-alt.svg';
 import NotificationIcon from '../images/mingcute--notification-fill.svg';
@@ -6,11 +6,23 @@ import SearchIcon from '../images/fluent--search-32-filled.svg';
 import user from '../images/john.jpg';
 import CalendarIcon from '../images/ion--calendar-sharp.svg';
 import Chart from 'chart.js/auto';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
-const Home = () => {
+const Home = ({ darkMode }) => {
     const lineChartRef = useRef(null);
+    const [percentageCompleted, setPercentageCompleted] = useState(0);
+    const [percentageInProgress, setPercentageInProgress] = useState(0);
+    const [percentageDelayed, setPercentageDelayed] = useState(0);
 
     useEffect(() => {
+        // Simulate an API call to get project status
+        setTimeout(() => {
+            setPercentageCompleted(75);
+            setPercentageInProgress(50);
+            setPercentageDelayed(20);
+        }, 500);
+
         if (lineChartRef.current) {
             lineChartRef.current.destroy();
         }
@@ -25,23 +37,23 @@ const Home = () => {
                         label: 'Contribution to Projects',
                         data: [65, 59, 80, 81, 56, 55, 40, 70, 60, 65, 55, 50],
                         fill: false,
-                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderColor: darkMode ? 'rgba(72, 61, 139, 1)' : 'rgba(255, 99, 132, 1)',
                         tension: 0.1
                     }]
                 },
                 options: {
                     animation: {
-                        duration: 2000, // Animation duration in milliseconds
-                        easing: 'easeInOutQuart' // Easing function for animation
+                        duration: 2000,
+                        easing: 'easeInOutQuart'
                     },
                     scales: {
                         x: {
                             grid: {
-                                display: false // Hide X-axis grid lines
+                                display: false
                             }
                         },
                         y: {
-                            beginAtZero: true // Start Y-axis from 0
+                            beginAtZero: true
                         }
                     }
                 }
@@ -49,33 +61,48 @@ const Home = () => {
 
             lineChartRef.current = newLineChart;
         }
-    }, []);
+    }, [darkMode]);
+
+    const iconStyle = {
+        filter: darkMode
+            ? 'invert(35%) sepia(64%) saturate(5000%) hue-rotate(320deg) brightness(100%) contrast(100%)'
+            : 'invert(15%) sepia(100%) saturate(5000%) hue-rotate(330deg) brightness(90%) contrast(85%)'
+    };
+
+    const headerTextStyle = {
+        color: darkMode ? '#fff' : '#333'
+    };
+
+    const circularProgressStyle = (percentage) => buildStyles({
+        pathColor: darkMode ? '#48c774' : '#ff3860',
+        trailColor: darkMode ? '#aaa' : '#ddd',
+        textColor: darkMode ? '#fff' : '#333'
+    });
 
     return (
-        <div className="home">
-            <div className="header">
+        <div className={`home ${darkMode ? 'dark-mode' : ''}`}>
+            <div className="header" style={headerTextStyle}>
                 <div className="intro">
                     <h1>Dashboard</h1>
                 </div>
                 <div className="search">
-                    <img src={SearchIcon} alt="Search" />
+                    <img src={SearchIcon} alt="Search" style={iconStyle} />
                     <input type="text" placeholder="Search here..." />
                 </div>
                 <div className="reach">
                     <div className="emails">
-                        <img src={EmailIcon} alt="Email" />
+                        <img src={EmailIcon} alt="Email" style={iconStyle} />
                         <p>My Emails</p>
                     </div>
                     <div className="notifications">
-                        <img src={NotificationIcon} alt="Notification" />
+                        <img src={NotificationIcon} alt="Notification" style={iconStyle} />
                         <p>Notifications</p>
                     </div>
                     <div className="calendar">
-                        <img src={CalendarIcon} alt="Calendar" />
+                        <img src={CalendarIcon} alt="Calendar" style={iconStyle} />
                         <p>Schedule</p>
                     </div>
                 </div>
-
                 <div className="user-logged-in">
                     <div className="profile-picture">
                         <img src={user} alt="User" />
@@ -89,13 +116,47 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div className="manage">
+                <div className="project-management">
+                    <h2>Manage Your Project</h2>
+                    <p>At ProjectProctor we manage your project automatically with our best AI systems</p>
+                </div>
+                <div className="project-status">
+                <div className="proj-status">
+                <h2>Project Status</h2>
+                </div>
+                    <div className="status">
+                        <div className="stat">
+                            <h3>Completed</h3>
+                            <CircularProgressbar
+                                value={percentageCompleted}
+                                text={`${percentageCompleted}%`}
+                                styles={circularProgressStyle(percentageCompleted)}
+                            />
+                        </div>
+                        <div className="stat">
+                            <h3>On Progress</h3>
+                            <CircularProgressbar
+                                value={percentageInProgress}
+                                text={`${percentageInProgress}%`}
+                                styles={circularProgressStyle(percentageInProgress)}
+                            />
+                        </div>
+                        <div className="stat">
+                            <h3>Delayed</h3>
+                            <CircularProgressbar
+                                value={percentageDelayed}
+                                text={`${percentageDelayed}%`}
+                                styles={circularProgressStyle(percentageDelayed)}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="my-project-statistics">
                 <h2>My Project Statistics</h2>
                 <canvas id="lineChart"></canvas>
-                <p>Manage your project in one touch</p>
-                <p>At ProjectProctor we manage your project automatically with our best AI systems</p>
             </div>
             <div className="financial-stats">
                 <h2>$ 24,567.33</h2>
@@ -116,7 +177,7 @@ const Home = () => {
             <div className="project-statistics">
                 <h2>Project Statistics</h2>
                 <p>Manage your project in one touch</p>
-                <p>Let Wokrload manage your project automatically with our best AI systems</p>
+                <p>Let Workload manage your project automatically with our best AI systems</p>
                 <div className="stats">
                     <div className="stat">
                         <h3>Total Clients</h3>
