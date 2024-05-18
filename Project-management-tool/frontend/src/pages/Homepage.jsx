@@ -133,6 +133,7 @@ const Home = ({ darkMode }) => {
                                 value={percentageCompleted}
                                 text={`${percentageCompleted}%`}
                                 styles={circularProgressStyle(percentageCompleted)}
+                                className="percentage-text"
                             />
                         </div>
                         <div className="stat">
@@ -141,6 +142,7 @@ const Home = ({ darkMode }) => {
                                 value={percentageInProgress}
                                 text={`${percentageInProgress}%`}
                                 styles={circularProgressStyle(percentageInProgress)}
+                                className="percentage-text"
                             />
                         </div>
                         <div className="stat">
@@ -149,6 +151,7 @@ const Home = ({ darkMode }) => {
                                 value={percentageDelayed}
                                 text={`${percentageDelayed}%`}
                                 styles={circularProgressStyle(percentageDelayed)}
+                                className="percentage-text"
                             />
                         </div>
                     </div>
