@@ -4,6 +4,7 @@ const DarkModeToggle = () => {
     const toggleDarkMode = () => {
         const isDarkMode = document.body.style.backgroundColor === 'rgb(51, 51, 51)';
         document.body.style.backgroundColor = isDarkMode ? '#fff' : '#333';
+        document.body.style.color = isDarkMode ? '#333' : '#fff';
         localStorage.setItem('darkMode', isDarkMode ? 'false' : 'true');
     };
 
@@ -12,6 +13,7 @@ const DarkModeToggle = () => {
         const isDarkMode = localStorage.getItem('darkMode') === 'true';
         if (isDarkMode) {
             document.body.style.backgroundColor = '#333';
+            document.body.style.color = '#fff'; // Change text color
         }
     }, []);
 
