@@ -187,23 +187,61 @@ body{
     align-items: center;
     gap: 10px;
 
-        .project-management{
-            background-color: #FF1493;
-            padding: 10px;
-            border-radius: 5px;
-            color: #fff;
-            width: 500px;
-            height: 200px;
-            margin-left: 50px;
+    .project-management {
+        background: linear-gradient(to bottom, #FF1493, #8B008B); 
+        padding: 10px;
+        border-radius: 5px;
+        color: #fff;
+        width: 500px;
+        height: 200px;
+        margin-left: 50px;
 
+        &:hover{
+            color: #fff;
+            cursor: pointer;
+            transition: 0.5s;
+            transform : scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.8);
         }
+    }
+    
         .project-creation{
-            background-color:#008080;
+            background: linear-gradient(to top, #008080, #094740); 
             padding: 10px;
             border-radius: 5px;
             color: #fff;
             width: 400px;
             height: 200px;
             margin-left: 20px;
+
+            button{
+                background-color:$darkpink ;
+                color: #fff;
+                padding: 5px;
+                border-radius: 12px;
+                border: none;
+                height: 40px;
+                margin-top: -10px;
+                align-items: center;
+                font-family: $jost;
+                font-size: 18px;
+                justify-content: center;
+                margin-left: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                &:hover{
+                    cursor: pointer;
+                    background-color: $special;
+                    color: #fff;
+                    transition: 0.5s;
+                }
+            }
+            &:hover{
+               
+                color: #fff;
+                cursor: pointer;
+                transition: 0.5s;
+                transform : scale(1.1);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+            }
         }
   }
