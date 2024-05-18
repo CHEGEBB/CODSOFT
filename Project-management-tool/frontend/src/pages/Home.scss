@@ -126,11 +126,11 @@ body{
     width: 90%; 
     height: 300px; 
     margin: 0 auto; 
-    border: 1px solid $darkpink ; 
+    // border: 1px solid $darkpink ; 
     border-radius: 8px; 
     overflow: hidden; 
     position: relative;
-    background-color: $silver;
+    background-color: #f0f0f0;
 }
 
 #lineChart::before {
@@ -145,14 +145,20 @@ body{
 }
 
 #lineChart canvas {
-    position: relative; /* Set position relative for canvas to appear above overlay */
-    z-index: 2; /* Set z-index higher than the overlay */
+    position: relative; 
+    z-index: 2; 
 }
 .project-status {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
     flex-direction: column;
+
+    h2{
+        font-family: $ropa;
+        font-size: 26px;
+        margin-left: 20px;
+    }
 
     .status {
         display: flex;

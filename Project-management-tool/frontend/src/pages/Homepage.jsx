@@ -22,11 +22,11 @@ const Home = ({ darkMode }) => {
             setPercentageInProgress(50);
             setPercentageDelayed(20);
         }, 500);
-
+    
         if (lineChartRef.current) {
             lineChartRef.current.destroy();
         }
-
+    
         const lineCtx = document.getElementById('lineChart');
         if (lineCtx) {
             const newLineChart = new Chart(lineCtx, {
@@ -35,11 +35,29 @@ const Home = ({ darkMode }) => {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                     datasets: [{
                         label: 'Contribution to Projects',
-                        data: [65, 59, 80, 81, 56, 55, 40, 70, 60, 65, 55, 50],
+                        data: [65, 59, 80, 51, 56, 45, 40, 55, 60, 75, 45, 50],
                         fill: false,
                         borderColor: darkMode ? 'rgba(72, 61, 139, 1)' : 'rgba(255, 99, 132, 1)',
-                        tension: 0.1
-                    }]
+                        tension: 0.1,
+                        borderWidth: 5, 
+                    },
+                    {
+                        label: 'Contribution to Team-Projects',
+                        data: [35, 45, 85, 70, 45, 40, 30, 50, 45, 40, 60, 35], 
+                        fill: false,
+                        borderColor: darkMode ? '#C71585' : '#00CED1',
+                        tension: 0.1,
+                        borderWidth: 5,
+                    },
+                    {
+                        label: 'Task Completion Rate',
+                        data: [25, 65, 35, 65, 85, 55, 45, 55, 75, 75, 95, 55], // Sample data
+                        fill: false,
+                        borderColor: darkMode ? 'rgba(0, 0, 139, 1)' : '#23CE6B',
+                        tension: 0.1,
+                        borderWidth: 5,
+                    }
+                ]
                 },
                 options: {
                     animation: {
@@ -53,12 +71,15 @@ const Home = ({ darkMode }) => {
                             }
                         },
                         y: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            grid: {
+                                display: false 
+                            }
                         }
                     }
                 }
             });
-
+    
             lineChartRef.current = newLineChart;
         }
     }, [darkMode]);
@@ -78,6 +99,8 @@ const Home = ({ darkMode }) => {
         trailColor: darkMode ? '#aaa' : '#ddd',
         textColor: darkMode ? '#fff' : '#333'
     });
+
+    
 
     return (
         <div className={`home ${darkMode ? 'dark-mode' : ''}`}>
