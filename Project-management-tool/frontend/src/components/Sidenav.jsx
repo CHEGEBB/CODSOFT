@@ -22,6 +22,7 @@ const SideNav = ({ isDarkMode, toggleDarkMode }) => {
     return (
         <nav className="side-nav">
         <div className="us-name">
+        <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <div className="title">
         <h1>ProjectProctor</h1>
         </div>
@@ -103,7 +104,6 @@ const SideNav = ({ isDarkMode, toggleDarkMode }) => {
                         Teams
                     </Link>
                 </li>
-                <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
             </ul>
         </nav>
     );
