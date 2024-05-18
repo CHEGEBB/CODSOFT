@@ -33,6 +33,27 @@ body{
     gap: 50px;
     background-color: red;
 
+    .search{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        input{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 2px;
+            left: 180px;
+
+        }
+    }
+
     img{
         width: 30px;
         height: 30px;
