@@ -117,11 +117,19 @@ const Home = ({ darkMode }) => {
                     </div>
                 </div>
             </div>
-            <div className="manage">
-                <div className="project-management">
+            <div className="us">
+            <div className="project-management">
                     <h2>Manage Your Project</h2>
                     <p>At ProjectProctor we manage your project automatically with our best AI systems</p>
                 </div>
+                <div className="project-creation">
+                    <h2>Create a Project</h2>
+                    <p>Start creating your project by clicking the button below</p>
+                    <button>Create Project</button>
+                    </div>
+            </div>
+            <div className="manage">
+                
                 <div className="project-status">
                 <div className="proj-status">
                 <h2>Project Status</h2>

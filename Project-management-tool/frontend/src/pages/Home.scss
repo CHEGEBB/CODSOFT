@@ -181,4 +181,29 @@ body{
     font-weight: bold; // Make it bold
     fill: $silver;
   }
-  
+  .us{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+        .project-management{
+            background-color: #FF1493;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            width: 500px;
+            height: 200px;
+            margin-left: 50px;
+
+        }
+        .project-creation{
+            background-color:#008080;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            width: 400px;
+            height: 200px;
+            margin-left: 20px;
+        }
+  }
