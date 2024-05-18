@@ -5,6 +5,7 @@ import EmailIcon from '../images/dashicons--email-alt.svg';
 import NotificationIcon from '../images/mingcute--notification-fill.svg';
 import SearchIcon from '../images/fluent--search-32-filled.svg';
 import user from '../images/john.jpg';
+import CalendarIcon from '../images/ion--calendar-sharp.svg';
 
 const Home = () => {
     return ( 
@@ -25,6 +26,10 @@ const Home = () => {
         <div className="notifications">
         <img src={NotificationIcon} alt="Notification" />
         <p>Notifications</p>
+        </div>
+        <div className="calendar">
+        <img src={CalendarIcon} alt="Calendar" />
+        <p>Schedule</p>
         </div>
         </div>
 
