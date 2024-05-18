@@ -1,10 +1,11 @@
 .app {
   display: flex;
+  flex-direction: row;
 }
-
-.content {
-  margin-left: 220px; 
-  padding: 20px;
-  width: 100%;
+.sidebar{
+  width:30%;
+}
+.main-app{
+  width:70%;
 }
 

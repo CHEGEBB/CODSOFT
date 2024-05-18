@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidenav.scss';
 
-import dropdownIcon from '../images/gridicons--dropdown.svg';
+import dropdownIcon from '../images/drop2.svg';
+import DashboardIcon from '../images/ic--sharp-dashboard.svg';
 
 const SideNav = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -14,6 +15,14 @@ const SideNav = () => {
 
     return (
         <nav className="side-nav">
+        <div className="my-dashboard">
+        <div className="dash">
+        <img src={DashboardIcon} alt="Dashboard Icon" />
+        </div>
+        <div className="board">
+        <h1>My Dashboard</h1>
+        </div>
+        </div>
             <ul>
                 <li>
                     <Link to="/">

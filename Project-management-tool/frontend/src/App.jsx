@@ -13,7 +13,10 @@ const App = () => {
     return (
         <Router>
         <div className="app">
+        <div className="sidebar">
         <Sidenav />
+        </div>
+        <div className="main-app">
 
             <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -22,6 +25,7 @@ const App = () => {
                 <Route path="/progress" element={<Progress />} />
                 <Route path="/timeline" element={<Timeline />} />
             </Routes>
+            </div>
             </div>
         </Router>
     );
