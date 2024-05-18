@@ -1,20 +1,18 @@
 .dark-mode-toggle {
-    switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-        background-color: red;
-    }
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
+    display: flex;
+    align-items: center;
+  }
+  
+  .circular-slider {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #333;
+  }
+.dark-mode-toggle img{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
 }
+  

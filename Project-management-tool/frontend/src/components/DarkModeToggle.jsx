@@ -15,13 +15,13 @@ const DarkModeToggle = () => {
         const isDarkMode = localStorage.getItem('darkMode') === 'true';
         if (isDarkMode) {
             document.body.style.backgroundColor = '#333';
-            document.body.style.color = '#fff'; // Change text color
+            document.body.style.color = '#fff'; 
         }
     }, []);
 
     return (
         <div className="dark-mode-toggle">
-            <img src={LightThemeIcon} alt="Light Theme" /> {/* Use the light theme icon image */}
+            <img src={LightThemeIcon} alt="Light Theme" style={{width:30}} /> 
             <Switch
                 onChange={toggleDarkMode}
                 checked={document.body.style.backgroundColor === 'rgb(51, 51, 51)'}
@@ -30,7 +30,8 @@ const DarkModeToggle = () => {
                 checkedIcon={false}
                 uncheckedIcon={false}
             />
-            <img src={DarkThemeIcon} alt="Dark Theme" /> {/* Use the dark theme icon image */}
+            <img src={DarkThemeIcon} alt="Dark Theme" style={{width:30}}
+             /> 
         </div>
     );
 }
