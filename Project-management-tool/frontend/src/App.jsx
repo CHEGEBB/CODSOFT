@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import './App.scss'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ProjectPage from './pages/ProjectPage';
 
-function App() {
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/project/:id" element={<ProjectPage />} />
+            </Routes>
+        </Router>
+    );
+};
 
-  return (
-    <>
-    <h1>Hello</h1>
-       
-    </>
-  )
-}
-
-export default App
+export default App;
