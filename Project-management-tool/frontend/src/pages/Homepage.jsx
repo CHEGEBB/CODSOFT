@@ -173,7 +173,7 @@ const Home = ({ darkMode }) => {
                 borderColor: darkMode ? '#48c774' : '#8B008B',
                 backgroundColor: darkMode ? 'rgba(72, 199, 116, 0.2)' : 'rgba(139, 0, 139, 0.2)',
                 fill: true,
-                tension: 0.4, // Smooth curve
+                tension: 0.4,
             },
         ],
     };
@@ -190,7 +190,7 @@ const Home = ({ darkMode }) => {
             y: {
                 beginAtZero: true,
                 grid: {
-                    display: true,
+                    display: false,
                 },
             },
         },
