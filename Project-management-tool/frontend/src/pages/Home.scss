@@ -353,6 +353,18 @@ body{
         flex-direction: row;
         gap: 20px;
         margin-top: 20px;
+        h3{
+            font-family: $ropa;
+            font-size: 20px;
+            color: #fff;
+        }
+        p{
+            font-family: $jost;
+            font-size: 16px;
+            color: #666666;
+            margin-top: -10px;
+            font-weight: 500;
+        }
         .project1{
             @include project-cards;
             background-color: #23CE6B;
@@ -380,7 +392,7 @@ body{
             margin-top: 20px;
             width: 50px;
             height: 50px;
-            filter: invert(100%);
+            filter: invert(1);
         }
     }
     .competence{

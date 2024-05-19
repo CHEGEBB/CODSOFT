@@ -9,6 +9,9 @@ import Chart from 'chart.js/auto';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Project1Icon from '../images/game-icons--coffee-cup.svg';
+import Project2Icon from '../images/zondicons--shopping-cart.svg';
+import Project3Icon from '../images/fluent-mdl2--task-manager-mirrored.svg';
+import Project4Icon from '../images/streamline--computer-logo-twitter-media-twitter-social.svg';
 
 const Home = ({ darkMode }) => {
     const lineBarChartRef = useRef(null);
@@ -26,9 +29,9 @@ const Home = ({ darkMode }) => {
     ]);
     const [projectProgress, setProjectProgress] = useState([
         { name: 'DeluxJavaHouse', description: 'Responsive website', progress: 70 ,Icon: Project1Icon},
-        { name: 'E-Commerce', description: 'Online store', progress: 50 ,Icon: Project1Icon},
-        { name: 'Task Manager', description: 'Organize your tasks', progress: 75 ,Icon: Project1Icon},
-        { name: 'Social Media App', description: 'Connect with friends', progress: 60 ,Icon: Project1Icon},
+        { name: 'E-Commerce', description: 'Online store', progress: 50 ,Icon: Project2Icon},
+        { name: 'Task Manager', description: 'Organize your tasks', progress: 75 ,Icon: Project3Icon},
+        { name: 'Social Media App', description: 'Connect with friends', progress: 60 ,Icon: Project4Icon},
     ]);
 
     const toggleTodo = (index) => {
