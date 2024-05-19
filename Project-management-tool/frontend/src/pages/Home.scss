@@ -231,13 +231,11 @@ body{
         }
     }
 }
-// In Home.scss or any other SCSS file
-.percentage-text text {
-    font-size: 20px; // Adjust font size
-    font-weight: bold; // Make it bold
-    fill: $silver;
-  }
-  .us{
+.p-stats{
+    display: flex;
+    flex-direction: column;
+}
+ .us{
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -266,6 +266,7 @@ const Home = ({ darkMode }) => {
                         <h2>Project Status</h2>
                     </div>
                     <div className="facts">
+                    <div className="p-stats">
                         <div className="status">
                             <div className="stat">
                                 <h3>Completed</h3>
@@ -295,6 +296,10 @@ const Home = ({ darkMode }) => {
                                 />
                             </div>
                         </div>
+                        <div className="wave-chart">
+                    <Line data={waveChartData} options={waveChartOptions} />
+                </div>
+                </div>
                         <div className="to-do-list">
                             <h2>To-Do List</h2>
                             <ul>
