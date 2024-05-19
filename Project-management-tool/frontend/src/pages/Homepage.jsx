@@ -18,7 +18,10 @@ const Home = ({ darkMode }) => {
     const [todos, setTodos] = useState([
         { text: 'Complete project report', completed: false },
         { text: 'Attend team meeting', completed: false },
-        { text: 'Review code submissions', completed: false }
+        { text: 'Review code submissions', completed: false },
+        { text: 'Create a project', completed: false},
+        {text: 'Work on client project', completed: false},
+        {text:'Consult the ui/ux team', completed: false},
     ]);
 
     const toggleTodo = (index) => {
