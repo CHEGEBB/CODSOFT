@@ -8,6 +8,7 @@ import CalendarIcon from '../images/calendar.svg';
 import Chart from 'chart.js/auto';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import Project1Icon from '../images/game-icons--coffee-cup.svg';
 
 const Home = ({ darkMode }) => {
     const lineBarChartRef = useRef(null);
@@ -24,12 +25,12 @@ const Home = ({ darkMode }) => {
         { text: 'Consult the UI/UX team', completed: false },
     ]);
     const [projectProgress, setProjectProgress] = useState([
-        { name: 'DeluxJavaHouse', description: 'Responsive website', progress: 70 },
-        { name: 'E-Commerce', description: 'Online store', progress: 50 },
-        { name: 'Task Manager', description: 'Organize your tasks', progress: 75 },
-        { name: 'Social Media App', description: 'Connect with friends', progress: 60 },
+        { name: 'DeluxJavaHouse', description: 'Responsive website', progress: 70 ,Icon: Project1Icon},
+        { name: 'E-Commerce', description: 'Online store', progress: 50 ,Icon: Project1Icon},
+        { name: 'Task Manager', description: 'Organize your tasks', progress: 75 ,Icon: Project1Icon},
+        { name: 'Social Media App', description: 'Connect with friends', progress: 60 ,Icon: Project1Icon},
     ]);
-    
+
     const toggleTodo = (index) => {
         const newTodos = [...todos];
         newTodos[index].completed = !newTodos[index].completed;
@@ -275,7 +276,10 @@ const Home = ({ darkMode }) => {
     <div className="projects">
         {projectProgress.map((project, index) => (
             <div key={index} className={`project${index + 1}`}>
-                <img src={`path/to/project${index + 1}Icon`} alt={`${project.name} Icon`} /> {/* Placeholder for icons */}
+
+                <div className="project-icon">
+                    <img src={project.Icon} alt="Project Icon" />
+                </div>
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
                 <div className="progress-bar">
