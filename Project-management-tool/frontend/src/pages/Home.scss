@@ -122,8 +122,8 @@ body{
     margin-top: 20px;
 
 }
-#lineChart {
-    width: 90%; 
+#lineBarChart {
+    width: 50%; 
     height: 300px; 
     margin: 0 auto; 
     // border: 1px solid $darkpink ; 
@@ -133,7 +133,7 @@ body{
     background-color: #f0f0f0;
 }
 
-#lineChart::before {
+#lineBarChart::before {
     content: '';
     position: absolute;
     top: 0;
@@ -144,9 +144,17 @@ body{
     z-index: 1;
 }
 
-#lineChart canvas {
+#lineBarChart canvas {
     position: relative; 
     z-index: 2; 
+}
+.doughnut-chart-container {
+    margin-top: 20px;
+    canvas {
+        max-width: 400px;
+        margin: 0 auto;
+        max-height: 400px;
+    }
 }
 .project-status {
     display: flex;

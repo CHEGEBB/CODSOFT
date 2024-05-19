@@ -10,7 +10,8 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const Home = ({ darkMode }) => {
-    const lineChartRef = useRef(null);
+    const lineBarChartRef = useRef(null);
+    const doughnutChartRef = useRef(null);
     const [percentageCompleted, setPercentageCompleted] = useState(0);
     const [percentageInProgress, setPercentageInProgress] = useState(0);
     const [percentageDelayed, setPercentageDelayed] = useState(0);
@@ -22,42 +23,43 @@ const Home = ({ darkMode }) => {
             setPercentageInProgress(50);
             setPercentageDelayed(20);
         }, 500);
-    
-        if (lineChartRef.current) {
-            lineChartRef.current.destroy();
+
+        if (lineBarChartRef.current) {
+            lineBarChartRef.current.destroy();
         }
-    
-        const lineCtx = document.getElementById('lineChart');
-        if (lineCtx) {
-            const newLineChart = new Chart(lineCtx, {
-                type: 'line',
+        if (doughnutChartRef.current) {
+            doughnutChartRef.current.destroy();
+        }
+
+        const lineBarCtx = document.getElementById('lineBarChart');
+        if (lineBarCtx) {
+            const newLineBarChart = new Chart(lineBarCtx, {
+                type: 'bar',
                 data: {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                     datasets: [{
-                        label: 'Contribution to Projects',
-                        data: [65, 59, 80, 51, 56, 45, 40, 55, 60, 75, 45, 50],
-                        fill: false,
-                        borderColor: darkMode ? 'rgba(72, 61, 139, 1)' : 'rgba(255, 99, 132, 1)',
-                        tension: 0.1,
-                        borderWidth: 5, 
-                    },
-                    {
-                        label: 'Contribution to Team-Projects',
-                        data: [35, 45, 85, 70, 45, 40, 30, 50, 45, 40, 60, 35], 
-                        fill: false,
-                        borderColor: darkMode ? '#C71585' : '#00CED1',
-                        tension: 0.1,
-                        borderWidth: 5,
-                    },
-                    {
+                        type: 'line',
                         label: 'Task Completion Rate',
                         data: [25, 65, 35, 65, 85, 55, 45, 55, 75, 75, 95, 55], // Sample data
-                        fill: false,
                         borderColor: darkMode ? 'rgba(0, 0, 139, 1)' : '#23CE6B',
                         tension: 0.1,
                         borderWidth: 5,
-                    }
-                ]
+                        fill: false,
+                    },
+                    {
+                        label: 'Contribution to Projects',
+                        data: [65, 59, 80, 51, 56, 45, 40, 55, 60, 75, 45, 50],
+                        backgroundColor: darkMode ? 'rgba(72, 61, 139, 0.5)' : 'rgba(255, 99, 132, 0.5)',
+                        borderColor: darkMode ? 'rgba(72, 61, 139, 1)' : 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
+                    },
+                    {
+                        label: 'Contribution to Team-Projects',
+                        data: [35, 45, 85, 70, 45, 40, 30, 50, 45, 40, 60, 35],
+                        backgroundColor: darkMode ? '#C71585' : '#00CED1',
+                        borderColor: darkMode ? '#C71585' : '#00CED1',
+                        borderWidth: 1,
+                    }]
                 },
                 options: {
                     animation: {
@@ -73,16 +75,45 @@ const Home = ({ darkMode }) => {
                         y: {
                             beginAtZero: true,
                             grid: {
-                                display: false 
+                                display: false
                             }
                         }
                     }
                 }
             });
-    
-            lineChartRef.current = newLineChart;
+
+            lineBarChartRef.current = newLineBarChart;
         }
-    }, [darkMode]);
+
+        const doughnutCtx = document.getElementById('doughnutChart');
+        if (doughnutCtx) {
+            const newDoughnutChart = new Chart(doughnutCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Contribution to Projects', 'Contribution to Team-Projects', 'Task Completion Rate'],
+                    datasets: [{
+                        data: [65, 59, 80], // Change this to reflect actual data
+                        backgroundColor: [
+                            darkMode ? 'rgba(72, 61, 139, 0.5)' : 'rgba(255, 99, 132, 0.5)',
+                            darkMode ? '#C71585' : '#00CED1',
+                            darkMode ? 'rgba(0, 0, 139, 1)' : '#23CE6B'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
+
+            doughnutChartRef.current = newDoughnutChart;
+        }
+    }, [darkMode, percentageCompleted, percentageInProgress, percentageDelayed]);
 
     const iconStyle = {
         filter: darkMode
@@ -99,7 +130,6 @@ const Home = ({ darkMode }) => {
         trailColor: darkMode ? '#aaa' : '#ddd',
         textColor: darkMode ? '#fff' : '#333'
     });
-
     
 
     return (
@@ -188,9 +218,15 @@ const Home = ({ darkMode }) => {
                     </div>
                 </div>
             </div>
+            <div className="charts">
             <div className="my-project-statistics">
                 <h2>My Project Statistics</h2>
-                <canvas id="lineChart"></canvas>
+                <canvas id="lineBarChart"></canvas>
+            </div>
+            <div className="doughnut-chart-container">
+                <h2>Project Contribution Breakdown</h2>
+                <canvas id="doughnutChart"></canvas>
+            </div>
             </div>
             <div className="financial-stats">
                 <h2>$ 24,567.33</h2>
