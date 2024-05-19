@@ -284,12 +284,13 @@ const Home = ({ darkMode }) => {
             <div className="total-income">
                 <h2>Total Income</h2>
                 <p>Amount</p>
-                <p>$7k</p>
+                <p className='para'>$7k</p>
+                <h4>This Month: 22% increase</h4>
                 </div>
                 <div className="total-expense">
                 <h2>Total Expense</h2>
                 <p>Amount</p>
-                <p>$3k</p>
+                <p className='para'>$3k</p>
                 </div>
                 <div className="total-meetings">
                 <h2>Total Meetings Attended</h2>
@@ -299,12 +300,12 @@ const Home = ({ darkMode }) => {
                 <div className="total-projects">
                 <h2>Total Projects</h2>
                 <p>Number</p>
-                <p>40</p>
+                <p className='para'>40</p>
                 </div>
                 <div className="total-clients">
                 <h2>Total Clients</h2>
                 <p>Number</p>
-                <p>15</p>
+                <p className='para'>15</p>
                 </div>
                 </div>
         </div>
