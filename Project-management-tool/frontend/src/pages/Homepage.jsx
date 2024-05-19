@@ -259,40 +259,26 @@ const Home = ({ darkMode }) => {
             </div>
                 </div>
             </div>
-            <div className="financial-stats">
-                <h2>$ 24,567.33</h2>
-                <p>+2.7% than last week</p>
-                <div className="time-intervals">
-                    <button>Daily</button>
-                    <button>Weekly</button>
-                    <button>Monthly</button>
-                </div>
-                <div className="progress-bar">
-                    <div className="progress" style={{ width: '70%' }}>On Progress 70%</div>
-                </div>
-            </div>
-            <div className="workload-dashboard">
-                <h2>Workload Dashboard For CMS Websites</h2>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            </div>
-            <div className="project-statistics">
-                <h2>Project Statistics</h2>
-                <p>Manage your project in one touch</p>
-                <p>Let Workload manage your project automatically with our best AI systems</p>
-                <div className="stats">
-                    <div className="stat">
-                        <h3>Total Clients</h3>
-                        <p>68</p>
-                        <p>+0.5%</p>
-                        <p>71%</p>
+            <div className="important-projects">
+                <h2>Important Projects</h2>
+                <div className="projects">
+                    <div className="project1">
+                        <h3>Project 1</h3>
+                        <p>Project Description</p>
+                    </div>
+                    <div className="project2">
+                        <h3>Project 2</h3>
+                        <p>Project Description</p>
+                    </div>
+                    <div className="project3">
+                        <h3>Project 3</h3>
+                        <p>Project Description</p>
+                    </div>
+                    <div className="project4">
+                        <h3>Project 4</h3>
+                        <p>Project Description</p>
                     </div>
                 </div>
-            </div>
-            <div className="project-categories">
-                <h2>Project Categories</h2>
-            </div>
-            <div className="messages">
-                <h2>Messages</h2>
             </div>
         </div>
     );
