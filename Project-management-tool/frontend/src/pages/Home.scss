@@ -180,6 +180,11 @@ body{
         max-height: 300px;
     }
 }
+.facts{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 .project-status {
     display: flex;
     justify-content: space-around;
@@ -190,6 +195,8 @@ body{
         font-family: $ropa;
         font-size: 26px;
         margin-left: 20px;
+        color: $darkpink;
+        margin-top: 70px;
     }
 
     .status {
@@ -197,7 +204,6 @@ body{
         gap: 10px;
         width: 100%;
         flex-direction: row;
-
         .stat {
             display: flex;
             flex-direction: column;
@@ -285,7 +291,10 @@ body{
         }
   }
   .to-do-list {
-    margin-top: 20px;
+    margin-top: -50px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 
     h2 {
         color: $darkpink;

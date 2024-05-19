@@ -208,6 +208,7 @@ const Home = ({ darkMode }) => {
                 <div className="proj-status">
                 <h2>Project Status</h2>
                 </div>
+                <div className="facts">
                     <div className="status">
                         <div className="stat">
                             <h3>Completed</h3>
@@ -251,6 +252,7 @@ const Home = ({ darkMode }) => {
                         </li>
                     ))}
                 </ul>
+            </div>
             </div>
                 </div>
             </div>
