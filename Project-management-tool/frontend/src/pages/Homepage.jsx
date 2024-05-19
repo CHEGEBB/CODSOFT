@@ -15,6 +15,17 @@ const Home = ({ darkMode }) => {
     const [percentageCompleted, setPercentageCompleted] = useState(0);
     const [percentageInProgress, setPercentageInProgress] = useState(0);
     const [percentageDelayed, setPercentageDelayed] = useState(0);
+    const [todos, setTodos] = useState([
+        { text: 'Complete project report', completed: false },
+        { text: 'Attend team meeting', completed: false },
+        { text: 'Review code submissions', completed: false }
+    ]);
+
+    const toggleTodo = (index) => {
+        const newTodos = [...todos];
+        newTodos[index].completed = !newTodos[index].completed;
+        setTodos(newTodos);
+    };
 
     useEffect(() => {
         // Simulate an API call to get project status
@@ -126,9 +137,9 @@ const Home = ({ darkMode }) => {
     };
 
     const circularProgressStyle = (percentage) => buildStyles({
-        pathColor: darkMode ? '#48c774' : '#ff3860',
-        trailColor: darkMode ? '#aaa' : '#ddd',
-        textColor: darkMode ? '#fff' : '#333'
+        pathColor: darkMode ? '#48c774' : '#8B008B',
+        trailColor: darkMode ? '#aaa' : '#c0c0c0',
+        textColor: darkMode ? '#fff' : '#c0c0c0'
     });
     
 
@@ -226,6 +237,21 @@ const Home = ({ darkMode }) => {
                             />
                         </div>
                     </div>
+                    <div className="to-do-list">
+                <h2>To-Do List</h2>
+                <ul>
+                    {todos.map((todo, index) => (
+                        <li key={index} className={todo.completed ? 'completed' : ''}>
+                            <input
+                                type="checkbox"
+                                checked={todo.completed}
+                                onChange={() => toggleTodo(index)}
+                            />
+                            <span>{todo.text}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
                 </div>
             </div>
             <div className="financial-stats">

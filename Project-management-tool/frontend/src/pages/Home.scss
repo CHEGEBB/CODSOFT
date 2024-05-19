@@ -196,6 +196,7 @@ body{
         display: flex;
         gap: 10px;
         width: 100%;
+        flex-direction: row;
 
         .stat {
             display: flex;
@@ -283,3 +284,40 @@ body{
             }
         }
   }
+  .to-do-list {
+    margin-top: 20px;
+
+    h2 {
+        color: $darkpink;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #f9f9f9;
+            }
+
+            &.completed span {
+                text-decoration: line-through;
+                color: #aaa;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+
+            span {
+                flex: 1;
+            }
+        }
+    }
+}
