@@ -19,11 +19,17 @@ const Home = ({ darkMode }) => {
         { text: 'Complete project report', completed: false },
         { text: 'Attend team meeting', completed: false },
         { text: 'Review code submissions', completed: false },
-        { text: 'Create a project', completed: false},
-        {text: 'Work on client project', completed: false},
-        {text:'Consult the ui/ux team', completed: false},
+        { text: 'Create a project', completed: false },
+        { text: 'Work on client project', completed: false },
+        { text: 'Consult the UI/UX team', completed: false },
     ]);
-
+    const [projectProgress, setProjectProgress] = useState([
+        { name: 'DeluxJavaHouse', description: 'Responsive website', progress: 70 },
+        { name: 'E-Commerce', description: 'Online store', progress: 50 },
+        { name: 'Task Manager', description: 'Organize your tasks', progress: 75 },
+        { name: 'Social Media App', description: 'Connect with friends', progress: 60 },
+    ]);
+    
     const toggleTodo = (index) => {
         const newTodos = [...todos];
         newTodos[index].completed = !newTodos[index].completed;
@@ -144,7 +150,12 @@ const Home = ({ darkMode }) => {
         trailColor: darkMode ? '#aaa' : '#c0c0c0',
         textColor: darkMode ? '#fff' : '#c0c0c0'
     });
-    
+
+    const projectProgressStyle = (percentage) => ({
+        width: `${percentage}%`,
+        backgroundColor: darkMode ? '#48c774' : '#8B008B',
+        transition: 'width 1s ease-in-out'
+    });
 
     return (
         <div className={`home ${darkMode ? 'dark-mode' : ''}`}>
@@ -185,7 +196,7 @@ const Home = ({ darkMode }) => {
                 </div>
             </div>
             <div className="us">
-            <div className="project-management">
+                <div className="project-management">
                     <h2>Manage Your Project</h2>
                     <p>At ProjectProctor we manage your project automatically with our best AI systems</p>
                 </div>
@@ -193,127 +204,122 @@ const Home = ({ darkMode }) => {
                     <h2>Create a Project</h2>
                     <p>Start creating your project by clicking the button below</p>
                     <button>Create Project</button>
-                    </div>
+                </div>
             </div>
             <div className="manage">
-            <div className="charts">
-            <div className="my-project-statistics">
-                <h2>My Project Statistics</h2>
-                <canvas id="lineBarChart"></canvas>
-            </div>
-            <div className="doughnut-chart-container">
-                <h2>Project Contribution Breakdown</h2>
-                <canvas id="doughnutChart"></canvas>
-            </div>
-            </div>
-                
-                <div className="project-status">
-                <div className="proj-status">
-                <h2>Project Status</h2>
+                <div className="charts">
+                    <div className="my-project-statistics">
+                        <h2>My Project Statistics</h2>
+                        <canvas id="lineBarChart"></canvas>
+                    </div>
+                    <div className="doughnut-chart-container">
+                        <h2>Project Contribution Breakdown</h2>
+                        <canvas id="doughnutChart"></canvas>
+                    </div>
                 </div>
-                <div className="facts">
-                    <div className="status">
-                        <div className="stat">
-                            <h3>Completed</h3>
-                            <CircularProgressbar
-                                value={percentageCompleted}
-                                text={`${percentageCompleted}%`}
-                                styles={circularProgressStyle(percentageCompleted)}
-                                className="percentage-text"
-                            />
+                <div className="project-status">
+                    <div className="proj-status">
+                        <h2>Project Status</h2>
+                    </div>
+                    <div className="facts">
+                        <div className="status">
+                            <div className="stat">
+                                <h3>Completed</h3>
+                                <CircularProgressbar
+                                    value={percentageCompleted}
+                                    text={`${percentageCompleted}%`}
+                                    styles={circularProgressStyle(percentageCompleted)}
+                                    className="percentage-text"
+                                />
+                            </div>
+                            <div className="stat">
+                                <h3>On Progress</h3>
+                                <CircularProgressbar
+                                    value={percentageInProgress}
+                                    text={`${percentageInProgress}%`}
+                                    styles={circularProgressStyle(percentageInProgress)}
+                                    className="percentage-text"
+                                />
+                            </div>
+                            <div className="stat">
+                                <h3>Delayed</h3>
+                                <CircularProgressbar
+                                    value={percentageDelayed}
+                                    text={`${percentageDelayed}%`}
+                                    styles={circularProgressStyle(percentageDelayed)}
+                                    className="percentage-text"
+                                />
+                            </div>
                         </div>
-                        <div className="stat">
-                            <h3>On Progress</h3>
-                            <CircularProgressbar
-                                value={percentageInProgress}
-                                text={`${percentageInProgress}%`}
-                                styles={circularProgressStyle(percentageInProgress)}
-                                className="percentage-text"
-                            />
-                        </div>
-                        <div className="stat">
-                            <h3>Delayed</h3>
-                            <CircularProgressbar
-                                value={percentageDelayed}
-                                text={`${percentageDelayed}%`}
-                                styles={circularProgressStyle(percentageDelayed)}
-                                className="percentage-text"
-                            />
+                        <div className="to-do-list">
+                            <h2>To-Do List</h2>
+                            <ul>
+                                {todos.map((todo, index) => (
+                                    <li key={index} className={todo.completed ? 'completed' : ''}>
+                                        <input
+                                            type="checkbox"
+                                            checked={todo.completed}
+                                            onChange={() => toggleTodo(index)}
+                                        />
+                                        <span>{todo.text}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
-                    <div className="to-do-list">
-                <h2>To-Do List</h2>
-                <ul>
-                    {todos.map((todo, index) => (
-                        <li key={index} className={todo.completed ? 'completed' : ''}>
-                            <input
-                                type="checkbox"
-                                checked={todo.completed}
-                                onChange={() => toggleTodo(index)}
-                            />
-                            <span>{todo.text}</span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            </div>
                 </div>
             </div>
             <div className="important-projects">
-                <h2>Important Projects</h2>
-                <div className="projects">
-                    <div className="project1">
-                        <h3>Project 1</h3>
-                        <p>Project Description</p>
-                    </div>
-                    <div className="project2">
-                        <h3>Project 2</h3>
-                        <p>Project Description</p>
-                    </div>
-                    <div className="project3">
-                        <h3>Project 3</h3>
-                        <p>Project Description</p>
-                    </div>
-                    <div className="project4">
-                        <h3>Project 4</h3>
-                        <p>Project Description</p>
-                    </div>
+            <div className="important-projects">
+    <h2>Important Projects</h2>
+    <div className="projects">
+        {projectProgress.map((project, index) => (
+            <div key={index} className={`project${index + 1}`}>
+                <img src={`path/to/project${index + 1}Icon`} alt={`${project.name} Icon`} /> {/* Placeholder for icons */}
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <div className="progress-bar">
+                    <div className="progress" style={{ width: `${project.progress}%` }}></div>
                 </div>
             </div>
+        ))}
+    </div>
+</div>
+
             <div className="competence">
-            <div className="total-income">
-                <h2>Total Income</h2>
-                <p>Amount</p>
-                <p className='para'>$7k</p>
-                <h4>This Month: 22% increase</h4>
+                <div className="total-income">
+                    <h2>Total Income</h2>
+                    <p>Amount</p>
+                    <p className='para'>$7k</p>
+                    <h4>This Month: 22% increase</h4>
                 </div>
                 <div className="total-expense">
-                <h2>Total Expense</h2>
-                <p>Amount</p>
-                <p className='para'>$3k</p>
-                <h4>This Month: 10% increase</h4>
+                    <h2>Total Expense</h2>
+                    <p>Amount</p>
+                    <p className='para'>$3k</p>
+                    <h4>This Month: 10% increase</h4>
                 </div>
                 <div className="total-meetings">
-                <h2>Total Meetings Attended</h2>
-                <p>Number</p>
-                <p className='para'>25</p>
-                <h4>This Month: 5% decrease</h4>
+                    <h2>Total Meetings Attended</h2>
+                    <p>Number</p>
+                    <p className='para'>25</p>
+                    <h4>This Month: 5% decrease</h4>
                 </div>
                 <div className="total-projects">
-                <h2>Total Projects</h2>
-                <p>Number</p>
-                <p className='para'>40</p>
-                <h4>This Month: 15% increase</h4>
+                    <h2>Total Projects</h2>
+                    <p>Number</p>
+                    <p className='para'>40</p>
+                    <h4>This Month: 15% increase</h4>
                 </div>
                 <div className="total-clients">
-                <h2>Total Clients</h2>
-                <p>Number</p>
-                <p className='para'>15</p>
-                <h4>This Month: 10% decrease</h4>
+                    <h2>Total Clients</h2>
+                    <p>Number</p>
+                    <p className='para'>15</p>
+                    <h4>This Month: 10% decrease</h4>
                 </div>
-                </div>
+            </div>
         </div>
+    </div>
     );
 }
-
 export default Home;
