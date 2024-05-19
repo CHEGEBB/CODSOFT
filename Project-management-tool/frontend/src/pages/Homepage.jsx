@@ -12,6 +12,8 @@ import Project1Icon from '../images/game-icons--coffee-cup.svg';
 import Project2Icon from '../images/zondicons--shopping-cart.svg';
 import Project3Icon from '../images/fluent-mdl2--task-manager-mirrored.svg';
 import Project4Icon from '../images/streamline--computer-logo-twitter-media-twitter-social.svg';
+import { Line } from 'react-chartjs-2';
+
 
 const Home = ({ darkMode }) => {
     const lineBarChartRef = useRef(null);
@@ -160,6 +162,44 @@ const Home = ({ darkMode }) => {
         backgroundColor: darkMode ? '#48c774' : '#8B008B',
         transition: 'width 1s ease-in-out'
     });
+
+    
+    const waveChartData = {
+        labels: ['Completed', 'In Progress', 'Delayed'],
+        datasets: [
+            {
+                label: 'Project Status',
+                data: [percentageCompleted, percentageInProgress, percentageDelayed],
+                borderColor: darkMode ? '#48c774' : '#8B008B',
+                backgroundColor: darkMode ? 'rgba(72, 199, 116, 0.2)' : 'rgba(139, 0, 139, 0.2)',
+                fill: true,
+                tension: 0.4, // Smooth curve
+            },
+        ],
+    };
+
+    const waveChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                beginAtZero: true,
+                grid: {
+                    display: true,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: false,
+            },
+        },
+    };
 
     return (
         <div className={`home ${darkMode ? 'dark-mode' : ''}`}>
@@ -323,6 +363,73 @@ const Home = ({ darkMode }) => {
                     <p>Number</p>
                     <p className='para'>15</p>
                     <h4>This Month: 10% decrease</h4>
+                </div>
+            </div>
+            <div className="testimonials">
+                <h2>My Testimonials</h2>
+                <div className="test">
+                <div className="testimonial">
+                    <div className="testimonial-text">
+                        <p>"ProjectProctor has been a great help in managing my projects. I can now focus on other things while my projects are being managed automatically."</p>
+                    </div>
+                    <div className="testimonial-user">
+                        <div className="user-picture">
+                            <img src={user} alt="User" />
+                        </div>
+                        <div className="user-info">
+                            <p>John Doe</p>
+                            <p>CEO, Company</p>
+                            <div className="rating">
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="testimonial">
+                    <div className="testimonial-text">
+                        <p>"I have been using ProjectProctor for a while now and I must say that it has been a great experience. It has helped me manage my projects efficiently."</p>
+                    </div>
+                    <div className="testimonial-user">
+                        <div className="user-picture">
+                            <img src={user} alt="User" />
+                        </div>
+                        <div className="user-info">
+                            <p>Jane Doe</p>
+                            <p>CTO, Company</p>
+                            <div className="rating">
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="testimonial">
+                    <div className="testimonial-text">
+                        <p>"ProjectProctor is the best project management tool I have ever used. It has helped me manage my projects efficiently and has saved me a lot of time."</p>
+                    </div>
+                    <div className="testimonial-user">
+                        <div className="user-picture">
+                            <img src={user} alt="User" />
+                        </div>
+                        <div className="user-info">
+                            <p>John Doe</p>
+                            <p>CEO, Company</p>
+                            <div className="rating">
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
