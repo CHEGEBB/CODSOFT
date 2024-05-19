@@ -291,21 +291,25 @@ const Home = ({ darkMode }) => {
                 <h2>Total Expense</h2>
                 <p>Amount</p>
                 <p className='para'>$3k</p>
+                <h4>This Month: 10% increase</h4>
                 </div>
                 <div className="total-meetings">
                 <h2>Total Meetings Attended</h2>
                 <p>Number</p>
                 <p className='para'>25</p>
+                <h4>This Month: 5% decrease</h4>
                 </div>
                 <div className="total-projects">
                 <h2>Total Projects</h2>
                 <p>Number</p>
                 <p className='para'>40</p>
+                <h4>This Month: 15% increase</h4>
                 </div>
                 <div className="total-clients">
                 <h2>Total Clients</h2>
                 <p>Number</p>
                 <p className='para'>15</p>
+                <h4>This Month: 10% decrease</h4>
                 </div>
                 </div>
         </div>

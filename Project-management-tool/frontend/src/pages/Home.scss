@@ -381,18 +381,24 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 20px;
+        gap: 5px;
         margin-top: 20px;
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 20px;
+        padding: 10px;
         h2{
             font-family: $ropa;
             font-size: 18px;
+            width: 200px;
         }
         .para{
-            font-family: $ropa;
-            font-size: 16px;
+            font-family: $jost;
+            font-size: 26px;
             color: $darkpink;
+        }
+        h4{
+            font-family: $jost;
+            font-size: 12px;
+            font-weight: 400;
         }
     }
