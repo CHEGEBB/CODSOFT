@@ -15,7 +15,7 @@ $darkpink : #FF1493;
     padding: 20px;
     border-radius: 12px;
     width:300px;
-    height: 200px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,7 +302,7 @@ body{
         }
   }
   .to-do-list {
-    margin-top: -50px;
+    margin-top: -90px;
     width: 400px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -375,5 +375,27 @@ body{
                 font-size: 26px;
                 color: $darkpink;
             }
+        }
+    }
+    .competence{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 20px;
+        .competence1{
+            @include project-cards;
+            background-color: #FF1493;
+        }
+        .competence2{
+            @include project-cards;
+            background-color: #FF8C00;
+        }
+        .competence3{
+            @include project-cards;
+            background-color: #483D8B;
+        }
+        .competence4{
+            @include project-cards;
+            background-color: #23CE6B;
         }
     }

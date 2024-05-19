@@ -280,6 +280,23 @@ const Home = ({ darkMode }) => {
                     </div>
                 </div>
             </div>
+            <div className="competence">
+            <div className="total-income">
+                <h2>Total Income</h2>
+                <p>Amount</p>
+                <p>$7k</p>
+                </div>
+                <div className="total-expense">
+                <h2>Total Expense</h2>
+                <p>Amount</p>
+                <p>$3k</p>
+                </div>
+                <div className="total-meetings">
+                <h2>Total Meetings Attended</h2>
+                <p>Number</p>
+                <p>5</p>
+                </div>
+                </div>
         </div>
     );
 }
