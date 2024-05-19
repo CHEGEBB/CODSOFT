@@ -295,7 +295,7 @@ const Home = ({ darkMode }) => {
                 <div className="total-meetings">
                 <h2>Total Meetings Attended</h2>
                 <p>Number</p>
-                <p>5</p>
+                <p className='para'>25</p>
                 </div>
                 <div className="total-projects">
                 <h2>Total Projects</h2>
