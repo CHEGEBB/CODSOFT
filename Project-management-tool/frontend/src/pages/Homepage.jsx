@@ -41,7 +41,7 @@ const Home = ({ darkMode }) => {
                         type: 'line',
                         label: 'Task Completion Rate',
                         data: [25, 65, 35, 65, 85, 55, 45, 55, 75, 75, 95, 55], // Sample data
-                        borderColor: darkMode ? 'rgba(0, 0, 139, 1)' : '#23CE6B',
+                        borderColor: darkMode ? 'rgba(0, 0, 139, 1)' : '#483D8B',
                         tension: 0.1,
                         borderWidth: 5,
                         fill: false,
@@ -182,6 +182,16 @@ const Home = ({ darkMode }) => {
                     </div>
             </div>
             <div className="manage">
+            <div className="charts">
+            <div className="my-project-statistics">
+                <h2>My Project Statistics</h2>
+                <canvas id="lineBarChart"></canvas>
+            </div>
+            <div className="doughnut-chart-container">
+                <h2>Project Contribution Breakdown</h2>
+                <canvas id="doughnutChart"></canvas>
+            </div>
+            </div>
                 
                 <div className="project-status">
                 <div className="proj-status">
@@ -217,16 +227,6 @@ const Home = ({ darkMode }) => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="charts">
-            <div className="my-project-statistics">
-                <h2>My Project Statistics</h2>
-                <canvas id="lineBarChart"></canvas>
-            </div>
-            <div className="doughnut-chart-container">
-                <h2>Project Contribution Breakdown</h2>
-                <canvas id="doughnutChart"></canvas>
-            </div>
             </div>
             <div className="financial-stats">
                 <h2>$ 24,567.33</h2>
