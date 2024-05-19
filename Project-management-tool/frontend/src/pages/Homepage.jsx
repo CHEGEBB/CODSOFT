@@ -296,6 +296,16 @@ const Home = ({ darkMode }) => {
                 <p>Number</p>
                 <p>5</p>
                 </div>
+                <div className="total-projects">
+                <h2>Total Projects</h2>
+                <p>Number</p>
+                <p>40</p>
+                </div>
+                <div className="total-clients">
+                <h2>Total Clients</h2>
+                <p>Number</p>
+                <p>15</p>
+                </div>
                 </div>
         </div>
     );
