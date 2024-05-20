@@ -41,15 +41,19 @@ $darkpink : #FF1493;
         select {
             width: 100%;
             padding: 8px;
-            border: 1px solid #ccc;
+            border: 0;
             border-radius: 5px;
             outline: none;
-            font-family: $jost; // Applying custom font
+            font-family: $jost; 
+
+            &:hover{
+                border: 1px solid ;
+            }
             &:focus {
                 border-color: #007bff;
             }
             &::placeholder {
-                color: $placeholder-color; // Applying placeholder color
+                color: $placeholder-color;
             }
         }
     }
