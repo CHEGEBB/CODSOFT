@@ -1,0 +1,42 @@
+.project-details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-details,
+  .additional-details,
+  .other-sections {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+  
+  .project-details-table {
+    width: 100%;
+    border-collapse: collapse;
+  
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+  
+  .additional-details h2,
+  .other-sections h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    margin-top: 20px;
+  }
+  
+  .section h3 {
+    color: #007bff;
+  }
+  
