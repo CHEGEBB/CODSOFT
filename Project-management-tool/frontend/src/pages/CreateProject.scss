@@ -32,6 +32,7 @@ $darkpink : #FF1493;
     .create-project-form{
         border: 2px solid $special;
         width: 75%;
+        height: 800px;
 
     }
 
@@ -51,7 +52,7 @@ $darkpink : #FF1493;
             border-radius: 5px;
             outline: none;
             font-family: $jost; 
-            ma
+            margin-left: 70px;
             &:hover{
                 border: 1px solid ;
             }
@@ -71,6 +72,7 @@ $darkpink : #FF1493;
             border-radius: 5px;
             outline: none;
             font-family: $jost; 
+            margin-left: 70px;
 
             &:hover{
                 border: 1px solid ;
