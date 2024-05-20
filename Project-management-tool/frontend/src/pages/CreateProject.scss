@@ -26,17 +26,22 @@ $darkpink : #FF1493;
         border-radius: 10px;
         padding: 10px;
         margin-bottom: 20px;
-        max-width: 100%;
         margin: 0 auto;
+
+    }
+    .create-project-form{
+        border: 2px solid $special;
+
     }
 
     .form-group {
         margin-bottom: 10px;
+        
         label {
             font-weight: bold;
         }
         textarea{
-            width: 100%;
+            width: 500px;
             height: 100px;
             padding: 8px;
             border: 1px solid $special;
@@ -56,7 +61,7 @@ $darkpink : #FF1493;
         input[type='text'],
         input[type='date'],
         select {
-            width: 100%;
+            width: 500px;
             padding: 8px;
             border: 1px solid $special;
             border-radius: 5px;
@@ -88,7 +93,7 @@ $darkpink : #FF1493;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        font-family: $jost; // Applying custom font
+        font-family: $jost;
         &.btn-primary {
             background-color: #007bff;
             color: #fff;
@@ -97,17 +102,17 @@ $darkpink : #FF1493;
             }
         }
         &.btn-danger {
-            background-color: $darkpink; // Using custom color for danger button
+            background-color: $darkpink;
             color: $white;
             &:hover {
                 background-color: darken($darkpink, 10%);
             }
         }
         &.btn-success {
-            background-color: #28a745; // Using bootstrap success color
+            background-color: #28a745; 
             color: $white;
             &:hover {
-                background-color: #218838; // Using slightly darker shade for hover effect
+                background-color: #218838; 
             }
         }
     }
