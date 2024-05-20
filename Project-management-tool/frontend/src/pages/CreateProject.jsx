@@ -129,6 +129,36 @@ const CreateProject = () => {
 
     return (
         <div className="project-create">
+        <div className="project-us">
+            <h1>Project Management</h1>
+            <p>ProjectProctor is a project management tool that helps you organize your work and keep track of your projects.
+            </p>
+            <div className="us">
+            <div className="we">
+            <h1>We are best know for :</h1>
+            </div>
+                
+                <div className="ads">
+                <div className="easy-management-card1">
+                    <h3>Easy Management</h3>
+                    <p>Manage your projects with ease and keep track of your progress.</p> 
+                </div>
+                <div className="Robust-Ai-intervention-card2">
+                    <h3>Robust AI Intervention</h3>
+                    <p>Our AI system helps you manage your projects efficiently and effectively.</p>
+                </div>
+                <div className="24/7-support-card3">
+                    <h3>24/7 Support</h3>
+                    <p>Our support team is available 24/7 to help you with any issues you may have.</p>
+                    </div>
+
+                    <div className="organizational-focus-card4">
+                    <h3>Organizational Focus</h3>
+                    <p>Our tool helps you focus on your organizational goals and objectives.</p>
+                    </div>
+                    </div>
+            </div>
+        </div>
             <h1>Create Project</h1>
             <form className="create-project-form">
                 <div className="form-group">
