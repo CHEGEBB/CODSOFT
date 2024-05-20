@@ -147,10 +147,10 @@ const CreateProject = () => {
                     <h3>Robust AI Intervention</h3>
                     <p>Our AI system helps you manage your projects efficiently and effectively.</p>
                 </div>
-                <div className="24/7-support-card3">
-                    <h3>24/7 Support</h3>
-                    <p>Our support team is available 24/7 to help you with any issues you may have.</p>
-                    </div>
+                <div className="team-management-card3">
+                    <h3>Team Management</h3>
+                    <p>Manage your team and assign tasks to your team members.</p>
+                </div>
 
                     <div className="organizational-focus-card4">
                     <h3>Organizational Focus</h3>
