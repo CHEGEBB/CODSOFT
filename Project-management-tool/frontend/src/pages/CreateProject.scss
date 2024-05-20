@@ -24,15 +24,42 @@ $darkpink : #FF1493;
     font-family: $jost;
 
 }
+@mixin project-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .project-create {
     padding: 20px;
     border-radius: 10px;
     width: 800px;
     margin-left: 300px;
+    .project-us{
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: $ropa;
+            font-size: 30px;
+        
+        }
+        .man{
+        p{
+            font-family: $jost;
+            font-size: 20px;
+            margin-left: 20px;
+        
+        }
+    }
+    }
     .us{
         display: flex;
         flex-direction: column;
+       
 
         .ads{
             display: flex;
@@ -40,19 +67,51 @@ $darkpink : #FF1493;
 
             .easy-management-card1{
                 @include card;
-                background-color: #f55f;    
+                background-color: #f55f; 
+                
+                &:hover{
+                    background: linear-gradient(to bottom, #f55f, rgb(49, 21, 21)); 
+                    transition: all 0.3s ease-in-out;
+                    transform:  scale(1.1);
+                    animation: ease-in-out;
+                    transform: 0.3s;
+                }
             }
             .Robust-Ai-intervention-card2{
                 @include card;
                 background-color:#218838;
+                 
+                &:hover{
+                    background: linear-gradient(to bottom, #218838, #122d17); 
+                    transition: all 0.3s ease-in-out;
+                    transform:  scale(1.1);
+                    animation: ease-in-out;
+                    transform: 0.3s;
+                }
             }
             .team-management-card3{
                 @include card;
                 background-color: #0056b3;
+                 
+                &:hover{
+                    background: linear-gradient(to bottom, #0056b3, #152a40); 
+                    transition: all 0.3s ease-in-out;
+                    transform:  scale(1.1);
+                    animation: ease-in-out;
+                    transform: 0.3s;
+                }
             }
             .organizational-focus-card4{
                 @include card;
                 background-color: #FF1493;
+                 
+                &:hover{
+                    background: linear-gradient(to bottom, #FF1493, #461046); 
+                    transition: all 0.3s ease-in-out;
+                    transform:  scale(1.1);
+                    animation: ease-in-out;
+                    transform: 0.3s;
+                }
             }
         }
     }
@@ -248,16 +307,26 @@ $darkpink : #FF1493;
     .project-showcase {
         .project-cards {
             display: flex;
-            flex-wrap: wrap;
-            .card {
-                flex: 0 0 calc(33.333% - 20px);
-                background-color: #fff;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                padding: 20px;
-                margin: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
+            flex-direction: row;
+
+            .card1{
+                @include project-card;
         }
+        .card2{
+            @include project-card;
+        }
+        .card3{
+            @include project-card;
+        }
+        .card4{
+            @include project-card;
+        }
+        .card5{
+            @include project-card;
+        }
+        .card6{
+            @include project-card;
+        }
+    }
     }
 }

@@ -130,9 +130,11 @@ const CreateProject = () => {
     return (
         <div className="project-create">
         <div className="project-us">
+        <div className="man">
             <h1>Project Management</h1>
-            <p>ProjectProctor is a project management tool that helps you organize your work and keep track of your projects.
+            <p><span className='us-name'>ProjectProctor</span>  is a project management tool that helps you organize your work and keep track of your projects.
             </p>
+            </div>
             <div className="us">
             <div className="we">
             <h1>We are best know for</h1>
@@ -298,16 +300,25 @@ const CreateProject = () => {
             
            
             <div className="project-showcase">
-                <h2>Animated Project Showcase</h2>
+                <h2>Best Team Projects Showcase</h2>
                 <motion.div
                     className="project-cards"
                     variants={projectVariants}
                     initial="initial"
                     animate="animate"
                 >
-                    <motion.div className="card">Project 1</motion.div>
-                    <motion.div className="card">Project 2</motion.div>
-                    <motion.div className="card">Project 3</motion.div>
+                <div className="row1">
+                    <motion.div className="card1">Creative Cafe Responsive website</motion.div>
+                    <motion.div className="card2">E-commerce website</motion.div>
+                    <motion.div className="card3">Social Media App</motion.div>
+                    </div>
+                    <div className="row2">
+                    <motion.div className="card4">Online Learning Platform</motion.div>
+                    <motion.div className="card5">Task Automation Bots</motion.div>
+                    <motion.div className="card6">Healthcare Management System</motion.div>
+                    </div>
+
+                  
                 </motion.div>
             </div>
 
