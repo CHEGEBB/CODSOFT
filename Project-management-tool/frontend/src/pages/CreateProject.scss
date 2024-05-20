@@ -35,6 +35,16 @@ $darkpink : #FF1493;
         .ads{
             display: flex;
             flex-direction: row;
+
+            .easy-management-card1{
+                @include card;
+            }
+            .Robust-Ai-Intervention-card2{
+                @include card;
+            }
+            .team-management-card3{
+                @include card;
+            }
         }
     }
 
