@@ -1,186 +1,221 @@
-import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import React, { useState } from 'react';
+import { Doughnut, Bar } from 'react-chartjs-2';
+import { motion } from 'framer-motion';
 import './CreateProject.scss';
 
-const projects = [
-    {
-        name: 'Social Geek Made',
-        category: 'UI/UX Design',
-        attachments: 5,
-        duration: '4 Month',
-        members: 5,
-        progress: 10,
-        daysLeft: 35,
-    },
-    {
-        name: 'Practice to Perfect',
-        category: 'Website Design',
-        attachments: 5,
-        duration: '4 Month',
-        members: 5,
-        progress: 10,
-        daysLeft: 35,
-    },
-    // Add more projects as needed
-];
-
 const CreateProject = () => {
-    const barData = {
-        labels: projects.map(project => project.name),
+    const [projectDetails, setProjectDetails] = useState({
+        projectName: '',
+        projectDescription: '',
+        projectType: 'Internal',
+        projectPhases: [],
+        projectManager: '',
+        projectDeadline: ''
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        if (type === 'checkbox') {
+            const selectedPhases = [...projectDetails.projectPhases];
+            if (checked) {
+                selectedPhases.push(value);
+            } else {
+                const index = selectedPhases.indexOf(value);
+                if (index !== -1) {
+                    selectedPhases.splice(index, 1);
+                }
+            }
+            setProjectDetails(prevState => ({
+                ...prevState,
+                projectPhases: selectedPhases
+            }));
+        } else {
+            setProjectDetails(prevState => ({
+                ...prevState,
+                [name]: value
+            }));
+        }
+    };
+
+    const teamMembers = [
+        { name: 'Alice', role: 'Developer', responsibility: 'Frontend Development', expertise: 'React, JavaScript', image: 'alice.jpg' },
+        { name: 'Bob', role: 'Designer', responsibility: 'UI/UX Design', expertise: 'Adobe XD, Sketch', image: 'bob.jpg' },
+        { name: 'Charlie', role: 'Project Manager', responsibility: 'Project Planning', expertise: 'Agile, Scrum', image: 'charlie.jpg' },
+        { name: 'Dave', role: 'Tester', responsibility: 'Quality Assurance', expertise: 'Selenium, Jira', image: 'dave.jpg' },
+        { name: 'Eve', role: 'DevOps', responsibility: 'Deployment & Automation', expertise: 'Docker, Jenkins', image: 'eve.jpg' },
+        { name: 'Frank', role: 'Data Scientist', responsibility: 'Data Analysis', expertise: 'Python, TensorFlow', image: 'frank.jpg' }
+    ];
+
+    const doughnutData = {
+        labels: ['Planning', 'Execution', 'Monitoring', 'Closing'],
         datasets: [
             {
-                label: 'Progress',
-                data: projects.map(project => project.progress),
-                backgroundColor: 'rgba(0, 123, 255, 0.6)',
-                borderColor: 'rgba(0, 123, 255, 1)',
-                borderWidth: 1,
+                label: 'Project Progress',
+                data: [70, 50, 90, 80],
+                backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545'],
+                hoverBackgroundColor: ['#0056b3', '#1e7e34', '#d39e00', '#bd2130'],
             },
         ],
     };
 
-    const barOptions = {
-        scales: {
-            y: { beginAtZero: true },
-        },
-        animation: {
-            duration: 2000,
-            easing: 'easeInOutBounce',
-        },
+    const barData = {
+        labels: ['Project A', 'Project B', 'Project C', 'Project D', 'Project E'],
+        datasets: [
+            {
+                label: 'Client Satisfaction',
+                data: [90, 85, 95, 80, 88],
+                backgroundColor: '#007bff',
+                hoverBackgroundColor: '#0056b3',
+            },
+        ],
+    };
+
+    const projectVariants = {
+        initial: { x: '-100%' },
+        animate: {
+            x: 0,
+            transition: {
+                type: 'spring',
+                stiffness: 120,
+                duration: 1
+            }
+        }
+    };
+
+    const waveGraphData = {
+        labels: ['Client 1', 'Client 2', 'Client 3', 'Client 4', 'Client 5'],
+        datasets: [
+            {
+                label: 'Clients Served',
+                data: [80, 85, 70, 90, 75],
+                backgroundColor: '#007bff',
+                hoverBackgroundColor: '#0056b3',
+            },
+        ],
     };
 
     return (
-        <div className="project-page">
-            <div className="project-search">
-                <input type="text" placeholder="Search" />
-                <div className="project-categories">
-                    <button>All</button>
-                    <button>Started</button>
-                    <button>Approval</button>
-                    <button>Completed</button>
+        <div className="project-create">
+            <h1>Create Project</h1>
+            <form className="animated-form">
+    <div className="form-group">
+        <label htmlFor="projectName">Project Name</label>
+        <input type="text" id="projectName" name="projectName" value={projectDetails.projectName} onChange={handleInputChange} required className="form-control" />
+    </div>
+
+    <div className="form-group">
+        <label htmlFor="projectDescription">Project Description</label>
+        <textarea id="projectDescription" name="projectDescription" value={projectDetails.projectDescription} onChange={handleInputChange} required className="form-control"></textarea>
+    </div>
+
+    <div className="form-group">
+        <label>Project Type</label>
+        <div className="form-check">
+            <input type="radio" id="internal" name="projectType" value="Internal" checked={projectDetails.projectType === 'Internal'} onChange={handleInputChange} className="form-check-input" />
+            <label htmlFor="internal" className="form-check-label">Internal</label>
+        </div>
+        <div className="form-check">
+            <input type="radio" id="external" name="projectType" value="External" checked={projectDetails.projectType === 'External'} onChange={handleInputChange} className="form-check-input" />
+            <label htmlFor="external" className="form-check-label">External</label>
+        </div>
+    </div>
+
+    <div className="form-group">
+        <label>Project Phases</label>
+        <div className="form-check">
+            <input type="checkbox" id="planning" name="projectPhases" value="Planning" checked={projectDetails.projectPhases.includes('Planning')} onChange={handleInputChange} className="form-check-input" />
+            <label htmlFor="planning" className="form-check-label">Planning</label>
+        </div>
+        <div className="form-check">
+            <input type="checkbox" id="execution" name="projectPhases" value="Execution" checked={projectDetails.projectPhases.includes('Execution')} onChange={handleInputChange} className="form-check-input" />
+            <label htmlFor="execution" className="form-check-label">Execution</label>
+        </div>
+        <div className="form-check">
+            <input type="checkbox" id="monitoring" name="projectPhases" value="Monitoring" checked={projectDetails.projectPhases.includes('Monitoring')} onChange={handleInputChange} className="form-check-input" />
+            <label htmlFor="monitoring" className="form-check-label">Monitoring</label>
+        </div>
+        <div className="form-check">
+            <input type="checkbox" id="closing" name="projectPhases" value="Closing" checked={projectDetails.projectPhases.includes('Closing')} onChange={handleInputChange} className="form-check-input" />
+            <label htmlFor="closing" className="form-check-label">Closing</label>
+        </div>
+    </div>
+
+    <div className="form-group">
+        <label htmlFor="projectManager">Project Manager</label>
+        <input type="text" id="projectManager" name="projectManager" value={projectDetails.projectManager} onChange={handleInputChange} required className="form-control" />
+    </div>
+
+    <div className="form-group">
+        <label htmlFor="projectDeadline">Project Deadline</label>
+        <input type="date" id="projectDeadline" name="projectDeadline" value={projectDetails.projectDeadline} onChange={handleInputChange} required className="form-control" />
+    </div>
+
+    {/* Add more form inputs as needed */}
+
+    <button type="submit" className="btn btn-primary">Create Project</button>
+</form>
+
+
+            <div className="statistics">
+                <h2>Project Statistics</h2>
+                <div className="chart-container">
+                    <Doughnut data={doughnutData} />
                 </div>
             </div>
+            <div className="team-members">
+    <h2>Team Members</h2>
+    <table className="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Responsibility</th>
+                <th>Expertise</th>
+            </tr>
+        </thead>
+        <tbody>
+            {teamMembers.map((member, index) => (
+                <tr key={index}>
+                    <td>{member.name}</td>
+                    <td>{member.role}</td>
+                    <td>{member.responsibility}</td>
+                    <td>{member.expertise}</td>
+                </tr>
+            ))}
+        </tbody>
+    </table>
+</div>
 
-            <div className="project-create-section">
-                <h1>Create Project</h1>
-                <form>
-                    <div className="form-group">
-                        <label htmlFor="projectName">Project Name</label>
-                        <input type="text" id="projectName" name="projectName" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="projectDescription">Project Description</label>
-                        <textarea id="projectDescription" name="projectDescription" required></textarea>
-                    </div>
-                    <div className="form-group">
-                        <label>Project Type</label>
-                        <div>
-                            <input type="radio" id="internal" name="projectType" value="Internal" />
-                            <label htmlFor="internal">Internal</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="external" name="projectType" value="External" />
-                            <label htmlFor="external">External</label>
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <label>Project Phases</label>
-                        <div>
-                            <input type="checkbox" id="planning" name="projectPhases" value="Planning" />
-                            <label htmlFor="planning">Planning</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="execution" name="projectPhases" value="Execution" />
-                            <label htmlFor="execution">Execution</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="monitoring" name="projectPhases" value="Monitoring" />
-                            <label htmlFor="monitoring">Monitoring</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="closing" name="projectPhases" value="Closing" />
-                            <label htmlFor="closing">Closing</label>
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="projectManager">Project Manager</label>
-                        <input type="text" id="projectManager" name="projectManager" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="projectDeadline">Project Deadline</label>
-                        <input type="date" id="projectDeadline" name="projectDeadline" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="projectBudget">Project Budget</label>
-                        <input type="number" id="projectBudget" name="projectBudget" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="projectResources">Project Resources</label>
-                        <textarea id="projectResources" name="projectResources" required></textarea>
-                    </div>
-                    <button type="submit">Create Project</button>
-                </form>
+            <div className="project-showcase">
+                <h2>Animated Project Showcase</h2>
+                <motion.div
+                    className="project-cards"
+                    variants={projectVariants}
+                    initial="initial"
+                    animate="animate"
+                >
+                    <motion.div className="card">Project 1</motion.div>
+                    <motion.div className="card">Project 2</motion.div>
+                    <motion.div className="card">Project 3</motion.div>
+                </motion.div>
             </div>
 
-            <div className="project-list">
-                {projects.map((project, index) => (
-                    <div className="project-card" key={index}>
-                        <div className="project-header">
-                            <h2>{project.name}</h2>
-                            <p>{project.category}</p>
-                        </div>
-                        <div className="project-details">
-                            <p>Attachments: {project.attachments}</p>
-                            <p>Duration: {project.duration}</p>
-                            <p>Members: {project.members}</p>
-                            <p>Progress: {project.progress}%</p>
-                        </div>
-                        <div className="project-progress">
-                            <div className="progress-bar">
-                                <div
-                                    className="progress"
-                                    style={{ width: `${project.progress}%` }}
-                                ></div>
-                            </div>
-                            <p>{project.daysLeft} Days Left</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <div className="project-overview">
-                <h2>Project Overview</h2>
-                <div className="overview-chart">
-                    <Bar data={barData} options={barOptions} />
+            <div className="project-analytics">
+                <h2>Project Analytics</h2>
+                <div className="chart-container">
+                    <h3>Best Projects of All Time</h3>
+                    <Bar data={barData} />
                 </div>
-                <div className="timeline">
-                    <h3>Project Timeline</h3>
-                    <div className="timeline-step">
-                        <div className="step-title">Planning</div>
-                        <div className="step-bar" style={{ width: '25%' }}></div>
-                    </div>
-                    <div className="timeline-step">
-                        <div className="step-title">Execution</div>
-                        <div className="step-bar" style={{ width: '50%' }}></div>
-                    </div>
-                    <div className="timeline-step">
-                        <div className="step-title">Monitoring</div>
-                        <div className="step-bar" style={{ width: '75%' }}></div>
-                    </div>
-                    <div className="timeline-step">
-                        <div className="step-title">Closing</div>
-                        <div className="step-bar" style={{ width: '100%' }}></div>
+                <div className="chart-container">
+                    <h3>Clients Served</h3>
+                    <div className="wave-graph">
+                        <Bar data={waveGraphData} />
                     </div>
                 </div>
-            </div>
-
-            <div className="additional-content">
-                <h2>Tips and Statistics</h2>
-                <p>Projects with clear goals and milestones are 20% more likely to be completed on time.</p>
-                <p>80% of high-performing projects have a dedicated project manager.</p>
-                <p>Using project management tools can improve team collaboration by 50%.</p>
             </div>
         </div>
     );
-};
+}
 
 export default CreateProject;
+
