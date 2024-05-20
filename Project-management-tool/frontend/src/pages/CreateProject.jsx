@@ -7,10 +7,15 @@ const CreateProject = () => {
     const [projectDetails, setProjectDetails] = useState({
         projectName: '',
         projectDescription: '',
-        projectType: 'Internal',
+        projectCategory: '',
         projectPhases: [],
         projectManager: '',
-        projectDeadline: ''
+        projectStartDate: '',
+        projectEndDate: '',
+        notificationSent: 'All',
+        taskAssignPerson: '',
+        budget: '',
+        priority: 'Medium'
     });
 
     const handleInputChange = (e) => {
@@ -36,6 +41,15 @@ const CreateProject = () => {
             }));
         }
     };
+
+    const handleFileInputChange = (e) => {
+        const files = e.target.files;
+        setProjectDetails(prevState => ({
+            ...prevState,
+            projectImages: files
+        }));
+    };
+
     const [teamMembers, setTeamMembers] = useState([
         { name: 'Alice', role: 'Developer', responsibility: 'Frontend Development', expertise: 'React, JavaScript', image: 'alice.jpg' },
         { name: 'Bob', role: 'Designer', responsibility: 'UI/UX Design', expertise: 'Adobe XD, Sketch', image: 'bob.jpg' },
@@ -92,6 +106,7 @@ const CreateProject = () => {
             },
         ],
     };
+
     const addMember = () => {
         // Add new member to teamMembers array
         const newMember = { name: '', role: '', responsibility: '', expertise: '', image: '' };
@@ -115,57 +130,70 @@ const CreateProject = () => {
     return (
         <div className="project-create">
             <h1>Create Project</h1>
-            <form className="animated-form">
+            <form className="create-project-form">
                 <div className="form-group">
                     <label htmlFor="projectName">Project Name</label>
                     <input type="text" id="projectName" name="projectName" value={projectDetails.projectName} onChange={handleInputChange} required className="form-control" />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="projectDescription">Project Description</label>
+                    <label htmlFor="projectDescription">Explain what the Project Name</label>
                     <textarea id="projectDescription" name="projectDescription" value={projectDetails.projectDescription} onChange={handleInputChange} required className="form-control"></textarea>
                 </div>
 
                 <div className="form-group">
-                    <label>Project Type</label>
-                    <div className="form-check">
-                        <input type="radio" id="internal" name="projectType" value="Internal" checked={projectDetails.projectType === 'Internal'} onChange={handleInputChange} className="form-check-input" />
-                        <label htmlFor="internal" className="form-check-label">Internal</label>
-                    </div>
-                    <div className="form-check">
-                        <input type="radio" id="external" name="projectType" value="External" checked={projectDetails.projectType === 'External'} onChange={handleInputChange} className="form-check-input" />
-                        <label htmlFor="external" className="form-check-label">External</label>
-                    </div>
+                    <label htmlFor="projectCategory">Project Category</label>
+                    <select id="projectCategory" name="projectCategory" value={projectDetails.projectCategory} onChange={handleInputChange} className="form-control">
+                        <option value="">Select Category</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="SEO">SEO</option>
+                        {/* Add more options as needed */}
+                    </select>
                 </div>
 
                 <div className="form-group">
-                    <label>Project Phases</label>
-                    <div className="form-check">
-                        <input type="checkbox" id="planning" name="projectPhases" value="Planning" checked={projectDetails.projectPhases.includes('Planning')} onChange={handleInputChange} className="form-check-input" />
-                        <label htmlFor="planning" className="form-check-label">Planning</label>
-                    </div>
-                    <div className="form-check">
-                        <input type="checkbox" id="execution" name="projectPhases" value="Execution" checked={projectDetails.projectPhases.includes('Execution')} onChange={handleInputChange} className="form-check-input" />
-                        <label htmlFor="execution" className="form-check-label">Execution</label>
-                    </div>
-                    <div className="form-check">
-                        <input type="checkbox" id="monitoring" name="projectPhases" value="Monitoring" checked={projectDetails.projectPhases.includes('Monitoring')} onChange={handleInputChange} className="form-check-input" />
-                        <label htmlFor="monitoring" className="form-check-label">Monitoring</label>
-                    </div>
-                    <div className="form-check">
-                        <input type="checkbox" id="closing" name="projectPhases" value="Closing" checked={projectDetails.projectPhases.includes('Closing')} onChange={handleInputChange} className="form-check-input" />
-                        <label htmlFor="closing" className="form-check-label">Closing</label>
-                    </div>
+                    <label htmlFor="projectImages">Project Images & Document</label>
+                    <input type="file" id="projectImages" name="projectImages" onChange={handleFileInputChange} multiple className="form-control" />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="projectManager">Project Manager</label>
-                    <input type="text" id="projectManager" name="projectManager" value={projectDetails.projectManager} onChange={handleInputChange} required className="form-control" />
+                    <label htmlFor="projectStartDate">Project Start Date</label>
+                    <input type="date" id="projectStartDate" name="projectStartDate" value={projectDetails.projectStartDate} onChange={handleInputChange} className="form-control" />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="projectDeadline">Project Deadline</label>
-                    <input type="date" id="projectDeadline" name="projectDeadline" value={projectDetails.projectDeadline} onChange={handleInputChange} required className="form-control" />
+                    <label htmlFor="projectEndDate">Project End Date</label>
+                    <input type="date" id="projectEndDate" name="projectEndDate" value={projectDetails.projectEndDate} onChange={handleInputChange} className="form-control" />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="notificationSent">Notification Sent</label>
+                    <select id="notificationSent" name="notificationSent" value={projectDetails.notificationSent} onChange={handleInputChange} className="form-control">
+                        <option value="All">All</option>
+                        <option value="Some">Some</option>
+                        {/* Add more options as needed */}
+                    </select>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="taskAssignPerson">Task Assign Person</label>
+                    <input type="text" id="taskAssignPerson" name="taskAssignPerson" value={projectDetails.taskAssignPerson} onChange={handleInputChange} className="form-control" />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="budget">Budget</label>
+                    <input type="text" id="budget" name="budget" value={projectDetails.budget} onChange={handleInputChange} className="form-control" />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="priority">Priority</label>
+                    <select id="priority" name="priority" value={projectDetails.priority} onChange={handleInputChange} className="form-control">
+                        <option value="Highest">Highest</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
                 </div>
 
                 <button type="submit" className="btn btn-primary">Create Project</button>
@@ -177,7 +205,7 @@ const CreateProject = () => {
                     <Doughnut data={doughnutData} options={{ maintainAspectRatio: false }} />
                 </div>
             </div>
-
+            
             <div className="team-members">
                 <h2>Team Members</h2>
                 <table className="table">
@@ -257,10 +285,10 @@ const CreateProject = () => {
                     <div className="wave-graph">
                         <Doughnut data={waveGraphData} options={{ maintainAspectRatio: false }} />
                     </div>
-                </div>
-            </div>
+                    </div>
+                    </div>
         </div>
     );
-}
+};
 
 export default CreateProject;
