@@ -31,17 +31,20 @@ $darkpink : #FF1493;
     }
     .create-project-form{
         border: 2px solid $special;
+        width: 75%;
 
     }
 
     .form-group {
         margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
         
         label {
             font-weight: bold;
         }
         textarea{
-            width: 500px;
+            width: 70%;
             height: 100px;
             padding: 8px;
             border: 1px solid $special;
@@ -61,7 +64,7 @@ $darkpink : #FF1493;
         input[type='text'],
         input[type='date'],
         select {
-            width: 500px;
+            width: 70%;
             padding: 8px;
             border: 1px solid $special;
             border-radius: 5px;
