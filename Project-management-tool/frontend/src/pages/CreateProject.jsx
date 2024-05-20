@@ -137,7 +137,7 @@ const CreateProject = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="projectDescription">Explain what the Project Name</label>
+                    <label htmlFor="projectDescription">Explain what the Project Entails</label>
                     <textarea id="projectDescription" name="projectDescription" value={projectDetails.projectDescription} onChange={handleInputChange} required className="form-control"></textarea>
                 </div>
 
