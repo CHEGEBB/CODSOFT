@@ -10,6 +10,7 @@ $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
 $silver: #C0C0C0;
 $darkpink : #FF1493;
+
 .project-create {
     padding: 20px;
     border-radius: 10px;
@@ -22,7 +23,6 @@ $darkpink : #FF1493;
     }
 
     .animated-form {
-        border: 1px solid #ccc;
         border-radius: 10px;
         padding: 10px;
         margin-bottom: 20px;
@@ -37,14 +37,19 @@ $darkpink : #FF1493;
         }
         input[type='text'],
         input[type='date'],
-        textarea {
+        textarea,
+        select {
             width: 100%;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 5px;
             outline: none;
+            font-family: $jost; // Applying custom font
             &:focus {
                 border-color: #007bff;
+            }
+            &::placeholder {
+                color: $placeholder-color; // Applying placeholder color
             }
         }
     }
@@ -62,11 +67,26 @@ $darkpink : #FF1493;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-family: $jost; // Applying custom font
         &.btn-primary {
             background-color: #007bff;
             color: #fff;
             &:hover {
                 background-color: #0056b3;
+            }
+        }
+        &.btn-danger {
+            background-color: $darkpink; // Using custom color for danger button
+            color: $white;
+            &:hover {
+                background-color: darken($darkpink, 10%);
+            }
+        }
+        &.btn-success {
+            background-color: #28a745; // Using bootstrap success color
+            color: $white;
+            &:hover {
+                background-color: #218838; // Using slightly darker shade for hover effect
             }
         }
     }
