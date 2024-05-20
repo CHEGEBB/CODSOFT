@@ -135,7 +135,7 @@ const CreateProject = () => {
             </p>
             <div className="us">
             <div className="we">
-            <h1>We are best know for :</h1>
+            <h1>We are best know for</h1>
             </div>
                 
                 <div className="ads">
