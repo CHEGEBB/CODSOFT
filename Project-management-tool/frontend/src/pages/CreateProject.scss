@@ -321,21 +321,45 @@ $darkpink : #FF1493;
 
             .card1{
                 @include project-card;
+                background: url("../images/cafe.avif");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
         }
         .card2{
             @include project-card;
+            background: url("../images/eccom.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .card3{
             @include project-card;
+            background: url("../images/soci.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .card4{
             @include project-card;
+            background: url("../images/online.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .card5{
             @include project-card;
+            background: url("../images/bot.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .card6{
             @include project-card;
+            background: url("../images/health.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     }
     }
