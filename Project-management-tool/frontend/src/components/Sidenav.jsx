@@ -53,7 +53,7 @@ const SideNav = ({ isDarkMode, toggleDarkMode }) => {
                     </div>
                     {openDropdown === 'project' && (
                         <ul className="dropdown">
-                            <li><Link to="/project/New Project">Overview</Link></li>
+                            <li><Link to="/project/new">New Project</Link></li>
                             <li><Link to="/project/details">Details</Link></li>
                         </ul>
                     )}
