@@ -36,15 +36,14 @@ const CreateProject = () => {
             }));
         }
     };
-
-    const teamMembers = [
+    const [teamMembers, setTeamMembers] = useState([
         { name: 'Alice', role: 'Developer', responsibility: 'Frontend Development', expertise: 'React, JavaScript', image: 'alice.jpg' },
         { name: 'Bob', role: 'Designer', responsibility: 'UI/UX Design', expertise: 'Adobe XD, Sketch', image: 'bob.jpg' },
         { name: 'Charlie', role: 'Project Manager', responsibility: 'Project Planning', expertise: 'Agile, Scrum', image: 'charlie.jpg' },
         { name: 'Dave', role: 'Tester', responsibility: 'Quality Assurance', expertise: 'Selenium, Jira', image: 'dave.jpg' },
         { name: 'Eve', role: 'DevOps', responsibility: 'Deployment & Automation', expertise: 'Docker, Jenkins', image: 'eve.jpg' },
         { name: 'Frank', role: 'Data Scientist', responsibility: 'Data Analysis', expertise: 'Python, TensorFlow', image: 'frank.jpg' }
-    ];
+    ]);
 
     const doughnutData = {
         labels: ['Planning', 'Execution', 'Monitoring', 'Closing'],
@@ -92,6 +91,25 @@ const CreateProject = () => {
                 hoverBackgroundColor: '#0056b3',
             },
         ],
+    };
+    const addMember = () => {
+        // Add new member to teamMembers array
+        const newMember = { name: '', role: '', responsibility: '', expertise: '', image: '' };
+        setTeamMembers([...teamMembers, newMember]);
+    };
+
+    const removeMember = (index) => {
+        // Remove member from teamMembers array
+        const updatedMembers = [...teamMembers];
+        updatedMembers.splice(index, 1);
+        setTeamMembers(updatedMembers);
+    };
+
+    const updateMember = (index, field, value) => {
+        // Update member field in teamMembers array
+        const updatedMembers = [...teamMembers];
+        updatedMembers[index][field] = value;
+        setTeamMembers(updatedMembers);
     };
 
     return (
@@ -212,6 +230,7 @@ const CreateProject = () => {
                 </table>
                 <button onClick={addMember}>Add Member</button>
             </div>
+
 
             <div className="project-showcase">
                 <h2>Animated Project Showcase</h2>
