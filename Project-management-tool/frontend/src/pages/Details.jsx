@@ -1,24 +1,26 @@
 import React from 'react';
-import './ProjectDetails.scss'; // Import the external SCSS file for styling
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import { Bar, Doughnut } from 'react-chartjs-2';
+import './ProjectDetails.scss';
 
 const ProjectDetails = () => {
-  // Sample project data
   const project = {
     id: 258,
     title: 'Android Application',
     clientName: 'Cara Stevens',
-    startDate: '05/10/2021',
-    endDate: '07/25/2021',
-    deadline: '08/25/2021',
+    startDate: '2021-05-10',
+    endDate: '2021-07-25',
+    deadline: '2021-08-25',
     members: 'useruseruser',
     priority: 'High',
-    progress: 'Active',
+    progress: 60,
     status: 'Active',
     createdBy: 'Alex Smith',
     client: 'ZMK Tech LLP.',
     version: 'v1.2.0',
-    lastUpdated: '16.08.2022 12:15:57',
-    created: '10.07.2022 23:36:57',
+    lastUpdated: '2022-08-16 12:15:57',
+    created: '2022-07-10 23:36:57',
     completed: 'Project completed in 60%. Remaining close the project, sign a contract and invoice.',
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
@@ -30,90 +32,147 @@ const ProjectDetails = () => {
     ]
   };
 
+  const barData = {
+    labels: ['Completed', 'Remaining'],
+    datasets: [
+      {
+        label: 'Project Progress',
+        data: [project.progress, 100 - project.progress],
+        backgroundColor: ['#36A2EB', '#FF6384']
+      }
+    ]
+  };
+
+  const doughnutData = {
+    labels: ['High', 'Medium', 'Low'],
+    datasets: [
+      {
+        data: [50, 30, 20],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+      }
+    ]
+  };
+
   return (
     <div className="project-details-page">
-      <div className="project-details">
-        <h2>Project Details</h2>
-        <table className="project-details-table">
-          <tbody>
-            <tr>
-              <td>ID:</td>
-              <td>{project.id}</td>
-            </tr>
-            <tr>
-              <td>Project Title:</td>
-              <td>{project.title}</td>
-            </tr>
-            <tr>
-              <td>Client Name:</td>
-              <td>{project.clientName}</td>
-            </tr>
-            <tr>
-              <td>Start Date:</td>
-              <td>{project.startDate}</td>
-            </tr>
-            <tr>
-              <td>End Date:</td>
-              <td>{project.endDate}</td>
-            </tr>
-            <tr>
-              <td>Deadline:</td>
-              <td>{project.deadline}</td>
-            </tr>
-            <tr>
-              <td>Members:</td>
-              <td>{project.members}</td>
-            </tr>
-            <tr>
-              <td>Priority:</td>
-              <td>{project.priority}</td>
-            </tr>
-            <tr>
-              <td>Progress:</td>
-              <td>{project.progress}</td>
-            </tr>
-            <tr>
-              <td>Status:</td>
-              <td>{project.status}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <h1 className="page-title">Project Details: {project.title}</h1>
+      <Tabs>
+        <TabList>
+          <Tab>Overview</Tab>
+          <Tab>Details</Tab>
+          <Tab>Files</Tab>
+          <Tab>Charts</Tab>
+        </TabList>
 
-      <div className="additional-details">
-        <h2>Additional Details</h2>
-        <p>Status: {project.status}</p>
-        <p>Priority: {project.priority}</p>
-        <p>Created by: {project.createdBy}</p>
-        <p>Client: {project.client}</p>
-        <p>Version: {project.version}</p>
-        <p>Last Updated: {project.lastUpdated}</p>
-        <p>Created: {project.created}</p>
-        <p>Completed: {project.completed}</p>
-        <h3>Project description</h3>
-        <p>{project.description}</p>
-        <h3>Project tags</h3>
-        <p>{project.tags}</p>
-        <h3>Project files</h3>
-        {project.files.map((file, index) => (
-          <p key={index}>
-            {file.name} ({file.size})
-          </p>
-        ))}
-      </div>
+        <TabPanel>
+          <div className="form-section">
+            <h2>Project Overview</h2>
+            <div className="form-group">
+              <label>ID:</label>
+              <input type="text" value={project.id} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Client Name:</label>
+              <input type="text" value={project.clientName} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Start Date:</label>
+              <input type="date" value={project.startDate} readOnly />
+            </div>
+            <div className="form-group">
+              <label>End Date:</label>
+              <input type="date" value={project.endDate} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Deadline:</label>
+              <input type="date" value={project.deadline} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Members:</label>
+              <input type="text" value={project.members} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Priority:</label>
+              <select value={project.priority} disabled>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label>Progress:</label>
+              <input type="text" value={`${project.progress}%`} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Status:</label>
+              <input type="text" value={project.status} readOnly />
+            </div>
+          </div>
+        </TabPanel>
 
-      {/* Other sections */}
-      <div className="other-sections">
-        <h2>Other Sections</h2>
-        <div className="section">
-          <h3>Section 1</h3>
-          <p>Wonderful data goes here...</p>
-        </div>
-        <div className="section">
-          <h3>Section 2</h3>
-          <p>More wonderful data goes here...</p>
-        </div>
-      </div>
+        <TabPanel>
+          <div className="form-section">
+            <h2>Additional Details</h2>
+            <div className="form-group">
+              <label>Created by:</label>
+              <input type="text" value={project.createdBy} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Client:</label>
+              <input type="text" value={project.client} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Version:</label>
+              <input type="text" value={project.version} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Last Updated:</label>
+              <input type="text" value={project.lastUpdated} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Created:</label>
+              <input type="text" value={project.created} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Completed:</label>
+              <textarea value={project.completed} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Description:</label>
+              <textarea value={project.description} readOnly />
+            </div>
+            <div className="form-group">
+              <label>Tags:</label>
+              <input type="text" value={project.tags} readOnly />
+            </div>
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="form-section">
+            <h2>Project Files</h2>
+            {project.files.map((file, index) => (
+              <div key={index} className="file-item">
+                <span>{file.name}</span> <span>({file.size})</span>
+              </div>
+            ))}
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="form-section">
+            <h2>Charts</h2>
+            <div className="chart-container">
+              <h3>Project Progress</h3>
+              <Bar data={barData} options={{ maintainAspectRatio: false }} />
+            </div>
+            <div className="chart-container">
+              <h3>Priority Distribution</h3>
+              <Doughnut data={doughnutData} options={{ maintainAspectRatio: false }} />
+            </div>
+          </div>
+        </TabPanel>
+      </Tabs>
     </div>
   );
 };
