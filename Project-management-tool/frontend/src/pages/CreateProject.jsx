@@ -169,19 +169,48 @@ const CreateProject = () => {
                             <th>Role</th>
                             <th>Responsibility</th>
                             <th>Expertise</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {teamMembers.map((member, index) => (
                             <tr key={index}>
-                                <td>{member.name}</td>
-                                <td>{member.role}</td>
-                                <td>{member.responsibility}</td>
-                                <td>{member.expertise}</td>
+                                <td>
+                                    <input
+                                        type="text"
+                                        value={member.name}
+                                        onChange={(e) => updateMember(index, 'name', e.target.value)}
+                                    />
+                                </td>
+                                <td>
+                                    <input
+                                        type="text"
+                                        value={member.role}
+                                        onChange={(e) => updateMember(index, 'role', e.target.value)}
+                                    />
+                                </td>
+                                <td>
+                                    <input
+                                        type="text"
+                                        value={member.responsibility}
+                                        onChange={(e) => updateMember(index, 'responsibility', e.target.value)}
+                                    />
+                                </td>
+                                <td>
+                                    <input
+                                        type="text"
+                                        value={member.expertise}
+                                        onChange={(e) => updateMember(index, 'expertise', e.target.value)}
+                                    />
+                                </td>
+                                <td>
+                                    <button onClick={() => removeMember(index)}>Remove</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
+                <button onClick={addMember}>Add Member</button>
             </div>
 
             <div className="project-showcase">
