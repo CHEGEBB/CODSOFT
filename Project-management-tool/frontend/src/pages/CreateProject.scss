@@ -32,7 +32,8 @@ $darkpink : #FF1493;
     .create-project-form{
         border: 2px solid $special;
         width: 75%;
-        height: 800px;
+        height: 890px;
+        margin-left: 90px;
 
     }
 
@@ -43,6 +44,10 @@ $darkpink : #FF1493;
         
         label {
             font-weight: bold;
+            margin-left: 70px;
+            margin-bottom: 5px;
+            font-family: $jost;
+
         }
         textarea{
             width: 70%;
@@ -100,6 +105,7 @@ $darkpink : #FF1493;
         border-radius: 5px;
         cursor: pointer;
         font-family: $jost;
+        margin-left: 70px;
         &.btn-primary {
             background-color: #007bff;
             color: #fff;
