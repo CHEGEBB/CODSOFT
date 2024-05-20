@@ -32,6 +32,8 @@ $darkpink : #FF1493;
     padding: 20px;
     margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 200px;
 }
 
 .project-create {
@@ -307,7 +309,15 @@ $darkpink : #FF1493;
     .project-showcase {
         .project-cards {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            .row1{
+                display: flex;
+                flex-direction: row;
+            }
+            .row2{
+                display: flex;
+                flex-direction: row;
+            }
 
             .card1{
                 @include project-card;
