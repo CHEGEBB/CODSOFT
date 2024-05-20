@@ -161,6 +161,29 @@ const CreateProject = () => {
                     </div>
             </div>
         </div>
+        <div className="project-showcase">
+                <h2>Best Team Projects Showcase</h2>
+                <motion.div
+                    className="project-cards"
+                    variants={projectVariants}
+                    initial="initial"
+                    animate="animate"
+                >
+                <div className="row1">
+                    <motion.div className="card1"><p>Creative Cafe Responsive website</p></motion.div>
+                    <motion.div className="card2"><p>E-commerce Website</p></motion.div>
+                    <motion.div className="card3"><p>Online Learning Platform</p></motion.div>
+                   
+                    </div>
+                    <div className="row2">
+                    <motion.div className="card4"><p>Online Learning Platform</p></motion.div>
+                    <motion.div className="card5"><p>Task Automation Bots</p></motion.div>
+                    <motion.div className="card6"><p>Healthcare Management System</p></motion.div>
+                    </div>
+
+                  
+                </motion.div>
+            </div>
             <h1>Create Project</h1>
             <form className="create-project-form">
                 <div className="form-group">
@@ -296,30 +319,6 @@ const CreateProject = () => {
                 <div className="chart-container">
                     <Doughnut data={doughnutData} options={{ maintainAspectRatio: false }} />
                 </div>
-            </div>
-            
-           
-            <div className="project-showcase">
-                <h2>Best Team Projects Showcase</h2>
-                <motion.div
-                    className="project-cards"
-                    variants={projectVariants}
-                    initial="initial"
-                    animate="animate"
-                >
-                <div className="row1">
-                    <motion.div className="card1">Creative Cafe Responsive website</motion.div>
-                    <motion.div className="card2">E-commerce website</motion.div>
-                    <motion.div className="card3">Social Media App</motion.div>
-                    </div>
-                    <div className="row2">
-                    <motion.div className="card4">Online Learning Platform</motion.div>
-                    <motion.div className="card5">Task Automation Bots</motion.div>
-                    <motion.div className="card6">Healthcare Management System</motion.div>
-                    </div>
-
-                  
-                </motion.div>
             </div>
 
             <div className="project-analytics">

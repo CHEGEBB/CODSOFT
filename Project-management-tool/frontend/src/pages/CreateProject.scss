@@ -34,6 +34,7 @@ $darkpink : #FF1493;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 200px;
     height: 200px;
+
 }
 
 .project-create {
@@ -66,6 +67,7 @@ $darkpink : #FF1493;
         .ads{
             display: flex;
             flex-direction: row;
+            margin-left: 60px;
 
             .easy-management-card1{
                 @include card;
@@ -325,6 +327,13 @@ $darkpink : #FF1493;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+
+                &:hover{
+                    transition: all 0.3s ease-in-out;
+                    transform:  scale(1.1);
+                    animation: ease-in-out;
+                    transform: 0.3s;
+                }
         }
         .card2{
             @include project-card;
@@ -332,6 +341,12 @@ $darkpink : #FF1493;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            &:hover{
+                transition: all 0.3s ease-in-out;
+                transform:  scale(1.1);
+                animation: ease-in-out;
+                transform: 0.3s;
+            }
         }
         .card3{
             @include project-card;
@@ -339,6 +354,12 @@ $darkpink : #FF1493;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            &:hover{
+                transition: all 0.3s ease-in-out;
+                transform:  scale(1.1);
+                animation: ease-in-out;
+                transform: 0.3s;
+            }
         }
         .card4{
             @include project-card;
@@ -346,6 +367,12 @@ $darkpink : #FF1493;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            &:hover{
+                transition: all 0.3s ease-in-out;
+                transform:  scale(1.1);
+                animation: ease-in-out;
+                transform: 0.3s;
+            }
         }
         .card5{
             @include project-card;
@@ -353,6 +380,12 @@ $darkpink : #FF1493;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            &:hover{
+                transition: all 0.3s ease-in-out;
+                transform:  scale(1.1);
+                animation: ease-in-out;
+                transform: 0.3s;
+            }
         }
         .card6{
             @include project-card;
@@ -360,6 +393,12 @@ $darkpink : #FF1493;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            &:hover{
+                transition: all 0.3s ease-in-out;
+                transform:  scale(1.1);
+                animation: ease-in-out;
+                transform: 0.3s;
+            }
         }
     }
     }
