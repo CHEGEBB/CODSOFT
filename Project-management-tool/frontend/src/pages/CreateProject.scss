@@ -30,10 +30,11 @@ $darkpink : #FF1493;
 
     }
     .create-project-form{
-        border: 2px solid $special;
+        border: 2px solid #c0c0c0;
         width: 75%;
-        height: 890px;
+        height: 920px;
         margin-left: 90px;
+        border-radius: 10px;
 
     }
 
@@ -48,6 +49,14 @@ $darkpink : #FF1493;
             margin-bottom: 5px;
             font-family: $jost;
 
+        }
+        #projectName{
+            label{
+                margin-top: 50px;
+            }
+        }
+        #projectImages{
+            margin-left: 70px;
         }
         textarea{
             width: 70%;

@@ -132,7 +132,7 @@ const CreateProject = () => {
             <h1>Create Project</h1>
             <form className="create-project-form">
                 <div className="form-group">
-                    <label htmlFor="projectName">Project Name</label>
+                    <label htmlFor="projectName" style={{marginTop:40}}>Project Name</label>
                     <input type="text" id="projectName" name="projectName" value={projectDetails.projectName} onChange={handleInputChange} required className="form-control" />
                 </div>
 
@@ -148,7 +148,12 @@ const CreateProject = () => {
                         <option value="UI/UX Design">UI/UX Design</option>
                         <option value="Web Development">Web Development</option>
                         <option value="SEO">SEO</option>
-                        {/* Add more options as needed */}
+                        <option value="Content Writing">Content Writing</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="App Development">App Development</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Game Development">Game Development</option>
+                        <option value="Graphic Design">Graphic Design</option>
                     </select>
                 </div>
 
