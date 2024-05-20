@@ -98,93 +98,91 @@ const CreateProject = () => {
         <div className="project-create">
             <h1>Create Project</h1>
             <form className="animated-form">
-    <div className="form-group">
-        <label htmlFor="projectName">Project Name</label>
-        <input type="text" id="projectName" name="projectName" value={projectDetails.projectName} onChange={handleInputChange} required className="form-control" />
-    </div>
+                <div className="form-group">
+                    <label htmlFor="projectName">Project Name</label>
+                    <input type="text" id="projectName" name="projectName" value={projectDetails.projectName} onChange={handleInputChange} required className="form-control" />
+                </div>
 
-    <div className="form-group">
-        <label htmlFor="projectDescription">Project Description</label>
-        <textarea id="projectDescription" name="projectDescription" value={projectDetails.projectDescription} onChange={handleInputChange} required className="form-control"></textarea>
-    </div>
+                <div className="form-group">
+                    <label htmlFor="projectDescription">Project Description</label>
+                    <textarea id="projectDescription" name="projectDescription" value={projectDetails.projectDescription} onChange={handleInputChange} required className="form-control"></textarea>
+                </div>
 
-    <div className="form-group">
-        <label>Project Type</label>
-        <div className="form-check">
-            <input type="radio" id="internal" name="projectType" value="Internal" checked={projectDetails.projectType === 'Internal'} onChange={handleInputChange} className="form-check-input" />
-            <label htmlFor="internal" className="form-check-label">Internal</label>
-        </div>
-        <div className="form-check">
-            <input type="radio" id="external" name="projectType" value="External" checked={projectDetails.projectType === 'External'} onChange={handleInputChange} className="form-check-input" />
-            <label htmlFor="external" className="form-check-label">External</label>
-        </div>
-    </div>
+                <div className="form-group">
+                    <label>Project Type</label>
+                    <div className="form-check">
+                        <input type="radio" id="internal" name="projectType" value="Internal" checked={projectDetails.projectType === 'Internal'} onChange={handleInputChange} className="form-check-input" />
+                        <label htmlFor="internal" className="form-check-label">Internal</label>
+                    </div>
+                    <div className="form-check">
+                        <input type="radio" id="external" name="projectType" value="External" checked={projectDetails.projectType === 'External'} onChange={handleInputChange} className="form-check-input" />
+                        <label htmlFor="external" className="form-check-label">External</label>
+                    </div>
+                </div>
 
-    <div className="form-group">
-        <label>Project Phases</label>
-        <div className="form-check">
-            <input type="checkbox" id="planning" name="projectPhases" value="Planning" checked={projectDetails.projectPhases.includes('Planning')} onChange={handleInputChange} className="form-check-input" />
-            <label htmlFor="planning" className="form-check-label">Planning</label>
-        </div>
-        <div className="form-check">
-            <input type="checkbox" id="execution" name="projectPhases" value="Execution" checked={projectDetails.projectPhases.includes('Execution')} onChange={handleInputChange} className="form-check-input" />
-            <label htmlFor="execution" className="form-check-label">Execution</label>
-        </div>
-        <div className="form-check">
-            <input type="checkbox" id="monitoring" name="projectPhases" value="Monitoring" checked={projectDetails.projectPhases.includes('Monitoring')} onChange={handleInputChange} className="form-check-input" />
-            <label htmlFor="monitoring" className="form-check-label">Monitoring</label>
-        </div>
-        <div className="form-check">
-            <input type="checkbox" id="closing" name="projectPhases" value="Closing" checked={projectDetails.projectPhases.includes('Closing')} onChange={handleInputChange} className="form-check-input" />
-            <label htmlFor="closing" className="form-check-label">Closing</label>
-        </div>
-    </div>
+                <div className="form-group">
+                    <label>Project Phases</label>
+                    <div className="form-check">
+                        <input type="checkbox" id="planning" name="projectPhases" value="Planning" checked={projectDetails.projectPhases.includes('Planning')} onChange={handleInputChange} className="form-check-input" />
+                        <label htmlFor="planning" className="form-check-label">Planning</label>
+                    </div>
+                    <div className="form-check">
+                        <input type="checkbox" id="execution" name="projectPhases" value="Execution" checked={projectDetails.projectPhases.includes('Execution')} onChange={handleInputChange} className="form-check-input" />
+                        <label htmlFor="execution" className="form-check-label">Execution</label>
+                    </div>
+                    <div className="form-check">
+                        <input type="checkbox" id="monitoring" name="projectPhases" value="Monitoring" checked={projectDetails.projectPhases.includes('Monitoring')} onChange={handleInputChange} className="form-check-input" />
+                        <label htmlFor="monitoring" className="form-check-label">Monitoring</label>
+                    </div>
+                    <div className="form-check">
+                        <input type="checkbox" id="closing" name="projectPhases" value="Closing" checked={projectDetails.projectPhases.includes('Closing')} onChange={handleInputChange} className="form-check-input" />
+                        <label htmlFor="closing" className="form-check-label">Closing</label>
+                    </div>
+                </div>
 
-    <div className="form-group">
-        <label htmlFor="projectManager">Project Manager</label>
-        <input type="text" id="projectManager" name="projectManager" value={projectDetails.projectManager} onChange={handleInputChange} required className="form-control" />
-    </div>
+                <div className="form-group">
+                    <label htmlFor="projectManager">Project Manager</label>
+                    <input type="text" id="projectManager" name="projectManager" value={projectDetails.projectManager} onChange={handleInputChange} required className="form-control" />
+                </div>
 
-    <div className="form-group">
-        <label htmlFor="projectDeadline">Project Deadline</label>
-        <input type="date" id="projectDeadline" name="projectDeadline" value={projectDetails.projectDeadline} onChange={handleInputChange} required className="form-control" />
-    </div>
+                <div className="form-group">
+                    <label htmlFor="projectDeadline">Project Deadline</label>
+                    <input type="date" id="projectDeadline" name="projectDeadline" value={projectDetails.projectDeadline} onChange={handleInputChange} required className="form-control" />
+                </div>
 
-    {/* Add more form inputs as needed */}
-
-    <button type="submit" className="btn btn-primary">Create Project</button>
-</form>
-
+                <button type="submit" className="btn btn-primary">Create Project</button>
+            </form>
 
             <div className="statistics">
                 <h2>Project Statistics</h2>
                 <div className="chart-container">
-                    <Doughnut data={doughnutData} />
+                    <Doughnut data={doughnutData} options={{ maintainAspectRatio: false }} />
                 </div>
             </div>
+
             <div className="team-members">
-    <h2>Team Members</h2>
-    <table className="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Responsibility</th>
-                <th>Expertise</th>
-            </tr>
-        </thead>
-        <tbody>
-            {teamMembers.map((member, index) => (
-                <tr key={index}>
-                    <td>{member.name}</td>
-                    <td>{member.role}</td>
-                    <td>{member.responsibility}</td>
-                    <td>{member.expertise}</td>
-                </tr>
-            ))}
-        </tbody>
-    </table>
-</div>
+                <h2>Team Members</h2>
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Responsibility</th>
+                            <th>Expertise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {teamMembers.map((member, index) => (
+                            <tr key={index}>
+                                <td>{member.name}</td>
+                                <td>{member.role}</td>
+                                <td>{member.responsibility}</td>
+                                <td>{member.expertise}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
 
             <div className="project-showcase">
                 <h2>Animated Project Showcase</h2>
@@ -209,7 +207,7 @@ const CreateProject = () => {
                 <div className="chart-container">
                     <h3>Clients Served</h3>
                     <div className="wave-graph">
-                        <Bar data={waveGraphData} />
+                        <Doughnut data={waveGraphData} options={{ maintainAspectRatio: false }} />
                     </div>
                 </div>
             </div>
@@ -218,4 +216,3 @@ const CreateProject = () => {
 }
 
 export default CreateProject;
-
