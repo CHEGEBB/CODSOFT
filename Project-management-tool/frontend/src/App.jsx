@@ -7,6 +7,7 @@ import Progress from './pages/Progress';
 import Timeline from './pages/Timeline';
 import Sidenav from './components/Sidenav'
 import Team from './pages/Teams';
+import Details from './pages/Details'
 import { useState } from 'react';
 
 
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path="/progress" element={<Progress />} />
                 <Route path="/timeline" element={<Timeline />} />
                 <Route path="/team" element={<Team />} />
+                <Route path="/project/details" element={<Details />} />
             </Routes>
             </div>
             </div>

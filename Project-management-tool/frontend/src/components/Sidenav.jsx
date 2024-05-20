@@ -66,9 +66,8 @@ const SideNav = ({ isDarkMode, toggleDarkMode }) => {
                     </div>
                     {openDropdown === 'tasks' && (
                         <ul className="dropdown">
-                            <li><Link to="/tasks/todo">To Do</Link></li>
-                            <li><Link to="/tasks/in-progress">In Progress</Link></li>
-                            <li><Link to="/tasks/completed">Completed</Link></li>
+                            <li><Link to="/tasks/assign">Assign Task</Link></li>
+                            <li><Link to="/tasks/completion">Completion</Link></li>
                         </ul>
                     )}
                 </li>
@@ -80,8 +79,7 @@ const SideNav = ({ isDarkMode, toggleDarkMode }) => {
                     </div>
                     {openDropdown === 'progress' && (
                         <ul className="dropdown">
-                            <li><Link to="/progress/reports">Reports</Link></li>
-                            <li><Link to="/progress/charts">Charts</Link></li>
+                            <li><Link to="/progress/track">Track Progress</Link></li>
                         </ul>
                     )}
                 </li>
