@@ -199,13 +199,6 @@ const CreateProject = () => {
                 <button type="submit" className="btn btn-primary">Create Project</button>
             </form>
 
-            <div className="statistics">
-                <h2>Project Statistics</h2>
-                <div className="chart-container">
-                    <Doughnut data={doughnutData} options={{ maintainAspectRatio: false }} />
-                </div>
-            </div>
-            
             <div className="team-members">
                 <h2>Team Members</h2>
                 <table className="table">
@@ -260,6 +253,15 @@ const CreateProject = () => {
             </div>
 
 
+
+            <div className="statistics">
+                <h2>Project Statistics</h2>
+                <div className="chart-container">
+                    <Doughnut data={doughnutData} options={{ maintainAspectRatio: false }} />
+                </div>
+            </div>
+            
+           
             <div className="project-showcase">
                 <h2>Animated Project Showcase</h2>
                 <motion.div
