@@ -132,6 +132,20 @@ const Progress = () => {
     { name: 'Alex Johnson', role: 'Project Manager', completion: 80 },
     // Add more performers as needed
   ];
+    const projects = [
+      { name: 'Project 1', progress: 80 },
+      { name: 'Project 2', progress: 60 },
+      { name: 'Project 3', progress: 40 },
+      { name: 'Project 4', progress: 50 }
+    ];
+
+    useEffect(() => {
+        const bars = document.querySelectorAll('.progress-bar');
+        bars.forEach(bar => {
+          const value = bar.getAttribute('data-value');
+          bar.style.width = `${value}%`;
+        });
+      }, []);
 
   return (
     <div className="progress-page">
@@ -182,11 +196,28 @@ const Progress = () => {
           <div className="chart-container">
             <canvas ref={barChartRef}></canvas>
           </div>
+          <div className="current-projects-progress">
+          {projects.map((project, index) => (
+            <div key={index} className={`project project${index + 1}`}>
+              <h2>{project.name}</h2>
+              <div className="progress-bar-container">
+                <div
+                  className="progress-bar"
+                  data-value={project.progress}
+                ></div>
+              </div>
+              <p>{project.progress}%</p>
+            </div>
+          ))}
+        </div>
+          
+          <div className="data2">
           <div className="chart-container">
             <canvas ref={donutChartRef}></canvas>
           </div>
           <div className="chart-container">
             <canvas ref={waveChartRef}></canvas>
+          </div>
           </div>
         </section>
         <section className="top-workers">
