@@ -71,17 +71,24 @@ const Progress = () => {
 
     destroyCharts();
 
-    // Create Line Chart
     if (lineChartRef.current) {
       new Chart(lineChartRef.current, {
         type: 'line',
         data: lineData,
         options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                    },
+                },
+            },
         }
       });
     }
@@ -95,9 +102,17 @@ const Progress = () => {
           indexAxis: 'y',
           scales: {
             x: {
-              beginAtZero: true
-            }
-          }
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                beginAtZero: true,
+                grid: {
+                    display: false,
+                },
+            },
+        },
         }
       });
     }
@@ -116,11 +131,19 @@ const Progress = () => {
         type: 'line',
         data: waveData,
         options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                    },
+                },
+            },
         }
       });
     }
@@ -128,9 +151,10 @@ const Progress = () => {
 
   const topPerformers = [
     { name: 'John Doe', role: 'Developer', completion: 90 },
-    { name: 'Jane Smith', role: 'Designer', completion: 85 },
-    { name: 'Alex Johnson', role: 'Project Manager', completion: 80 },
-    // Add more performers as needed
+    { name: 'Jane Smith', role: 'Designer', completion: 82 },
+    { name: 'Alex Johnson', role: 'Project Manager', completion: 78 },
+    {name :'Justin Simons', role:'Ui/Ux Designer',completion :76},
+    
   ];
     const projects = [
       { name: 'SmartLife Web App', progress: 80 },
