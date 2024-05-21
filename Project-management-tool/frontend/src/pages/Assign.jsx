@@ -103,6 +103,7 @@ const Tasks = () => {
         <div className="create-task-button">
           <button onClick={handleCreateTask}>Create Task</button>
         </div>
+        
         <div className="task-bar__search">
           <input type="text" placeholder="Search..." />
         </div>
