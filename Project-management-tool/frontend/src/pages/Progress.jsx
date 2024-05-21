@@ -196,6 +196,7 @@ const Progress = () => {
           <div className="chart-container">
             <canvas ref={barChartRef}></canvas>
           </div>
+          <div className="two">
           <div className="current-projects-progress">
           {projects.map((project, index) => (
             <div key={index} className={`project project${index + 1}`}>
@@ -217,6 +218,7 @@ const Progress = () => {
           </div>
           <div className="chart-container">
             <canvas ref={waveChartRef}></canvas>
+          </div>
           </div>
           </div>
         </section>
