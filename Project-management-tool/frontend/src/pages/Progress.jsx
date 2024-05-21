@@ -338,7 +338,7 @@ const Progress = () => {
           </li>
         ))}
       </ul>
-      <form onSubmit={handleCreate}>
+      <form  onSubmit={handleCreate}>
         <label htmlFor="title">Title:</label>
         <input type="text" id="title" name="title" required />
         <label htmlFor="dueDate">Due Date:</label>
