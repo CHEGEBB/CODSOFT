@@ -125,13 +125,21 @@ const Tasks = () => {
           <tbody>
             {tasks.map((task, index) => (
               <tr key={index}>
-                <td className="data-number">{task.id}</td>
+                <td className="data-number">
+                <input
+                    type="string"
+                    value={task.id}
+                    onChange={(e) => handleEdit(task.id, "id", e.target.value)}
+                />
+                </td>
+                <td>
                 <td className="data-name">
                   <input
                     type="text"
                     value={task.projectName}
                     onChange={(e) => handleEdit(task.id, "projectName", e.target.value)}
                   />
+                  </td>
                 </td>
                 <td className="data-client">
                   <input
