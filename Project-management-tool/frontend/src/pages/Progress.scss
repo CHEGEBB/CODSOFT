@@ -267,6 +267,45 @@ $silver: #C0C0C0;
   }
   .milestones {
     margin-bottom: 20px;
+    form {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      width: 600px;
+  
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+  
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 500px;
+      }
+  
+      button[type="submit"] {
+        background-color: #ffcc00;
+        color: #333;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #ffc700;
+        }
+      }
+    }
+  
   
     h2 {
       margin-bottom: 20px;
@@ -294,6 +333,22 @@ $silver: #C0C0C0;
       .milestone-header {
         border-bottom: 1px solid #666;
         margin-bottom: 10px;
+
+        button{
+            background-color: #ffcc00;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-family: $jost;
+      
+            &:hover {
+              background-color: #800080;
+            }
+        }
   
         h3 {
           color: #ffcc00;
@@ -312,41 +367,4 @@ $silver: #C0C0C0;
       }
     }
   }
-  form {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    width: 600px;
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      width: 500px;
-    }
-
-    button[type="submit"] {
-      background-color: #ffcc00;
-      color: #333;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #ffc700;
-      }
-    }
-  }
+ 
