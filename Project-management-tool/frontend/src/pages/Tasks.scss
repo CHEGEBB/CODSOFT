@@ -42,6 +42,15 @@ $darkpink : #FF1493;
             color: $darkpink;
             border: 2px solid $darkpink;
         }
+        .data-status{
+            background-color: $darkpink;
+            color: $white;
+            border-radius: 15px;
+            width: 80px;
+            height: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
         th, td {
             padding: 8px;
             text-align: left;

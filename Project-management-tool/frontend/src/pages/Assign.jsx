@@ -1,9 +1,14 @@
 import './Tasks.scss'
 
 const Tasks = () => {
-   const TaskManager = () =>{
-    
-   }
+   const tasks = [
+    { id: 'TASK-01', projectName: 'ProjectProctor', client: 'John Doe', status: 'Completed', type: 'Design', priority: 'High', assignedTo: 'John Doe', dueDate: '12/12/2021' },
+    { id: 'TASK-02', projectName: 'SmartLife Web App', client: 'Phil Daniels', status: 'In progress', type: 'Design', priority: 'High', assignedTo: 'Cara Eve', dueDate: '12/12/2021' },
+    { id: 'TASK-03', projectName: 'Health Tracker', client: 'Alice Smith', status: 'Pending', type: 'Development', priority: 'Medium', assignedTo: 'Bob Brown', dueDate: '14/12/2021' },
+    {id :  'TASK-04', projectName: 'CityScape Eccomerce', client: 'Jane Steward', status: 'In progress', type: 'Development', priority: 'High', assignedTo: 'John Doe', dueDate: '05/06/2024'},
+    {id :  'TASK-05', projectName: 'Responsive Website', client: 'John Hemsworth', status: 'Completed', type: 'Web Development', priority: 'High', assignedTo: 'John Doe', dueDate: '23/02/2024'},
+    {id :  'TASK-06', projectName: 'Eccomerce App', client: 'John Doe', status: 'Pending', type: 'App Development', priority: 'Medium', assignedTo: 'Cara Eve', dueDate: '12/12/2021'}
+   ];
 
     
     return ( 
@@ -20,40 +25,42 @@ const Tasks = () => {
             <div className="task-bar__search">
                 <input type="text" placeholder="Search..." />
             </div>
-           <div className="task-table">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>Task No</th>
-                            <th>Project Name</th>
-                            <th>Client</th>
-                            <th>Status</th>
-                            <th>Type</th>
-                            <th>Priority</th>
-                            <th>Assigned To</th>
-                            <th>Due Date</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td className='data-number'>TASK-01</td>
-                            <td className='data-name'>ProjectProctor</td>
-                            <td className='data-client'>John Doe</td>
-                            <td className='data-status'>Completed</td>
-                            <td className='data-type'>Design</td>
-                            <td className='data-priority'>High</td>
-                            <td className='data-assigned'>John Doe</td>
-                            <td className='data-date'>12/12/2021</td>
-                            <td>
-                                <button className="btn">View</button>
-                                <button className="btn">Edit</button>
-                                <button className="btn">Delete</button>
-                            </td>
-                           </tr>   
-                    </tbody>
-                </table>
-           </div>
+            <div className="task-table">
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Task No</th>
+            <th>Project Name</th>
+            <th>Client</th>
+            <th>Status</th>
+            <th>Type</th>
+            <th>Priority</th>
+            <th>Assigned To</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tasks.map((task, index) => (
+            <tr key={index}>
+              <td className='data-number'>{task.id}</td>
+              <td className='data-name'>{task.projectName}</td>
+              <td className='data-client'>{task.client}</td>
+              <td className='data-status'>{task.status}</td>
+              <td className='data-type'>{task.type}</td>
+              <td className='data-priority'>{task.priority}</td>
+              <td className='data-assigned'>{task.assignedTo}</td>
+              <td className='data-date'>{task.dueDate}</td>
+              <td>
+                <button className="btn">View</button>
+                <button className="btn">Edit</button>
+                <button className="btn">Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
         </div>
         </div>
         
