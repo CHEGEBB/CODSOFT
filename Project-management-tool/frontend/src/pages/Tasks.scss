@@ -109,7 +109,7 @@ $darkpink : #FF1493;
                 font-family: $jost;
               }
   
-              .data-number, .data-name, .data-client, .data-status, .data-type, .data-priority, .data-assigned, .data-date {
+               .data-name, .data-client, .data-status, .data-type, .data-priority, .data-assigned, .data-date {
                 @include data-items;
                 input {
                   border: none;
