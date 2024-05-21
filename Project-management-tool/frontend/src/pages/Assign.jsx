@@ -10,6 +10,18 @@ const Tasks = () => {
     {id :  'TASK-06', projectName: 'Eccomerce App', client: 'John Doe', status: 'Pending', type: 'App Development', priority: 'Medium', assignedTo: 'Cara Eve', dueDate: '12/12/2021'}
    ];
 
+   const handleDelete = (id) => {
+   }
+
+   const handleEdit = (id) => {
+   }
+
+   const handleView = (id) => {
+   }
+
+   const handleCreateTask = () => {
+   }
+
     
     return ( 
 
