@@ -150,12 +150,18 @@ const Progress = () => {
   }, []);
 
   const topPerformers = [
-    { name: 'John Doe', role: 'Developer', completion: 90 },
+    { name: 'Sean Davis', role: 'Developer', completion: 90 },
     { name: 'Jane Smith', role: 'Designer', completion: 82 },
     { name: 'Alex Johnson', role: 'Project Manager', completion: 78 },
-    {name :'Justin Simons', role:'Ui/Ux Designer',completion :76},
-    
+    { name: 'Justin Simons', role: 'UI/UX Designer', completion: 76 },
+    { name: 'Micheal Johnson', role: 'Developer', completion: 74 },
+    { name: 'David Smith', role: 'Project Manager', completion: 72 },
+    { name: 'Evans Johnson', role: 'UI/UX Designer', completion: 70 },
+    { name: 'Janet Williams', role: 'Search Engine Optimization Engineer', completion: 66 },
+    { name: 'Rahul Singh', role: 'Quality Assurance Engineer', completion: 64 },
+    { name: 'Emily Davis', role: 'Content Writer', completion: 68 }
   ];
+  
     const projects = [
       { name: 'SmartLife Web App', progress: 80 },
       { name: 'CityScape Eccomerce', progress: 60 },
