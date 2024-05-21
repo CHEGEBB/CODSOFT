@@ -10,6 +10,14 @@ $ropa: 'Ropa Sans', sans-serif;
 $island:'Island Moments', cursive;
 $silver: #C0C0C0;
 $darkpink : #FF1493;
+
+@mixin data-items{
+    width: 10%;
+    text-align: center;
+    font-family: $jost;
+    font-size: 16px;
+    padding : 10px;
+}
 .tasks{
     display: flex;
     flex-wrap: wrap;
@@ -39,13 +47,41 @@ $darkpink : #FF1493;
 
         }
         .data-number{
+            @include data-items;
+            background-color: orangered;
+           
         }
         .data-status{
-            background-color: $darkpink;
-            color: $white;
-            border-radius: 15px;
-            width: 80px;
+            @include data-items;
+          
         }
+        .data-name{
+            @include data-items;
+        }
+        .data-client{
+            @include data-items;
+        }
+        .data-status{
+            @include data-items;
+        }
+        .data-date{
+            @include data-items;
+        }
+        .data-type{
+            @include data-items;
+        }
+        .data-assigned{
+            @include data-items;
+        }
+        .data-priority{
+            @include data-items;
+            border: 1px solid $darkpink;
+            padding: 20px;
+            font-size: 20px;
+            background-color: #555555;
+            color: $white;
+        }
+
         th, td {
             padding: 8px;
             text-align: left;
