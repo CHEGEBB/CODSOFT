@@ -31,7 +31,7 @@ $darkpink : #FF1493;
 .task-table{
     border-collapse: collapse;
     margin: 20px;
-    margin-left: -80px;
+    margin-left: -60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow-x: scroll;
 
@@ -40,6 +40,7 @@ $darkpink : #FF1493;
         border-collapse: collapse;
         background-color: $silver;
         box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+       
         tr {
             border-bottom: 1px solid #ccc;
             
