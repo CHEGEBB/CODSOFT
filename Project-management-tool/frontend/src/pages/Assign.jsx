@@ -81,6 +81,51 @@ const Tasks = () => {
                                   <button className="btn">Delete</button>
                              </td>
                             </tr>
+                            <tr>
+                                <td>TASK-04</td>
+                                <td>SmartHome Web App</td>
+                                <td>Phil Daniels</td>
+                                <td>Completed</td>
+                                <td>Development</td>
+                                <td>High</td>
+                                <td>Phil Daniels</td>
+                                <td>12/12/2021</td>
+                                <td>
+                                  <button className="btn">View</button>
+                                  <button className="btn">Edit</button>
+                                  <button className="btn">Delete</button>
+                             </td>
+                            </tr>
+                            <tr>
+                                <td>TASK-05</td>
+                                <td>SmartHome Web App</td>
+                                <td>Phil Daniels</td>
+                                <td>Completed</td>
+                                <td>Development</td>
+                                <td>High</td>
+                                <td>Phil Daniels</td>
+                                <td>12/12/2021</td>
+                                <td>
+                                  <button className="btn">View</button>
+                                  <button className="btn">Edit</button>
+                                  <button className="btn">Delete</button>
+                             </td>
+                            </tr>
+                            <tr>
+                                <td>TASK-06</td>
+                                <td>SmartHome Web App</td>
+                                <td>Phil Daniels</td>
+                                <td>Completed</td>
+                                <td>Development</td>
+                                <td>High</td>
+                                <td>Phil Daniels</td>
+                                <td>12/12/2021</td>
+                                <td>
+                                  <button className="btn">View</button>
+                                  <button className="btn">Edit</button>
+                                  <button className="btn">Delete</button>
+                             </td>
+                            </tr>
                     </tbody>
                 </table>
            </div>
