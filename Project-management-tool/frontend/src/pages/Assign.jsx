@@ -12,7 +12,10 @@ const Tasks = () => {
         <div className="tasks">
         <div className="task-bar">
             <div className="task-bar__title">
-                <h1>Tasks</h1>
+                <h1>My Tasks</h1>
+            </div>
+            <div className="create-task-button">
+                <button> Create Task</button>
             </div>
             <div className="task-bar__search">
                 <input type="text" placeholder="Search..." />
@@ -23,13 +26,62 @@ const Tasks = () => {
                         <tr>
                             <th>Task No</th>
                             <th>Project Name</th>
+                            <th>Client</th>
+                            <th>Status</th>
+                            <th>Type</th>
+                            <th>Priority</th>
                             <th>Assigned To</th>
                             <th>Due Date</th>
-                            <th>Status</th>
-                            <th>Priority</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr>
+                            <td>TASK-01</td>
+                            <td>ProjectProctor</td>
+                            <td>John Doe</td>
+                            <td>Completed</td>
+                            <td>Design</td>
+                            <td>High</td>
+                            <td>John Doe</td>
+                            <td>12/12/2021</td>
+                            <td>
+                                <button className="btn">View</button>
+                                <button className="btn">Edit</button>
+                                <button className="btn">Delete</button>
+                            </td>
+                           </tr>
+                            <tr>
+                             <td>TASK-02</td>
+                             <td>ProjectProctor</td>
+                             <td>John Doe</td>
+                             <td>Completed</td>
+                             <td>Design</td>
+                             <td>High</td>
+                             <td>John Doe</td>
+                             <td>12/12/2021</td>
+                             <td>
+                                  <button className="btn">View</button>
+                                  <button className="btn">Edit</button>
+                                  <button className="btn">Delete</button>
+                             </td>
+                            </tr>
+                            <tr>
+                             <td>TASK-03</td>
+                             <td>ProjectProctor</td>
+                             <td>John Doe</td>
+                             <td>Completed</td>
+                             <td>Design</td>
+                             <td>High</td>
+                             <td>John Doe</td>
+                             <td>12/12/2021</td>
+                             <td>
+                                  <button className="btn">View</button>
+                                  <button className="btn">Edit</button>
+                                  <button className="btn">Delete</button>
+                             </td>
+                            </tr>
+                    </tbody>
                 </table>
            </div>
         </div>

@@ -1,4 +1,15 @@
-
+$greyish:#555555;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$silver: #C0C0C0;
+$darkpink : #FF1493;
 .tasks{
     display: flex;
     flex-wrap: wrap;
@@ -6,4 +17,26 @@
     margin: 0;
     height: 100vh;
     margin-left: 300px;
+}
+.task-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    th, td{
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    th{
+        background: #f9f9f9;
+    }
+
+    td{
+        background: #fff;
+    }
 }
