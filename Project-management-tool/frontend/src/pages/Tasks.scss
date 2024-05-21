@@ -22,10 +22,6 @@ $darkpink : #FF1493;
 /* Tasks.scss */
 .tasks {
     padding: 20px;
-    background-color: #999;
-    width: 90%;
-    margin-left: 250px;
-    height: 150vh;
   
     .task-bar {
       display: flex;
@@ -69,9 +65,9 @@ $darkpink : #FF1493;
     }
   
     .task-table {
-      width:80%;
+      width:85%;
       overflow-x: auto;
-      margin-left: 20px;
+      margin-left: 200px;
   
       .table {
         width: 100%;

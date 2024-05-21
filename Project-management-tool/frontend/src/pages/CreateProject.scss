@@ -121,10 +121,11 @@ $darkpink : #FF1493;
     }
 
     h1 {
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
         font-family: $ropa;
         font-size: 30px;
+        color: $darkpink;
     }
 
     .animated-form {
@@ -135,10 +136,9 @@ $darkpink : #FF1493;
 
     }
     .create-project-form{
-        border: 2px solid #c0c0c0;
         width: 75%;
         height: 920px;
-        margin-left: 90px;
+        margin-left: -60px;
         border-radius: 10px;
 
     }
@@ -167,13 +167,14 @@ $darkpink : #FF1493;
             width: 70%;
             height: 100px;
             padding: 8px;
-            border: 1px solid $special;
+            border: none;
+            // border: 1px solid $special;
             border-radius: 5px;
             outline: none;
             font-family: $jost; 
             margin-left: 70px;
             &:hover{
-                border: 1px solid ;
+                border: 1px solid #FF1493
             }
             &:focus {
                 border-color: #007bff;
@@ -187,14 +188,16 @@ $darkpink : #FF1493;
         select {
             width: 70%;
             padding: 8px;
-            border: 1px solid $special;
+            // border: 1px solid $special;
             border-radius: 5px;
             outline: none;
             font-family: $jost; 
             margin-left: 70px;
+            border: none;
 
             &:hover{
-                border: 1px solid ;
+                border: 1px solid $darkpink ;
+
             }
             &:focus {
                 border-color: #007bff;
