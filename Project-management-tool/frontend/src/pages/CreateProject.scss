@@ -164,7 +164,7 @@ $darkpink : #FF1493;
             margin-left: 70px;
         }
         textarea{
-            width: 70%;
+            width: 100%;
             height: 100px;
             padding: 8px;
             border: none;
@@ -186,7 +186,7 @@ $darkpink : #FF1493;
         input[type='text'],
         input[type='date'],
         select {
-            width: 70%;
+            width: 100%;
             padding: 8px;
             // border: 1px solid $special;
             border-radius: 5px;

@@ -57,9 +57,10 @@ $darkpink : #FF1493;
       &__search {
         input {
           padding: 10px;
-          border: 1px solid #ccc;
+          border: 1px solid $darkpink;
           border-radius: 5px;
-          width: 200px;
+          width: 300px;
+          outline: none;
         }
       }
     }
