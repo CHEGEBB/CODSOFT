@@ -1,4 +1,5 @@
 import "./Tasks.scss";
+import { useState } from "react";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([
@@ -69,11 +70,21 @@ const Tasks = () => {
     setTasks(updatedTasks);
   };
 
-  const handleEdit = (id) => {};
+  const handleEdit = (id) => {
+  };
 
-  const handleView = (id) => {};
-
-  const handleCreateTask = () => {};
+  const handleCreateTask = () => {
+    const newTask =push.tasks({
+        id: "",
+        projectName: "",
+        client: "",
+        status: "",
+        type: "",
+        priority: "",
+        assignedTo: "",
+        dueDate: ""
+        });
+  };
 
   return (
     <div className="tasks">
@@ -114,11 +125,8 @@ const Tasks = () => {
                   <td className="data-assigned">{task.assignedTo}</td>
                   <td className="data-date">{task.dueDate}</td>
                   <td>
-                    <button className="btn" onClick={() => handleView(task.id)}>
+                    <button className="btn" onClick={() => handleCreateTask(task.id)}>
                       View
-                    </button>
-                    <button className="btn" onClick={() => handleEdit(task.id)}>
-                      Edit
                     </button>
                     <button
                       className="btn"
