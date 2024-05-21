@@ -2,12 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Homepage';
 import CreateProject from './pages/CreateProject';
-import Tasks from './pages/Tasks'
 import Progress from './pages/Progress';
 import Timeline from './pages/Timeline';
 import Sidenav from './components/Sidenav'
 import Team from './pages/Teams';
-import Details from './pages/Details'
+import Details from './pages/Details';
 import Assign from './pages/Assign';
 import { useState } from 'react';
 
