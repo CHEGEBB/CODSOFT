@@ -12,11 +12,12 @@ $silver: #C0C0C0;
 $darkpink : #FF1493;
 
 @mixin data-items{
-    width: 10%;
+    width: 20px;
     text-align: center;
     font-family: $jost;
     font-size: 16px;
     padding : 10px;
+
 }
 .tasks{
     display: flex;
@@ -25,13 +26,15 @@ $darkpink : #FF1493;
     margin: 0;
     height: 100vh;
     margin-left: 300px;
+    max-width: 1200px;
 }
 .task-table{
-    width: 1000px;
     border-collapse: collapse;
+    width: 60%;
     margin: 20px;
+    margin-left: -80px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    // overflow: hidden;
 
     table {
         width: 100%;
@@ -40,6 +43,7 @@ $darkpink : #FF1493;
         box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
         tr {
             border-bottom: 1px solid #ccc;
+            
             .task{
                 background-color: $special;
 
@@ -48,7 +52,6 @@ $darkpink : #FF1493;
         }
         .data-number{
             @include data-items;
-            background-color: orangered;
            
         }
         .data-status{
@@ -75,16 +78,19 @@ $darkpink : #FF1493;
         }
         .data-priority{
             @include data-items;
-            border: 1px solid $darkpink;
-            padding: 20px;
-            background-color: #555555;
-            color: $white;
         }
 
-        th, td {
+        td{
             padding: 8px;
             text-align: left;
-           
+            font-family: $ropa;
+            font-size: 16px;
+            padding : 10px;
+        }
+
+        th {
+            padding: 8px;
+            text-align: left;
 
             input{
                 margin-left: 10px;
