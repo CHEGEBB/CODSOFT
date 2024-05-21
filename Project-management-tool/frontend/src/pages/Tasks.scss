@@ -26,17 +26,38 @@ $darkpink : #FF1493;
     border-radius: 8px;
     overflow: hidden;
 
-    th, td{
-        padding: 15px;
-        text-align: left;
-        border-bottom: 1px solid #f2f2f2;
-    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: $silver;
+        box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        tr {
+            border-bottom: 1px solid #ccc;
 
-    th{
-        background: #f9f9f9;
-    }
+        }
 
-    td{
-        background: #fff;
+        th, td {
+            padding: 8px;
+            text-align: left;
+
+            input{
+                margin-left: 10px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $special;
+                font-family: $jost;
+            }
+        }
+        th {
+            background-color: #f55f;
+            font-family: $ropa;
+            font-size: 16px;
+            padding : 10px;
+            padding-left: 20px;
+        }
+        tr:nth-child(even) {
+           background-color: $silver;
+           
+        }
     }
 }
