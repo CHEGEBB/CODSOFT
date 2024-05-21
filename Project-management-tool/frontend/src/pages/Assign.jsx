@@ -37,95 +37,20 @@ const Tasks = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>TASK-01</td>
-                            <td>ProjectProctor</td>
-                            <td>John Doe</td>
-                            <td>Completed</td>
-                            <td>Design</td>
-                            <td>High</td>
-                            <td>John Doe</td>
-                            <td>12/12/2021</td>
+                            <td className='data-number'>TASK-01</td>
+                            <td className='data-name'>ProjectProctor</td>
+                            <td className='data-client'>John Doe</td>
+                            <td className='data-status'>Completed</td>
+                            <td className='data-type'>Design</td>
+                            <td className='data-priority'>High</td>
+                            <td className='data-assigned'>John Doe</td>
+                            <td className='data-date'>12/12/2021</td>
                             <td>
                                 <button className="btn">View</button>
                                 <button className="btn">Edit</button>
                                 <button className="btn">Delete</button>
                             </td>
-                           </tr>
-                            <tr>
-                             <td>TASK-02</td>
-                             <td>ProjectProctor</td>
-                             <td>John Doe</td>
-                             <td>Completed</td>
-                             <td>Design</td>
-                             <td>High</td>
-                             <td>John Doe</td>
-                             <td>12/12/2021</td>
-                             <td>
-                                  <button className="btn">View</button>
-                                  <button className="btn">Edit</button>
-                                  <button className="btn">Delete</button>
-                             </td>
-                            </tr>
-                            <tr>
-                             <td>TASK-03</td>
-                             <td>ProjectProctor</td>
-                             <td>John Doe</td>
-                             <td>Completed</td>
-                             <td>Design</td>
-                             <td>High</td>
-                             <td>John Doe</td>
-                             <td>12/12/2021</td>
-                             <td>
-                                  <button className="btn">View</button>
-                                  <button className="btn">Edit</button>
-                                  <button className="btn">Delete</button>
-                             </td>
-                            </tr>
-                            <tr>
-                                <td>TASK-04</td>
-                                <td>SmartHome Web App</td>
-                                <td>Phil Daniels</td>
-                                <td>Completed</td>
-                                <td>Development</td>
-                                <td>High</td>
-                                <td>Phil Daniels</td>
-                                <td>12/12/2021</td>
-                                <td>
-                                  <button className="btn">View</button>
-                                  <button className="btn">Edit</button>
-                                  <button className="btn">Delete</button>
-                             </td>
-                            </tr>
-                            <tr>
-                                <td>TASK-05</td>
-                                <td>SmartHome Web App</td>
-                                <td>Phil Daniels</td>
-                                <td>Completed</td>
-                                <td>Development</td>
-                                <td>High</td>
-                                <td>Phil Daniels</td>
-                                <td>12/12/2021</td>
-                                <td>
-                                  <button className="btn">View</button>
-                                  <button className="btn">Edit</button>
-                                  <button className="btn">Delete</button>
-                             </td>
-                            </tr>
-                            <tr>
-                                <td>TASK-06</td>
-                                <td>SmartHome Web App</td>
-                                <td>Phil Daniels</td>
-                                <td>Completed</td>
-                                <td>Development</td>
-                                <td>High</td>
-                                <td>Phil Daniels</td>
-                                <td>12/12/2021</td>
-                                <td>
-                                  <button className="btn">View</button>
-                                  <button className="btn">Edit</button>
-                                  <button className="btn">Delete</button>
-                             </td>
-                            </tr>
+                           </tr>   
                     </tbody>
                 </table>
            </div>

@@ -32,12 +32,20 @@ $darkpink : #FF1493;
         box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
         tr {
             border-bottom: 1px solid #ccc;
+            .task{
+                background-color: $special;
+
+            }
 
         }
-
+        .data-number{
+            color: $darkpink;
+            border: 2px solid $darkpink;
+        }
         th, td {
             padding: 8px;
             text-align: left;
+           
 
             input{
                 margin-left: 10px;
