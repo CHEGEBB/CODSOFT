@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import './Progress.scss';
+import { useState } from 'react';
 
 const Progress = () => {
   // Refs for chart canvases
@@ -40,12 +41,13 @@ const Progress = () => {
     };
 
     const lineData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September', 'October', 'November', 'December'],
       datasets: [{
         label: 'Tasks Completed',
-        data: [10, 20, 30, 40, 50, 60, 70],
-        fill: false,
-        borderColor: '#4CAF50',
+        data: [54, 61, 30, 23, 35, 65, 72, 55, 60, 80, 78, 34],
+        fill:false,
+        borderColor: '#4bc0c0',
+        backgroundColor: '#4bc0c0',
         tension: 0.1
       }]
     };
@@ -69,12 +71,13 @@ const Progress = () => {
     };
 
     const waveData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       datasets: [{
         label: 'Workload',
-        data: [12, 19, 3, 5, 2, 3, 10],
+        data: [12, 19, 3, 5, 2, 3, 10, 8, 6, 11, 9, 5],
         fill: true,
-        borderColor: '#ffcc00',
+        borderColor: '#ff6384',
+        backgroundColor: '#ff6384',
         tension: 0.4
       }]
     };
@@ -198,6 +201,31 @@ const Progress = () => {
     });
   }, []);
 
+
+    const [milestones, setMilestones] = useState([
+      { id: 1, title: 'Milestone 1', dueDate: 'Feb 28, 2023', description: 'This milestone involves setting up the foundational infrastructure for the project, including server configuration, database setup, and initial project structure.' },
+      { id: 2, title: 'Milestone 2', dueDate: 'May 15, 2023', description: 'This milestone focuses on frontend and backend development tasks. It includes building user interfaces, implementing backend logic, integrating APIs, and setting up authentication and authorization.' },
+      { id: 3, title: 'Milestone 3', dueDate: 'Aug 10, 2023', description: 'This milestone involves optimization and refinement tasks. It includes performance optimization, debugging, testing, and deployment automation. It also includes documentation and user training.' }
+    ]);
+  
+    const handleDelete = (id) => {
+      setMilestones(milestones.filter(milestone => milestone.id !== id));
+    };
+  
+    const handleCreate = (e) => {
+      e.preventDefault();
+      const newMilestone = {
+        id: milestones.length + 1,
+        title: e.target.title.value,
+        dueDate: e.target.dueDate.value,
+        description: e.target.description.value
+      };
+      setMilestones([...milestones, newMilestone]);
+      e.target.reset();
+    };
+
+  
+
   return (
     <div className="progress-page">
       <div className="facts">
@@ -293,13 +321,35 @@ const Progress = () => {
           </div>
         </section>
         <section className="milestones">
-          <h2>Milestones</h2>
-          <ul>
-            <li>Milestone 1 - Due Date: Feb 28, 2023</li>
-            <li>Milestone 2 - Due Date: May 15, 2023</li>
-            <li>Milestone 3 - Due Date: Aug 10, 2023</li>
-          </ul>
-        </section>
+      <h2>Milestones</h2>
+      <ul>
+        {milestones.map(milestone => (
+          <li key={milestone.id}>
+            <div className="milestone">
+              <div className="milestone-header">
+                <h3>{milestone.title}</h3>
+                <p>Due Date: {milestone.dueDate}</p>
+                <button onClick={() => handleDelete(milestone.id)}>Delete</button>
+              </div>
+              <div className="milestone-details">
+                <p>{milestone.description}</p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <form onSubmit={handleCreate}>
+        <label htmlFor="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+        <label htmlFor="dueDate">Due Date:</label>
+        <input type="text" id="dueDate" name="dueDate" required />
+        <label htmlFor="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <button type="submit">Create Milestone</button>
+      </form>
+    </section>
+
+
       </main>
     </div>
   );

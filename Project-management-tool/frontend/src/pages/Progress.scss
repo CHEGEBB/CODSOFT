@@ -265,3 +265,88 @@ $silver: #C0C0C0;
       width: 600px;
     }
   }
+  .milestones {
+    margin-bottom: 20px;
+  
+    h2 {
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .milestone {
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .milestone-header {
+        border-bottom: 1px solid #666;
+        margin-bottom: 10px;
+  
+        h3 {
+          color: #ffcc00;
+          margin-bottom: 5px;
+        }
+  
+        p {
+          color: #999;
+        }
+      }
+  
+      .milestone-details {
+        p {
+          color: #ccc;
+        }
+      }
+    }
+  }
+  form {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 500px;
+    }
+
+    button[type="submit"] {
+      background-color: #ffcc00;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ffc700;
+      }
+    }
+  }
