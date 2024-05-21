@@ -1,10 +1,18 @@
 // Progress.scss
 .progress-page {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
+    width: 800px;
+    margin-left: 300px;
+
+    .facts{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .overall-completion{
+            border: 3px 2px 0px 0px solid #ccc;
+        }
+    }
   
     header {
       text-align: center;
@@ -17,63 +25,127 @@
     }
   
     main {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-  
-      .overview {
-        width: 100%;
+
+
+      .project-details {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .milestones,
+    .team-members {
+      margin-top: 20px;
+
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 1.1em;
+          margin-bottom: 5px;
+        }
+      }
+    }
   
-        .metrics-summary {
-          display: flex;
-          gap: 10px;
-          margin-top: 10px;
+        .detail {
+          flex: 1;
+          padding: 10px;
+          border-radius: 5px;
   
-          .metric {
-            background-color: #f0f0f0;
-            padding: 5px 10px;
-            border-radius: 5px;
+          h2 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+          }
+  
+          p {
+            margin: 0;
           }
         }
       }
   
-      .task-section {
-        width: 100%;
+      .charts-section {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
       }
   
-      .milestones-section,
-      .team-performance-section,
-      .filters-section,
       .chart-container {
         flex: 1;
         min-width: 300px;
+        padding: 20px;
+        border-radius: 5px;
       }
   
-      .charts-section {
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
+      .top-workers {
+        margin-top: 20px;
   
-        .chart-container {
-          flex: 1;
-          min-width: 300px;
+        h2 {
+          font-size: 1.5em;
+          margin-bottom: 10px;
+        }
+  
+        ul {
+          list-style: none;
+          padding: 0;
+  
+          li {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+          }
         }
       }
     }
+  }
+  .top-workers {
+    margin-top: 20px;
   
-    footer {
-      margin-top: 20px;
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  
+    .performers-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .performer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+  
+      .details {
+        flex: 1;
+  
+        h3 {
+          margin: 0;
+        }
+  
+        p {
+          margin: 5px 0;
+          font-size: 0.9em;
+        }
+      }
+  
+      .image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
-  

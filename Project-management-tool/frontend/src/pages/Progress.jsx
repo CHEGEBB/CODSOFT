@@ -10,8 +10,25 @@ const Progress = () => {
   const donutChartRef = useRef(null);
   const waveChartRef = useRef(null);
 
+
+
   useEffect(() => {
-    // Sample data for charts
+
+    const destroyCharts = () => {
+        if (lineChartRef.current) {
+          Chart.getChart(lineChartRef.current)?.destroy();
+        }
+        if (barChartRef.current) {
+          Chart.getChart(barChartRef.current)?.destroy();
+        }
+        if (donutChartRef.current) {
+          Chart.getChart(donutChartRef.current)?.destroy();
+        }
+        if (waveChartRef.current) {
+          Chart.getChart(waveChartRef.current)?.destroy();
+        }
+      };
+
     const lineData = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [{
@@ -51,6 +68,8 @@ const Progress = () => {
         tension: 0.4
       }]
     };
+
+    destroyCharts();
 
     // Create Line Chart
     if (lineChartRef.current) {
@@ -107,8 +126,33 @@ const Progress = () => {
     }
   }, []);
 
+  const topPerformers = [
+    { name: 'John Doe', role: 'Developer', completion: 90 },
+    { name: 'Jane Smith', role: 'Designer', completion: 85 },
+    { name: 'Alex Johnson', role: 'Project Manager', completion: 80 },
+    // Add more performers as needed
+  ];
+
   return (
     <div className="progress-page">
+    <div className="facts">
+        <div className="overall-completion">
+            <h2>Overall Completion</h2>
+            <p>36.80%</p>
+        </div>
+        <div className="days-left">
+            <h2>Days Left</h2>
+            <p>120 days</p>
+            </div>
+            <div className="tasks-per-day">
+            <h2>Tasks Per Day</h2>
+            <p>5/day</p>
+            </div>
+            <div className="number-completed">
+            <h2>Number of Completed Projects</h2>
+            <p>500</p>
+            </div>
+    </div>
       <header>
         <h1>Project Progress</h1>
       </header>
@@ -147,10 +191,33 @@ const Progress = () => {
         </section>
         <section className="top-workers">
           <h2>Top Performers</h2>
+          <div className="performers-container">
+            {topPerformers.map((performer, index) => (
+              <div className="performer" key={index}>
+                <div className="details">
+                  <h3>{performer.name}</h3>
+                  <p>Role: {performer.role}</p>
+                  <p>Completion: {performer.completion}%</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* Additional sections */}
+        <section className="milestones">
+          <h2>Milestones</h2>
           <ul>
-            <li>John Doe - 90% Completion</li>
-            <li>Jane Smith - 85% Completion</li>
-            <li>Alex Johnson - 80% Completion</li>
+            <li>Milestone 1 - Due Date: Feb 28, 2023</li>
+            <li>Milestone 2 - Due Date: May 15, 2023</li>
+            <li>Milestone 3 - Due Date: Aug 10, 2023</li>
+          </ul>
+        </section>
+        <section className="team-members">
+          <h2>Team Members</h2>
+          <ul>
+            <li>John Doe - Project Manager</li>
+            <li>Jane Smith - Developer</li>
+            <li>Alex Johnson - Designer</li>
           </ul>
         </section>
       </main>
