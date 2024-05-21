@@ -90,22 +90,31 @@ $silver: #C0C0C0;
               display: flex;
               flex-direction: column;
               align-items: center;
+              background: linear-gradient(to bottom, #15b6a3, #122d17); 
+                color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                width: 160px;
         
               h2 {
                 margin-bottom: 10px;
+                font-family: $ropa;
+                font-size: 18px;
               }
         
               .progress-bar-container {
-                width: 200px;
-                height: 10px;
+                width: 180px;
+                height: 6px;
                 background-color: #e0e0e0;
                 // border-radius: 10px;
                 margin-bottom: 10px;
+                margin-top: 60px;
+
         
                 .progress-bar {
-                  height: 10px;
+                  height: 7px;
                   margin-top: -0.5px;
-                  background-color: #4CAF50;
+                  background-color: #FF6F61;
                   width: 0;
                   transition: width 2s ease-in-out;
                   border-radius: 0;

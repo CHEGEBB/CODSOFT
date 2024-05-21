@@ -133,10 +133,10 @@ const Progress = () => {
     // Add more performers as needed
   ];
     const projects = [
-      { name: 'Project 1', progress: 80 },
-      { name: 'Project 2', progress: 60 },
-      { name: 'Project 3', progress: 40 },
-      { name: 'Project 4', progress: 50 }
+      { name: 'SmartLife Web App', progress: 80 },
+      { name: 'CityScape Eccomerce', progress: 60 },
+      { name: 'Health Tracker', progress: 40 },
+      { name: 'Task Automation Bots', progress: 50 }
     ];
 
     useEffect(() => {
