@@ -28,16 +28,17 @@ $silver: #C0C0C0;
     }
 }
 .side-nav {
-    width: 180px;
+    width: 200px;
     position: fixed;
     height: 760px;
-    background-color: #483D8B;
     padding: 20px;
+    background: linear-gradient(to bottom, #FF1493, #461046); 
+    color: #fff;
     margin-top: 10px;
     border-radius: 12px;
     font-family: $jost;
     font-size: 18px;
-    margin-left: -4px;
+    margin-left: 2px;
 
     .us-name{
         display: flex;
