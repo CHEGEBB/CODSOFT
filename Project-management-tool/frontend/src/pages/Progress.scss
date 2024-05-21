@@ -216,7 +216,7 @@ $silver: #C0C0C0;
   
     .performers-container {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
       gap: 20px;
       width: 100%;
     }
@@ -225,7 +225,7 @@ $silver: #C0C0C0;
       display: flex;
       align-items: center;
       gap: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #15b6a3;
       border-radius: 5px;
       padding: 10px;
   
@@ -254,5 +254,14 @@ $silver: #C0C0C0;
           object-fit: cover;
         }
       }
+    }
+  }
+  .productivity-graph {
+    margin-bottom: 20px;
+
+    .chart-container {
+      padding: 20px;
+      border-radius: 5px;
+      width: 600px;
     }
   }
