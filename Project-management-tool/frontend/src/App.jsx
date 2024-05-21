@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Homepage';
 import CreateProject from './pages/CreateProject';
 import Progress from './pages/Progress';
-import Timeline from './pages/Timeline';
 import Sidenav from './components/Sidenav'
 import Team from './pages/Teams';
 import Details from './pages/Details';
@@ -26,7 +25,6 @@ const App = () => {
                 <Route path="/project/new" element={<CreateProject />} />
                 <Route path="/tasks/assign" element={<Assign />} />
                 <Route path="/progress/track" element={<Progress />} />
-                <Route path="/timeline" element={<Timeline />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/project/details" element={<Details />} />
             </Routes>
