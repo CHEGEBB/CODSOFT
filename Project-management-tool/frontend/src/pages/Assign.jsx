@@ -1,5 +1,5 @@
-import "./Tasks.scss";
-import { useState } from "react";
+import React, { useState } from 'react';
+import './Tasks.scss';
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([
@@ -70,20 +70,28 @@ const Tasks = () => {
     setTasks(updatedTasks);
   };
 
-  const handleEdit = (id) => {
+  const handleEdit = (id, field, value) => {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, [field]: value };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
   };
 
   const handleCreateTask = () => {
-    const newTask =push.tasks({
-        id: "",
-        projectName: "",
-        client: "",
-        status: "",
-        type: "",
-        priority: "",
-        assignedTo: "",
-        dueDate: ""
-        });
+    const newTask = {
+      id: "", // You can generate a unique id here, or leave it empty if you have a mechanism for generating ids later
+      projectName: "",
+      client: "",
+      status: "",
+      type: "",
+      priority: "",
+      assignedTo: "",
+      dueDate: ""
+    };
+    setTasks([...tasks, newTask]);
   };
 
   return (
@@ -93,53 +101,89 @@ const Tasks = () => {
           <h1>My Tasks</h1>
         </div>
         <div className="create-task-button">
-          <button> Create Task</button>
+          <button onClick={handleCreateTask}>Create Task</button>
         </div>
         <div className="task-bar__search">
           <input type="text" placeholder="Search..." />
         </div>
-        <div className="task-table">
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Task No</th>
-                <th>Project Name</th>
-                <th>Client</th>
-                <th>Status</th>
-                <th>Type</th>
-                <th>Priority</th>
-                <th>Assigned To</th>
-                <th>Due Date</th>
-                <th>Actions</th>
+      </div>
+      <div className="task-table">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Task No</th>
+              <th>Project Name</th>
+              <th>Client</th>
+              <th>Status</th>
+              <th>Type</th>
+              <th>Priority</th>
+              <th>Assigned To</th>
+              <th>Due Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tasks.map((task, index) => (
+              <tr key={index}>
+                <td className="data-number">{task.id}</td>
+                <td className="data-name">
+                  <input
+                    type="text"
+                    value={task.projectName}
+                    onChange={(e) => handleEdit(task.id, "projectName", e.target.value)}
+                  />
+                </td>
+                <td className="data-client">
+                  <input
+                    type="text"
+                    value={task.client}
+                    onChange={(e) => handleEdit(task.id, "client", e.target.value)}
+                  />
+                </td>
+                <td className="data-status">
+                  <input
+                    type="text"
+                    value={task.status}
+                    onChange={(e) => handleEdit(task.id, "status", e.target.value)}
+                  />
+                </td>
+                <td className="data-type">
+                  <input
+                    type="text"
+                    value={task.type}
+                    onChange={(e) => handleEdit(task.id, "type", e.target.value)}
+                  />
+                </td>
+                <td className="data-priority">
+                  <input
+                    type="text"
+                    value={task.priority}
+                    onChange={(e) => handleEdit(task.id, "priority", e.target.value)}
+                  />
+                </td>
+                <td className="data-assigned">
+                  <input
+                    type="text"
+                    value={task.assignedTo}
+                    onChange={(e) => handleEdit(task.id, "assignedTo", e.target.value)}
+                  />
+                </td>
+                <td className="data-date">
+                  <input
+                    type="text"
+                    value={task.dueDate}
+                    onChange={(e) => handleEdit(task.id, "dueDate", e.target.value)}
+                  />
+                </td>
+                <td>
+                  <button className="btn" onClick={() => handleDelete(task.id)}>
+                    Delete
+                  </button>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {tasks.map((task, index) => (
-                <tr key={index}>
-                  <td className="data-number">{task.id}</td>
-                  <td className="data-name">{task.projectName}</td>
-                  <td className="data-client">{task.client}</td>
-                  <td className="data-status">{task.status}</td>
-                  <td className="data-type">{task.type}</td>
-                  <td className="data-priority">{task.priority}</td>
-                  <td className="data-assigned">{task.assignedTo}</td>
-                  <td className="data-date">{task.dueDate}</td>
-                  <td>
-                    <button className="btn" onClick={() => handleCreateTask(task.id)}>
-                      View
-                    </button>
-                    <button
-                      className="btn"
-                      onClick={() => handleDelete(task.id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
