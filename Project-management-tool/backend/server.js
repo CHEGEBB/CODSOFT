@@ -3,6 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db'); // Ensure correct path to db.js
 const projectRoutes = require('./routes/projectRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -20,6 +21,9 @@ app.use(cors());
 
 // Routes
 app.use('/api/projects', projectRoutes);
+
+// Routes
+app.use('/api/auth', authRoutes);
 
 // Error handling middleware (optional)
 app.use(require('./middleware/errorMiddleware'));
