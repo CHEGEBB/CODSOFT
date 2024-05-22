@@ -17,8 +17,7 @@ const TeamMember = ({ name, role, rating, description, address, phone, email }) 
     const handleClick = () => {
         setIsFlipped(!isFlipped);
     };
-
-    // Extract the image name from the import statement based on user's name
+   
     const imageName = eval(name.replace(/\s+/g, ''));
 
     return (
@@ -34,8 +33,9 @@ const TeamMember = ({ name, role, rating, description, address, phone, email }) 
                         <p className="rating">{rating}</p>
                     </div>
                     <div className="flip-card-back">
-                        <h2>{name}</h2>
+                        <div className="un">
                         <p className='unique'>{description}</p>
+                        </div>
                         <div className="address">
                         <p>{address}</p>
                         </div>

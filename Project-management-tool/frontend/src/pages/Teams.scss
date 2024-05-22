@@ -80,23 +80,24 @@ $darkpink : #FF1493;
   .flip-card-back {
     transform: rotateY(180deg);
     display: flex;
-    flex-direction: column;
-    padding: 0;
+    flex-direction: column-reverse;
+
+    .un{
+      
+        margin-top: -10px;
+    }
+
+    .address{
+        font-size: 12px;
+        
+    }
   }
   .unique{
-    font-size: 12px;
-    color: $greyish;
-    background-color: red;
+    font-size: 16px;
     width: 200px;
+    text-align: center;
   }
-  
-  .profile-picture img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 15px;
-  }
+
   
   .profile-picture img {
     width: 100px;
