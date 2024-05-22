@@ -1,6 +1,18 @@
+$greyish:#555555;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$silver: #C0C0C0;
+$darkpink : #FF1493;
 .teams-page {
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family:$jost;
     max-width: 800px;
     margin-left: 300px;
   }
@@ -9,12 +21,14 @@
     font-size: 32px;
     margin-bottom: 30px;
     text-align: center;
+    color: $darkpink;
   }
   
   .team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 90px;
+    row-gap: 40px;
   }
   
   .team-member {
@@ -25,7 +39,7 @@
   }
   
   .flip-card {
-    width: 100%;
+    width: 300px;
     height: 200px;
     position: relative;
     transition: transform 0.5s;
@@ -37,7 +51,7 @@
   }
   
   .flip-card-inner {
-    width: 100%;
+    width: 300px;
     height: 100%;
     transition: transform 0.5s;
     transform-style: preserve-3d;
@@ -45,8 +59,9 @@
   
   .flip-card-front,
   .flip-card-back {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 200px;
+    // gap: 20px;
     position: absolute;
     backface-visibility: hidden;
     display: flex;
@@ -58,26 +73,35 @@
   }
   
   .flip-card-front {
-    background-color: #fff; /* Front card background color */
+    background-color: #c0c0c0;
+   
   }
   
   .flip-card-back {
-    background-color: #f9f9f9; /* Back card background color */
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .unique{
+    font-size: 12px;
+    color: $greyish;
+    background-color: red;
+    width: 200px;
   }
   
-  .profile-picture {
-    width: 100px;
-    height: 100px;
+  .profile-picture img{
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 15px;
   }
   
   .profile-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
   }
   
   .role {
