@@ -4,10 +4,10 @@ import { useState } from 'react';
 import SarahSmith from '../images/sarah.jpg';
 import JohnDoe from '../images/john.jpg';
 import EmilyJohnson from '../images/ash.jpg';
-import MichaelBrown from '../images/emily.jpg';
-import JessicaMiller from '../images/allan.jpg';
-import DavidWilson from '../images/allan.jpg';
-import JenniferTaylor from '../images/bob.jpg';
+import MichaelBrown from '../images/mike.jpg';
+import JessicaMiller from '../images/jessica.avif';
+import DavidWilson from '../images/david.jpg';
+import JenniferTaylor from '../images/jenni.jpg';
 import ChristopherMartinez from '../images/martinez.jpg';
 import EvaAdams from '../images/emily.jpg';
 

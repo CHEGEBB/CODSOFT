@@ -70,11 +70,16 @@ $darkpink : #FF1493;
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    
+    &:hover {
+
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+    }
   }
   
   .flip-card-front {
-    background: linear-gradient(to bottom, #c6cec7, #461046); 
+    background: linear-gradient(to bottom, #c6cec7, #201d20); 
 
     h2{
         color: $white;
