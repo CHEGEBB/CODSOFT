@@ -59,6 +59,12 @@ body{
         img {
             width: 30px;
             height: 30px;
+
+            &:hover {
+                cursor: pointer;
+                transition : 0.5s;
+                transform: scale(1.3);
+            }
           }                  
         p{
             font-size: 12px;
@@ -472,6 +478,13 @@ body{
             height: 50px;
             border-radius: 50%;
             margin-top: 20px;
+        }
+        .testimonial-text{
+            p{
+                font-family: $jost;
+                font-size: 16px;
+                margin-top: 20px;
+            }
         }
     }
 }

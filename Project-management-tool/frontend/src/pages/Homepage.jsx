@@ -378,7 +378,7 @@ const Home = ({ darkMode }) => {
                 </div>
             </div>
             <div className="testimonials">
-                <h2>My Testimonials</h2>
+                <h2>What Clients Say</h2>
                 <div className="test">
                 <div className="testimonial">
                     <div className="testimonial-text">
@@ -390,7 +390,6 @@ const Home = ({ darkMode }) => {
                         </div>
                         <div className="user-info">
                             <p>John Doe</p>
-                            <p>CEO, Company</p>
                             <div className="rating">
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -410,8 +409,7 @@ const Home = ({ darkMode }) => {
                             <img src={user} alt="User" />
                         </div>
                         <div className="user-info">
-                            <p>Jane Doe</p>
-                            <p>CTO, Company</p>
+                            <p>Cole Daniels</p>
                             <div className="rating">
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -430,8 +428,7 @@ const Home = ({ darkMode }) => {
                             <img src={user} alt="User" />
                         </div>
                         <div className="user-info">
-                            <p>John Doe</p>
-                            <p>CEO, Company</p>
+                            <p>John Rick</p>
                             <div className="rating">
                                 <span>⭐</span>
                                 <span>⭐</span>

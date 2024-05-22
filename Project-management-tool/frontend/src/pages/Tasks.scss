@@ -19,7 +19,6 @@ $darkpink : #FF1493;
     padding : 10px;
 
 }
-/* Tasks.scss */
 .tasks {
     padding: 20px;
   
@@ -33,8 +32,8 @@ $darkpink : #FF1493;
       &__title {
         h1 {
           font-size: 24px;
-          color: #333;
           margin-left: 400px;
+          font-family: $ropa;
         }
       }
   

@@ -257,10 +257,27 @@ $darkpink : #FF1493;
                 height: auto;
             }
         }
+        h2{
+            font-family: $ropa;
+            font-size: 30px;
+            color: $darkpink;
+        }
+        h3{
+            font-family: $ropa;
+            font-size: 20px;
+            color: $silver;
+            display: none;
+        }
     }
 
     .team-members-create {
         margin-bottom: 20px;
+        h2{
+            font-family: $ropa;
+            font-size: 30px;
+            color: $darkpink;
+            margin-left: 70px;
+        }
         button{
             border: 0;
             background-color: #0056b3;
