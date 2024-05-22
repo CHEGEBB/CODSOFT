@@ -143,14 +143,10 @@ const CreateProject = () => {
                 budget: projectDetails.budget,
                 priority: projectDetails.priority
             };
-            
-            // Sending data directly from projectDetails
-            const response1 = await axios.post('/api/projects', projectDetails);
-            console.log(response1.data); // Log the created project data from projectDetails
     
-            // Sending data from formData
-            const response2 = await axios.post('/api/projects', formData);
-            console.log(response2.data); // Log the created project data from formData
+            // Note: The URL now uses the proxy '/api/projects'
+            const response = await axios.post('/api/projects', formData);
+            console.log(response.data); // Log the created project data
     
             // Optionally, you can redirect the user or show a success message here
         } catch (error) {
