@@ -132,14 +132,33 @@ const CreateProject = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/api/projects', projectDetails);
-            console.log(response.data); // Log the created project data
+            const formData = {
+                projectName: projectDetails.projectName,
+                projectDescription: projectDetails.projectDescription,
+                projectCategory: projectDetails.projectCategory,
+                projectStartDate: projectDetails.projectStartDate,
+                projectEndDate: projectDetails.projectEndDate,
+                notificationSent: projectDetails.notificationSent,
+                taskAssignPerson: projectDetails.taskAssignPerson,
+                budget: projectDetails.budget,
+                priority: projectDetails.priority
+            };
+            
+            // Sending data directly from projectDetails
+            const response1 = await axios.post('/api/projects', projectDetails);
+            console.log(response1.data); // Log the created project data from projectDetails
+    
+            // Sending data from formData
+            const response2 = await axios.post('/api/projects', formData);
+            console.log(response2.data); // Log the created project data from formData
+    
             // Optionally, you can redirect the user or show a success message here
         } catch (error) {
             console.error('Error creating project:', error);
             // Handle error: show error message to the user
         }
     };
+    
 
     return (
         <div className="project-create">
@@ -199,7 +218,7 @@ const CreateProject = () => {
                 </motion.div>
             </div>
             <h1>Create Project</h1>
-            <form className="create-project-form">
+            <form className="create-project-form"  onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="projectName" style={{marginTop:40}}>Project Name</label>
                     <input type="text" id="projectName" name="projectName" value={projectDetails.projectName} onChange={handleInputChange} required className="form-control" />
