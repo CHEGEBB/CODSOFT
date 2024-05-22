@@ -145,7 +145,7 @@ const CreateProject = () => {
             };
     
             // Note: The URL now uses the proxy '/api/projects'
-            const response = await axios.post('/api/projects', formData);
+            const response = await axios.post('http://localhost:5000/api/projects ', formData);
             console.log(response.data); // Log the created project data
     
             // Optionally, you can redirect the user or show a success message here
