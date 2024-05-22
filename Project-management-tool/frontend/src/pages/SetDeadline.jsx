@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import React, { useState } from 'react';
 import './Deadline.scss';
 
 const Deadline = () => {
@@ -10,64 +9,6 @@ const Deadline = () => {
     { title: 'Testing Phase', dueDate: '2024-09-10', team: 'Team D', description: 'Conduct system and integration testing.' },
     { title: 'Deployment', dueDate: '2024-10-05', team: 'Team E', description: 'Deploy the project to production.' }
   ]);
-
-  const chartRef = useRef(null);
-  const chartInstanceRef = useRef(null);
-
-  useEffect(() => {
-    const updateChart = () => {
-      const labels = deadlines.map(deadline => deadline.title);
-      const data = deadlines.map(deadline => {
-        const now = new Date();
-        const deadlineDate = new Date(deadline.dueDate);
-        const timeDifference = deadlineDate - now;
-        return Math.max(timeDifference / (1000 * 60 * 60 * 24), 0); // Convert milliseconds to days
-      });
-
-      if (chartRef.current) {
-        if (chartInstanceRef.current) {
-          chartInstanceRef.current.data.labels = labels;
-          chartInstanceRef.current.data.datasets[0].data = data;
-          chartInstanceRef.current.update();
-        } else {
-          chartInstanceRef.current = new Chart(chartRef.current, {
-            type: 'bar',
-            data: {
-              labels,
-              datasets: [{
-                label: 'Days Left',
-                data,
-                backgroundColor: ['#36a2eb', '#ff6384', '#ffcd56', '#4bc0c0', '#9966ff']
-              }]
-            },
-            options: {
-              scales: {
-                x: {
-                  grid: {
-                    display: false
-                  }
-                },
-                y: {
-                  beginAtZero: true,
-                  grid: {
-                    display: true
-                  }
-                }
-              }
-            }
-          });
-        }
-      }
-    };
-
-    updateChart();
-
-    return () => {
-      if (chartInstanceRef.current) {
-        chartInstanceRef.current.destroy();
-      }
-    };
-  }, [deadlines]);
 
   const handleCreate = (e) => {
     e.preventDefault();
@@ -92,12 +33,6 @@ const Deadline = () => {
         <h1>Project Deadlines & Reminders</h1>
       </header>
       <main>
-        <section className="chart-section">
-          <h2>Deadlines Overview</h2>
-          <div className="chart-container">
-            <canvas ref={chartRef}></canvas>
-          </div>
-        </section>
         <section className="deadlines">
           <h2>Upcoming Deadlines</h2>
           <ul>

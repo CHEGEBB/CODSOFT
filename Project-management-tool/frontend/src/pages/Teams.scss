@@ -1,0 +1,109 @@
+// Teams.scss
+
+.page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin-left: 300px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .team-member {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .team-member:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .front {
+    background-color: #fff;
+  }
+  
+  .back {
+    background-color: #f9f9f9;
+    transform: rotateY(180deg);
+  }
+  
+  .team-member h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .team-member .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .team-member .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-member .role {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .team-member .contact-info {
+    text-align: center;
+  }
+  
+  .contact-info p {
+    margin-bottom: 5px;
+  }
+  
+  .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
