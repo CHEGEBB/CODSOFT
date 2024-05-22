@@ -1,6 +1,6 @@
-// backend/routes/projectRoutes.js
 const express = require('express');
 const router = express.Router();
+const Project = require('../models/Project'); // Import the Project model
 const { getProjects, createProject } = require('../controllers/projectController');
 
 // POST route to create a new project
