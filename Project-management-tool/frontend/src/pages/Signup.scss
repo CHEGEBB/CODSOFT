@@ -25,7 +25,6 @@ $darkpink: #FF007F;
   background-image: url("../images/bg2.avif");
   background-size: cover;
   background-repeat: no-repeat;
-
   .overlay {
     background-color: rgba(5, 5, 5, 0.6);
     height: 100vh;
@@ -97,6 +96,8 @@ $darkpink: #FF007F;
     width: 350px;
     height: 500px;
     background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #8f37cd;
+
 
     .horizontal-nav {
       ul {
@@ -168,7 +169,7 @@ $darkpink: #FF007F;
           font-family: $jost;
         }
         input {
-          width: 270px;
+          width: 320px;
           padding: 10px;
           border: 1px solid #8f37cd;
           border-radius: 5px;
