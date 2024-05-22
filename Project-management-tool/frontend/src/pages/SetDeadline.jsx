@@ -11,65 +11,63 @@ const Deadline = () => {
     { title: 'Deployment', dueDate: '2024-10-05', team: 'Team E', description: 'Deploy the project to production.' }
   ]);
 
-  const [timeLeft, setTimeLeft] = useState([]);
-  const countdownChartRef = useRef(null);
+  const chartRef = useRef(null);
+  const chartInstanceRef = useRef(null);
 
   useEffect(() => {
-    const calculateTimeLeft = () => {
-      const now = new Date();
-      const timeLeftArray = deadlines.map(deadline => {
+    const updateChart = () => {
+      const labels = deadlines.map(deadline => deadline.title);
+      const data = deadlines.map(deadline => {
+        const now = new Date();
         const deadlineDate = new Date(deadline.dueDate);
         const timeDifference = deadlineDate - now;
-        return {
-          ...deadline,
-          timeLeft: Math.max(timeDifference, 0)
-        };
+        return Math.max(timeDifference / (1000 * 60 * 60 * 24), 0); // Convert milliseconds to days
       });
-      setTimeLeft(timeLeftArray);
-    };
 
-    const updateCountdownChart = () => {
-      if (countdownChartRef.current) {
-        Chart.getChart(countdownChartRef.current)?.destroy();
-      }
-
-      const labels = deadlines.map(deadline => deadline.title);
-      const data = timeLeft.map(item => item.timeLeft / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
-
-      new Chart(countdownChartRef.current, {
-        type: 'bar',
-        data: {
-          labels,
-          datasets: [{
-            label: 'Days Left',
-            data,
-            backgroundColor: ['#36a2eb', '#ff6384', '#ffcd56', '#4bc0c0', '#9966ff']
-          }]
-        },
-        options: {
-          scales: {
-            x: {
-              grid: {
-                display: false
-              }
+      if (chartRef.current) {
+        if (chartInstanceRef.current) {
+          chartInstanceRef.current.data.labels = labels;
+          chartInstanceRef.current.data.datasets[0].data = data;
+          chartInstanceRef.current.update();
+        } else {
+          chartInstanceRef.current = new Chart(chartRef.current, {
+            type: 'bar',
+            data: {
+              labels,
+              datasets: [{
+                label: 'Days Left',
+                data,
+                backgroundColor: ['#36a2eb', '#ff6384', '#ffcd56', '#4bc0c0', '#9966ff']
+              }]
             },
-            y: {
-              beginAtZero: true,
-              grid: {
-                display: true
+            options: {
+              scales: {
+                x: {
+                  grid: {
+                    display: false
+                  }
+                },
+                y: {
+                  beginAtZero: true,
+                  grid: {
+                    display: true
+                  }
+                }
               }
             }
-          }
+          });
         }
-      });
+      }
     };
 
-    calculateTimeLeft();
-    updateCountdownChart();
+    updateChart();
 
-    const interval = setInterval(calculateTimeLeft, 1000 * 60); // Update every minute
-    return () => clearInterval(interval);
-  }, [deadlines, timeLeft]);
+    return () => {
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.destroy();
+      }
+    };
+  }, [deadlines]);
 
   const handleCreate = (e) => {
     e.preventDefault();
@@ -94,10 +92,10 @@ const Deadline = () => {
         <h1>Project Deadlines & Reminders</h1>
       </header>
       <main>
-        <section className="countdown-section">
-          <h2>Time Left for Each Deadline</h2>
+        <section className="chart-section">
+          <h2>Deadlines Overview</h2>
           <div className="chart-container">
-            <canvas ref={countdownChartRef}></canvas>
+            <canvas ref={chartRef}></canvas>
           </div>
         </section>
         <section className="deadlines">
@@ -114,7 +112,6 @@ const Deadline = () => {
                   </div>
                   <div className="deadline-details">
                     <p>{deadline.description}</p>
-                    <p>Time Left: {Math.max(deadline.timeLeft / (1000 * 60 * 60 * 24), 0).toFixed(2)} days</p>
                   </div>
                 </div>
               </li>
