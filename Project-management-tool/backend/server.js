@@ -23,7 +23,7 @@ app.use(cors());
 app.use('/api/projects', projectRoutes);
 
 // Routes
-app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
 
 // Error handling middleware (optional)
 app.use(require('./middleware/errorMiddleware'));

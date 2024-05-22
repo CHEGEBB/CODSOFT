@@ -40,7 +40,7 @@ const SideNav = ({ isDarkMode, toggleDarkMode }) => {
         </div>
             <ul>
                 <li>
-                    <Link to="/">
+                    <Link to="/home">
                         <img src={Home} alt="Home Icon" />
                         Dashboard
                     </Link>
