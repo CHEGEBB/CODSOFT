@@ -13,6 +13,7 @@ import Project2Icon from '../images/zondicons--shopping-cart.svg';
 import Project3Icon from '../images/fluent-mdl2--task-manager-mirrored.svg';
 import Project4Icon from '../images/streamline--computer-logo-twitter-media-twitter-social.svg';
 import { Line } from 'react-chartjs-2';
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = ({ darkMode }) => {
@@ -201,6 +202,12 @@ const Home = ({ darkMode }) => {
         },
     };
 
+    const navigate = useNavigate();
+
+    const handleCreateProject = () => {
+        navigate('/project/new');
+    }
+
     return (
         <div className={`home ${darkMode ? 'dark-mode' : ''}`}>
             <div className="header" style={headerTextStyle}>
@@ -247,7 +254,7 @@ const Home = ({ darkMode }) => {
                 <div className="project-creation">
                     <h2>Create a Project</h2>
                     <p>Start creating your project by clicking the button below</p>
-                    <button>Create Project</button>
+                    <button onClick={handleCreateProject}>Create Project</button>
                 </div>
             </div>
             <div className="manage">
