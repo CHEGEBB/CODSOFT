@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import Axios for HTTP requests
 import './Tasks.scss';
 
 const Tasks = () => {
@@ -70,19 +71,33 @@ const Tasks = () => {
     setTasks(updatedTasks);
   };
 
-  const handleCreateTask = () => {
-    const newTask = {
-      id: "", // You can generate a unique id here, or leave it empty if you have a mechanism for generating ids later
-      projectName: "",
-      client: "",
-      status: "",
-      type: "",
-      priority: "",
-      assignedTo: "",
-      dueDate: ""
+    const handleCreateTask = () => {
+      const newTask = {
+        id: `TASK-${tasks.length + 1}`, // Generate a unique ID for the new task
+        projectName: "",
+        client: "",
+        status: "",
+        type: "",
+        priority: "",
+        assignedTo: "",
+        dueDate: ""
+      };
+      setTasks([...tasks, newTask]);
     };
-    setTasks([...tasks, newTask]);
-  };
+    
+    const handleSaveTask = async () => {
+      try {
+        // Access the last task directly from the state
+        const newTask = tasks[tasks.length - 1];
+    
+        // Send a POST request to save the new task to the database
+        await axios.post('http://localhost:5000/api/tasks', newTask); // Assuming the backend route is '/api/tasks'
+        alert('Task saved successfully!');
+      } catch (error) {
+        console.error('Error saving task:', error);
+        alert('Failed to save task. Please try again later.');
+      }
+    };
 
   return (
     <div className="tasks">
@@ -92,6 +107,7 @@ const Tasks = () => {
         </div>
         <div className="create-task-button">
           <button onClick={handleCreateTask}>Create Task</button>
+          <button onClick={handleSaveTask}>Save Task</button>
         </div>
         
         <div className="task-bar__search">
