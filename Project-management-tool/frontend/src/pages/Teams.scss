@@ -1,8 +1,8 @@
-// Teams.scss
-
 .teams-page {
     padding: 20px;
     font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin-left: 300px;
   }
   
   h1 {
@@ -53,14 +53,16 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   
   .flip-card-front {
-    background-color: #fff;
+    background-color: #fff; /* Front card background color */
   }
   
   .flip-card-back {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Back card background color */
     transform: rotateY(180deg);
   }
   
@@ -98,5 +100,8 @@
   
   .contact-info a:hover {
     text-decoration: underline;
+  }
+  .flip-card:hover .flip-card-inner .flip-card-back h2 {
+    opacity: 0;
   }
   
