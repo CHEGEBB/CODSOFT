@@ -35,8 +35,10 @@ const TeamMember = ({ name, role, rating, description, address, phone, email }) 
                     </div>
                     <div className="flip-card-back">
                         <h2>{name}</h2>
-                        <p>{description}</p>
+                        <p className='unique'>{description}</p>
+                        <div className="address">
                         <p>{address}</p>
+                        </div>
                         <div className="contact-info">
                             <p>{phone}</p>
                             <p>{email}</p>
