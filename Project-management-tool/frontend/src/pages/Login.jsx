@@ -3,15 +3,17 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
-
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', { 
+      const response = await fetch('http://localhost:5000/auth/login', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +27,7 @@ const Login = () => {
         localStorage.setItem('token', token);
         navigate('/home');
       } else {
-        alert('Invalid email or password'); // Handle invalid credentials
+        alert('Invalid email or password');
       }
     } catch (error) {
       console.error('Login failed:', error.message);
@@ -74,7 +76,7 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
-                <button type="submit" onClick={ handleLogin}>Login</button>
+                <button type="submit">Login</button>
               </form>
               <div className="forgot-password">
                 <p>
