@@ -259,7 +259,7 @@ const CreateProject = () => {
                 <button type="submit" className="btn btn-primary">Create Project</button>
             </form>
 
-            <div className="team-members">
+            <div className="team-members-create">
                 <h2>Team Members</h2>
                 <table className="table">
                     <thead>
@@ -327,12 +327,6 @@ const CreateProject = () => {
                     <h3>Best Projects of All Time</h3>
                     <Bar data={barData} />
                 </div>
-                <div className="chart-container">
-                    <h3>Clients Served</h3>
-                    <div className="wave-graph">
-                        <Doughnut data={waveGraphData} options={{ maintainAspectRatio: false }} />
-                    </div>
-                    </div>
                     </div>
         </div>
     );
