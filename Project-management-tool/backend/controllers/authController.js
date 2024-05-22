@@ -1,4 +1,3 @@
-
 // backend/controllers/authController.js
 
 const User = require('../models/User');

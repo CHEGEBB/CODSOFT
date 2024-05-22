@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const connectDB = require('./config/db'); // Ensure correct path to db.js
+const connectDB = require('./config/db'); 
 const projectRoutes = require('./routes/projectRoutes');
 const authRoutes = require('./routes/authRoutes');
 
@@ -25,7 +25,7 @@ app.use('/api/projects', projectRoutes);
 // Routes
 app.use('/auth', authRoutes);
 
-// Error handling middleware (optional)
+// Error handling middleware
 app.use(require('./middleware/errorMiddleware'));
 
 const PORT = process.env.PORT || 5000;

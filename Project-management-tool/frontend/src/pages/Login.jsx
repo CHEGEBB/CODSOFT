@@ -11,7 +11,7 @@ const Login = () => {
 
 
     try {
-      const response = await fetch('http://localhost:5000/auth/login', { // Assuming your backend API endpoint is '/auth/login'
+      const response = await fetch('http://localhost:5000/api/auth/login', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,8 +22,8 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         const { token } = data;
-        localStorage.setItem('token', token); // Store the token in local storage
-        navigate('/home'); // Redirect to the home page or any other authenticated route
+        localStorage.setItem('token', token);
+        navigate('/home');
       } else {
         alert('Invalid email or password'); // Handle invalid credentials
       }
