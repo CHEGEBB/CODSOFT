@@ -5,8 +5,6 @@ const projectSchema = new mongoose.Schema({
     projectName: { type: String, required: true },
     projectDescription: { type: String, required: true },
     projectCategory: { type: String, required: true },
-    projectPhases: { type: [String], required: true },
-    projectManager: { type: String, required: true },
     projectStartDate: { type: Date, required: true },
     projectEndDate: { type: Date, required: true },
     notificationSent: { type: String, required: true },

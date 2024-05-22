@@ -1,6 +1,6 @@
-// backend/server.js
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors'); // Import the cors package
 const connectDB = require('./config/db'); // Ensure correct path to db.js
 const projectRoutes = require('./routes/projectRoutes');
 
@@ -11,6 +11,9 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors()); // Add this line to enable CORS
 
 // Middleware to parse JSON
 app.use(express.json());
