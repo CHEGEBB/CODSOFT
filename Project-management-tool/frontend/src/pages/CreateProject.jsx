@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Doughnut, Bar } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
 import './CreateProject.scss';
+import axios from 'axios';
+
 
 const CreateProject = () => {
     const [projectDetails, setProjectDetails] = useState({
@@ -125,6 +127,18 @@ const CreateProject = () => {
         const updatedMembers = [...teamMembers];
         updatedMembers[index][field] = value;
         setTeamMembers(updatedMembers);
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('/api/projects', projectDetails);
+            console.log(response.data); // Log the created project data
+            // Optionally, you can redirect the user or show a success message here
+        } catch (error) {
+            console.error('Error creating project:', error);
+            // Handle error: show error message to the user
+        }
     };
 
     return (
