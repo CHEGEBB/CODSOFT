@@ -69,8 +69,8 @@ $silver: #C0C0C0;
     ul {
         list-style-type: none;
         padding: 0;
-        display: flex; /* Make the ul a flex container */
-        flex-direction: column; /* Stack items vertically */
+        display: flex; 
+        flex-direction: column; 
         gap: 10px;
 
         img{
@@ -111,7 +111,9 @@ $silver: #C0C0C0;
 
                     a {
                         text-decoration: none;
-                        color: crimson;
+                        color: #16caca;
+                        font-size: 14px;
+                        font-weight: bold;
                     }
                 }
             }
