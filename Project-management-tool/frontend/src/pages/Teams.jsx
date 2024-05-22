@@ -28,9 +28,18 @@ const TeamMember = ({ name, role, rating, description, address, phone, email }) 
                         <div className="profile-picture">
                             <img src={imageName} alt={name} />
                         </div>
+                        <div className="pers">
+                        <div className="info-pers">
                         <h2>{name}</h2>
                         <p className="role">{role}</p>
-                        <p className="rating">{rating}</p>
+                        </div>
+                        <div className="rating">
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                <span>⭐</span>
+                                </div>
+                                </div>
                     </div>
                     <div className="flip-card-back">
                         <div className="un">

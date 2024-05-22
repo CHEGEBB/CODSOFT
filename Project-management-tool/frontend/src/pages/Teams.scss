@@ -27,8 +27,8 @@ $darkpink : #FF1493;
   .team-members {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    gap: 90px;
-    row-gap: 40px;
+    gap: 10px;
+    row-gap: 20px;
   }
   
   .team-member {
@@ -44,6 +44,7 @@ $darkpink : #FF1493;
     position: relative;
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    border-radius: 10px;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -59,7 +60,7 @@ $darkpink : #FF1493;
   
   .flip-card-front,
   .flip-card-back {
-    width: 300px;
+    width: 200px;
     height: 200px;
     // gap: 20px;
     position: absolute;
@@ -73,7 +74,21 @@ $darkpink : #FF1493;
   }
   
   .flip-card-front {
-    background-color: #c0c0c0;
+    background: linear-gradient(to bottom, #c6cec7, #461046); 
+
+    h2{
+        color: $white;
+        font-family: $jost;
+        font-size: 20px;
+        text-align: center;
+    }
+    p{
+        color: $white;
+        font-family: $jost;
+        font-size: 16px;
+        text-align: center;
+    }
+
    
   }
   
@@ -128,5 +143,14 @@ $darkpink : #FF1493;
   }
   .flip-card:hover .flip-card-inner .flip-card-back h2 {
     opacity: 0;
+  }
+  .pers{
+    display: flex;
+    flex-direction: column;
+
+    .info-pers{
+      display: flex;
+      flex-direction: column;
+    }
   }
   

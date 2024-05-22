@@ -16,10 +16,14 @@ $darkpink : #FF1493;
       padding: 20px;
       background-color: #282c34;
       color: #fff;
+      width: 800px;
+      margin-left: 390px;
+      font-family: $ropa;
   
       h1 {
         margin: 0;
         font-size: 2.5rem;
+        font-family: $ropa;
       }
     }
   
@@ -34,6 +38,7 @@ $darkpink : #FF1493;
         h2 {
           margin-bottom: 20px;
           color: #ffcc00;
+          font-family: $ropa;
         }
   
         .chart-container {
@@ -49,6 +54,7 @@ $darkpink : #FF1493;
         h2 {
           margin-bottom: 20px;
           color: #ffcc00;
+          font-family: $ropa;
         }
   
         ul {
@@ -63,6 +69,7 @@ $darkpink : #FF1493;
             padding: 20px;
             margin-bottom: 20px;
             transition: transform 0.3s ease-in-out;
+            font-family: $jost;
   
             &:hover {
               transform: translateY(-5px);
@@ -111,6 +118,7 @@ $darkpink : #FF1493;
           border: 1px solid #ccc;
           padding: 20px;
           border-radius: 10px;
+          font-family: $jost;
   
           label {
             display: block;
@@ -121,12 +129,20 @@ $darkpink : #FF1493;
           input[type="text"],
           input[type="date"],
           textarea {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #c0c0c0;
             border-radius: 5px;
             font-size: 16px;
+
+            &:focus {
+              outline: none;
+              border-color: #ffcc00;
+            }
+            &:hover {
+              border-color: #72a37a;
+            }
           }
   
           button[type="submit"] {
