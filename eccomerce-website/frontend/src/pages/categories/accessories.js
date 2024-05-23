@@ -4,6 +4,7 @@ import cartIcon from "../../images/ic--round-shopping-cart.svg";
 import "./Accessories.scss";
 import Modal from "../../components/Modal";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const Accessories = () => {
   const [items, setItems] = useState([
@@ -418,9 +419,12 @@ const Accessories = () => {
     }
   ]);
     
+
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const navigate = useNavigate();
 
   const handleOpenModal = (item) =>{
     setSelectedProduct(item);
@@ -476,6 +480,19 @@ const Accessories = () => {
     }
 }, [items]);
 
+
+const handleAddToCart = async (item) => {
+  try {
+    const name = encodeURIComponent(item.name);
+    const category = encodeURIComponent(item.category);
+    const { data } = await axios.get(`http://localhost:3000/cart/add-to-cart/${name}/${item.price}/${category}`);
+    console.log('Item fetched from the backend:', data);
+    navigate('/cart', { state: { item: data } }); // Navigate to Cart.js and pass the fetched item as state
+  } catch (error) {
+    console.error('Error fetching item from the backend:', error);
+  }
+};
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prevItems) =>
@@ -515,7 +532,7 @@ const Accessories = () => {
                     <div className="wish">
                       <img src={item.wishlistIconPath} alt="Wishlist" className="wishlist-icon" />
                     </div>
-                    <button className="add-to-cart-btn" onClick={() => handleOpenModal(item)}>
+                    <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>

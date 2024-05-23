@@ -773,6 +773,12 @@ $darkpink: #FF007F;
       animation: none;
       height: 1000px;
       margin-top: 1500px;
+
+      .text-container{
+        h1{
+          display: none;
+        }
+      }
     }
   }
   .home{
