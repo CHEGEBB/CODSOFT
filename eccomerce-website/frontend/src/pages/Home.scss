@@ -689,10 +689,11 @@ $darkpink: #FF007F;
   display: flex;
   flex-direction: row;
   gap: 20px;
-  background-color: green;
+  // background-color: green;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  // margin-top: 50px;
+  height: 600px;
 }
 .set-apart{
   background-color: #666666;
