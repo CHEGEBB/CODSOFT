@@ -131,7 +131,7 @@ const Home = () => {
         className="home-intro"
         style={{
           backgroundImage: `url(${images[index].src})`,
-          transition: 'background-image 1s ease-in-out'
+          transition: 'background-image 1s ease-in-out',
         }}
       >
         <div className="text-container animate">
