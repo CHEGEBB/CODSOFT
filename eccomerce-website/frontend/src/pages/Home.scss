@@ -689,6 +689,7 @@ $darkpink: #FF007F;
   display: flex;
   flex-direction: row;
   gap: 20px;
+  background-color: green;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
@@ -742,3 +743,281 @@ $darkpink: #FF007F;
     font-family: $jost;
   }
 }
+// mobile design
+@media screen and (max-width: 768px) {
+  .homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 700px;
+    width: 100%;
+    animation: zoomIn 5s ease infinite alternate;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 700px;
+    width: 100%;
+    animation: zoomIn 5s ease infinite alternate;
+  }
+  .heading {
+    font-size: 1.5rem;
+    width: auto;
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    margin-top: 0;
+    padding: 20px;
+  }
+  
+  .paragraph, .colored-paragraph {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .colored-paragraph {
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .header-container {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navigation {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .home-intro {
+    height: auto;
+    padding: 20px;
+    animation: none;
+  }
+  
+  .home-content {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    height: auto;
+  }
+  
+  .women-shop, .mens-shop {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .items {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .featured h1, .featured p {
+    font-size: 1.5rem;
+    margin: 0 20px;
+  }
+
+  .products-row1, .products-row2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .product {
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px 0;
+  }
+  
+  .about h1, .about p {
+    width: auto;
+    margin: 0 20px;
+  }
+  
+  .set-apart h1, .set-apart h2, .set-apart p {
+    font-size: 1.5rem;
+    margin: 0 20px;
+  }
+
+  .DeliveryIcon img, .SupportIcon img, .DiscountIcon img, .SecurePaymentsIcon img {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .welcome{
+    height: 1500px;
+    h1{
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: $darkpink;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $white;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: 20px;
+      width: 300px;
+      font-family: $jost;
+    }
+  }
+  .featured{
+    h1{
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: $greyish;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $greyish;
+      text-align: center;
+      margin-top: 10px;
+      font-family: $jost;
+    }
+  }
+  .product{
+    width: 300px;
+    h3{
+      font-size: 1rem;
+      color:$darkpink;
+      font-family: $ropa;
+      font-size: 1.5rem;
+      width: 190px;
+    }
+    p{
+      font-size: 12px;
+      margin: 5px 0;
+      color: $celestialOrange;
+      font-family: $ropa;
+      font-weight: bold;
+      width: 170px;
+      margin-left: -30px;
+    }
+    button{
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 10px;
+      background-color: $darkpink;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      img{
+        width: 20px;
+        margin-right: 5px;
+      }
+    }
+    .button-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .unique{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .set-apart{
+    h2{
+      font-size: 20px;
+      color:#ffffff;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $white;
+      text-align: center;
+      margin-top: 10px;
+      font-family: $jost;
+    }
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    .image {
+      width: 100px;
+      height: 50px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    
+      img {
+        width:100px;
+        height: 50px;
+        object-fit: cover;
+        transition: transform 3s ease;
+        display: none;
+      }
+    
+      &:hover img {
+        transform: rotate(5deg) scale(1.1);
+      }
+    }
+  }
+  .set-apart{
+    h2{
+      font-size: 20px;
+      color:#ffffff;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $white;
+      text-align: center;
+      margin-top: 10px;
+      font-family: $jost;
+    }
+  }
+}
+

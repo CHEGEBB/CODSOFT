@@ -126,7 +126,7 @@ body{
     }
     .profile-picture img{
         width: 50px;
-        height: 50px;
+    
         border-radius: 50%;
         border: 2px solid $greyish;
 
@@ -487,4 +487,11 @@ body{
             }
         }
     }
+}
+@media screen and (max-width: 768px) {
+    .home{
+        width: 375px;
+        background-color: red;
+    }
+
 }
