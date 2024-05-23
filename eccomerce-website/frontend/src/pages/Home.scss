@@ -771,7 +771,8 @@ $darkpink: #FF007F;
       height: auto;
       padding: 20px;
       animation: none;
-      height: 800px;
+      height: 1000px;
+      margin-top: 1500px;
     }
   }
   .home{
@@ -783,9 +784,10 @@ $darkpink: #FF007F;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10px;
-    height: 700px;
+    height: 1900px;
     width: 100%;
     animation: zoomIn 5s ease infinite alternate;
+    display: none;
   }
   .heading {
     font-size: 1.5rem;
