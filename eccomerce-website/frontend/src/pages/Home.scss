@@ -746,6 +746,7 @@ $darkpink: #FF007F;
 }
 // mobile design
 @media screen and (max-width: 768px) {
+ 
   .homepage{
     display: flex;
     flex-direction: column;
@@ -758,6 +759,20 @@ $darkpink: #FF007F;
     height: 700px;
     width: 100%;
     animation: zoomIn 5s ease infinite alternate;
+
+    .navigation{
+      margin-left: 0;
+      margin-top: 10px;
+      text-align: center;
+      width: 300px;
+    
+    }
+    .home-intro {
+      height: auto;
+      padding: 20px;
+      animation: none;
+      height: 800px;
+    }
   }
   .home{
     display: flex;
