@@ -11,7 +11,6 @@ const Cart = () => {
     navigate('/checkout');
   };
 
-  // Function to handle delete button click for a specific item
   const handleDelete = (itemId) => {
     const updatedCartItems = cartItems.filter(item => item._id !== itemId);
     setCartItems(updatedCartItems);
